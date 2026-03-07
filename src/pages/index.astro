@@ -1,0 +1,418 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+
+import heroBg from "../assets/images/hero-bg.jpg";
+import beforeAfter1 from "../assets/images/before-after-1.png";
+import beforeAfter2 from "../assets/images/before-after-2.webp";
+import beforeAfter3 from "../assets/images/before-after-3.webp";
+import beforeAfter4 from "../assets/images/before-after-4.webp";
+import work01 from "../assets/images/work-01.webp";
+import work02 from "../assets/images/work-02.webp";
+import work03 from "../assets/images/work-03.webp";
+import team1 from "../assets/images/team-1.webp";
+import team2 from "../assets/images/team-2.webp";
+import team3 from "../assets/images/team-3.webp";
+import team4 from "../assets/images/team-4.webp";
+import team5 from "../assets/images/team-5.webp";
+import partnerEpa from "../assets/images/partner-epa.webp";
+import partnerSherwin from "../assets/images/partner-sherwin.webp";
+import partnerPpg from "../assets/images/partner-ppg.webp";
+import partnerBehr from "../assets/images/partner-behr.webp";
+import partnerOleary from "../assets/images/partner-oleary.webp";
+import partnerCarboline from "../assets/images/partner-carboline.webp";
+
+const challenges = [
+  {
+    title: "Corrosion & Wear",
+    desc: "Old coatings and rust are deteriorating your valuable equipment over time, leading to expensive repairs.",
+    icon: "rust",
+  },
+  {
+    title: "Project Delays",
+    desc: "Unreliable contractors and slow work processes are delaying your project timelines, harming your business.",
+    icon: "clock",
+  },
+  {
+    title: "Safety & Quality Concerns",
+    desc: "Improper preparation and low-quality work can lead to safety issues and coatings that don't last long-term.",
+    icon: "shield",
+  },
+];
+
+const services = [
+  {
+    title: "Mobile Blasting",
+    desc: "Our fully-equipped mobile teams travel directly to your site to perform the work on-location.",
+  },
+  {
+    title: "Durable Coatings",
+    desc: "After preparing the surface, we apply high-quality industrial coatings to protect it from corrosion and wear.",
+  },
+  {
+    title: "On-Site Setup",
+    desc: "We begin every project by professionally preparing the worksite in full compliance with all safety standards.",
+  },
+  {
+    title: "Fast Turnaround",
+    desc: "We value your time and complete our projects efficiently and within the agreed-upon deadlines.",
+  },
+];
+
+const whyUs = [
+  {
+    title: "Decades of Experience",
+    desc: "As a family-owned business operating since the 1980s, we approach every project with deep knowledge and experience.",
+    num: "01",
+  },
+  {
+    title: "Safety-First Approach",
+    desc: "Our team strictly adheres to all safety standards, ensuring the protection of your site and our employees.",
+    num: "02",
+  },
+  {
+    title: "Uncompromising Quality",
+    desc: "We use only the best materials and proven technologies to guarantee a long-lasting and durable result.",
+    num: "03",
+  },
+  {
+    title: "On-Time, Every Time",
+    desc: "We value your time and complete our projects within the agreed-upon deadlines, without disrupting your business.",
+    num: "04",
+  },
+  {
+    title: "A Single, Reliable Partner",
+    desc: "By handling all the work in-house, from surface preparation to the final coating, we simplify the process for you.",
+    num: "05",
+  },
+  {
+    title: "Honesty & Integrity",
+    desc: "Open communication and transparent pricing are the foundation of our business. We work to earn your trust.",
+    num: "06",
+  },
+];
+
+const processSteps = [
+  { num: "01", title: "Consultation & Planning" },
+  { num: "02", title: "Preparation & Blasting" },
+  { num: "03", title: "Coating Application" },
+  { num: "04", title: "Final Inspection & Aftercare" },
+];
+
+const galleryImages = [work03, beforeAfter1, beforeAfter2, beforeAfter3, beforeAfter4, work01, work02];
+const teamImages = [team1, team2, team3, team4, team5, team1];
+const partners = [
+  { src: partnerEpa, alt: "EPA", w: 175, h: 115 },
+  { src: partnerSherwin, alt: "Sherwin Williams", w: 175, h: 87 },
+  { src: partnerPpg, alt: "PPG", w: 175, h: 193 },
+  { src: partnerBehr, alt: "Behr", w: 175, h: 44 },
+  { src: partnerOleary, alt: "O'Leary", w: 175, h: 69 },
+  { src: partnerCarboline, alt: "Carboline", w: 175, h: 64 },
+];
+---
+
+<Layout>
+  <Header />
+
+  <!-- Hero -->
+  <section class="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden">
+    <Image
+      src={heroBg}
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      widths={[640, 1024, 1440, 1920]}
+      sizes="100vw"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 max-w-[1400px] mx-auto px-6 py-32 md:py-40 w-full">
+      <h1 class="font-heading text-white text-[40px] md:text-[60px] lg:text-[80px] font-semibold leading-[1.1] tracking-[-0.045em] max-w-[800px]">
+        Restoring Surfaces, Protecting Your Assets
+      </h1>
+      <p class="text-white/80 text-[18px] md:text-[20px] mt-6 max-w-[600px]">
+        Your trusted partner for mobile sandblasting and surface preparation services in Michigan.
+      </p>
+      <a
+        href="#contact"
+        class="inline-block mt-8 bg-primary text-white font-semibold text-[18px] md:text-[20px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover hover:border-primary-hover transition-colors"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <!-- Challenges -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div>
+          <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em]">
+            We Understand Your Challenges
+          </h2>
+          <p class="text-body mt-6">
+            We know that industrial projects come with a unique set of challenges. From protecting valuable assets to meeting tight deadlines, you need a partner who understands what's at stake.
+          </p>
+          <a
+            href="#contact"
+            class="inline-block mt-8 bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover hover:border-primary-hover transition-colors"
+          >
+            Get a Free Estimate
+          </a>
+        </div>
+
+        <div class="space-y-6">
+          {challenges.map((item) => (
+            <div class="bg-white border border-gray-100 p-6 flex gap-5 items-start shadow-sm">
+              <div class="w-12 h-12 bg-dark flex items-center justify-center shrink-0">
+                {item.icon === "rust" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m14.5 9-5 5"/><path d="m9.5 9 5 5"/></svg>
+                )}
+                {item.icon === "clock" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                )}
+                {item.icon === "shield" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                )}
+              </div>
+              <div>
+                <h3 class="font-heading text-[20px] font-semibold text-heading">{item.title}</h3>
+                <p class="text-body text-[16px] mt-2">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center">
+        Our Solution &ndash; Our Services
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        {services.map((svc) => (
+          <div class="bg-white p-8 text-center">
+            <div class="w-16 h-16 mx-auto mb-6 bg-primary/10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6B2813" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="font-heading text-[20px] font-semibold text-heading">{svc.title}</h3>
+            <p class="text-body text-[16px] mt-3">{svc.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em]">
+        Our Recent Work
+      </h2>
+      <div class="mt-12 overflow-x-auto pb-4">
+        <div class="flex gap-4 min-w-max">
+          {galleryImages.map((img, i) => (
+            <div class="w-[280px] md:w-[340px] h-[200px] md:h-[240px] shrink-0 overflow-hidden">
+              <Image
+                src={img}
+                alt={`Recent sandblasting work ${i + 1}`}
+                width={340}
+                height={240}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team in Action -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em]">
+        See Our Team in Action.
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+        {teamImages.map((img, i) => (
+          <div class="relative aspect-[9/16] md:aspect-[3/4] overflow-hidden group">
+            <Image
+              src={img}
+              alt={`Team in action ${i + 1}`}
+              width={400}
+              height={600}
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#333"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section id="whyus" class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center">
+        Why Choose Blasting Jack
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        {whyUs.map((item) => (
+          <div class="bg-white p-8">
+            <span class="font-heading text-[14px] font-bold text-primary tracking-wider">{item.num}</span>
+            <h3 class="font-heading text-[20px] font-semibold text-heading mt-3">{item.title}</h3>
+            <p class="text-body text-[16px] mt-3">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center">
+        Our Partners & Valued Clients
+      </h2>
+      <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 mt-12">
+        {partners.map((p) => (
+          <div class="grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+            <Image src={p.src} alt={p.alt} width={p.w} height={p.h} class="h-[50px] md:h-[70px] w-auto object-contain" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center">
+        From Rust to Ready: Our 4-Step Process
+      </h2>
+      <div class="w-20 h-[2px] bg-dark mx-auto mt-6"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+        {processSteps.map((step) => (
+          <div class="text-center">
+            <span class="font-heading text-[48px] md:text-[60px] font-bold text-dark/10 leading-none">{step.num}</span>
+            <h3 class="font-heading text-[18px] md:text-[20px] font-semibold text-heading mt-2">{step.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div>
+          <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] capitalize">
+            Get a quote
+          </h2>
+          <p class="text-body mt-4">
+            Please contact us regarding your project and we will get back to you shortly.
+          </p>
+          <div class="mt-8 space-y-4">
+            <a href="mailto:info@blastingjack.com" class="flex items-center gap-3 text-body hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              info@blastingjack.com
+            </a>
+            <span class="flex items-center gap-3 text-body">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              810-602-6809
+            </span>
+          </div>
+          <div class="flex gap-3 mt-8">
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors text-dark" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors text-dark" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors text-dark" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-dark/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors text-dark" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="space-y-5" action="#" method="POST">
+          <div>
+            <label for="name" class="block text-[14px] font-medium text-heading mb-1">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Theo James"
+              class="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-[16px] focus:outline-none focus:border-primary transition-colors"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-[14px] font-medium text-heading mb-1">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="theojames@gmail.com"
+              class="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-[16px] focus:outline-none focus:border-primary transition-colors"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-[14px] font-medium text-heading mb-1">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(500) 234-5678"
+              class="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-[16px] focus:outline-none focus:border-primary transition-colors"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-[14px] font-medium text-heading mb-1">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us more about your project."
+              class="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-[16px] resize-none focus:outline-none focus:border-primary transition-colors"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary text-white font-semibold text-[18px] py-4 hover:bg-primary-hover transition-colors"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Bar -->
+  <section class="bg-dark py-12 md:py-16">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-white text-[32px] md:text-[50px] font-medium leading-[1.2] tracking-[-0.045em]">
+        We Blast, We Coat, You Relax.
+      </h2>
+      <a
+        href="#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-colors shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

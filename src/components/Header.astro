@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo-full.png";
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all" id="site-header">
+  <nav class="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-3">
+    <a href="/" class="shrink-0">
+      <Image src={logo} alt="Blasting Jack" width={80} height={61} class="h-[61px] w-auto" />
+    </a>
+
+    <button
+      id="mobile-menu-btn"
+      class="lg:hidden flex flex-col gap-[6px] p-2"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="block w-6 h-[2px] bg-dark transition-all origin-center" id="bar1"></span>
+      <span class="block w-6 h-[2px] bg-dark transition-all" id="bar2"></span>
+      <span class="block w-6 h-[2px] bg-dark transition-all origin-center" id="bar3"></span>
+    </button>
+
+    <div
+      id="nav-menu"
+      class="hidden lg:flex items-center gap-8 max-lg:fixed max-lg:inset-0 max-lg:top-[73px] max-lg:bg-white max-lg:flex-col max-lg:items-start max-lg:p-8 max-lg:gap-6"
+    >
+      <ul class="flex max-lg:flex-col items-center gap-8 max-lg:gap-6 font-nav text-[20px] font-medium text-dark">
+        <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+        <li><a href="#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
+        <li><a href="#whyus" class="hover:text-primary transition-colors">Why Us</a></li>
+        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+      </ul>
+      <a
+        href="#contact"
+        class="inline-block bg-primary text-white font-semibold text-[18px] px-[26px] py-[16px] border-2 border-primary hover:bg-primary-hover transition-colors"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("nav-menu");
+  const bar1 = document.getElementById("bar1");
+  const bar2 = document.getElementById("bar2");
+  const bar3 = document.getElementById("bar3");
+
+  btn?.addEventListener("click", () => {
+    const expanded = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!expanded));
+    menu?.classList.toggle("hidden");
+    if (!expanded) {
+      bar1?.classList.add("rotate-45", "translate-y-[8px]");
+      bar2?.classList.add("opacity-0");
+      bar3?.classList.add("-rotate-45", "-translate-y-[8px]");
+    } else {
+      bar1?.classList.remove("rotate-45", "translate-y-[8px]");
+      bar2?.classList.remove("opacity-0");
+      bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
+    }
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      btn?.setAttribute("aria-expanded", "false");
+      bar1?.classList.remove("rotate-45", "translate-y-[8px]");
+      bar2?.classList.remove("opacity-0");
+      bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
+    });
+  });
+</script>

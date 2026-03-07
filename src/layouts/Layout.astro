@@ -1,0 +1,40 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Analytics from "@vercel/analytics/astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://blastingjack.com/" />
+    <title>Professional Sandblasting & Coating Services | Blasting Jack</title>
+    <meta
+      name="description"
+      content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!"
+    />
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Professional Sandblasting & Coating Services | Blasting Jack" />
+    <meta property="og:description" content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!" />
+    <meta property="og:url" content="https://blastingjack.com/" />
+    <meta property="og:site_name" content="Blasting Jack" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Professional Sandblasting & Coating Services | Blasting Jack" />
+    <meta name="twitter:description" content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <ClientRouter />
+    <Analytics />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
