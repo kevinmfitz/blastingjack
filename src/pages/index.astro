@@ -6,7 +6,15 @@ import { Image } from "astro:assets";
 
 import heroBg from "../assets/images/hero-bg.jpg";
 
-// Before/After composites (full originals from WP)
+// Before/After slider pairs (actual originals from WP ICV widget)
+import slider1Before from "../assets/images/slider-1-before.webp";
+import slider1After from "../assets/images/slider-1-after.webp";
+import slider2Before from "../assets/images/slider-2-before.webp";
+import slider2After from "../assets/images/slider-2-after.webp";
+import slider3Before from "../assets/images/slider-3-before.webp";
+import slider3After from "../assets/images/slider-3-after.webp";
+
+// Before/After composites (for gallery)
 import ba1 from "../assets/images/ba-1.webp";
 import ba2 from "../assets/images/ba-2.webp";
 import ba3 from "../assets/images/ba-3.webp";
@@ -75,11 +83,10 @@ const processSteps = [
   { num: "04", title: "Final Inspection & Aftercare" },
 ];
 
-const beforeAfterImages = [
-  { src: ba1, alt: "Industrial pipe restoration - before and after" },
-  { src: ba2, alt: "Pole base repair and coating - before and after" },
-  { src: ba3, alt: "Structural steel restoration - before and after" },
-  { src: ba4, alt: "Tank interior coating - before and after" },
+const sliderPairs = [
+  { before: slider1Before, after: slider1After, alt: "Industrial equipment sandblasting", w: 1920, h: 1440 },
+  { before: slider2Before, after: slider2After, alt: "Surface coating restoration", w: 1008, h: 900 },
+  { before: slider3Before, after: slider3After, alt: "Structural steel coating", w: 1200, h: 1600 },
 ];
 
 const galleryImages = [
@@ -206,8 +213,44 @@ const partners = [
     </div>
   </section>
 
-  <!-- Gallery (work photos + before/after) with lightbox -->
-  <section id="gallery" class="py-16 md:py-24 bg-white">
+  <!-- Before & After Sliders -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center reveal">
+        Before &amp; After
+      </h2>
+      <p class="text-body text-center mt-4 max-w-[600px] mx-auto reveal" style="transition-delay:100ms">
+        Drag the slider to see the transformation.
+      </p>
+      <div class="space-y-10 mt-12">
+        {sliderPairs.map((pair, i) => (
+          <div class="ba-slider rounded-lg overflow-hidden max-w-[900px] mx-auto reveal-scale" data-ba-slider style={`transition-delay:${i * 150}ms`}>
+            <Image
+              src={pair.before}
+              alt={`${pair.alt} - before`}
+              width={pair.w}
+              height={pair.h}
+              class="w-full h-auto block"
+            />
+            <div class="ba-after" style="clip-path: inset(0 0 0 50%)">
+              <Image
+                src={pair.after}
+                alt={`${pair.alt} - after`}
+                width={pair.w}
+                height={pair.h}
+              />
+            </div>
+            <div class="ba-handle" style="left: 50%"></div>
+            <span class="ba-label ba-label-before">Before</span>
+            <span class="ba-label ba-label-after">After</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery with lightbox -->
+  <section id="gallery" class="py-16 md:py-24 bg-light-bg">
     <div class="max-w-[1400px] mx-auto px-6">
       <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center reveal">
         Our Recent Work
@@ -299,10 +342,10 @@ const partners = [
     <button id="modal-close" class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors z-10" aria-label="Close video">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <div class="w-full max-w-[400px] mx-4" style="aspect-ratio:9/16">
+    <div class="w-full max-w-[500px] md:max-w-[560px] lg:max-w-[640px] mx-4" style="aspect-ratio:9/16">
       <iframe
         id="vimeo-iframe"
-        class="w-full h-full rounded-lg"
+        class="w-full h-full rounded-xl shadow-2xl"
         src=""
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
@@ -464,6 +507,41 @@ const partners = [
     );
     document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children").forEach((el) => {
       revealObs.observe(el);
+    });
+
+    // Before/After Sliders
+    document.querySelectorAll("[data-ba-slider]").forEach((slider) => {
+      const afterEl = slider.querySelector(".ba-after") as HTMLElement;
+      const handle = slider.querySelector(".ba-handle") as HTMLElement;
+      if (!afterEl || !handle) return;
+
+      let isDragging = false;
+
+      function updateSlider(x: number) {
+        const rect = slider.getBoundingClientRect();
+        let pct = ((x - rect.left) / rect.width) * 100;
+        pct = Math.max(2, Math.min(98, pct));
+        afterEl.style.clipPath = `inset(0 0 0 ${pct}%)`;
+        handle.style.left = `${pct}%`;
+      }
+
+      slider.addEventListener("mousedown", (e: Event) => {
+        isDragging = true;
+        updateSlider((e as MouseEvent).clientX);
+      });
+      document.addEventListener("mousemove", (e: MouseEvent) => {
+        if (isDragging) updateSlider(e.clientX);
+      });
+      document.addEventListener("mouseup", () => { isDragging = false; });
+
+      slider.addEventListener("touchstart", (e: Event) => {
+        isDragging = true;
+        updateSlider((e as TouchEvent).touches[0].clientX);
+      }, { passive: true });
+      document.addEventListener("touchmove", (e: TouchEvent) => {
+        if (isDragging) updateSlider(e.touches[0].clientX);
+      }, { passive: true });
+      document.addEventListener("touchend", () => { isDragging = false; });
     });
 
     // Gallery Lightbox
