@@ -203,68 +203,83 @@ const partners = [
     </div>
   </section>
 
-  <!-- Before & After Sliders -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-[1400px] mx-auto px-6">
-      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center reveal">
-        Before &amp; After
-      </h2>
-      <p class="text-body text-center mt-4 max-w-[600px] mx-auto reveal" style="transition-delay:100ms">
-        Drag the slider to see the transformation.
-      </p>
-      <div class="space-y-10 mt-12">
-        {sliderPairs.map((pair, i) => (
-          <div class="ba-slider rounded-lg overflow-hidden max-w-[900px] mx-auto reveal-scale" data-ba-slider style={`transition-delay:${i * 150}ms`}>
-            <Image
-              src={pair.before}
-              alt={`${pair.alt} - before`}
-              width={pair.w}
-              height={pair.h}
-              class="w-full h-auto block"
-            />
-            <div class="ba-after" style="clip-path: inset(0 0 0 50%)">
-              <Image
-                src={pair.after}
-                alt={`${pair.alt} - after`}
-                width={pair.w}
-                height={pair.h}
-              />
-            </div>
-            <div class="ba-handle" style="left: 50%"></div>
-            <span class="ba-label ba-label-before">Before</span>
-            <span class="ba-label ba-label-after">After</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery with lightbox -->
-  <section id="gallery" class="py-16 md:py-24 bg-light-bg">
+  <!-- Our Recent Work — Combined Carousel -->
+  <section id="gallery" class="py-16 md:py-24 bg-white">
     <div class="max-w-[1400px] mx-auto px-6">
       <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] text-center reveal">
         Our Recent Work
       </h2>
       <p class="text-body text-center mt-4 max-w-[600px] mx-auto reveal" style="transition-delay:100ms">
-        Click any image to view full size.
+        Drag the slider to see transformations, or click an image to view full size.
       </p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12 stagger-children">
-        {galleryImages.map((img, i) => (
-          <button
-            type="button"
-            class="overflow-hidden rounded-lg group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50"
-            data-lightbox-trigger
-            data-lightbox-index={i}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              width={700}
-              height={467}
-              class="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+
+      <div class="relative mt-12 reveal" style="transition-delay:150ms">
+        <!-- Carousel controls -->
+        <button id="work-prev" class="absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="work-next" class="absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <!-- Carousel viewport -->
+        <div class="overflow-hidden mx-6 md:mx-12 rounded-lg" id="work-carousel">
+          <div class="flex" id="work-track" style="transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)">
+            {sliderPairs.map((pair) => (
+              <div class="w-full shrink-0 flex justify-center">
+                <div class="ba-slider rounded-lg overflow-hidden max-w-[900px] w-full" data-ba-slider>
+                  <Image
+                    src={pair.before}
+                    alt={`${pair.alt} - before`}
+                    width={pair.w}
+                    height={pair.h}
+                    class="w-full h-auto block"
+                  />
+                  <div class="ba-after" style="clip-path: inset(0 0 0 50%)">
+                    <Image
+                      src={pair.after}
+                      alt={`${pair.alt} - after`}
+                      width={pair.w}
+                      height={pair.h}
+                    />
+                  </div>
+                  <div class="ba-handle" style="left: 50%"></div>
+                  <span class="ba-label ba-label-before">Before</span>
+                  <span class="ba-label ba-label-after">After</span>
+                </div>
+              </div>
+            ))}
+            {galleryImages.map((img, i) => (
+              <div class="w-full shrink-0 flex justify-center">
+                <button
+                  type="button"
+                  class="overflow-hidden rounded-lg group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/50 max-w-[900px] w-full"
+                  data-lightbox-trigger
+                  data-lightbox-index={i}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={700}
+                    height={467}
+                    class="w-full aspect-[3/2] object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="flex justify-center gap-2 mt-6" id="work-dots">
+          {[...Array(sliderPairs.length + galleryImages.length)].map((_, i) => (
+            <button
+              class="work-dot w-3 h-3 rounded-full transition-all duration-300"
+              data-work-dot={i}
+              aria-label={`Go to slide ${i + 1}`}
             />
-          </button>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -532,6 +547,60 @@ const partners = [
         if (isDragging) updateSlider(e.touches[0].clientX);
       }, { passive: true });
       document.addEventListener("touchend", () => { isDragging = false; });
+    });
+
+    // Work Carousel (combined before/after + gallery)
+    const workTrack = document.getElementById("work-track") as HTMLElement;
+    const workDots = document.querySelectorAll("[data-work-dot]");
+    const totalWorkSlides = workDots.length;
+    let workSlide = 0;
+
+    function updateWorkCarousel() {
+      if (!workTrack) return;
+      workTrack.style.transform = `translateX(-${workSlide * 100}%)`;
+      workDots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === workSlide);
+      });
+    }
+    updateWorkCarousel();
+
+    document.getElementById("work-prev")?.addEventListener("click", () => {
+      workSlide = (workSlide - 1 + totalWorkSlides) % totalWorkSlides;
+      updateWorkCarousel();
+    });
+    document.getElementById("work-next")?.addEventListener("click", () => {
+      workSlide = (workSlide + 1) % totalWorkSlides;
+      updateWorkCarousel();
+    });
+    workDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        workSlide = parseInt(dot.getAttribute("data-work-dot") || "0", 10);
+        updateWorkCarousel();
+      });
+    });
+
+    // Touch swipe for work carousel (skip if inside a ba-slider)
+    let workTouchStartX = 0;
+    let workTouchDiff = 0;
+    let workSwipeTarget: EventTarget | null = null;
+    workTrack?.addEventListener("touchstart", (e) => {
+      workTouchStartX = e.touches[0].clientX;
+      workSwipeTarget = e.target;
+    }, { passive: true });
+    workTrack?.addEventListener("touchmove", (e) => {
+      workTouchDiff = workTouchStartX - e.touches[0].clientX;
+    }, { passive: true });
+    workTrack?.addEventListener("touchend", () => {
+      const isInSlider = workSwipeTarget && (workSwipeTarget as Element).closest?.("[data-ba-slider]");
+      if (!isInSlider && Math.abs(workTouchDiff) > 50) {
+        if (workTouchDiff > 0) {
+          workSlide = Math.min(totalWorkSlides - 1, workSlide + 1);
+        } else {
+          workSlide = Math.max(0, workSlide - 1);
+        }
+        updateWorkCarousel();
+      }
+      workTouchDiff = 0;
     });
 
     // Gallery Lightbox
