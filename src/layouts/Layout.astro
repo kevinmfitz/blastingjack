@@ -2,6 +2,20 @@
 import { ClientRouter } from "astro:transitions";
 import Analytics from "@vercel/analytics/astro";
 import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogType?: string;
+}
+
+const {
+  title = "Professional Sandblasting & Coating Services | Blasting Jack",
+  description = "Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!",
+  canonical = "https://blastingjack.com/",
+  ogType = "website",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -9,22 +23,19 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="https://blastingjack.com/" />
-    <title>Professional Sandblasting & Coating Services | Blasting Jack</title>
-    <meta
-      name="description"
-      content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!"
-    />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Professional Sandblasting & Coating Services | Blasting Jack" />
-    <meta property="og:description" content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!" />
-    <meta property="og:url" content="https://blastingjack.com/" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Blasting Jack" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Professional Sandblasting & Coating Services | Blasting Jack" />
-    <meta name="twitter:description" content="Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets." />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
