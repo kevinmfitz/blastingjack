@@ -5,12 +5,17 @@ export const prerender = false;
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-const RECIPIENTS = [
-  'info@blastingjack.com',
-  'kevinf@blastingjack.com',
-  'jacobs@blastingjack.com',
-  'kfitzgeraldblastingjackend@gmail.com',
-];
+// Full recipient list — restore once blastingjack.com is verified at resend.com/domains
+// const RECIPIENTS = [
+//   'info@blastingjack.com',
+//   'kevinf@blastingjack.com',
+//   'jacobs@blastingjack.com',
+//   'kfitzgeraldblastingjackend@gmail.com',
+// ];
+
+// Temporary: Resend free tier only allows sending to the verified account email.
+// Verify blastingjack.com in the Resend dashboard to unlock all recipients.
+const RECIPIENTS = ['kevinmfitz7@gmail.com'];
 
 export const POST: APIRoute = async ({ request }) => {
   let body: { name?: string; email?: string; phone?: string; message?: string };
