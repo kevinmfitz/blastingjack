@@ -206,22 +206,21 @@ const partners = [
   <!-- Our Recent Work — Thumbnail Carousel -->
   <section id="gallery" class="py-16 md:py-24 bg-white overflow-hidden">
     <div class="max-w-[1400px] mx-auto px-6">
-      <div class="flex items-end justify-between mb-2 reveal">
-        <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em]">
-          Our Recent Work
-        </h2>
-        <div class="flex gap-2 shrink-0">
-          <button id="work-prev" class="w-10 h-10 md:w-11 md:h-11 border border-dark/30 flex items-center justify-center hover:bg-dark hover:text-white transition-all duration-200" aria-label="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button id="work-next" class="w-10 h-10 md:w-11 md:h-11 border border-dark/30 flex items-center justify-center hover:bg-dark hover:text-white transition-all duration-200" aria-label="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-      </div>
-      <div class="w-full h-[1px] bg-dark/15 mb-8"></div>
+      <h2 class="font-heading text-[32px] md:text-[48px] font-medium leading-[1.2] tracking-[-0.045em] reveal">
+        Our Recent Work
+      </h2>
+      <div class="w-full h-[1px] bg-dark/15 mt-4 mb-8"></div>
 
-      <div class="overflow-hidden reveal" style="transition-delay:150ms">
+      <div class="relative reveal" style="transition-delay:150ms">
+        <!-- Arrows far left/right -->
+        <button id="work-prev" class="absolute -left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-11 md:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Previous">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button id="work-next" class="absolute -right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-11 md:h-11 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110" aria-label="Next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="overflow-hidden mx-4 md:mx-8">
         <div class="carousel-track gap-4" id="work-track">
           {galleryImages.map((img, i) => (
             <div
@@ -267,6 +266,7 @@ const partners = [
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </div>
@@ -601,14 +601,36 @@ const partners = [
       workTrack.style.transform = `translateX(-${workPos}px)`;
     }
 
+    function advanceWork() {
+      const max = getWorkMaxOffset();
+      if (workPos >= max) {
+        workPos = 0;
+      } else {
+        workPos = Math.min(max, workPos + getWorkSlideWidth());
+      }
+      updateWorkCarousel();
+    }
+
+    let workAutoplay = setInterval(advanceWork, 3500);
+    function resetWorkAutoplay() {
+      clearInterval(workAutoplay);
+      workAutoplay = setInterval(advanceWork, 3500);
+    }
+
     document.getElementById("work-prev")?.addEventListener("click", () => {
       workPos = Math.max(0, workPos - getWorkSlideWidth() * 2);
       updateWorkCarousel();
+      resetWorkAutoplay();
     });
     document.getElementById("work-next")?.addEventListener("click", () => {
       workPos = Math.min(getWorkMaxOffset(), workPos + getWorkSlideWidth() * 2);
       updateWorkCarousel();
+      resetWorkAutoplay();
     });
+
+    // Pause autoplay on hover
+    workTrack?.addEventListener("mouseenter", () => clearInterval(workAutoplay));
+    workTrack?.addEventListener("mouseleave", () => { workAutoplay = setInterval(advanceWork, 3500); });
 
     // Touch swipe for work carousel
     let workTouchStartX = 0;
@@ -623,6 +645,7 @@ const partners = [
           workPos = Math.max(0, workPos - getWorkSlideWidth() * 2);
         }
         updateWorkCarousel();
+        resetWorkAutoplay();
       }
       workTouchDiff = 0;
     });

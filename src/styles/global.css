@@ -25,13 +25,14 @@ body {
   line-height: 1.8;
 }
 
-/* Heading font only — color set via Tailwind classes to avoid cascade conflicts */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-}
-/* Default heading color — low specificity so text-white etc. can override */
-:where(h1, h2, h3, h4, h5, h6) {
-  color: var(--color-heading);
+/* Heading font + color in @layer base so Tailwind utilities can override */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  :where(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-heading);
+  }
 }
 
 /* Scroll-triggered reveals */
