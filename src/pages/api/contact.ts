@@ -66,7 +66,7 @@ export const POST: APIRoute = async ({ request }) => {
   const text = `New Project Enquiry — Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
 
   const { data, error } = await resend.emails.send({
-    from: 'Blasting Jack Website <no-reply@blastingjack.com>',
+    from: 'Blasting Jack <onboarding@resend.dev>',
     to: RECIPIENTS,
     replyTo: email,
     subject: `New Enquiry from ${name} — Blasting Jack`,
