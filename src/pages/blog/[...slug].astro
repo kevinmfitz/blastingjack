@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import PageBanner from '../../components/PageBanner.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => data.draft !== true);
@@ -31,36 +32,24 @@ const canonical = `https://blastingjack.com/blog/${post.id}/`;
 >
   <Header />
 
-  <main class="pt-28 pb-20">
-    <!-- Article Header -->
-    <div class="bg-[#f7f5f3] py-14 mb-12">
-      <div class="max-w-[800px] mx-auto px-6">
-        <!-- Tags -->
-        {post.data.tags.length > 0 && (
-          <div class="flex flex-wrap gap-2 mb-5">
-            {post.data.tags.slice(0, 3).map((tag) => (
-              <span class="text-[11px] font-semibold tracking-[0.1em] uppercase text-primary bg-primary/10 px-3 py-1">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
+  <PageBanner
+    label={post.data.tags[0]}
+    title={post.data.title}
+  />
 
-        <h1 class="font-heading text-[32px] md:text-[44px] font-semibold leading-[1.15] tracking-[-0.025em] text-heading mb-5">
-          {post.data.title}
-        </h1>
-
-        <div class="flex items-center gap-4 text-[14px] text-body/70">
-          <span class="flex items-center gap-1.5">
-            <i class="fa-regular fa-calendar"></i>
-            <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
-          </span>
-          <span class="text-body/30">|</span>
-          <span class="flex items-center gap-1.5">
-            <i class="fa-regular fa-user"></i>
-            {post.data.author}
-          </span>
-        </div>
+  <main class="pb-20">
+    <!-- Article meta -->
+    <div class="max-w-[800px] mx-auto px-6 pt-8 pb-2">
+      <div class="flex items-center gap-4 text-[14px] text-body/70">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-regular fa-calendar"></i>
+          <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
+        </span>
+        <span class="text-body/30">|</span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-regular fa-user"></i>
+          {post.data.author}
+        </span>
       </div>
     </div>
 

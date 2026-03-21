@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import heroBg from '../assets/images/hero-bg.jpg';
+
+interface Props {
+  label?: string;
+  title: string;
+  subtitle?: string;
+}
+
+const { label, title, subtitle } = Astro.props;
+---
+
+<section class="relative flex items-center overflow-hidden" style="height: 260px;">
+  <Image
+    src={heroBg}
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover object-left-top"
+    widths={[640, 1024, 1440]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/58"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-[1400px] mx-auto px-6 w-full pt-16">
+    {label && (
+      <p class="text-white/60 font-semibold text-[12px] tracking-[0.15em] uppercase mb-3">
+        {label}
+      </p>
+    )}
+    <h1 class="font-heading text-[32px] md:text-[48px] font-semibold leading-[1.15] tracking-[-0.03em] text-white max-w-[800px]">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-white/75 text-[16px] md:text-[18px] mt-3 max-w-[580px] leading-relaxed">
+        {subtitle}
+      </p>
+    )}
+  </div>
+</section>

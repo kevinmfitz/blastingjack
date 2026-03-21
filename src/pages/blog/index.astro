@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import PageBanner from '../../components/PageBanner.astro';
 
 const posts = (await getCollection('blog', ({ data }) => data.draft !== true))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -15,18 +16,11 @@ const posts = (await getCollection('blog', ({ data }) => data.draft !== true))
 >
   <Header />
 
-  <!-- Page Hero -->
-  <section class="bg-[#f7f5f3] pt-32 pb-16">
-    <div class="max-w-[1400px] mx-auto px-6">
-      <p class="text-primary font-semibold text-[14px] tracking-[0.12em] uppercase mb-3">Knowledge Base</p>
-      <h1 class="font-heading text-[40px] md:text-[56px] font-semibold leading-[1.1] tracking-[-0.03em] text-heading max-w-[700px]">
-        Sandblasting Tips &amp; Industry Insights
-      </h1>
-      <p class="text-body text-[18px] mt-4 max-w-[600px] leading-relaxed">
-        Practical guidance on surface preparation, rust removal, coatings, and what to expect from professional sandblasting services in Michigan.
-      </p>
-    </div>
-  </section>
+  <PageBanner
+    label="Knowledge Base"
+    title="Sandblasting Tips & Industry Insights"
+    subtitle="Practical guidance on surface preparation, rust removal, coatings, and what to expect from professional sandblasting services in Michigan."
+  />
 
   <!-- Post Grid -->
   <section class="max-w-[1400px] mx-auto px-6 py-16 md:py-24">
