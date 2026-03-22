@@ -26,12 +26,13 @@ Professional sandblasting and surface coating services website for Blasting Jack
 ├── src/
 │   ├── assets/images/          # Hero, gallery, slider, partner, video thumb images
 │   ├── components/
-│   │   ├── Header.astro        # Fixed nav with mobile hamburger menu
-│   │   └── Footer.astro
+│   │   ├── Header.astro        # Fixed nav + separate mobile overlay (outside header to avoid backdrop-blur bleed)
+│   │   ├── Footer.astro
+│   │   └── PageBanner.astro    # Hero image ribbon used on blog listing and post pages
 │   ├── content/
 │   │   └── blog/               # Markdown blog posts (Astro content collections)
 │   ├── layouts/
-│   │   └── Layout.astro        # Base HTML layout — accepts title, description, canonical props
+│   │   └── Layout.astro        # Base HTML layout — accepts title, description, canonical, ogType props
 │   ├── pages/
 │   │   ├── index.astro         # Main landing page (all sections)
 │   │   ├── blog/
@@ -110,6 +111,26 @@ draft: false
 ```
 
 To add a new post, create a `.md` file in `src/content/blog/`. The filename becomes the URL slug (e.g. `my-post.md` → `/blog/my-post/`).
+
+**Current posts:**
+
+| File | Topic |
+|---|---|
+| `dustless-vs-traditional-sandblasting-michigan.md` | Dustless vs traditional blasting comparison |
+| `sandblasting-cost-michigan.md` | Cost guide for industrial/commercial projects |
+| `rust-removal-sandblasting-michigan.md` | Rust removal and surface prep |
+| `hiring-sandblasting-company-michigan.md` | What to look for in a sandblasting contractor |
+| `why-painting-contractors-hire-sandblasting-subcontractor.md` | Why painting contractors subcontract blasting to us |
+
+**Blog pages use `PageBanner.astro`** — a 260px hero image ribbon at the top of both the listing page and individual post pages.
+
+---
+
+## Header / Mobile Nav
+
+The desktop nav is rendered inside `<header>`. The **mobile nav overlay is a separate sibling element** placed after `</header>` in the DOM.
+
+This separation is intentional: the `<header>` uses `backdrop-blur-sm` which creates a CSS compositing layer. If the mobile menu is a child of that element, its background renders as transparent regardless of the set color. Keeping it as a sibling with `z-index: 200` and `background: #ffffff` guarantees a solid white panel on all browsers.
 
 ---
 
