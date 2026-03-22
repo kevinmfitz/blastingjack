@@ -20,12 +20,9 @@ import logo from "../assets/images/logo-full.png";
       <span class="block w-6 h-[2px] bg-dark transition-all origin-center" id="bar3"></span>
     </button>
 
-    <div
-      id="nav-menu"
-      class="hidden lg:flex items-center gap-8 max-lg:fixed max-lg:inset-0 max-lg:top-[73px] max-lg:flex-col max-lg:items-start max-lg:p-8 max-lg:gap-6 max-lg:z-[100]"
-      style="background-color: #ffffff;"
-    >
-      <ul class="flex max-lg:flex-col items-center gap-8 max-lg:gap-6 font-nav text-[20px] font-medium text-dark">
+    <!-- Desktop nav -->
+    <div class="hidden lg:flex items-center gap-8">
+      <ul class="flex items-center gap-8 font-nav text-[20px] font-medium text-dark">
         <li><a href="/#services" class="hover:text-primary transition-colors">Services</a></li>
         <li><a href="/#gallery" class="hover:text-primary transition-colors">Gallery</a></li>
         <li><a href="/#whyus" class="hover:text-primary transition-colors">Why Us</a></li>
@@ -42,35 +39,58 @@ import logo from "../assets/images/logo-full.png";
   </nav>
 </header>
 
+<!-- Mobile nav overlay — kept outside <header> so backdrop-blur on header doesn't bleed through -->
+<div
+  id="mobile-nav"
+  class="hidden fixed inset-0 top-[73px] z-[200] flex-col items-start p-8 gap-6 lg:hidden"
+  style="background: #ffffff;"
+>
+  <ul class="flex flex-col gap-6 font-nav text-[20px] font-medium text-dark w-full">
+    <li><a href="/#services" class="hover:text-primary transition-colors block">Services</a></li>
+    <li><a href="/#gallery" class="hover:text-primary transition-colors block">Gallery</a></li>
+    <li><a href="/#whyus" class="hover:text-primary transition-colors block">Why Us</a></li>
+    <li><a href="/blog/" class="hover:text-primary transition-colors block">Blog</a></li>
+    <li><a href="/#contact" class="hover:text-primary transition-colors block">Contact</a></li>
+  </ul>
+  <a
+    href="/#contact"
+    class="inline-block bg-primary text-white font-semibold text-[18px] px-[26px] py-[16px] border-2 border-primary hover:bg-primary-hover transition-colors"
+  >
+    Get a Free Estimate
+  </a>
+</div>
+
 <script>
   const btn = document.getElementById("mobile-menu-btn");
-  const menu = document.getElementById("nav-menu");
+  const menu = document.getElementById("mobile-nav");
   const bar1 = document.getElementById("bar1");
   const bar2 = document.getElementById("bar2");
   const bar3 = document.getElementById("bar3");
 
+  function openMenu() {
+    menu?.classList.remove("hidden");
+    menu?.classList.add("flex");
+    btn?.setAttribute("aria-expanded", "true");
+    bar1?.classList.add("rotate-45", "translate-y-[8px]");
+    bar2?.classList.add("opacity-0");
+    bar3?.classList.add("-rotate-45", "-translate-y-[8px]");
+  }
+
+  function closeMenu() {
+    menu?.classList.add("hidden");
+    menu?.classList.remove("flex");
+    btn?.setAttribute("aria-expanded", "false");
+    bar1?.classList.remove("rotate-45", "translate-y-[8px]");
+    bar2?.classList.remove("opacity-0");
+    bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
+  }
+
   btn?.addEventListener("click", () => {
     const expanded = btn.getAttribute("aria-expanded") === "true";
-    btn.setAttribute("aria-expanded", String(!expanded));
-    menu?.classList.toggle("hidden");
-    if (!expanded) {
-      bar1?.classList.add("rotate-45", "translate-y-[8px]");
-      bar2?.classList.add("opacity-0");
-      bar3?.classList.add("-rotate-45", "-translate-y-[8px]");
-    } else {
-      bar1?.classList.remove("rotate-45", "translate-y-[8px]");
-      bar2?.classList.remove("opacity-0");
-      bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
-    }
+    expanded ? closeMenu() : openMenu();
   });
 
   menu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.add("hidden");
-      btn?.setAttribute("aria-expanded", "false");
-      bar1?.classList.remove("rotate-45", "translate-y-[8px]");
-      bar2?.classList.remove("opacity-0");
-      bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
-    });
+    link.addEventListener("click", closeMenu);
   });
 </script>
