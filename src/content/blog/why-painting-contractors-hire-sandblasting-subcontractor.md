@@ -1,66 +1,56 @@
 ---
-title: "Why Smart Painting Contractors Subcontract Their Sandblasting to Blasting Jack"
-description: "Michigan painting contractors trust Blasting Jack for industrial sandblasting subcontracting — state-of-the-art BlastOne MistBlaster equipment, SSPC-certified surface prep, and zero equipment headaches."
+title: "Why Painting Contractors Hire Blasting Jack"
+description: "Michigan painting contractors subcontract sandblasting to Blasting Jack for professional surface prep — BlastOne MistBlaster equipment, SSPC-compliant profiles, and a full equipment package on every job."
 pubDate: 2026-03-21
 author: "Blasting Jack Team"
 tags: ["Painting Contractors", "Surface Preparation"]
 draft: false
 ---
 
-If you run a painting or industrial coatings business in Michigan, you already know the truth behind the old industry saying: **the paint is only as good as what's underneath it.**
+Painting contractors across Michigan subcontract their blast work to Blasting Jack for straightforward reasons: proper equipment, experienced operators, and surface prep done to spec so coatings perform and warranties hold.
 
-Surface preparation isn't the glamorous part of a project — but it's the part that makes or breaks your reputation and your warranty. That's exactly why more and more painting contractors across Michigan are calling Blasting Jack to handle the blast work before their crews ever pick up a spray gun.
+## The Cost of Running Your Own Blast Operation
 
-## The Real Cost of Doing Your Own Blasting
+A blast pot, compressor, and supporting equipment runs $15,000 to $80,000 to purchase. Add trailer mounting, air dryer systems, blast hose, abrasive media, PPE, and spare parts on top of that.
 
-Let's talk numbers. A professional-grade blast pot, compressor, and ancillary equipment package runs anywhere from **$15,000 to $80,000+** to purchase outright. Add trailer mounting, air dryer systems, blast hose, media, PPE, and spare parts — and you're looking at serious capital before you've blasted a square foot.
+Then there are the ongoing costs:
 
-Then there's the operational side:
+- **Equipment maintenance and downtime** — blast equipment wears hard. A pot failure mid-job stops everything.
+- **Media management** — sourcing the right abrasive for each substrate, storage, and spent media disposal.
+- **OSHA compliance** — crystalline silica regulations (OSHA 1910.1053) require engineering controls, air monitoring, medical surveillance, and recordkeeping.
+- **Operator qualification** — blasters with documented SSPC surface prep competency take time and money to develop.
 
-- **Maintenance and downtime** — blast equipment takes a beating. When a pot fails on a job site, your whole project stops.
-- **Media management** — sourcing the right abrasive for each substrate, storing it, disposing of spent media responsibly.
-- **OSHA compliance** — crystalline silica regulations (OSHA 1910.1053) require engineering controls, air monitoring, medical surveillance, and detailed recordkeeping. Non-compliance fines are significant.
-- **Operator training and certification** — qualified blasters with documented SSPC surface prep knowledge don't grow on trees.
+For painting contractors whose core business is coatings, not blasting, the equipment rarely generates enough throughput to justify the overhead.
 
-When you add it all up, owning and operating your own blast rig often costs more than the revenue it generates — especially if blasting is only one part of what your company does.
+## Equipment and Capabilities
 
-## What Blasting Jack Brings to Your Job Site
+We've operated in Michigan since the 1980s. Every mobilization includes a complete, self-sufficient operation.
 
-We've been doing this since the 1980s. When you subcontract your surface prep to us, you're not just renting a service — you're plugging in a complete, fully equipped operation that shows up ready to produce.
+### BlastOne MistBlaster
 
-### BlastOne MistBlaster — State-of-the-Art Wet/Dry Blasting
+Our primary blast system is the **BlastOne MistBlaster** — a 4-in-1 platform running dry blast, vapor blast, wet blast, and vacuum blast from one machine.
 
-Our flagship system is the **BlastOne MistBlaster**, one of the most advanced portable blast systems available. It's a true 4-in-1 platform — dry blasting, vapor blasting, wet blasting, and vacuum blasting — all from a single machine.
+Water is introduced after the metering valve, not at the blast pot. Abrasive flows without clumping, dust is suppressed, and there's no sludge waste to deal with on your job site. Water consumption runs 0.5 to 1 pint per minute versus gallons per minute on conventional wet blast systems. Less water means faster cleanup and simpler containment.
 
-What sets it apart from older wet-blast systems is where the water is introduced: **after the metering valve**, not at the blast pot. That means the abrasive flows freely without clumping, and you get the dust suppression benefits of wet blasting without generating the sludge waste that creates disposal headaches on your job site.
+### Air Dryers
 
-Water consumption is just **0.5 to 1 pint per minute** — compare that to conventional wet blast systems that dump gallons per minute. Less water means faster cleanup, less containment complexity, and less disruption to active facilities.
+Moisture in the compressed air supply causes flash rust on freshly blasted steel — sometimes within minutes in Michigan's humid summers. Our compressor setups run integrated deliquescent desiccant dryers that strip moisture from the air stream before it reaches the nozzle. The blasted profile stays clean until your crew is ready to coat.
 
-### Industrial Air Dryers — Protecting the Profile You Just Created
+### Full Job Site Package
 
-Moisture is the enemy of a freshly blasted surface. Without a properly sized air dryer in line, atmospheric moisture in your compressed air supply causes flash rust to form on the anchor profile within minutes — especially in Michigan's humid summers and freeze-thaw springs. Flash rust means rework, schedule overruns, and coating adhesion failures.
+- **Blast operators** — trained, safety-compliant, experienced on industrial work
+- **Industrial air compressors** — sized for the job
+- **Gas sweepers** — mechanical abrasive cleanup on large horizontal surfaces
+- **Skid steer** — for cleanup where volume makes hand labor impractical
+- **Containment** — wind screens through full enclosure systems for bridges, near-water work, and environmentally sensitive sites
 
-Our compressor setups run integrated **deliquescent desiccant air dryer systems** that strip moisture from the compressed air stream in three phases before it ever reaches the blast nozzle. The result is a dry, clean anchor profile that holds until your paint crew is ready to coat — not one that's already compromised by oxidation.
+One call covers the blast scope. Your crew follows behind on a surface that's ready.
 
-This is the kind of detail that separates professional surface prep from the kind that leads to coating failures and warranty disputes.
+## Surface Prep Standards
 
-### The Full Equipment Package — Everything Onsite
+Coating manufacturers specify surface prep standards because inadequate preparation is the leading cause of premature coating failure — widely cited at 80% across industry training and technical data sheets. When a coating fails early, the surface prep is the first thing examined.
 
-We don't show up with just a blast pot and a hose. A Blasting Jack mobilization includes:
-
-- **Blast operators** — trained, experienced, safety-compliant
-- **Industrial air compressors** — properly sized for the job, not undersized rentals
-- **Gas sweepers** — for fast abrasive cleanup on large horizontal surfaces
-- **Skid steer** — we bring mechanical cleanup where hand labor would take hours
-- **Containment solutions** — from basic wind screens to complex full-enclosure containment systems for sensitive environments, bridges, or near-water work
-
-You get one call, one mobilization, one subcontractor. Your crew walks in to a surface that's ready to coat.
-
-## SSPC Surface Prep Standards — Done Right the First Time
-
-Industrial coatings manufacturers specify surface preparation standards for a reason: **80% of premature coating failures are caused by inadequate surface prep** (a widely cited figure across Sherwin-Williams, Prosoco, and the SSPC training curriculum). When a coating fails, the warranty finger-points at whoever prepped the surface.
-
-Blasting Jack produces documented SSPC-compliant surface profiles:
+Blasting Jack produces SSPC-compliant profiles to the standard your coating spec requires:
 
 | Standard | Description | Common Application |
 |---|---|---|
@@ -69,28 +59,24 @@ Blasting Jack produces documented SSPC-compliant surface profiles:
 | **SSPC-SP 6 / NACE 3** | Commercial Blast | General steel structures |
 | **SSPC-SP 7 / NACE 4** | Brush-Off Blast | Maintenance recoating, light rust |
 
-We match the prep level to your coating spec — not to whatever's fastest or cheapest. That protects your coating warranty and your business relationship with the end client.
+We prep to your spec, not to whatever moves fastest.
 
-## What This Means for Your Painting Business
+## What Subcontracting Covers for Your Business
 
-Subcontracting to Blasting Jack isn't a cost — it's a competitive advantage.
+**Bid coverage.** Painting contractors who can quote surface prep alongside the coating work present a complete scope to the client. Many competitors quote paint only and leave surface prep as an open question.
 
-**Win more bids.** Including professional sandblasting in your proposal is a differentiator. Many of your competitors quote painting only and leave the surface prep question unanswered. You can show clients a complete turnkey solution.
+**Warranty protection.** Coating manufacturer warranties are contingent on surface prep meeting spec. Documentation from a qualified blast contractor supports that warranty if it's ever questioned.
 
-**Protect your coating warranties.** Your coating manufacturer's warranty is only valid when the surface prep meets spec. We give you documentation to back that up.
+**Crew focus.** Blasting is equipment-intensive, physically demanding work that requires its own trained operators. Your painting crew does what it's built to do.
 
-**Keep your crews focused.** Your painters are your revenue generators. Blasting is physically demanding, equipment-intensive work. Let your people do what they're best at.
+**Capital flexibility.** Structural steel, bridge work, water towers, industrial facilities — you can take on larger blast-and-paint projects without owning equipment that sits between jobs.
 
-**Scale without capital.** Take on larger structural steel projects, bridge work, or industrial facility contracts without buying equipment you'll use six times a year. We flex with your project load.
+**Compliance offload.** OSHA silica requirements, respiratory protection programs, air monitoring — that compliance burden stays with us.
 
-**Eliminate compliance risk.** OSHA silica regulations, respiratory protection programs, air monitoring — we carry that burden so you don't have to.
+## Coverage Area
 
-## Serving Michigan Painting and Coatings Contractors
-
-We work with painting contractors across Metro Detroit, Grand Rapids, Lansing, Flint, Kalamazoo, Saginaw, and throughout Michigan. Our mobile operation comes to your job site — whether that's a structural steel fabrication shop, an industrial facility, a bridge structure, a water tower, or a large commercial building exterior.
-
-We're a subcontractor built for subcontracting. We understand job site schedules, we coordinate with your project timeline, and we keep our work area clean so your crew can follow behind without delays.
+We work with painting and coatings contractors across Metro Detroit, Grand Rapids, Lansing, Flint, Kalamazoo, Saginaw, and statewide throughout Michigan. Mobile operation — we come to the job site.
 
 ---
 
-If you're a painting or industrial coatings contractor in Michigan looking for a reliable blast subcontractor, **contact Blasting Jack for a project estimate**. We'll review your coating spec, assess the scope, and give you a straightforward number you can build your proposal around.
+Painting and industrial coatings contractors in Michigan can contact Blasting Jack directly for project estimates. We'll review your coating spec, assess scope, and provide pricing you can work into your proposal.
