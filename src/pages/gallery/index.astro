@@ -6,6 +6,7 @@ import PageBanner from "../../components/PageBanner.astro";
 import { Image } from "astro:assets";
 
 // Cover photo for each project card
+import trainStationCover from "../../assets/images/gallery-work-42.jpg";
 import annArborCover from "../../assets/images/gallery-work-15.jpg";
 import battleCreekCover from "../../assets/images/gallery-work-23.jpg";
 import lightPolesCover from "../../assets/images/gallery-work-25.jpg";
@@ -15,6 +16,12 @@ import fordTablesCover from "../../assets/images/gallery-work-37.jpg";
 import brownstownCover from "../../assets/images/gallery-work-38.jpg";
 
 const projects = [
+  {
+    name: "Michigan Central Train Station Waiting Room Blast and Repaint",
+    count: 5,
+    cover: trainStationCover,
+    href: "/gallery/michigan-central-train-station/",
+  },
   {
     name: "Ann Arbor Staircase Restoration",
     count: 14,
