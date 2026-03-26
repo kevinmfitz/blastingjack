@@ -37,6 +37,30 @@ const images = [
         <span class="text-[14px] text-heading font-medium">FDA Grade Storage Silo</span>
       </div>
 
+      <!-- Videos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+        {[
+          { src: "/videos/kelloggs-1.mp4", label: "Video 1" },
+          { src: "/videos/kelloggs-2.mp4", label: "Video 2" },
+          { src: "/videos/kelloggs-3.mp4", label: "Video 3" },
+          { src: "/videos/kelloggs-4.mp4", label: "Video 4" },
+          { src: "/videos/kelloggs-5.mp4", label: "Video 5" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              class="w-full max-h-[400px] object-contain"
+              aria-label={vid.label}
+            >
+              <source src={vid.src} type="video/mp4" />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <!-- Photos -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         {images.map((img, i) => (
           <div
@@ -63,7 +87,7 @@ const images = [
         ))}
       </div>
 
-      <p class="text-body text-[14px] mt-5 text-center">{images.length} photos</p>
+      <p class="text-body text-[14px] mt-5 text-center">5 videos &middot; {images.length} photos</p>
     </div>
   </section>
 
