@@ -6,9 +6,17 @@ import PageBanner from "../../../components/PageBanner.astro";
 import { Image } from "astro:assets";
 
 import g25 from "../../../assets/images/gallery-work-25.jpg";
+import g30 from "../../../assets/images/gallery-work-30.jpg";
+import g31 from "../../../assets/images/gallery-work-31.jpg";
+import g32 from "../../../assets/images/gallery-work-32.jpg";
+import g33 from "../../../assets/images/gallery-work-33.jpg";
 
 const images = [
   { src: g25, alt: "Crew member in boom lift sandblasting a light pole — Milan Ford" },
+  { src: g30, alt: "Light pole sandblasting — Milan Ford" },
+  { src: g31, alt: "Light pole sandblasting — Milan Ford" },
+  { src: g32, alt: "Light pole sandblasting — Milan Ford" },
+  { src: g33, alt: "Light pole sandblasting — Milan Ford" },
 ];
 ---
 
@@ -61,7 +69,7 @@ const images = [
         ))}
       </div>
 
-      <p class="text-body text-[14px] mt-5 text-center">{images.length} photo</p>
+      <p class="text-body text-[14px] mt-5 text-center">{images.length} photos</p>
     </div>
   </section>
 
