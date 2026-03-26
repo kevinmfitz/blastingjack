@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+import { Image } from "astro:assets";
+
+// Cover photo for each project card
+import annArborCover from "../../assets/images/gallery-work-15.jpg";
+import battleCreekCover from "../../assets/images/gallery-work-23.jpg";
+import lightPolesCover from "../../assets/images/gallery-work-25.jpg";
+import kelloggsCover from "../../assets/images/gallery-work-26.jpg";
+
+const projects = [
+  {
+    name: "Ann Arbor Staircase Restoration",
+    count: 14,
+    cover: annArborCover,
+    href: "/gallery/ann-arbor-stairs/",
+  },
+  {
+    name: "Engineering Test: Revealing Deterioration on Elementary School Walkway Awnings",
+    count: 7,
+    cover: battleCreekCover,
+    href: "/gallery/battle-creek-school/",
+  },
+  {
+    name: "Blasting Light Poles",
+    count: 1,
+    cover: lightPolesCover,
+    href: "/gallery/blasting-light-poles/",
+  },
+  {
+    name: "Blasting and Relining a FDA Grade Storage Silo",
+    count: 2,
+    cover: kelloggsCover,
+    href: "/gallery/fda-grade-storage-silo/",
+  },
+];
+---
+
+<Layout
+  title="Project Gallery | Blasting Jack"
+  description="Browse completed sandblasting and surface coating projects by Blasting Jack — serving Michigan and surrounding areas."
+  canonical="https://blastingjack.com/gallery/"
+>
+  <Header />
+  <PageBanner
+    label="Our Work"
+    title="Project Gallery"
+    subtitle="Real projects. Real results."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <a
+            href={project.href}
+            class="group block overflow-hidden rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <Image
+                src={project.cover}
+                alt={project.name}
+                width={640}
+                height={480}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+              />
+            </div>
+            <div class="p-5 flex items-center justify-between">
+              <div>
+                <h2 class="font-heading text-[18px] font-semibold text-heading group-hover:text-primary transition-colors duration-200">
+                  {project.name}
+                </h2>
+                <p class="text-body text-[14px] mt-1">{project.count} photos</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-primary transition-colors duration-200 shrink-0"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16" style="background-color: #1a1a1a;">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[44px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a similar project?
+      </h2>
+      <a
+        href="/#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
