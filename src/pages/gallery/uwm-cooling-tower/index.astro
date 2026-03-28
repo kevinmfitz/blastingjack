@@ -1,0 +1,84 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import PageBanner from "../../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Blasting and Painting Cooling Tower Infrastructure at United Shore Mortgage | Blasting Jack"
+  description="Industrial blasting and painting of cooling tower infrastructure at United Shore Mortgage — surface preparation and protective coating by Blasting Jack."
+  canonical="https://blastingjack.com/gallery/uwm-cooling-tower/"
+>
+  <Header />
+  <PageBanner
+    label="Project Gallery"
+    title="Blasting and Painting Cooling Tower Infrastructure at United Shore Mortgage"
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+
+      <div class="flex items-center gap-3 mb-10">
+        <a href="/gallery/" class="text-body text-[14px] hover:text-primary transition-colors flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          All Projects
+        </a>
+        <span class="text-gray-300">/</span>
+        <span class="text-[14px] text-heading font-medium">UWM Cooling Tower</span>
+      </div>
+
+      <!-- Main videos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {[
+          { src: "/videos/uwm-tower-main.mp4",   type: "video/mp4",       label: "Cooling tower walkthrough" },
+          { src: "/videos/uwm-tower-replay.mp4",  type: "video/mp4",       label: "Project overview" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <video controls playsinline preload="metadata" class="w-full max-h-[400px] object-contain" aria-label={vid.label}>
+              <source src={vid.src} type={vid.type} />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <!-- Short clips grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        {[
+          { src: "/videos/uwm-tower-1.mov", label: "Clip 1" },
+          { src: "/videos/uwm-tower-2.mov", label: "Clip 2" },
+          { src: "/videos/uwm-tower-3.mov", label: "Clip 3" },
+          { src: "/videos/uwm-tower-4.mov", label: "Clip 4" },
+          { src: "/videos/uwm-tower-5.mov", label: "Clip 5" },
+          { src: "/videos/uwm-tower-6.mov", label: "Clip 6" },
+          { src: "/videos/uwm-tower-7.mov", label: "Clip 7" },
+          { src: "/videos/uwm-tower-8.mov", label: "Clip 8" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <video controls playsinline preload="metadata" class="w-full max-h-[220px] object-contain" aria-label={vid.label}>
+              <source src={vid.src} type="video/quicktime" />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-body text-[14px] mt-5 text-center">10 videos</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16" style="background-color: #1a1a1a;">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[44px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a similar project?
+      </h2>
+      <a
+        href="/#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
