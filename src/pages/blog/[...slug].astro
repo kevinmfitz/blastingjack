@@ -38,6 +38,17 @@ const canonical = `https://blastingjack.com/blog/${post.id}/`;
   />
 
   <main class="pb-20">
+    <!-- Hero image -->
+    {post.data.heroImage && (
+      <div class="max-w-[1400px] mx-auto px-6 pt-8">
+        <img
+          src={post.data.heroImage}
+          alt={post.data.title}
+          class="w-full max-h-[480px] object-cover rounded-lg shadow-md"
+        />
+      </div>
+    )}
+
     <!-- Article meta -->
     <div class="max-w-[800px] mx-auto px-6 pt-8 pb-2">
       <div class="flex items-center gap-4 text-[14px] text-body/70">
