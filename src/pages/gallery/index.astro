@@ -14,6 +14,7 @@ import kelloggsCover from "../../assets/images/gallery-work-26.jpg";
 import bayDoorsCover from "../../assets/images/gallery-work-29.jpg";
 import fordTablesCover from "../../assets/images/gallery-work-37.jpg";
 import brownstownCover from "../../assets/images/gallery-work-38.jpg";
+import dtiTrailerCover from "../../assets/images/gallery-work-44.jpg";
 
 const projects = [
   {
@@ -64,6 +65,13 @@ const projects = [
     cover: brownstownCover,
     href: "/gallery/brownstown-wastewater-tanks/",
   },
+  {
+    name: "Mobile Blasting and Painting a Steel Trailer",
+    count: 6,
+    unit: "videos",
+    cover: dtiTrailerCover,
+    href: "/gallery/dti-steel-trailer/",
+  },
 ];
 ---
 
@@ -101,7 +109,7 @@ const projects = [
                 <h2 class="font-heading text-[18px] font-semibold text-heading group-hover:text-primary transition-colors duration-200">
                   {project.name}
                 </h2>
-                <p class="text-body text-[14px] mt-1">{project.count} photos</p>
+                <p class="text-body text-[14px] mt-1">{project.count} {project.unit ?? "photos"}</p>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 group-hover:text-primary transition-colors duration-200 shrink-0"><polyline points="9 18 15 12 9 6"/></svg>
             </div>

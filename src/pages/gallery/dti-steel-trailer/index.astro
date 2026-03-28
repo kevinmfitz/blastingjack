@@ -1,0 +1,75 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import PageBanner from "../../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Blasting and Painting a Steel Trailer | Blasting Jack"
+  description="Mobile sandblasting and painting of a steel trailer — on-site surface preparation and coating by Blasting Jack."
+  canonical="https://blastingjack.com/gallery/dti-steel-trailer/"
+>
+  <Header />
+  <PageBanner
+    label="Project Gallery"
+    title="Mobile Blasting and Painting a Steel Trailer"
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+
+      <div class="flex items-center gap-3 mb-10">
+        <a href="/gallery/" class="text-body text-[14px] hover:text-primary transition-colors flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          All Projects
+        </a>
+        <span class="text-gray-300">/</span>
+        <span class="text-[14px] text-heading font-medium">Steel Trailer Blast and Paint</span>
+      </div>
+
+      <!-- Videos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          { src: "/videos/dti-trailer-1.mp4", label: "Blasting — Day 1, Clip 1" },
+          { src: "/videos/dti-trailer-2.mp4", label: "Blasting — Day 1, Clip 2" },
+          { src: "/videos/dti-trailer-3.mp4", label: "Progress — Day 2" },
+          { src: "/videos/dti-trailer-4.mp4", label: "Painting — Day 3, Clip 1" },
+          { src: "/videos/dti-trailer-5.mp4", label: "Painting — Day 3, Clip 2" },
+          { src: "/videos/dti-trailer-6.mp4", label: "Painting — Day 3, Clip 3" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <p class="text-white/50 text-[12px] px-3 pt-2 pb-1">{vid.label}</p>
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              class="w-full max-h-[400px] object-contain"
+              aria-label={vid.label}
+            >
+              <source src={vid.src} type="video/mp4" />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-body text-[14px] mt-5 text-center">6 videos</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16" style="background-color: #1a1a1a;">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[44px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a similar project?
+      </h2>
+      <a
+        href="/#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
