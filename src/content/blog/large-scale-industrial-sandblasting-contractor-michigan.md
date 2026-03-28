@@ -27,7 +27,7 @@ That depth matters on jobs with compressed windows: plant shutdowns that have to
 
 We've invested heavily in our own equipment fleet. We're not renting a compressor for every job or scrambling for availability. We own the machines that show up on your site.
 
-On the air side, we run multiple **375 CFM compressors** and a **900 CFM** unit — enough capacity to run **up to four blast setups simultaneously** on a single job. We own the lifts, the material handling equipment, the containment systems, and the cleanup equipment. When we show up, we show up complete.
+We carry enough air capacity to run **up to four blast setups simultaneously** on a single job. We own the lifts, the material handling equipment, the containment systems, and the cleanup equipment. When we show up, we show up complete.
 
 For anything beyond our owned fleet, we have a long-standing working relationship with **McCalister / Michigan CAT** — one of the largest heavy equipment rental operations in the state. Additional compressors, specialty lifts, large material handlers — we can round out any gap quickly with reliable machines. You won't get a call from us saying equipment fell through.
 
