@@ -1,0 +1,77 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import PageBanner from "../../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Vapor Blasting Historic Brick Exterior | Blasting Jack"
+  description="Vapor blasting of a historic brick exterior using EcoQuip — gentle, low-dust surface cleaning that preserves original masonry by Blasting Jack."
+  canonical="https://blastingjack.com/gallery/vapor-blasting-historic-brick/"
+>
+  <Header />
+  <PageBanner
+    label="Project Gallery"
+    title="Vapor Blasting Historic Brick Exterior"
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+
+      <div class="flex items-center gap-3 mb-10">
+        <a href="/gallery/" class="text-body text-[14px] hover:text-primary transition-colors flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          All Projects
+        </a>
+        <span class="text-gray-300">/</span>
+        <span class="text-[14px] text-heading font-medium">Vapor Blasting Historic Brick</span>
+      </div>
+
+      <!-- Videos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          { src: "/videos/historic-brick-1.mp4", label: "Vapor blasting brick exterior — clip 1" },
+          { src: "/videos/historic-brick-2.mp4", label: "Vapor blasting brick exterior — clip 2" },
+          { src: "/videos/historic-brick-3.mp4", label: "Vapor blasting brick exterior — clip 3" },
+          { src: "/videos/historic-brick-4.mp4", label: "Vapor blasting brick exterior — clip 4" },
+          { src: "/videos/historic-brick-5.mp4", label: "Vapor blasting brick exterior — clip 5" },
+          { src: "/videos/historic-brick-6.mp4", label: "Vapor blasting brick exterior — clip 6" },
+          { src: "/videos/historic-brick-7.mp4", label: "Vapor blasting brick exterior — clip 7" },
+          { src: "/videos/historic-brick-8.mp4", label: "Vapor blasting brick exterior — clip 8" },
+          { src: "/videos/historic-brick-9.mp4", label: "Vapor blasting brick exterior — clip 9" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              class="w-full max-h-[400px] object-contain"
+              aria-label={vid.label}
+            >
+              <source src={vid.src} type="video/mp4" />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-body text-[14px] mt-5 text-center">9 videos</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16" style="background-color: #1a1a1a;">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[44px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a similar project?
+      </h2>
+      <a
+        href="/#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
