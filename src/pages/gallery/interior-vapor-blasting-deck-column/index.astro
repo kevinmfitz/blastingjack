@@ -1,0 +1,72 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import PageBanner from "../../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Interior Vapor Blasting — Deck and Column | Blasting Jack"
+  description="Interior vapor blasting of a white deck and column structure using EcoQuip — low-dust surface preparation inside an active facility by Blasting Jack."
+  canonical="https://blastingjack.com/gallery/interior-vapor-blasting-deck-column/"
+>
+  <Header />
+  <PageBanner
+    label="Project Gallery"
+    title="Interior Vapor Blasting — Deck and Column"
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+
+      <div class="flex items-center gap-3 mb-10">
+        <a href="/gallery/" class="text-body text-[14px] hover:text-primary transition-colors flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          All Projects
+        </a>
+        <span class="text-gray-300">/</span>
+        <span class="text-[14px] text-heading font-medium">Interior Vapor Blasting</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          { src: "/videos/interior-vapor-1.mp4", label: "Vapor blasting white deck — main" },
+          { src: "/videos/interior-vapor-2.mp4", label: "Vapor blasting deck — pipe section" },
+          { src: "/videos/interior-vapor-3.mp4", label: "Vapor blasting deck — second pass" },
+          { src: "/videos/interior-vapor-4.mp4", label: "Vapor blasting deck — third pass" },
+          { src: "/videos/interior-vapor-5.mp4", label: "Vapor blasting column" },
+        ].map((vid) => (
+          <div class="rounded-lg overflow-hidden bg-black shadow-md">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              class="w-full max-h-[400px] object-contain"
+              aria-label={vid.label}
+            >
+              <source src={vid.src} type="video/mp4" />
+            </video>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-body text-[14px] mt-5 text-center">5 videos</p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16" style="background-color: #1a1a1a;">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[44px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a similar project?
+      </h2>
+      <a
+        href="/#contact"
+        class="inline-block bg-white text-black font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300 shrink-0"
+      >
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
