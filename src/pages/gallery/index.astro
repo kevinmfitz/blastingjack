@@ -28,6 +28,7 @@ import sandblastExCover from "../../assets/images/gallery-work-69.jpg";
 import seawallCover from "../../assets/images/gallery-work-70.jpg";
 
 const projects = [
+  // --- Large-scale projects ---
   {
     name: "Michigan Central Train Station Waiting Room Blast and Repaint",
     count: 5,
@@ -35,11 +36,38 @@ const projects = [
     href: "/gallery/michigan-central-train-station/",
   },
   {
-    name: "Mobile Blasting: Removing Mill Scale for Pipe Manufacturer",
-    count: 7,
-    cover: millScalePipesCover,
-    href: "/gallery/mobile-blasting-mill-scale-pipes/",
+    name: "Parking Garage Blast and Repaint",
+    count: 10,
+    cover: hfhCover,
+    href: "/gallery/henry-ford-hospital-parking-garage/",
   },
+  {
+    name: "Blasting and Installing Tank Lining in Wastewater Tanks",
+    count: 1,
+    cover: brownstownCover,
+    href: "/gallery/brownstown-wastewater-tanks/",
+  },
+  {
+    name: "Blasting and Painting Cooling Tower Infrastructure at United Shore Mortgage",
+    count: 10,
+    unit: "videos",
+    cover: uwmCover,
+    href: "/gallery/uwm-cooling-tower/",
+  },
+  {
+    name: "Vapor Blasting Historic Brick Exterior",
+    count: 9,
+    unit: "videos",
+    cover: historicBrickCover,
+    href: "/gallery/vapor-blasting-historic-brick/",
+  },
+  {
+    name: "Blasting and Relining a FDA Grade Storage Silo",
+    count: 2,
+    cover: kelloggsCover,
+    href: "/gallery/fda-grade-storage-silo/",
+  },
+  // --- Mid-scale projects ---
   {
     name: "Ann Arbor Staircase Restoration",
     count: 14,
@@ -53,81 +81,11 @@ const projects = [
     href: "/gallery/battle-creek-school/",
   },
   {
-    name: "Blasting Light Poles",
-    count: 5,
-    cover: lightPolesCover,
-    href: "/gallery/blasting-light-poles/",
-  },
-  {
-    name: "Blasting and Relining a FDA Grade Storage Silo",
-    count: 2,
-    cover: kelloggsCover,
-    href: "/gallery/fda-grade-storage-silo/",
-  },
-  {
-    name: "Bay Door Blast and Repaint",
-    count: 2,
-    cover: bayDoorsCover,
-    href: "/gallery/bay-door-blast-repaint/",
-  },
-  {
-    name: "Historical Restoration of Ford Model A Factory Tables",
-    count: 4,
-    cover: fordTablesCover,
-    href: "/gallery/ford-model-a-tables/",
-  },
-  {
-    name: "Blasting and Installing Tank Lining in Wastewater Tanks",
-    count: 1,
-    cover: brownstownCover,
-    href: "/gallery/brownstown-wastewater-tanks/",
-  },
-  {
-    name: "Mobile Blasting and Painting a Steel Trailer",
-    count: 6,
-    unit: "videos",
-    cover: dtiTrailerCover,
-    href: "/gallery/dti-steel-trailer/",
-  },
-  {
-    name: "Dry-Ice Blasting for Machine Cleaning",
-    count: 2,
-    unit: "videos",
-    cover: luxwallCover,
-    href: "/gallery/dry-ice-machine-cleaning/",
-  },
-  {
-    name: "Blasting and Painting Cooling Tower Infrastructure at United Shore Mortgage",
-    count: 10,
-    unit: "videos",
-    cover: uwmCover,
-    href: "/gallery/uwm-cooling-tower/",
-  },
-  {
-    name: "Blast and Repaint of Henry Ford Hospital Parking Garage",
-    count: 10,
-    cover: hfhCover,
-    href: "/gallery/henry-ford-hospital-parking-garage/",
-  },
-  {
-    name: "Vapor Blasting Historic Brick Exterior",
-    count: 9,
-    unit: "videos",
-    cover: historicBrickCover,
-    href: "/gallery/vapor-blasting-historic-brick/",
-  },
-  {
     name: "Interior Vapor Blasting — Deck and Column",
     count: 5,
     unit: "videos",
     cover: interiorVaporCover,
     href: "/gallery/interior-vapor-blasting-deck-column/",
-  },
-  {
-    name: "Interior Cleaning of a Food Grade Storage Silo",
-    count: 3,
-    cover: jiffySiloCover,
-    href: "/gallery/jiffy-food-grade-silo/",
   },
   {
     name: "Blast and Repaint of In-Ground Quench Tank and Alloy Molds",
@@ -143,16 +101,61 @@ const projects = [
     href: "/gallery/msc-ann-arbor-chemical-room/",
   },
   {
-    name: "Sandblasting Examples",
+    name: "Interior Cleaning of a Food Grade Storage Silo",
+    count: 3,
+    cover: jiffySiloCover,
+    href: "/gallery/jiffy-food-grade-silo/",
+  },
+  {
+    name: "Historical Restoration of Ford Model A Factory Tables",
     count: 4,
-    cover: sandblastExCover,
-    href: "/gallery/sandblasting-examples/",
+    cover: fordTablesCover,
+    href: "/gallery/ford-model-a-tables/",
   },
   {
     name: "Blasting and Repainting a Seawall — Coordination with SME",
     count: 1,
     cover: seawallCover,
     href: "/gallery/seawall-blast-repaint/",
+  },
+  // --- Smaller / mobile jobs ---
+  {
+    name: "Mobile Blasting: Removing Mill Scale for Pipe Manufacturer",
+    count: 7,
+    cover: millScalePipesCover,
+    href: "/gallery/mobile-blasting-mill-scale-pipes/",
+  },
+  {
+    name: "Mobile Blasting and Painting a Steel Trailer",
+    count: 6,
+    unit: "videos",
+    cover: dtiTrailerCover,
+    href: "/gallery/dti-steel-trailer/",
+  },
+  {
+    name: "Blasting Light Poles",
+    count: 5,
+    cover: lightPolesCover,
+    href: "/gallery/blasting-light-poles/",
+  },
+  {
+    name: "Bay Door Blast and Repaint",
+    count: 2,
+    cover: bayDoorsCover,
+    href: "/gallery/bay-door-blast-repaint/",
+  },
+  {
+    name: "Dry-Ice Blasting for Machine Cleaning",
+    count: 2,
+    unit: "videos",
+    cover: luxwallCover,
+    href: "/gallery/dry-ice-machine-cleaning/",
+  },
+  {
+    name: "Sandblasting Examples",
+    count: 4,
+    cover: sandblastExCover,
+    href: "/gallery/sandblasting-examples/",
   },
 ];
 ---
