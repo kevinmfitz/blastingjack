@@ -1,0 +1,135 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Ann Arbor, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Ann Arbor, MI. Serving University of Michigan facilities, research campuses, automotive R&D, historic buildings, and commercial properties in Washtenaw County."
+  canonical="https://blastingjack.com/areas-served/ann-arbor-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Ann Arbor, MI"
+    subtitle="Surface preparation for Ann Arbor's institutional facilities, research campuses, and historic buildings."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Ann Arbor's institutional and industrial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Ann Arbor's surface preparation needs are distinct from the rest of the region. The University of Michigan's campus infrastructure, research facilities, and institutional buildings represent a significant and ongoing maintenance load. Automotive R&D and engineering operations in and around Ann Arbor require surface prep on specialized test equipment and research infrastructure. Historic downtown buildings require careful handling.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Ann Arbor from our Warren base. Ann Arbor is within our extended service range — industrial, institutional, and commercial projects are accessible for work with appropriate scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Ann Arbor projects near occupied campus buildings, historic structures, or urban sites where dust control is important, vapor/dustless blasting is often the right method. It suppresses dust at the source — appropriate for occupied institutional environments.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Ann Arbor</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Ann Arbor project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Institutional and Campus Infrastructure", desc: "University and institutional facility infrastructure — structural steel, mechanical systems, campus buildings — requires surface preparation on maintenance schedules. We work with facilities management on scheduling and access." },
+          { title: "Automotive R&D and Testing Facilities", desc: "Automotive engineering and testing facilities in and around Ann Arbor maintain specialized equipment and structural assets that require professional surface preparation." },
+          { title: "Historic Brick and Masonry Buildings", desc: "Ann Arbor's historic downtown and campus buildings include brick, ornamental metalwork, and architectural steel that requires careful media selection. Vapor blasting with fine media is often the appropriate method to clean without damaging original material." },
+          { title: "Research Facility Equipment", desc: "Research and laboratory facilities maintain specialized equipment and mechanical infrastructure that requires periodic surface preparation. Dry ice blasting is available for sensitive equipment where abrasive-free cleaning is required." },
+          { title: "Commercial Building Steel", desc: "Office buildings, retail developments, and commercial properties throughout Ann Arbor maintain structural steel requiring periodic surface preparation as coatings age and protective systems reach end of life." },
+          { title: "Infrastructure Assets", desc: "Bridges, utility structures, and transportation infrastructure in the Ann Arbor area require surface preparation as part of capital maintenance programs managed by public agencies and engineering firms." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Livingston County", "/areas-served/livingston-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take blasting projects in Ann Arbor?", a: "Yes. Ann Arbor is within our extended service range from Warren. Industrial, institutional, commercial, and historic restoration projects are all within scope — contact us with your project scope and location." },
+          { q: "Is vapor blasting available for Ann Arbor campus and institutional projects?", a: "Yes. Vapor/dustless blasting is available throughout Ann Arbor. For projects near occupied campus buildings, urban historic structures, or areas where dust is a constraint, vapor blasting is often the right approach — it suppresses dust at the source." },
+          { q: "Can you handle historic masonry blasting in Ann Arbor?", a: "Yes. Ann Arbor has significant historic brick and ornamental metalwork that requires careful media selection and blast parameters to clean without damaging original material. We assess the substrate and recommend the appropriate method." },
+          { q: "Do you work with University of Michigan facilities?", a: "We provide mobile sandblasting for institutional and campus facility projects. University facilities requiring structural steel maintenance, equipment blasting, or infrastructure surface preparation can contact us to discuss project requirements." },
+          { q: "What's the minimum scope for an Ann Arbor project?", a: "Extended mobilization distances work best with meaningful project scope. Contact us with your location and what needs blasting — we'll give you a straightforward answer on whether it makes sense and what to expect on cost." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Ann Arbor?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

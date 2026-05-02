@@ -1,0 +1,137 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Industrial Sandblasting in Detroit, MI | Blasting Jack"
+  description="Industrial sandblasting and mobile surface preparation in Detroit, MI. Serving historic industrial buildings, automotive facilities, infrastructure, and commercial properties throughout the city."
+  canonical="https://blastingjack.com/areas-served/detroit-industrial-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Industrial Sandblasting in Detroit, MI"
+    subtitle="Mobile surface preparation for Detroit's industrial buildings, infrastructure, and manufacturing facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Detroit's industrial base demands professional surface prep
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Detroit has one of the largest concentrations of historic industrial buildings, active manufacturing facilities, infrastructure assets, and construction activity of any city in Michigan. Older brick and structural steel buildings being restored, active industrial sites requiring ongoing maintenance blasting, bridge and utility infrastructure due for surface prep — Detroit generates significant demand for professional blasting services.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting throughout Detroit from our Warren base. Detroit projects regularly involve containment planning for urban job sites, coordination with general contractors, and compliance with city permitting for abrasive blasting — all of which we handle as part of project setup.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Detroit projects near occupied buildings, in-use facilities, or areas where dust control is essential, our vapor/dustless blasting capability is available as an alternative to open abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Detroit</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Detroit project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Historic Industrial Building Restoration", desc: "Detroit's older industrial building stock — brick facades, ornamental steel, structural steel frames — requires careful media selection and blast parameters. We've worked on historic restoration projects where protecting original material is as important as cleaning it." },
+          { title: "Active Manufacturing Facilities", desc: "Detroit's remaining active manufacturing operations require scheduled blast maintenance on equipment, structural steel, and production assets — coordinated around plant operations to minimize downtime." },
+          { title: "Bridge and Infrastructure Steel", desc: "Bridges, utility structures, and transportation infrastructure throughout Detroit require surface preparation as part of rehabilitation programs. We work with engineers, contractors, and public agencies managing these projects." },
+          { title: "Commercial and Institutional Buildings", desc: "Office buildings, institutional facilities, and parking structures throughout Detroit maintain structural steel that requires periodic blast and recoat as coatings age and fail." },
+          { title: "Urban Redevelopment Projects", desc: "Detroit's active redevelopment and adaptive reuse construction generates demand for structural steel prep, coating removal from existing steel, and surface preparation before new protective systems are applied." },
+          { title: "Waterfront and Industrial Corridor Assets", desc: "Detroit River waterfront properties and industrial corridor facilities — fuel terminals, processing plants, material handling — require surface prep with appropriate containment near waterways." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Dearborn", "/areas-served/dearborn-mobile-sandblasting/"],
+          ["Livonia", "/areas-served/livonia-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take industrial blasting projects in Detroit?", a: "Yes. Detroit is within our regular service range. We take industrial, commercial, infrastructure, and historic restoration projects in the city — contact us with scope and location." },
+          { q: "How do you handle containment for urban Detroit job sites?", a: "Urban Detroit projects require site-specific containment planning. We assess each location and design containment to prevent blast debris from migrating to adjacent properties, stormwater, or occupied spaces. For sites near waterways, we use methods that prevent abrasive media from entering storm drains." },
+          { q: "Can you handle historic masonry and brick blasting in Detroit?", a: "Yes. Detroit's historic building stock includes brick, ornamental metalwork, and architectural steel that requires careful media selection and pressure control. Vapor blasting with fine media is often the appropriate method for these surfaces — it cleans without damaging original material." },
+          { q: "Do you coordinate with general contractors on Detroit redevelopment projects?", a: "Yes. We work directly with general contractors managing redevelopment, adaptive reuse, and construction projects in Detroit. We can sequence blast work around other trades and provide documentation for project closeout." },
+          { q: "Do you work on Detroit bridge and infrastructure projects?", a: "Yes. Surface preparation for bridges, utility structures, and transportation infrastructure is within our scope. We work with public agencies, engineering firms, and general contractors managing these programs." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need industrial blasting in Detroit?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

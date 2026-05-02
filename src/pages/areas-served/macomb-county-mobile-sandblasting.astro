@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Sterling Heights", "Warren", "Shelby Township", "Clinton Township",
+  "Fraser", "Roseville", "St. Clair Shores", "Mount Clemens",
+  "Utica", "New Baltimore", "Chesterfield Township", "Harrison Township",
+  "Eastpointe", "Macomb Township", "Washington Township", "Romeo",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Macomb County, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation throughout Macomb County, MI. Serving Warren, Sterling Heights, Clinton Township, Shelby Township, and surrounding areas. Industrial, commercial, and fleet blasting."
+  canonical="https://blastingjack.com/areas-served/macomb-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Macomb County, MI"
+    subtitle="Blasting Jack is based in Warren — Macomb County is our home territory."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Local blasting crew, industrial capacity
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack is headquartered at 14500 East Eleven Mile Road in Warren — Macomb County is our home base. We're not mobilizing from two counties away and marking up travel time. When a facility manager or maintenance contractor in Sterling Heights, Clinton Township, or Shelby Township needs mobile blasting, we're already close.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Macomb County is one of Michigan's densest industrial corridors — automotive stamping plants, Tier 1 and Tier 2 suppliers, metal fabricators, fleet yards, and manufacturing facilities that all need periodic surface preparation work on equipment, structural steel, tanks, and production assets.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We run crews of 10–20 with 900 CFM air capacity and four simultaneous blast setups. For large shutdown windows or multi-shift projects in Macomb County, we have the production capacity to stay on schedule.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Macomb County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Macomb County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Macomb County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Macomb County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <!-- Asset types -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Industrial and commercial assets we blast in Macomb County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Supplier Facilities", desc: "Stamping plants, Tier 1 and Tier 2 supplier facilities, and die shops throughout the Macomb County corridor require periodic equipment blasting and structural steel maintenance." },
+          { title: "Metal Fabrication Shops", desc: "Steel fabricators in Macomb County producing structural components, assemblies, and custom fabrication need mill scale removed and anchor profiles established before primer is applied." },
+          { title: "Manufacturing Equipment", desc: "Production machinery, conveyors, presses, and material handling systems blasted in-place at Macomb County manufacturing facilities — scheduled around production windows." },
+          { title: "Fleet and Trailer Yards", desc: "Equipment rental companies and trucking fleets throughout Macomb County rely on mobile blasting to remove rust and old coatings from trailers, flatbeds, and fleet equipment." },
+          { title: "Parking Structures", desc: "Commercial and municipal parking garages in Sterling Heights, Warren, and Mount Clemens require surface preparation on structural steel columns and beams on a maintenance cycle." },
+          { title: "Tanks and Silos", desc: "Industrial storage tanks and processing vessels at Macomb County facilities blasted interior and exterior — food-grade, chemical, and industrial service." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Sterling Heights", "/areas-served/sterling-heights-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Is Blasting Jack based in Macomb County?", a: "Yes — we're headquartered at 14500 East Eleven Mile Road in Warren, MI 48089. Macomb County is our primary service area. No long mobilization hauls, no inflated travel fees for local work." },
+          { q: "What industries in Macomb County call Blasting Jack most often?", a: "Automotive suppliers, metal fabricators, equipment rental companies, and facility maintenance departments make up the majority of our Macomb County client base. We also work with general contractors managing commercial construction and renovation projects in the county." },
+          { q: "Can you blast inside an active Macomb County manufacturing plant?", a: "Yes — with appropriate containment. We schedule around production windows and can work nights, weekends, and during planned shutdowns. Containment systems prevent blast debris from migrating into active production areas." },
+          { q: "Do you offer dustless blasting in Macomb County?", a: "Yes. Our vapor/dustless blasting (BlastOne MistBlaster) is available throughout Macomb County for jobs where dust control is a requirement — occupied facilities, urban sites, or surfaces near other trades." },
+          { q: "How quickly can you mobilize to a Macomb County project?", a: "Being based in Warren, we're typically able to get to most Macomb County locations quickly. For urgent or emergency blast work, contact us directly to discuss availability. Scheduled work is booked in advance." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Macomb County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

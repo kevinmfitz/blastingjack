@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Novi, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Novi, MI. Serving automotive suppliers, corporate campuses, manufacturing operations, and commercial facilities throughout western Oakland County."
+  canonical="https://blastingjack.com/areas-served/novi-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Novi, MI"
+    subtitle="Surface preparation for Novi's automotive supplier corridor, corporate campuses, and commercial facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Novi's industrial and commercial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Novi sits at the intersection of I-96 and M-5, making it a hub for automotive supplier facilities, corporate offices, and commercial development in western Oakland County. The city's mix of Tier 1 and Tier 2 supplier operations, precision manufacturing, and large commercial properties generates demand for professional surface preparation across equipment, structural steel, and facility assets.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Novi from our Warren base. Novi is within our standard service range for projects with appropriate scope. We work around production schedules and maintenance windows, and coordinate with coating contractors as needed.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Novi projects near occupied commercial or corporate spaces where dust control is a concern, vapor/dustless blasting is available as a low-dust alternative.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Novi</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Novi project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Supplier Facilities", desc: "Tier 1 and Tier 2 supplier operations in Novi require scheduled equipment blasting and structural maintenance around production calendars." },
+          { title: "Corporate Campus Building Steel", desc: "Novi's corporate campuses maintain parking structures and building steel that require periodic surface preparation as coatings reach end of life." },
+          { title: "Precision Manufacturing Equipment", desc: "Machine shops and precision manufacturing operations in Novi's industrial parks need mill scale removed and surface prep completed before primer application." },
+          { title: "Parking Structures", desc: "Commercial developments, hospitals, and corporate properties throughout Novi maintain parking structures with structural steel requiring blast and recoat on a maintenance schedule." },
+          { title: "Equipment and Fleet", desc: "Corporate equipment, fleet vehicles, and industrial machinery at Novi facilities blasted in-place — mobile service comes to the asset's location." },
+          { title: "Commercial Building Maintenance", desc: "Retail developments, office parks, and commercial properties throughout Novi maintain structural steel and facade steel that requires periodic surface preparation." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Auburn Hills", "/areas-served/auburn-hills-industrial-sandblasting/"],
+          ["Southfield", "/areas-served/southfield-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take blasting projects in Novi?", a: "Yes. Novi is within our service range from Warren. We take industrial, commercial, and facility maintenance projects — contact us with your scope and location to confirm." },
+          { q: "Can you blast near occupied commercial buildings in Novi?", a: "Yes. For Novi projects near occupied areas, vapor/dustless blasting is available. It suppresses dust at the source and is appropriate for jobs near corporate campuses, occupied retail, or commercial properties." },
+          { q: "Do you offer dry ice blasting in Novi?", a: "Yes. Dry ice blasting for machine cleaning and production equipment is available in Novi. It's particularly useful for automotive supplier and manufacturing environments where cleaning needs to happen in-place without moisture or abrasive residue." },
+          { q: "Can you handle parking structure blasting in Novi?", a: "Yes. Parking structure structural steel is a regular project type. We work around building operations and can schedule nights or weekends to minimize disruption." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Novi?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

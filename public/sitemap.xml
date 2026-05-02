@@ -235,6 +235,112 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Areas served — counties -->
+  <url>
+    <loc>https://blastingjack.com/areas-served/macomb-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/oakland-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/wayne-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/washtenaw-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/genesee-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/livingston-county-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Areas served — cities -->
+  <url>
+    <loc>https://blastingjack.com/areas-served/warren-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/sterling-heights-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/detroit-industrial-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/troy-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/auburn-hills-industrial-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/novi-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/dearborn-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/livonia-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/southfield-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/ann-arbor-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blastingjack.com/areas-served/flint-mobile-sandblasting/</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog posts -->
   <url>
     <loc>https://blastingjack.com/blog/abrasive-selection-silica-free-industrial-sandblasting/</loc>

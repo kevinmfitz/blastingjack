@@ -1,0 +1,161 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Troy", "Auburn Hills", "Novi", "Southfield", "Royal Oak",
+  "Rochester Hills", "Pontiac", "Farmington Hills", "Madison Heights",
+  "Wixom", "Bloomfield Hills", "West Bloomfield", "Waterford",
+  "Ferndale", "Berkley", "Clawson", "Milford", "Walled Lake",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Oakland County, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation throughout Oakland County, MI — serving Troy, Auburn Hills, Novi, Southfield, Royal Oak, Rochester Hills, and surrounding areas."
+  canonical="https://blastingjack.com/areas-served/oakland-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Oakland County, MI"
+    subtitle="Industrial surface preparation for Oakland County's manufacturing, automotive, and commercial facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Oakland County's industrial corridor
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Oakland County is home to a concentration of automotive engineering, Tier 1 suppliers, and corporate campuses that generate substantial demand for industrial surface preparation. Auburn Hills houses major automotive engineering and manufacturing operations. Troy, Novi, and Rochester Hills support a dense network of machine shops, fabricators, and industrial facilities. Pontiac and Wixom have legacy manufacturing infrastructure that requires ongoing maintenance blasting.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting throughout Oakland County from our Warren, MI base — efficiently serving the county's manufacturing belt without long mobilization delays. We work around production schedules, planned shutdowns, and maintenance windows.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Oakland County projects that require both surface preparation and industrial coating, our sister brand Endurance Painting can coordinate blasting and coating application under one project plan.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Oakland County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Oakland County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Oakland County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Oakland County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Asset types served in Oakland County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Engineering & R&D Facilities", desc: "Engineering campuses and development facilities in Auburn Hills, Troy, and Rochester Hills maintain specialized equipment and structural assets that require professional surface preparation." },
+          { title: "Machine Shops and Metal Fabricators", desc: "Oakland County's precision machining and fabrication shops need mill scale removed from fabricated steel and surface prep on equipment maintained in tight tolerances." },
+          { title: "Parking Structures", desc: "Corporate campuses, hospitals, and commercial properties throughout Southfield, Troy, and Novi maintain parking structures where structural steel requires periodic blast and recoat." },
+          { title: "Industrial Equipment and Fleet", desc: "Equipment dealers, rental yards, and large corporate fleets in Oakland County use mobile blasting to restore and recoat equipment without transport costs." },
+          { title: "Commercial Building Steel", desc: "Office and industrial building steel in Farmington Hills, Royal Oak, and Madison Heights requires maintenance surface preparation as buildings age and coatings fail." },
+          { title: "Manufacturing Tanks and Vessels", desc: "Process tanks, storage vessels, and industrial silos at Oakland County manufacturing facilities require interior and exterior surface prep on a maintenance schedule." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Auburn Hills", "/areas-served/auburn-hills-industrial-sandblasting/"],
+          ["Novi", "/areas-served/novi-mobile-sandblasting/"],
+          ["Southfield", "/areas-served/southfield-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How far is Blasting Jack from Oakland County?", a: "We're based in Warren (Macomb County), which borders Oakland County directly. Troy, Madison Heights, and Royal Oak are routine service territory. Auburn Hills, Pontiac, Novi, and Wixom are all well within our standard service range with no unusual mobilization costs." },
+          { q: "Do you work at automotive supplier facilities in Oakland County?", a: "Yes — automotive suppliers, engineering campuses, and manufacturing facilities in Auburn Hills, Troy, and Rochester Hills are among our regular Oakland County project types. We understand the scheduling constraints these facilities operate under and plan accordingly." },
+          { q: "Can you blast in occupied Oakland County office or industrial parks?", a: "Yes, with appropriate containment. Vapor/dustless blasting is often the right choice for jobs near occupied areas — it suppresses dust at the source. We assess each location and recommend the appropriate method." },
+          { q: "What's the minimum project size for Oakland County service?", a: "We don't have a strict minimum — but the economics of mobilizing a blast crew work best on projects with meaningful scope. A piece of equipment, a structural steel inspection zone, or a tank prep job all qualify. Contact us with your scope and we'll let you know if it makes sense." },
+          { q: "Do you serve Oakland County for dry ice blasting?", a: "Yes. Dry ice blasting for machine cleaning, production equipment, and precision components is available throughout Oakland County. It's often the right choice for automotive and engineering facilities where equipment cleaning needs to happen in-place without disassembly." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Oakland County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

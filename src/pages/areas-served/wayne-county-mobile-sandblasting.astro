@@ -1,0 +1,163 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Detroit", "Dearborn", "Livonia", "Canton", "Plymouth",
+  "Taylor", "Romulus", "Westland", "Northville", "Allen Park",
+  "Dearborn Heights", "Inkster", "Garden City", "Wayne",
+  "Wyandotte", "Trenton", "Lincoln Park", "River Rouge",
+  "Melvindale", "Redford Township",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Wayne County, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Wayne County, MI — serving Detroit, Dearborn, Livonia, Canton, and the greater Metro Detroit industrial corridor."
+  canonical="https://blastingjack.com/areas-served/wayne-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Wayne County, MI"
+    subtitle="Metro Detroit's industrial base demands serious surface preparation. Blasting Jack delivers it."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Wayne County's industrial base needs real surface prep
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Wayne County is Michigan's most heavily industrialized county — automotive assembly plants, steel processing facilities, freight and logistics hubs, port operations along the Detroit River, and decades of industrial infrastructure that requires ongoing maintenance blasting to keep structural steel, equipment, and vessels protected.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From Detroit's historic industrial buildings to Dearborn's Ford manufacturing corridor, from Wyandotte's chemical processing plants to Romulus's logistics facilities, the range of surface preparation needs in Wayne County is as varied as the county itself.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack provides mobile sandblasting throughout Wayne County from our Warren base — with the crew size, equipment capacity, and scheduling flexibility to handle projects at Detroit-scale industrial facilities and smaller commercial properties alike.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Wayne County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Wayne County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Wayne County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Wayne County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Asset types served in Wayne County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Assembly and Stamping", desc: "Wayne County is home to active automotive assembly and stamping operations requiring scheduled equipment blasting, structural steel maintenance, and surface prep during plant shutdowns." },
+          { title: "Historic Industrial Buildings", desc: "Detroit's older industrial building stock — brick, structural steel, and concrete — requires surface restoration and prep before protective coating application. We work on the surface, not the story." },
+          { title: "Chemical and Process Facilities", desc: "Along the Detroit River corridor and in Wyandotte, chemical and process facilities require tank and vessel blasting to strict SSPC standards with appropriate containment." },
+          { title: "Freight, Logistics, and Fleet", desc: "Wayne County's freight and logistics facilities — including those serving DTW and the port — maintain large fleets and material handling equipment that need regular blast maintenance." },
+          { title: "Infrastructure and Municipal Assets", desc: "Bridges, water infrastructure, utility assets, and transportation infrastructure throughout Wayne County require surface preparation as part of maintenance and rehabilitation programs." },
+          { title: "Commercial and Institutional Properties", desc: "Parking structures, institutional buildings, and commercial properties in Detroit, Livonia, and Dearborn maintain structural steel that requires periodic blast and recoat." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+          ["Dearborn", "/areas-served/dearborn-mobile-sandblasting/"],
+          ["Livonia", "/areas-served/livonia-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you work in Detroit proper?", a: "Yes. We take projects in Detroit regularly — historic industrial buildings, institutional properties, infrastructure, and commercial facilities. Detroit projects often involve containment planning for urban job sites, which we handle as part of project setup." },
+          { q: "Can you handle the scale of Wayne County's larger industrial facilities?", a: "Yes. We run crews of 10–20 with 900 CFM air capacity and four simultaneous blast setups — scaled for production work at large industrial facilities. We've worked on multi-week projects at major facilities and understand the coordination requirements." },
+          { q: "Do you have experience with historic building restoration blasting in Detroit?", a: "Yes. Wayne County's older building stock includes historic brick, ornamental metalwork, and architectural steel that requires careful media selection and blast parameters. Vapor blasting is often the appropriate method for these surfaces." },
+          { q: "How do you handle Wayne County projects near the Detroit River or waterways?", a: "Projects near waterways require containment planning to prevent abrasive media and blast debris from entering stormwater. We design containment for the specific site and, if required by the project or municipality, can incorporate water jetting methods that don't generate abrasive waste." },
+          { q: "Do you coordinate with painting contractors for Wayne County projects?", a: "Yes. We work directly with painting contractors who subcontract blast prep, and through our sister brand Endurance Painting, we can provide both blasting and industrial coating under one project plan when that's what the project needs." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Wayne County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

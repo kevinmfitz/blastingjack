@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Dearborn, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Dearborn, MI. Serving Ford manufacturing operations, industrial facilities, historic buildings, and commercial properties in western Wayne County."
+  canonical="https://blastingjack.com/areas-served/dearborn-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Dearborn, MI"
+    subtitle="Surface preparation for Dearborn's Ford manufacturing corridor and industrial facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Dearborn's industrial and manufacturing base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Dearborn is home to one of Michigan's most significant manufacturing concentrations — Ford Motor Company's River Rouge Complex, assembly and stamping operations, supplier facilities, and supporting industrial infrastructure along the Rouge River corridor. The combination of active manufacturing, historic industrial buildings, and ongoing facility maintenance creates substantial demand for professional surface preparation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Dearborn from our Warren base. Dearborn is within our regular service range for industrial, commercial, and institutional projects. We coordinate with plant maintenance departments, general contractors, and painting contractors depending on project structure.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Dearborn projects where dust control is required — near occupied facilities, historic buildings, or urban sites — vapor/dustless blasting provides a low-dust alternative to open abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Dearborn</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Dearborn project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Manufacturing Operations", desc: "Dearborn's manufacturing facilities require blast maintenance on equipment, structural steel, plant infrastructure, and process vessels — scheduled during planned shutdowns and maintenance windows." },
+          { title: "Historic Industrial Building Restoration", desc: "Dearborn's older industrial buildings — brick, structural steel, ornamental iron — require careful surface preparation for restoration projects, with media selection matched to the original material." },
+          { title: "Manufacturing Equipment In-Place", desc: "Production machinery, material handling systems, and industrial equipment at Dearborn facilities blasted without transport — mobile service comes to the asset." },
+          { title: "Tanks, Vessels, and Process Equipment", desc: "Process tanks, storage vessels, and industrial equipment at Dearborn manufacturing facilities blasted interior and exterior to SSPC standards for industrial service." },
+          { title: "Infrastructure and Waterway-Adjacent Assets", desc: "Dearborn's Rouge River corridor requires containment planning for infrastructure surface prep near waterways. We design containment for each site and use appropriate methods for waterway-adjacent work." },
+          { title: "Commercial and Institutional Steel", desc: "Commercial buildings, institutional facilities, and parking structures throughout Dearborn require periodic surface preparation on structural steel as protective coatings age." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+          ["Livonia", "/areas-served/livonia-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take industrial blasting projects in Dearborn?", a: "Yes. Dearborn is within our regular service range. Industrial, commercial, historic restoration, and infrastructure projects are all within scope — contact us with your location and what needs blasting." },
+          { q: "Can you work at Dearborn manufacturing facilities during shutdowns?", a: "Yes. Planned shutdown windows are a common scheduling structure for industrial blast work. We coordinate with plant maintenance and can run multi-shift operations to maximize output during the available window." },
+          { q: "How do you handle blasting near Dearborn's Rouge River?", a: "Projects near the Rouge River corridor require containment to prevent abrasive media and blast debris from entering stormwater. We design site-specific containment and, where required, can incorporate water jetting methods that don't generate abrasive waste." },
+          { q: "Can you handle historic building blasting in Dearborn?", a: "Yes. Dearborn has significant historic industrial architecture that requires careful media selection and blast parameters. We assess the original material and recommend the appropriate method — often vapor blasting with fine media for brick and ornamental metalwork." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Dearborn?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

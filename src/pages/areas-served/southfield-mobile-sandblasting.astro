@@ -1,0 +1,133 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Southfield, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Southfield, MI. Serving corporate campuses, parking structures, commercial facilities, and industrial operations throughout Oakland County."
+  canonical="https://blastingjack.com/areas-served/southfield-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Southfield, MI"
+    subtitle="Surface preparation for Southfield's corporate campuses, parking structures, and commercial facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Southfield's commercial and industrial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Southfield is one of Metro Detroit's most significant commercial hubs — a concentration of corporate office towers, automotive supplier headquarters, healthcare campuses, and established commercial development along the I-696 and M-10 corridors. These properties maintain significant structural steel in buildings and parking structures that require periodic surface preparation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Southfield from our Warren base. Southfield is within our standard service range for commercial, institutional, and industrial projects. We work around business hours, tenant occupancy schedules, and maintenance windows.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Southfield projects in occupied commercial or corporate buildings, vapor/dustless blasting is available where dust control is a requirement near tenants or building users.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Southfield</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Southfield project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Parking Structure Steel", desc: "Southfield's dense commercial and corporate district supports numerous multi-level parking structures with structural steel that requires periodic blast and recoat to prevent corrosion progression." },
+          { title: "Corporate Campus Building Steel", desc: "High-rise office towers and corporate headquarters throughout Southfield maintain structural steel in building infrastructure and facades that require maintenance surface preparation." },
+          { title: "Healthcare Campus Infrastructure", desc: "Hospital and healthcare campus facilities in Southfield maintain structural steel, equipment, and mechanical infrastructure that requires professional surface preparation." },
+          { title: "Commercial and Retail Properties", desc: "Retail developments, hotels, and commercial buildings throughout Southfield have structural steel and building components requiring periodic blast and recoat as coatings age." },
+          { title: "Equipment and Mechanical Systems", desc: "Mechanical rooms, building equipment, and industrial systems at Southfield commercial facilities blasted in-place — mobile service without removing equipment from the building." },
+          { title: "Industrial Operations", desc: "Industrial and manufacturing operations in Southfield's industrial parks require scheduled equipment blasting, tank maintenance, and structural steel surface preparation." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Novi", "/areas-served/novi-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take blasting projects in Southfield?", a: "Yes. Southfield is within our standard service range from Warren. We take commercial, institutional, and industrial projects in the city — parking structures, building steel, equipment, and facility maintenance." },
+          { q: "Can you blast parking structures in occupied Southfield buildings?", a: "Yes. Parking structure blast work is typically scheduled around off-peak hours, nights, or weekends to minimize impact on building tenants. We coordinate the schedule with property management or facilities staff." },
+          { q: "Do you offer dustless blasting in Southfield?", a: "Yes. Vapor/dustless blasting is available for Southfield projects near occupied commercial spaces, office buildings, or areas where dust is not acceptable. It suppresses dust at the source." },
+          { q: "Can you work on high-rise building steel in Southfield?", a: "Yes. We assess each high-rise building project for access, containment requirements, and appropriate blasting method. For projects on occupied buildings, we coordinate access with property management and design containment to protect surrounding areas." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Southfield?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

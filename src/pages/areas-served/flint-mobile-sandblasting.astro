@@ -1,0 +1,135 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Flint, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Flint, MI. Serving manufacturing facilities, fleet yards, infrastructure assets, and commercial properties throughout Genesee County."
+  canonical="https://blastingjack.com/areas-served/flint-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Flint, MI"
+    subtitle="Industrial surface preparation for Flint's manufacturing base, fleet operations, and infrastructure assets."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Flint's industrial and infrastructure base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Flint has deep manufacturing roots — automotive and metal fabrication operations, fleet maintenance yards, industrial equipment, and significant infrastructure assets across the city and surrounding Genesee County. These assets require ongoing surface preparation: equipment blasting, structural steel maintenance, tank prep, and fleet restoration.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Flint from our Warren base. Flint is within our extended service range for industrial and commercial projects with appropriate scope. We take manufacturing facility work, fleet blasting, infrastructure prep, and commercial building steel projects in the area.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Flint projects where dust control is required near occupied areas or sensitive environments, our vapor/dustless blasting capability provides a low-dust alternative to traditional abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Flint</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Flint project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Manufacturing and Industrial Facilities", desc: "Flint's automotive and metal manufacturing operations require scheduled blast maintenance on equipment, structural steel, and plant infrastructure — timed around production and maintenance windows." },
+          { title: "Fleet and Equipment Yards", desc: "Equipment operators and fleet maintenance yards throughout Flint use mobile blasting to restore rust-affected trailers, vehicles, and heavy equipment without transporting assets to a fixed facility." },
+          { title: "Infrastructure and Municipal Assets", desc: "Bridges, utility structures, water infrastructure, and municipal assets throughout Flint and Genesee County require surface preparation as part of rehabilitation and capital maintenance programs." },
+          { title: "Industrial Tanks and Vessels", desc: "Process tanks, storage vessels, and industrial silos at Flint manufacturing facilities blasted interior and exterior to SSPC standards for industrial service." },
+          { title: "Structural Steel", desc: "Industrial building steel, commercial buildings, and facility infrastructure in Flint require periodic surface preparation as protective coatings age and corrosion begins to progress." },
+          { title: "Historic Industrial Buildings", desc: "Flint's older industrial building stock — brick, structural steel, concrete — benefits from professional surface preparation before new protective coatings or restoration finishes are applied." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Genesee County", "/areas-served/genesee-county-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take industrial blasting projects in Flint?", a: "Yes. Flint is within our extended service range from Warren. Manufacturing, fleet, infrastructure, and commercial projects in the Flint area are within scope — contact us with your location and scope." },
+          { q: "Can you handle fleet and equipment blasting in Flint?", a: "Yes. Mobile blasting for fleet vehicles, trailers, and heavy equipment is a core service. We come to your yard — no need to transport assets to a fixed facility." },
+          { q: "Do you work on Flint infrastructure and bridge steel?", a: "Yes. Bridge surface preparation, utility structure maintenance, and municipal infrastructure blasting are within our scope. We work with public agencies, engineers, and general contractors managing these programs." },
+          { q: "What's the minimum project size for Flint?", a: "There's no strict minimum, but extended mobilization to Flint works best with meaningful project scope. Contact us with your location and what needs blasting — we'll give you a straight answer on whether the project makes sense." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Flint?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

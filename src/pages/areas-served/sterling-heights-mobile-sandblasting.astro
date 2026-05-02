@@ -1,0 +1,135 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Sterling Heights, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Sterling Heights, MI. Serving automotive suppliers, metal fabricators, fleet yards, and manufacturing facilities throughout Macomb County."
+  canonical="https://blastingjack.com/areas-served/sterling-heights-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Sterling Heights, MI"
+    subtitle="Industrial surface preparation for Sterling Heights' dense manufacturing and supplier corridor."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Sterling Heights from Warren
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Sterling Heights is one of Michigan's most industrially dense cities — a concentration of automotive Tier 1 and Tier 2 suppliers, metal fabricators, precision machining shops, and manufacturing facilities along the Van Dyke and Mound Road corridors. That density generates consistent demand for professional surface preparation: equipment blasting, structural steel maintenance, tank prep, and mill scale removal from fabricated steel.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack is based in Warren, directly adjacent to Sterling Heights. Sterling Heights projects receive the same fast mobilization as our home base — no long hauls, no inflated travel costs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We schedule around production windows, planned shutdowns, and maintenance calendars. For multi-shift or large-scope shutdown work, we have the crew and equipment capacity to hit production targets.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Sterling Heights</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Sterling Heights industries and asset types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Tier 1 and Tier 2 Suppliers", desc: "Sterling Heights' supplier corridor — stamping, die casting, precision machining — requires scheduled blast maintenance on equipment, tooling, and structural assets around production shutdowns." },
+          { title: "Metal Fabrication", desc: "Fabricators producing structural steel assemblies and custom components need mill scale removed and proper anchor profiles established before primer and topcoat application." },
+          { title: "Manufacturing Equipment", desc: "Production lines, conveyors, presses, and industrial machinery at Sterling Heights facilities blasted in-place without moving equipment — scheduled around your production window." },
+          { title: "Fleet and Equipment", desc: "Fleet maintenance, equipment rental operations, and trucking yards throughout Sterling Heights use mobile blasting for rust removal and coating restoration on trailers and heavy vehicles." },
+          { title: "Tanks and Vessels", desc: "Process tanks, storage vessels, and industrial silos at Sterling Heights manufacturing facilities blasted to SSPC standards for food-grade, chemical, and industrial service." },
+          { title: "Commercial and Industrial Steel", desc: "Building steel, parking structure columns, and industrial building infrastructure require periodic blast and recoat as protective coatings age." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How far is Blasting Jack from Sterling Heights?", a: "We're based in Warren, which borders Sterling Heights directly. Sterling Heights is part of our core service area — mobilization times and costs are the same as for our home base." },
+          { q: "Can you work inside an active Sterling Heights manufacturing facility?", a: "Yes. With containment and scheduling coordination, we work inside active facilities. We plan around your production windows — nights, weekends, planned shutdowns — and contain blast debris to the work area." },
+          { q: "Do you serve automotive suppliers in Sterling Heights for equipment blasting?", a: "Yes. Automotive supplier facilities — stamping, die, precision machining — are a core project type in Sterling Heights. We understand the scheduling constraints and can work within planned maintenance windows." },
+          { q: "Do you offer dustless blasting in Sterling Heights?", a: "Yes. Vapor/dustless blasting is available for Sterling Heights projects where dust control is required — near occupied areas, precision equipment, or active production nearby." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Sterling Heights?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

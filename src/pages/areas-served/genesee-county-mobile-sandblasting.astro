@@ -1,0 +1,158 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Flint", "Grand Blanc", "Burton", "Fenton", "Davison",
+  "Swartz Creek", "Mt. Morris", "Clio", "Linden", "Flushing",
+  "Montrose", "Beecher", "Goodrich", "Durand", "Otisville",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Genesee County, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation throughout Genesee County, MI — serving Flint, Grand Blanc, Burton, Fenton, and surrounding areas."
+  canonical="https://blastingjack.com/areas-served/genesee-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Genesee County, MI"
+    subtitle="Industrial surface preparation for Genesee County's manufacturing, fleet, and infrastructure assets."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting services available throughout Genesee County
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Genesee County has deep manufacturing roots — automotive and metal fabrication operations in Flint, Burton, and Davison, industrial equipment yards, fleet maintenance facilities, and significant infrastructure assets across the county. That industrial density creates ongoing demand for surface preparation: equipment blasting, structural steel maintenance, tank prep, and fleet restoration.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting throughout Genesee County. Flint and Grand Blanc are within our extended service range from Warren. Projects in Fenton, Linden, and the southern part of the county are accessible for work with appropriate scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Genesee County facilities where production schedules or occupied spaces require dust control, our vapor/dustless blasting capability provides a low-dust alternative to traditional abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Genesee County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Genesee County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Genesee County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Genesee County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Asset types served in Genesee County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive and Metal Manufacturing", desc: "Flint-area automotive and metal fabrication operations require equipment blasting, structural steel maintenance, and surface prep scheduled around plant maintenance windows." },
+          { title: "Fleet and Equipment Yards", desc: "Equipment dealers, construction fleets, and trucking operations throughout Genesee County use mobile blasting to restore rust-affected equipment without transport to a fixed facility." },
+          { title: "Industrial Tanks and Vessels", desc: "Process tanks, storage vessels, and industrial silos at Genesee County manufacturing facilities require interior and exterior surface preparation on scheduled maintenance cycles." },
+          { title: "Structural Steel", desc: "Commercial buildings, industrial facilities, and warehouse structures throughout the county maintain structural steel that requires periodic blast and recoat as coatings age." },
+          { title: "Infrastructure Assets", desc: "Bridges, utility structures, water treatment infrastructure, and municipal assets across Genesee County require surface preparation as part of capital maintenance programs." },
+          { title: "Historic Industrial Buildings", desc: "Flint's older industrial building stock includes brick facades, structural steel, and concrete requiring careful surface preparation before new protective coatings are applied." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Livingston County", "/areas-served/livingston-county-mobile-sandblasting/"],
+          ["Flint", "/areas-served/flint-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you serve Flint and Grand Blanc for industrial blasting?", a: "Yes. Flint and Grand Blanc are within our extended service range. We take industrial, commercial, and municipal projects in Genesee County — contact us with your scope and we'll confirm scheduling and mobilization details." },
+          { q: "Can you handle fleet and equipment blasting in Genesee County?", a: "Yes. Mobile blasting for fleet equipment, trailers, and heavy machinery is one of our core services. We come to your yard — no transporting equipment to a fixed facility." },
+          { q: "Do you offer vapor/dustless blasting in Genesee County?", a: "Yes. Vapor blasting is available throughout Genesee County. For facilities where dust control is important — near occupied areas, production equipment, or sensitive environments — it's often the appropriate method." },
+          { q: "What's the minimum project size for Genesee County service?", a: "There's no strict minimum, but longer mobilization distances are better suited to projects with meaningful scope. Contact us with your location and scope and we'll give you a straight answer on whether it makes sense." },
+          { q: "Can you blast infrastructure and bridge steel in Genesee County?", a: "Yes. Bridge deck prep, utility structure maintenance, and municipal infrastructure surface preparation are within our service scope. We work with public works departments, general contractors, and engineering firms managing these projects." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Genesee County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

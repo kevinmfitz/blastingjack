@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Warren, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Warren, MI. Blasting Jack is headquartered in Warren — no travel markup, fast mobilization, full industrial capacity for Macomb County facilities."
+  canonical="https://blastingjack.com/areas-served/warren-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Warren, MI"
+    subtitle="Blasting Jack is based in Warren. No travel markup, no long mobilization — we're already here."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Warren is our home base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack is headquartered at 14500 East Eleven Mile Road in Warren. When a Warren facility needs mobile blasting — equipment maintenance, structural steel prep, tank work, fleet restoration — we're already local. No inflated mobilization costs, no scheduling delays from a far-away crew.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Warren is one of Michigan's most industrially dense cities — automotive stamping plants, Tier 1 and Tier 2 suppliers, metal fabricators, fleet maintenance yards, and manufacturing facilities across the city generate consistent demand for professional surface preparation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We run crews of 10–20 with 900 CFM air capacity and four simultaneous blast setups. For large shutdowns or multi-shift production work at Warren industrial facilities, we have the output to keep pace.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Warren</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Warren industries and asset types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Suppliers and Stamping", desc: "Warren's automotive supplier corridor includes stamping, die, and precision manufacturing operations that require scheduled equipment blasting and structural steel maintenance around planned shutdowns." },
+          { title: "Metal Fabrication Shops", desc: "Steel fabricators in Warren need mill scale removed from fabricated assemblies and proper anchor profiles established on structural components before protective primers are applied." },
+          { title: "Fleet and Equipment Yards", desc: "Equipment rental companies, trucking operations, and fleet maintenance yards in Warren use mobile blasting to strip and restore trailers, flatbeds, and heavy equipment on-site." },
+          { title: "Manufacturing Equipment In-Place", desc: "Production machinery, conveyors, presses, and processing equipment blasted at Warren manufacturing facilities without disrupting surrounding operations — scheduled around your production window." },
+          { title: "Tanks and Process Vessels", desc: "Industrial storage tanks, process vessels, and silos at Warren facilities blasted interior and exterior to SSPC standards for food-grade, chemical, and industrial service." },
+          { title: "Commercial and Industrial Buildings", desc: "Parking structures, commercial steel, and industrial building infrastructure throughout Warren require periodic surface preparation as buildings age and coatings reach end of life." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Sterling Heights", "/areas-served/sterling-heights-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Is Blasting Jack actually based in Warren?", a: "Yes — we're headquartered at 14500 East Eleven Mile Road, Warren, MI 48089. Warren is our home base, not a service area we drive to from somewhere else." },
+          { q: "How quickly can you mobilize to a Warren facility?", a: "We're local — most Warren locations are minutes from our facility. For scheduled work, we book in advance. For urgent needs, contact us directly to discuss availability." },
+          { q: "Can you blast inside an active Warren manufacturing plant?", a: "Yes. With appropriate containment, we work inside active facilities. We schedule around production windows — nights, weekends, and planned shutdowns — and use containment to prevent blast debris from migrating into active areas." },
+          { q: "Do you work with Warren painting contractors?", a: "Yes. We work directly with painting and coating contractors who subcontract blast prep, and through our sister brand Endurance Painting, we can provide both blasting and industrial coating application under one project plan." },
+          { q: "What SSPC standards do you blast to in Warren?", a: "Depending on the project specification: SP-5 (white metal), SP-10 (near-white), SP-6 (commercial), and SP-7 (brush-off). We blast to the standard specified by the engineer, coating manufacturer, or project documents." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Warren?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

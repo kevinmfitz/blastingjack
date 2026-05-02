@@ -1,0 +1,154 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Brighton", "Howell", "Hartland", "Pinckney", "Fowlerville",
+  "Hamburg Township", "Genoa Township", "Green Oak Township",
+  "Cohoctah Township", "Oceola Township",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Livingston County, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Livingston County, MI — serving Brighton, Howell, Hartland, and surrounding communities. Industrial, commercial, and equipment blasting."
+  canonical="https://blastingjack.com/areas-served/livingston-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Livingston County, MI"
+    subtitle="Surface preparation for Livingston County's industrial, commercial, and infrastructure assets."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting services available throughout Livingston County
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Livingston County sits between Metro Detroit and the I-96 corridor, with a mix of light industrial operations, commercial development, construction contractors, and agricultural equipment that generates ongoing demand for surface preparation. Brighton and Howell anchor the county's commercial and light industrial activity, with significant construction and equipment yards throughout Hamburg Township and the surrounding communities.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting throughout Livingston County. Brighton and Howell are within our extended service range from Warren. For projects in outlying areas of the county, appropriate project scope ensures mobilization is practical.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Livingston County projects frequently involve construction equipment, agricultural machinery, fleet vehicles, and commercial building steel — all well-suited to mobile blasting at the asset's location.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Livingston County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Livingston County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Livingston County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Livingston County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Asset types served in Livingston County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Construction Equipment and Fleet", desc: "General contractors and equipment operators throughout Livingston County use mobile blasting to remove rust and failed coatings from excavators, trailers, and fleet vehicles at their yard." },
+          { title: "Light Industrial Facilities", desc: "Manufacturing operations, warehouses, and light industrial buildings in Brighton, Howell, and Hartland maintain structural steel and equipment that require periodic surface preparation." },
+          { title: "Commercial Building Steel", desc: "Office buildings, retail developments, and commercial properties throughout Livingston County maintain structural steel requiring blast and recoat as original coatings reach end of life." },
+          { title: "Agricultural Equipment", desc: "Farm equipment, storage structures, and agricultural processing assets in Livingston County's rural areas are suited to mobile blasting — no transport needed." },
+          { title: "Infrastructure Assets", desc: "Bridges, drainage structures, utility assets, and transportation infrastructure across Livingston County require surface preparation as part of capital maintenance programs." },
+          { title: "Residential and Custom Projects", desc: "Livingston County's custom home and estate market generates periodic demand for gates, railings, decorative metalwork, and other custom steel restoration requiring careful blast prep." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you serve Brighton and Howell for mobile blasting?", a: "Yes. Brighton and Howell are within our service range. We take industrial, commercial, and equipment blasting projects in Livingston County — contact us with your scope to confirm." },
+          { q: "Can you blast construction equipment in Livingston County?", a: "Yes. Mobile blasting for excavators, trailers, dump trucks, and fleet equipment is a regular project type. We come to your location — no need to transport equipment to a fixed facility." },
+          { q: "Is there a minimum project size for Livingston County?", a: "There's no strict minimum, but extended mobilization works best on projects with meaningful scope. Contact us with your location and what needs blasting and we'll be straightforward about whether it makes economic sense." },
+          { q: "Do you serve rural parts of Livingston County?", a: "Yes, for projects with appropriate scope. Hamburg Township, outlying townships, and rural areas in the county are accessible. The further from our Warren base, the more a project needs to justify the mobilization." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Livingston County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Industrial Sandblasting in Auburn Hills, MI | Blasting Jack"
+  description="Industrial sandblasting and mobile surface preparation in Auburn Hills, MI. Serving automotive manufacturing, engineering campuses, and industrial facilities throughout northern Oakland County."
+  canonical="https://blastingjack.com/areas-served/auburn-hills-industrial-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Industrial Sandblasting in Auburn Hills, MI"
+    subtitle="Surface preparation for Auburn Hills' major automotive manufacturing and engineering facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Auburn Hills' automotive and industrial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Auburn Hills is home to major automotive manufacturing and engineering operations, Tier 1 supplier facilities, and a concentration of industrial and commercial development that generates substantial demand for surface preparation. The city's manufacturing facilities maintain complex equipment, structural steel, tanks, and production assets that require professional blasting on scheduled maintenance cycles.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Auburn Hills from our Warren, MI base. Auburn Hills is within our standard service range — facilities here receive professional blast crews without long mobilization delays or inflated travel costs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work within planned shutdown windows, maintenance schedules, and production calendars. For multi-shift or production-intensive blast work at Auburn Hills industrial facilities, our crew and equipment capacity is scaled accordingly.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Auburn Hills</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Auburn Hills project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Manufacturing Facilities", desc: "Auburn Hills' automotive manufacturing operations require blast maintenance on production equipment, structural steel, and plant infrastructure — scheduled during planned shutdown windows to minimize operational impact." },
+          { title: "Tier 1 Supplier Facilities", desc: "Supplier plants in Auburn Hills maintain specialized equipment, tooling, and structural assets that require professional surface preparation on maintenance cycles tied to production schedules." },
+          { title: "Engineering Campus Infrastructure", desc: "Corporate engineering campuses maintain building steel, parking structures, test facilities, and equipment that require periodic surface preparation as protective coatings age." },
+          { title: "Manufacturing Tanks and Vessels", desc: "Process tanks, chemical vessels, and industrial silos at Auburn Hills facilities blasted to SSPC standards — interior and exterior, chemical and industrial service." },
+          { title: "Dry Ice Blasting for Production Equipment", desc: "Auburn Hills' precision manufacturing and engineering environments benefit from dry ice blasting for in-place equipment cleaning without disassembly, moisture, or abrasive residue." },
+          { title: "Structural Steel", desc: "Industrial building steel, parking structure columns, and commercial building infrastructure throughout Auburn Hills require maintenance surface preparation on scheduled cycles." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Novi", "/areas-served/novi-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take industrial blasting projects at Auburn Hills manufacturing facilities?", a: "Yes. Auburn Hills manufacturing and supplier facilities are within our standard service range from Warren. We work within planned shutdown windows and production maintenance schedules." },
+          { q: "Can you work inside an active Auburn Hills production facility?", a: "Yes. With appropriate containment, we work inside active facilities. We plan around production windows and contain blast debris to the work area to prevent migration into active production zones." },
+          { q: "Do you offer dry ice blasting in Auburn Hills?", a: "Yes. Dry ice blasting for in-place machine cleaning and equipment maintenance is available in Auburn Hills. It's well-suited for automotive and engineering manufacturing environments where no moisture and no abrasive residue are requirements." },
+          { q: "Can you handle tank and vessel blasting at Auburn Hills facilities?", a: "Yes. Tank interior and exterior blasting to SSPC standards — SP-5 through SP-10 depending on coating specification — is within our scope. We work with the coating manufacturer's spec or the project engineer's standard." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need industrial blasting in Auburn Hills?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

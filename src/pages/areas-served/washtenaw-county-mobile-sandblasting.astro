@@ -1,0 +1,154 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Ann Arbor", "Ypsilanti", "Saline", "Chelsea", "Dexter", "Milan",
+  "Pittsfield Township", "Superior Township", "Manchester", "Whitmore Lake",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Washtenaw County, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Washtenaw County, MI — serving Ann Arbor, Ypsilanti, Saline, and surrounding areas. Industrial, research, and commercial facility blasting."
+  canonical="https://blastingjack.com/areas-served/washtenaw-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Washtenaw County, MI"
+    subtitle="Surface preparation for Washtenaw County's research, manufacturing, and industrial facilities."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting services available throughout Washtenaw County
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Washtenaw County has a distinct mix of industrial and institutional assets — University of Michigan campus infrastructure, light manufacturing along the US-23 and I-94 corridors, automotive R&D and testing facilities in Ann Arbor and Ypsilanti, and processing and production facilities in Saline, Milan, and Chelsea.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting throughout Washtenaw County. Projects in Ann Arbor or Ypsilanti are well within our standard service range from Warren. Saline, Chelsea, Milan, and outlying communities in the county are accessible for projects with appropriate scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For institutional and occupied-facility work common in Ann Arbor — where dust control is a serious constraint — our vapor/dustless blasting capability is often the right approach.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Washtenaw County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Washtenaw County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Washtenaw County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Washtenaw County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Asset types served in Washtenaw County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing Facilities", desc: "Manufacturing operations in Saline, Milan, and Ypsilanti require equipment blasting, structural steel maintenance, and tank prep on a scheduled maintenance cycle." },
+          { title: "Automotive Testing and R&D", desc: "Automotive testing and engineering facilities in Ann Arbor and Ypsilanti maintain specialized equipment and structures that require professional surface preparation." },
+          { title: "Commercial Building Steel", desc: "Office parks, retail developments, and commercial buildings throughout Washtenaw County maintain structural steel that requires periodic surface prep as coatings age." },
+          { title: "Historic and Institutional Buildings", desc: "Ann Arbor's historic brick buildings and institutional facilities benefit from vapor blasting — less dust, gentler on older masonry, appropriate for occupied campus environments." },
+          { title: "Industrial Equipment", desc: "Processing and production equipment at Washtenaw County industrial facilities blasted in-place without transport — mobile service comes to the asset." },
+          { title: "Infrastructure Assets", desc: "Bridges, utility structures, and municipal infrastructure across Washtenaw County require periodic surface preparation as part of maintenance programs." },
+        ].map(item => (
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Livingston County", "/areas-served/livingston-county-mobile-sandblasting/"],
+          ["Ann Arbor", "/areas-served/ann-arbor-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you serve Ann Arbor and Ypsilanti for industrial blasting?", a: "Yes. Ann Arbor and Ypsilanti are within our standard service area from Warren. We take industrial, commercial, and institutional projects in both cities regularly." },
+          { q: "Is vapor blasting available in Ann Arbor?", a: "Yes. Vapor/dustless blasting is available throughout Washtenaw County. For Ann Arbor projects near occupied buildings, campus facilities, or urban areas where dust control is important, vapor blasting is often the appropriate method." },
+          { q: "Can you handle historic masonry blasting in Ann Arbor?", a: "Yes. Ann Arbor has significant historic brick and masonry that requires careful media selection and blast parameters. We've worked on historic restoration projects and use appropriate methods — often vapor blasting with fine media — to clean without damaging original material." },
+          { q: "Do you take projects in Saline, Chelsea, and outlying Washtenaw County?", a: "Yes, with appropriate project scope. Outlying communities in Washtenaw County are accessible for projects that justify the mobilization. Contact us with your scope and we'll confirm." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Washtenaw County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

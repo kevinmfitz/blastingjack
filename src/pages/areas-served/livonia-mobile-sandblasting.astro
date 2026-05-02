@@ -1,0 +1,134 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Livonia, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Livonia, MI. Serving manufacturing facilities, fleet operations, commercial properties, and industrial parks throughout western Wayne County."
+  canonical="https://blastingjack.com/areas-served/livonia-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Livonia, MI"
+    subtitle="Industrial and commercial surface preparation for Livonia's manufacturing and business corridor."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Livonia's industrial and commercial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Livonia is one of western Wayne County's most significant commercial and industrial cities — a mix of automotive-related manufacturing, distribution and logistics operations, corporate headquarters, and established industrial parks along the I-96 and M-5 corridors. That variety generates consistent demand for surface preparation across equipment, building steel, fleet assets, and facility infrastructure.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Livonia from our Warren base. Livonia is within our regular service range for industrial and commercial projects. We coordinate with maintenance departments, general contractors, and painting contractors depending on project structure.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Livonia projects in occupied or semi-occupied facilities where dust control matters, vapor/dustless blasting is available as an alternative to open abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Livonia</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Livonia project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Manufacturing and Industrial Facilities", desc: "Livonia's industrial parks house automotive-related manufacturing, fabrication, and processing operations that require periodic equipment blasting and structural steel maintenance." },
+          { title: "Distribution and Logistics Facilities", desc: "Warehouse and distribution operations throughout Livonia maintain dock equipment, fleet vehicles, and building steel that require surface preparation on scheduled maintenance cycles." },
+          { title: "Fleet and Equipment", desc: "Fleet maintenance operations, equipment dealers, and corporate vehicle yards in Livonia use mobile blasting for rust removal and coating restoration at their location." },
+          { title: "Commercial Building Steel", desc: "Corporate campuses, retail developments, and commercial properties throughout Livonia maintain structural steel that requires periodic blast and recoat as coatings age." },
+          { title: "Parking Structures", desc: "Commercial and institutional parking structures in Livonia have structural steel that requires maintenance surface preparation on a scheduled cycle to prevent corrosion progression." },
+          { title: "Industrial Equipment In-Place", desc: "Production machinery, conveyors, and material handling equipment at Livonia facilities blasted without transport — scheduled around your maintenance window or planned shutdown." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Dearborn", "/areas-served/dearborn-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you take blasting projects in Livonia?", a: "Yes. Livonia is within our regular service range. Industrial, commercial, fleet, and facility maintenance projects are all within scope — contact us with your location and scope to confirm." },
+          { q: "Can you work inside a Livonia facility without disrupting operations?", a: "Yes. With containment and scheduling around your production or business hours, we work inside occupied and semi-occupied facilities. Vapor/dustless blasting is also available when dust control is required near active areas." },
+          { q: "Do you work with Livonia painting contractors?", a: "Yes. We work directly with painting contractors who subcontract blast prep, and can coordinate timing to minimize gap between blasting and coating application. Through our sister brand Endurance Painting, we can also provide both services under one project." },
+          { q: "Can you blast fleet vehicles and trailers in Livonia?", a: "Yes. Fleet and trailer blasting is a regular service in Livonia. We come to your yard — you don't need to transport equipment to a fixed facility." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Livonia?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

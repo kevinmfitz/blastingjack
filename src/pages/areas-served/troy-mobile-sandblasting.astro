@@ -1,0 +1,136 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Troy, MI | Blasting Jack"
+  description="Mobile sandblasting and industrial surface preparation in Troy, MI. Serving automotive engineering facilities, corporate campuses, manufacturing operations, and commercial properties throughout Oakland County."
+  canonical="https://blastingjack.com/areas-served/troy-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Troy, MI"
+    subtitle="Surface preparation for Troy's automotive engineering campuses, manufacturing facilities, and commercial properties."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Troy's engineering and manufacturing corridor
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Troy is one of Michigan's most significant concentrations of automotive engineering offices, corporate headquarters, Tier 1 supplier campuses, and precision manufacturing operations. The combination of specialized engineering equipment, corporate building infrastructure, and manufacturing assets creates ongoing demand for professional surface preparation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile sandblasting in Troy from our Warren base — Troy is directly adjacent to Macomb County, within our standard service range. Projects at Troy corporate campuses, industrial parks, and manufacturing facilities receive fast mobilization without extended travel costs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For Troy projects near occupied office buildings, corporate campuses, or areas where dust control matters, vapor/dustless blasting is available as a low-dust alternative to open abrasive blasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Troy</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Dry Ice Blasting", "/services/dry-ice-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Troy project types we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Engineering and R&D", desc: "Troy's automotive engineering facilities maintain specialized equipment, test rigs, and structures that require professional surface preparation on a maintenance cycle." },
+          { title: "Corporate Campus Building Steel", desc: "Corporate headquarters and office campuses throughout Troy maintain structural steel in parking structures, building facades, and infrastructure that requires periodic blast and recoat." },
+          { title: "Precision Manufacturing", desc: "Machine shops and precision manufacturing operations in Troy's industrial parks need mill scale removed from fabricated components and surface prep on production equipment." },
+          { title: "Parking Structures", desc: "Corporate campuses, hospitals, and commercial developments in Troy maintain multi-level parking structures with structural steel that requires surface preparation on a scheduled maintenance cycle." },
+          { title: "Equipment and Fleet", desc: "Corporate fleets, equipment yards, and facilities throughout Troy use mobile blasting for rust removal and coating restoration on vehicles and equipment at their location." },
+          { title: "Dry Ice Blasting for Precision Equipment", desc: "Troy's engineering facilities benefit from dry ice blasting for in-place cleaning of precision equipment — no moisture, no abrasive residue, no disassembly." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Auburn Hills", "/areas-served/auburn-hills-industrial-sandblasting/"],
+          ["Southfield", "/areas-served/southfield-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How far is Blasting Jack from Troy?", a: "We're based in Warren, which borders Troy directly. Troy is within our standard service range — no unusual mobilization costs or extended travel time." },
+          { q: "Can you blast near occupied office buildings in Troy?", a: "Yes, with vapor/dustless blasting. For Troy projects near corporate campuses, occupied buildings, or areas where dust is a concern, vapor blasting suppresses dust at the source. We assess each site and recommend the appropriate method." },
+          { q: "Do you offer dry ice blasting in Troy?", a: "Yes. Dry ice blasting for in-place machine cleaning, precision equipment, and production tooling is available in Troy. It's well-suited for automotive engineering and manufacturing environments where equipment needs cleaning without disassembly or moisture." },
+          { q: "Can you blast parking structures in Troy?", a: "Yes. Parking structure structural steel — columns, beams, connections — is a regular project type. We sequence around building operations and can work nights or weekends to minimize disruption to users." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Troy?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
