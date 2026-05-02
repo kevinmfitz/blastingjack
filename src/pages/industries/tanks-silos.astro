@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Tank & Silo Sandblasting | Blasting Jack"
+  description="Interior and exterior tank and silo sandblasting in Southeast Michigan. Agricultural silos, industrial process tanks, SSPC standards for linings, confined space capable. Warren, MI."
+  canonical="https://blastingjack.com/industries/tanks-silos/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Tank & Silo Sandblasting"
+    subtitle="Interior and exterior blast prep for agricultural silos, industrial tanks, and process vessels — confined space capable."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Tank and silo blasting done right — inside and out
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Tanks and silos are among the most demanding blast jobs in the field. Interior surfaces require confined space entry, proper ventilation, and blast profiles matched to the lining system going back on. Exterior surfaces on agricultural silos, water tanks, and industrial process vessels require full rust and coating removal before new protective systems are applied — and the coating spec often calls for SSPC-SP10 or SP5 cleanliness levels for tank lining applications.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack handles both interior and exterior tank and silo blasting. We're confined space capable and work to the surface cleanliness and anchor profile requirements specified by the coating manufacturer. Agricultural silos in Southeast Michigan, water storage tanks, chemical process vessels, and fuel storage tanks are all within our scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Tank lining failures typically trace back to inadequate surface preparation. The lining system spec exists for a reason — we deliver the profile it requires, not the profile that's fast and easy. That means the right abrasive, the right equipment, and a crew that understands what "near-white" actually looks like.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Agricultural grain silos — interior and exterior",
+                "Industrial process and chemical storage tanks",
+                "Water storage and distribution tanks",
+                "Fuel storage tanks — above-ground and shop fabricated",
+                "Pressure vessels and heat exchangers",
+                "Confined space interior blast to SSPC-SP10 or SP5",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Tank and silo blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Agricultural Silos", desc: "Grain silos and storage bins accumulate corrosion on interior and exterior surfaces. Interior blast prep removes rust and failed coating before new lining systems are applied to protect the structure and stored product." },
+          { title: "Industrial Process Tanks", desc: "Chemical storage, process vessels, and industrial holding tanks require interior lining systems that demand SSPC-SP10 or near-white cleanliness to achieve specified adhesion. We deliver that profile in confined space conditions." },
+          { title: "Water Storage Tanks", desc: "Potable water and fire suppression tanks require NSF-compliant interior lining systems. Surface prep to SP10 or SP5 is standard for water tank relining. We provide the blast prep ahead of coating application." },
+          { title: "Fuel and Oil Storage Tanks", desc: "Above-ground fuel storage tanks require periodic lining inspection and relining. Interior blast removes old lining, rust, and contamination. Exterior blast addresses atmospheric corrosion and prepares for protective coating systems." },
+          { title: "Pressure Vessels and Heat Exchangers", desc: "Pressure vessels and heat exchangers in manufacturing and process facilities require surface prep during scheduled inspections and maintenance windows. We work within plant turnaround schedules." },
+          { title: "Exterior Tank Surfaces", desc: "Exterior surfaces on tanks of all types require blast prep when coatings fail or reach the end of their service life. Full exterior blast removes rust and old coating back to bare metal for a new protective system." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Manufacturing Plants", "/industries/manufacturing-plants/"],
+          ["Plant Maintenance", "/industries/plant-maintenance/"],
+          ["Municipal & Utility Assets", "/industries/municipal-utility-assets/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Are you confined space capable for interior tank blasting?", a: "Yes. Interior tank and silo blasting requires confined space entry procedures — proper atmospheric testing, ventilation, attendants, and rescue equipment. We operate under confined space protocols for all interior tank work." },
+          { q: "What SSPC cleanliness levels can you achieve for tank lining prep?", a: "We regularly achieve SSPC-SP10 near-white metal blast for tank lining applications. SSPC-SP5 white metal blast is available for applications requiring the highest cleanliness level. The coating manufacturer's surface prep specification drives the target — we hit it." },
+          { q: "Can you blast the interior and exterior of the same tank in the same mobilization?", a: "Yes. When the scope includes both interior and exterior, we plan the sequence to work both surfaces in the same mobilization. Interior first is typical — exterior after — to avoid introducing airborne contamination into a freshly blasted interior." },
+          { q: "Do you work on tanks while they're in service or only out of service?", a: "Tank blasting — especially interior blasting — requires the tank to be fully out of service, cleaned, and gas-freed (for fuel tanks). Exterior blasting on tanks that can't be taken offline may be possible in some cases — contact us to discuss the specific situation." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need tank or silo blast prep?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

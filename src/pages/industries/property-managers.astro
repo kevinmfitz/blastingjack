@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for Property Managers | Blasting Jack"
+  description="Sandblasting for commercial property managers in Southeast Michigan. Building steel maintenance, parking structure prep, scheduled work around tenants. Warren, MI."
+  canonical="https://blastingjack.com/industries/property-managers/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for Property Managers"
+    subtitle="Scheduled blast maintenance for commercial building steel and parking structures — coordinated around tenant occupancy."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Keeping commercial building steel in condition — without disrupting tenants
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Commercial property managers deal with building steel maintenance on a schedule that has to work around tenants, lease obligations, and building operations. Structural steel in parking garages, building exteriors, mechanical areas, and below-grade environments corrodes over time — and maintenance work that disrupts tenants or creates liability isn't acceptable regardless of how necessary it is.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack works with property managers in Southeast Michigan to schedule and execute blast prep for building steel maintenance projects. We understand the constraints of occupied properties — work hours, dust control, access limitations, and coordination with building operations — and we plan the work to fit within them. Night and weekend scheduling is available for properties where daytime work in occupied areas isn't practical.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For work near occupied tenant spaces, vapor/dustless blasting is the preferred method. It delivers the same surface profile as dry abrasive blasting with dramatically less airborne dust. For properties with historic architectural metalwork or brick, we have experience with the media selection and blast parameters required to clean without damaging original material.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Parking structure structural steel — all levels",
+                "Building exterior steel and architectural metalwork",
+                "Below-grade and mechanical area structural steel",
+                "Stairwell and egress steel",
+                "Loading dock and service area steel",
+                "Historic building metalwork and ornamental iron",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Property management blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Parking Structure Steel Maintenance", desc: "Parking garage structural steel corrodes from road salt exposure year-round in Michigan. Scheduled blast prep and recoating extends the life of the structure and prevents the kind of steel deterioration that leads to costly remediation." },
+          { title: "Exterior Building Steel", desc: "Building exterior structural steel, canopy framing, and architectural metalwork exposed to weather require periodic blast prep and recoating. We schedule exterior work to minimize impact on building occupants and pedestrians." },
+          { title: "Night and Weekend Scheduling", desc: "Properties with heavy daytime occupancy require blast work at night or on weekends. We accommodate off-hours scheduling for occupied commercial, retail, and mixed-use properties." },
+          { title: "Vapor Blasting Near Occupied Spaces", desc: "For work adjacent to tenant spaces, common areas, or occupied floors, vapor/dustless blasting suppresses airborne particles at the nozzle. The same surface profile as dry blasting with far less dust migration." },
+          { title: "Mechanical and Utility Area Steel", desc: "Building mechanical rooms, utility areas, loading docks, and service corridors have structural steel that corrodes from moisture, chemical exposure, and general neglect. We blast these areas during scheduled access windows." },
+          { title: "Historic and Architecturally Significant Properties", desc: "Historic commercial properties with brick, ornamental iron, and architectural metalwork require careful blast work. Media selection and blast parameters are adjusted to clean without damaging original material. We assess before we blast." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Parking Garages", "/industries/parking-garages/"],
+          ["General Contractors", "/industries/general-contractors/"],
+          ["Historic Restoration", "/industries/historic-restoration/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you work in a tenant-occupied building without disrupting operations?", a: "Yes. Dust containment, proper scheduling, and vapor blasting in sensitive areas allow blast work to happen in occupied buildings. We coordinate with building management on access, work hours, and any tenant notifications required." },
+          { q: "Do you do night and weekend work?", a: "Yes. For commercial properties with high daytime occupancy, we schedule blast work during off-peak hours — evenings, nights, and weekends. Contact us with the property's constraints and we'll plan accordingly." },
+          { q: "Is vapor blasting less effective than regular sandblasting?", a: "Vapor blasting delivers the same anchor profile and surface cleanliness as dry abrasive blasting. The primary difference is dust — vapor blasting suppresses airborne particles significantly. Surface prep quality is equivalent." },
+          { q: "How often does commercial building structural steel need to be blast-prepped and recoated?", a: "It depends on the environment, the coating system, and how well previous applications held. Parking structure steel in Michigan's chloride environment may need attention every 10–15 years. Exterior building steel in normal atmospheric exposure typically holds longer. A coating contractor can assess the current condition and give you a timeline." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blast maintenance for your property?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

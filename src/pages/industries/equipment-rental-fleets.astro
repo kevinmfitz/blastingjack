@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for Equipment Rental Fleets | Blasting Jack"
+  description="Mobile sandblasting for equipment rental fleets in Southeast Michigan. Fleet rust removal, boom and frame restoration, trailer blasting, full refurbishment at your yard. Warren, MI."
+  canonical="https://blastingjack.com/industries/equipment-rental-fleets/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for Equipment Rental Fleets"
+    subtitle="On-site fleet blasting for rental yards — rust removal, frame restoration, and full refurbishment between rentals."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Keeping rental fleet looking and performing like it should
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Rental equipment takes a beating — excavators, aerial lifts, skid steers, trailers, and specialty attachments come back from job sites with rust, beat-up paint, and surface damage that accumulates rental by rental. Repainting over corroded or poorly prepped steel is money wasted. The coating won't hold, the rust comes back faster, and the equipment looks rough to the next customer.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack mobilizes to rental yards to blast equipment on-site. Booms, frames, counterweights, buckets, and trailers — we strip rust and failing paint down to bare metal so your paint or powder coat crew has a surface that will actually hold. We work around your rental schedule and can process multiple pieces simultaneously with our multi-setup capability.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Full fleet refurbishment — stripping an aging fleet down and repainting to look near-new — is one of the higher-ROI investments rental companies make before a resale cycle or remarketing effort. We've done batch fleet work where equipment cycles through blast and immediately to paint in the same yard, same week.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Excavator booms, arms, and buckets",
+                "Aerial lift and man-lift platforms and frames",
+                "Skid steer and compact equipment bodies",
+                "Trailer frames, decks, and undercarriages",
+                "Counterweights and attachment hardware",
+                "Full fleet batch blasting at the rental yard",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Rental fleet blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Between-Rental Refurbishment", desc: "Equipment coming back from long-term rentals or heavy use often needs more than a wash. Blasting removes accumulated rust and failed coating so a new paint system can go on clean and last." },
+          { title: "Excavators and Earthmoving Equipment", desc: "Booms, dippers, and buckets on excavators rust quickly from soil and moisture contact. We blast the boom arm assemblies, pivot areas, and bucket exteriors ahead of repainting." },
+          { title: "Aerial and Elevated Work Platforms", desc: "Aerial lift booms, scissor frames, and platform decks rust from outdoor storage and heavy use. Surface prep restores these before paint — and makes the equipment presentable to customers again." },
+          { title: "Trailers and Transport Equipment", desc: "Flatbeds, lowboys, equipment trailers, and utility trailers accumulate rust on frames, decks, and running gear. We blast trailer undercarriages and decks before rust treatment and coating." },
+          { title: "Skid Steers and Compact Equipment", desc: "Compact equipment bodies, lift arm assemblies, and cab structures rust from outdoor storage. Blasting strips failing paint and corrosion for a repaint that will hold." },
+          { title: "Pre-Sale Fleet Restoration", desc: "Before remarketing or auction, blasting and repainting aging fleet units recovers resale value. Clean, freshly painted equipment sells faster and commands better prices." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Industrial Equipment", "/industries/industrial-equipment/"],
+          ["General Contractors", "/industries/general-contractors/"],
+          ["Plant Maintenance", "/industries/plant-maintenance/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you come to our rental yard to blast equipment?", a: "Yes — we mobilize to your location. We bring our blast equipment to your yard and work through units on-site. We need a work area with adequate space for blast media containment and equipment staging." },
+          { q: "How many pieces can you process in a day?", a: "It depends on piece size and the amount of rust and coating to remove. With multiple simultaneous setups, we can move through a significant number of compact equipment pieces in a day. Larger excavators and equipment take longer. Contact us with your fleet composition and we'll give you a realistic estimate." },
+          { q: "Do you just blast, or do you paint too?", a: "We provide the blast prep only. You handle coating application with your own crew or a paint contractor. We deliver bare, profiled metal ready for primer. Many rental companies coordinate their blast and paint on the same day in the same yard." },
+          { q: "Can you handle larger equipment like cranes or large excavators?", a: "Yes. Large equipment — 50-ton excavators, crane boom sections, large loader frames — is within our capability. These take longer per unit, but the process is the same. We quote based on the surface area and condition." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Ready to restore your rental fleet?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

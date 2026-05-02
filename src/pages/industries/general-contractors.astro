@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for General Contractors | Blasting Jack"
+  description="Sandblasting subcontractor for general contractors in Southeast Michigan. Steel prep on new construction and renovation, coordination with coating crews, flexible scheduling. Warren, MI."
+  canonical="https://blastingjack.com/industries/general-contractors/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for General Contractors"
+    subtitle="A reliable blast subcontractor that shows up, hits the spec, and coordinates cleanly with your coating crew."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            A blast sub that works on your schedule — not ours
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            General contractors managing construction and renovation projects with structural steel need a blast subcontractor who can fit into the project schedule — not one that creates a scheduling problem. Steel needs to be blasted before coating. Coating needs to follow blasting fast, before flash rust sets in. That sequence works when the sub is reliable, communicative, and can execute without disrupting other trades on site.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack works as a blast subcontractor for GCs on new commercial and industrial construction, building renovation, and infrastructure projects throughout Southeast Michigan. We coordinate directly with your coating contractor on sequencing, we're on-site when we say we'll be there, and we deliver the surface cleanliness and profile the coating spec requires.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For renovation projects in occupied or partially occupied buildings, we handle dust containment and can use vapor/dustless blasting to reduce airborne particles where other trades or building occupants are nearby. We've worked on projects where blasting happened floors away from occupied tenant spaces — it requires planning and the right method, not avoiding the work.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "New construction structural steel prep before coating",
+                "Renovation structural steel — existing building recoating",
+                "Coordination with coating subcontractors on sequencing",
+                "Building steel in occupied environments with dust control",
+                "Parking structure steel prep on maintenance projects",
+                "Industrial and commercial facility steel — new and renovation",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        GC blasting subcontract applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "New Construction Steel Prep", desc: "New structural steel on commercial and industrial construction projects requires blast prep before protective coating systems are applied. We slot into the construction schedule after steel erection and before coating." },
+          { title: "Building Renovation Recoating", desc: "Renovation projects involving recoating of existing building structural steel require complete removal of the existing system. We provide blast prep coordinated with the coating contractor on the renovation schedule." },
+          { title: "Coordination with Coating Crews", desc: "Blasting and coating are a paired sequence. We coordinate directly with the coating contractor on daily production — how much steel gets blasted, when it's ready for primer, and how to avoid flash rust in humid conditions." },
+          { title: "Occupied Building Blasting", desc: "Renovation in occupied commercial buildings requires dust control and containment. We use vapor blasting in sensitive areas and barrier containment to isolate the work from building occupants and other trades." },
+          { title: "Parking Structure Projects", desc: "Parking structure restoration projects for GCs involve structural steel blast prep across multiple deck levels with scheduling around occupancy and traffic control requirements." },
+          { title: "Industrial Facility Construction", desc: "Industrial facility construction and expansion — manufacturing plants, warehouses, processing facilities — requires blast prep on new structural steel, process equipment, and tank installations." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Structural Steel", "/industries/structural-steel/"],
+          ["Steel Fabricators", "/industries/steel-fabricators/"],
+          ["Property Managers", "/industries/property-managers/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you work directly as a subcontractor to GCs?", a: "Yes. We sub directly to general contractors on construction and renovation projects. We provide blast prep only — coating is handled by the painting sub or coating contractor you've already engaged." },
+          { q: "How do you coordinate with the coating contractor on sequencing?", a: "We work directly with the coating contractor to align daily production. Blasted steel needs to be primed within hours in humid conditions — we plan production quantities so coating follows blast at the right pace to avoid flash rust." },
+          { q: "Can you work on a job site where other trades are active?", a: "Yes. We manage containment for the blast work area and coordinate with the site superintendent on access, safety, and sequencing with other trades. We're used to working in active construction environments." },
+          { q: "What documentation can you provide for surface prep compliance?", a: "We can document surface cleanliness and anchor profile achieved on the project. For projects requiring SSPC inspection or coating system compliance documentation, we work with the GC and coating contractor to provide what's needed." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need a blast sub for your project?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

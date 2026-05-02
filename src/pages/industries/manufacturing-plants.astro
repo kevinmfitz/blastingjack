@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for Manufacturing Plants | Blasting Jack"
+  description="Mobile sandblasting for manufacturing plants in Southeast Michigan. Scheduled downtime blasting for production equipment, facility steel, tanks, and overhead systems. Warren, MI."
+  canonical="https://blastingjack.com/industries/manufacturing-plants/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for Manufacturing Plants"
+    subtitle="Scheduled maintenance blasting for production equipment, facility structural steel, and process vessels."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting that works around your production schedule
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Manufacturing plants don't stop production for maintenance unless they have to. Blasting work in a live plant happens during planned downtime windows — shutdowns, scheduled turnarounds, or weekend maintenance windows when equipment is locked out and accessible. That means we need to be ready to mobilize fast, work efficiently, and be clear before the line comes back up.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack works with plant maintenance managers and facilities teams to plan and execute blasting scopes during downtime. Production equipment, overhead structural steel, tanks and process vessels, conveyor frames, dust collector housings — if it's steel and it needs surface prep, we can blast it in-place or where it sits. We run up to four simultaneous blast setups with 900 CFM air capacity to maximize what gets done in a limited window.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For plants where dust is a constraint near operating areas or sensitive equipment, we offer vapor/dustless blasting that suppresses airborne particles at the nozzle. Dry ice blasting is available for electrical enclosures, motors, and areas where no abrasive residue is acceptable.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Production equipment and machine frames",
+                "Facility structural steel — columns, beams, overhead systems",
+                "Process tanks and pressure vessels",
+                "Dust collector housings and ductwork exteriors",
+                "Conveyor frames and material handling equipment",
+                "Mezzanine and platform structural steel",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Plant blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Planned Shutdown Blasting", desc: "Annual or seasonal shutdowns are the primary window for blast work inside a live plant. We coordinate with your maintenance schedule, mobilize during the window, and complete the scope before startup." },
+          { title: "Production Equipment Prep", desc: "Press frames, machine bases, robotic work cells, and automated line components accumulate corrosion and coating failure over time. Blasting restores the surface for repainting and extends equipment life." },
+          { title: "Overhead Structural Steel", desc: "Building steel, crane runways, and overhead support structures inside manufacturing facilities corrode from the inside out — especially in humid, chemical, or salt-exposed environments. We blast overhead in-place." },
+          { title: "Process Tanks and Vessels", desc: "Tanks, pressure vessels, and process equipment in manufacturing plants require periodic interior and exterior surface prep. We handle confined space tank blasting for interior linings." },
+          { title: "Dust Collectors and Ductwork", desc: "Dust collector housings, exhaust ductwork, and ventilation systems corrode from both inside and outside. Surface prep extends coating life and keeps the systems operational longer between replacements." },
+          { title: "New Facility Construction Steel", desc: "New manufacturing facility steel and building additions require surface prep before protective coating systems are applied. We work with GC coating crews on new construction schedules." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Steel Fabricators", "/industries/steel-fabricators/"],
+          ["Tanks & Silos", "/industries/tanks-silos/"],
+          ["Plant Maintenance", "/industries/plant-maintenance/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you work during a planned shutdown window?", a: "Yes — that's the typical scenario for plant blasting work. We coordinate with your maintenance team to understand the window, scope what can realistically be completed, and mobilize accordingly. We're out before the line restarts." },
+          { q: "How do you handle dust control inside a plant?", a: "We assess the work area and adjacent operations. For areas near running equipment or sensitive areas, vapor/dustless blasting suppresses airborne particles at the nozzle. Containment barriers and proper ventilation are part of our setup for enclosed plant environments." },
+          { q: "Can you blast equipment that's still installed in place?", a: "Yes. Most plant blasting is done with equipment in place — we come to the work rather than moving the equipment. We work around fixed structures, overhead obstacles, and confined geometry." },
+          { q: "Do you do dry ice blasting for plant applications?", a: "Yes. Dry ice blasting is available for applications where no abrasive residue is acceptable — electrical enclosures, motor housings, control panels, food processing equipment. It cleans without leaving any secondary waste." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Planning a plant shutdown or maintenance window?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

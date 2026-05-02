@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Industrial Equipment Sandblasting | Blasting Jack"
+  description="Industrial equipment sandblasting in Southeast Michigan. Excavators, cranes, loaders, process equipment — on-site rust removal and surface prep for repainting. Warren, MI."
+  canonical="https://blastingjack.com/industries/industrial-equipment/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Industrial Equipment Sandblasting"
+    subtitle="On-site blast prep for heavy equipment and process machinery — rust removal and surface prep for repainting."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting heavy equipment where it sits
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Heavy industrial equipment — excavators, cranes, loaders, process machinery, and specialty equipment — accumulates rust and coating failure over years of outdoor storage and heavy use. Grinding and hand tool preparation don't get you to a clean metal surface that will actually hold a coating. Blasting does — and we bring the equipment to you.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack mobilizes to job sites, equipment yards, and manufacturing facilities to blast industrial equipment in-place. We work around the equipment's size and geometry — boom assemblies, undercarriages, complex machine frames, and process equipment housings all get the same treatment. Full rust and coating removal down to bare metal, ready for whatever protective system goes on next.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For process equipment and machinery where abrasive residue is a concern, dry ice blasting is available. It cleans without leaving secondary waste — no abrasive to contain or recover. For large equipment with significant rust accumulation, abrasive blasting is typically the most practical and economical method.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Excavator boom arms, sticks, and buckets",
+                "Crane booms, counterweights, and outrigger boxes",
+                "Wheel loader frames and lift arms",
+                "Process equipment housings and frames",
+                "Industrial conveyor and material handling equipment",
+                "Specialty and custom machine structures",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Industrial equipment blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Excavators and Earthmoving Equipment", desc: "Boom assemblies, sticks, buckets, undercarriages, and machine bodies on large excavators accumulate rust from soil and moisture exposure. Blasting strips everything to bare metal ahead of repainting." },
+          { title: "Cranes and Lifting Equipment", desc: "Crane boom sections, lattice structures, counterweight assemblies, and carbody frames corrode with outdoor storage. We blast crane components in the yard or disassembled in sections." },
+          { title: "Wheel Loaders and Dozers", desc: "Lift arm assemblies, blade frames, ROPS cabs, and machine bodies on loaders and dozers corrode and fade. Blasting restores the surface for a repaint that matches original finish quality." },
+          { title: "Process Machinery and Equipment", desc: "Manufacturing and process machinery — press frames, conveyors, mixing equipment, custom machine structures — accumulate rust and coating failure in plant environments. We blast in-place during maintenance windows." },
+          { title: "Specialty and Custom Equipment", desc: "Custom-built industrial equipment, one-off fabrications, and specialty machinery require the same surface prep as production equipment. We assess the piece and deliver the appropriate blast profile." },
+          { title: "Equipment Restoration Projects", desc: "Older industrial equipment being restored to service requires complete rust and coating removal before any refurbishment work begins. Blasting is the foundation of a proper restoration — everything else builds on it." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Equipment Rental Fleets", "/industries/equipment-rental-fleets/"],
+          ["Manufacturing Plants", "/industries/manufacturing-plants/"],
+          ["Plant Maintenance", "/industries/plant-maintenance/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you blast equipment on-site without moving it?", a: "Yes. We mobilize to your location and blast equipment where it sits — in the yard, at a job site, or inside a facility. We bring all necessary equipment and handle abrasive containment on-site." },
+          { q: "How do you handle large equipment like 50-ton excavators or large cranes?", a: "Large equipment takes more time per unit due to surface area, but the process is the same. We scale our setup to match the piece. Complex geometry — lattice booms, undercarriage components, tight clearances — we work through methodically to ensure complete coverage." },
+          { q: "Do you do any painting or just the blast prep?", a: "We provide blast surface preparation only. Coating application is handled by your paint crew or coating contractor. We deliver bare metal with the specified anchor profile ready for primer application." },
+          { q: "What's the difference between abrasive blasting and dry ice blasting for equipment?", a: "Abrasive blasting is the right method for heavy rust removal and when an anchor profile is needed for coating adhesion. Dry ice blasting is appropriate for cleaning sensitive components, electrical enclosures, and areas where no abrasive residue can be left behind. We can advise on the right method for your specific equipment." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need equipment blast prep?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

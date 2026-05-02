@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for Historic Restoration | Blasting Jack"
+  description="Historic restoration sandblasting in Southeast Michigan. Brick cleaning, ornamental iron, architectural metalwork — careful media selection, vapor blasting near occupied buildings. Warren, MI."
+  canonical="https://blastingjack.com/industries/historic-restoration/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for Historic Restoration"
+    subtitle="Brick cleaning, ornamental ironwork, and architectural metalwork — the right media and technique for original material."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Cleaning historic surfaces without damaging what's original
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Historic buildings present a different set of constraints than industrial blasting work. Brick, stone, and original architectural material can be damaged permanently by the wrong blast media, the wrong pressure, or a blaster who doesn't know the difference between cleaning a surface and abrading it into nothing. The goal on historic work is to remove paint, grime, and oxidation — not to remove the substrate.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack uses fine slag, glass bead, and other low-aggression media for historic brick and masonry cleaning. Blast pressure and nozzle distance are adjusted for the substrate — softer brick requires a lighter touch than hard industrial masonry. Ornamental iron and architectural metalwork gets similar treatment: we clean it, we don't profile it into a different shape. For occupied historic buildings where dust is a concern, vapor/dustless blasting is the standard approach.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We assess the substrate before we blast. Historic brick in particular varies significantly in hardness and absorption — what works on one building won't necessarily work on the next. We test in an inconspicuous area, confirm the result is what's needed, and then proceed. We're not going to blast first and figure out the problem afterward.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Historic brick facade cleaning — paint and grime removal",
+                "Ornamental iron railings, gates, and architectural hardware",
+                "Architectural steel — historic building structural members",
+                "Stone and masonry cleaning — careful media selection",
+                "Graffiti removal from brick and masonry",
+                "Vapor blasting near occupied historic buildings",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Historic restoration blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Historic Brick Facade Cleaning", desc: "Painted or stained historic brick requires low-pressure blasting with fine media — fine slag or glass bead — to remove surface contamination without eroding the brick face or mortar joint. We test, confirm, and proceed." },
+          { title: "Ornamental Iron and Architectural Hardware", desc: "Decorative railings, gates, fencing, balconies, and ornamental iron elements on historic buildings require rust and paint removal before restoration. Blasting removes corrosion without damaging fine casting details when done with the right media and pressure." },
+          { title: "Architectural Steel Members", desc: "Historic building structural steel and architectural steel elements — exposed beams, columns, steel-framed storefront systems — require rust and coating removal before new protective finishes are applied. We clean them without over-blasting the profile." },
+          { title: "Graffiti Removal from Masonry", desc: "Graffiti removal from historic brick and stone requires media and pressure selected to remove the paint without damaging the substrate. Vapor blasting is often appropriate — it combines cleaning action with moisture that helps release paint from porous masonry." },
+          { title: "Vapor Blasting Near Occupied Buildings", desc: "Historic commercial and residential buildings are often in dense urban areas with neighbors nearby. Vapor/dustless blasting suppresses airborne particles at the nozzle — appropriate for blast work near occupied buildings, pedestrian areas, and urban environments." },
+          { title: "Stone and Decorative Masonry", desc: "Limestone, sandstone, and decorative masonry on historic buildings are softer than structural brick and require very low-aggression cleaning methods. We adjust media and parameters to match the substrate — and we won't proceed if the test panel shows damage." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Property Managers", "/industries/property-managers/"],
+          ["General Contractors", "/industries/general-contractors/"],
+          ["Structural Steel", "/industries/structural-steel/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How do you avoid damaging historic brick during blasting?", a: "Media selection and blast pressure are the key variables. Fine glass bead or fine slag at low pressure cleans without eroding the brick face. We always do a test panel in an inconspicuous area first to confirm the result before proceeding across the facade. If the test panel shows damage, we stop and reassess." },
+          { q: "Can you remove multiple layers of paint from historic brick?", a: "Yes, though multiple heavy paint layers take more passes than light surface grime. We adjust for the paint thickness and type — oil-based paint releases differently than latex. The priority is always protecting the underlying substrate, which means patient work rather than aggressive blasting." },
+          { q: "Is vapor blasting better for historic buildings?", a: "For occupied buildings and urban environments, yes — vapor blasting suppresses airborne dust significantly. For pure cleaning effectiveness on porous masonry, the added moisture can help release paint and contamination. For ornamental iron, dry blasting gives more control over the surface profile. We recommend the right method for the specific substrate and situation." },
+          { q: "Do you work with architects or historic preservation consultants?", a: "Yes. Historic restoration projects often involve architects, preservation specialists, and in some cases SHPO review. We can work within requirements set by preservation consultants — we just need to know the parameters for the substrate, the acceptable media types, and any restrictions on blast method." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Working on a historic restoration project?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

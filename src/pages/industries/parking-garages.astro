@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Parking Garage Sandblasting | Blasting Jack"
+  description="Parking garage sandblasting in Southeast Michigan. Structural steel blast prep, road salt corrosion, night and weekend scheduling around occupancy. Warren, MI."
+  canonical="https://blastingjack.com/industries/parking-garages/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Parking Garage Sandblasting"
+    subtitle="Structural steel blast prep for parking decks — road salt corrosion, night scheduling, and coating-ready surfaces."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Parking structure steel corrodes fast — road salt is the reason
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Parking garages in Michigan deal with road salt year-round. Vehicles carry chloride-laden slush onto the decks, it drains down through expansion joints and concrete cracks, and it attacks structural steel from above and below. Deck drain supports, floor beams, columns, and connection hardware in parking structures corrode faster than almost any other building steel — because they're continuously exposed to one of the most corrosive environments a structural system encounters.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides blast prep for parking garage structural steel throughout Southeast Michigan. We work around occupancy — nights and weekends when traffic is low, or sections closed for maintenance — to minimize disruption to the facility. The blast work strips failing coating and corrosion products to bare metal so new protective systems can bond properly and deliver their full service life.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Dust management matters in occupied structures. We use containment barriers and vapor blasting where dust needs to be kept out of occupied areas or vehicle traffic lanes. The goal is to get the steel prepped without turning the garage into a dust problem for tenants, customers, or neighboring businesses.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Floor beams and structural framing under parking decks",
+                "Columns and connection hardware at all levels",
+                "Deck drain frames and supports",
+                "Stairwell structural steel and handrails",
+                "Expansion joint hardware and embedded steel",
+                "Exterior architectural steel and facades",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Parking garage blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Structural Steel Under Deck Slabs", desc: "The steel directly below parking decks takes the worst of it — chloride-laden drainage saturates these members constantly. Full blast prep removes all corrosion and old coating so new systems can be applied with proper adhesion." },
+          { title: "Columns and Connection Hardware", desc: "Columns at grade and below grade in parking structures accumulate chloride corrosion at the base. Connection hardware — bolts, plates, bracket assemblies — corrodes at joints. Blasting gets into the geometry." },
+          { title: "Night and Weekend Scheduling", desc: "Parking garages don't close for maintenance. We schedule blast work during off-peak hours — nights, weekends, or low-occupancy periods — with section closures managed by the property team. Production continues on occupied levels." },
+          { title: "Vapor Blasting Near Occupied Areas", desc: "For levels adjacent to occupied spaces or where dust migration is a concern, vapor/dustless blasting suppresses airborne particles at the nozzle. Same surface profile, dramatically less dust." },
+          { title: "Stairwells and Vertical Elements", desc: "Stairwell structural steel, intermediate landings, and vertical framing in parking structures corrode from moisture and salt. We blast stairwell steel ahead of coating or galvanized repair." },
+          { title: "Pre-Coating Restoration Projects", desc: "Full parking structure recoating projects require blast prep on all structural steel before the coating contractor applies new protective systems. We coordinate with the coating crew on sequencing and timing." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Property Managers", "/industries/property-managers/"],
+          ["Structural Steel", "/industries/structural-steel/"],
+          ["General Contractors", "/industries/general-contractors/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you work in a parking garage while it's open to traffic?", a: "Yes, with section closures. We work in the closed section while the rest of the facility remains open. Nights and weekends are the most common schedule for occupied parking structures. We coordinate access and section closures with the property manager or GC." },
+          { q: "How do you manage dust in a parking garage?", a: "Containment barriers isolate the work area. For areas near occupied spaces or where dust migration is a concern, we use vapor/dustless blasting to suppress airborne particles at the nozzle. For mechanical ventilation coordination in enclosed structures, we work with the GC or facilities team." },
+          { q: "What surface prep standard is required for parking structure steel?", a: "Most parking structure coating systems require SSPC-SP6 commercial blast at minimum. High-performance coating systems used in severe chloride environments typically call for SP10 near-white metal. We deliver what the coating spec requires." },
+          { q: "Can you work on a parking garage that's actively being used?", a: "Yes — that's the typical scenario. Parking structures don't close for steel maintenance. We section off the work area, maintain safe clearances for any traffic in adjacent sections, and schedule intensive work during off-peak hours." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need parking garage steel blast prep?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

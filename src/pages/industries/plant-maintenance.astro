@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Plant Maintenance Sandblasting | Blasting Jack"
+  description="Scheduled turnaround blasting for plant maintenance in Southeast Michigan. Production equipment, overhead steel, tanks, dust collectors — blast during planned downtime. Warren, MI."
+  canonical="https://blastingjack.com/industries/plant-maintenance/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Plant Maintenance Sandblasting"
+    subtitle="Turnaround blasting for production equipment, overhead steel, and process vessels — done during your planned downtime window."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blast work that fits your turnaround — not the other way around
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Plant maintenance departments run on planned downtime. When the line goes down for a scheduled turnaround — annual shutdown, seasonal maintenance window, equipment inspection outage — the maintenance scope has to be executed efficiently before startup. Blast work that's on the schedule needs to happen on time, with the right crew size, and clear before the plant comes back up.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack is set up for turnaround work. With 900 CFM air capacity and up to four simultaneous blast setups, we move through plant blasting scopes efficiently. Production equipment in place, overhead structural steel, dust collector housings, tanks and process vessels — we blast what's on the list during the window you have. We coordinate with your maintenance management team on scope, sequence, and access.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For plants where dust control is critical — food processing, pharmaceutical, or areas near sensitive equipment — we offer vapor/dustless blasting to suppress airborne particles. Dry ice blasting is available for electrical equipment and areas where abrasive-free cleaning is required. We have the right method for each application in the plant.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Production equipment — presses, frames, machine bases",
+                "Overhead building steel during shutdown access",
+                "Dust collector housings and ductwork exteriors",
+                "Process tanks and vessels — in-place",
+                "Conveyor and material handling structures",
+                "Mezzanines, platforms, and stair steel",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Plant maintenance blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Scheduled Turnaround Blasting", desc: "Annual or major maintenance shutdowns are the primary window for plant blast work. We mobilize with sufficient equipment and crew to execute the planned scope within the shutdown duration — on time, every time." },
+          { title: "Production Equipment in Place", desc: "Press frames, machine bases, robotic work cells, stamping lines, and other production equipment gets blasted in-place during the shutdown window. We work around fixed utilities, anchored equipment, and restricted access geometry." },
+          { title: "Overhead Structural Steel", desc: "Facility structural steel above the production floor — roof steel, crane runway girders, elevated walkway framing — is only accessible when equipment below is locked out and staging can be safely erected. Shutdown access is often the only practical time to blast this steel." },
+          { title: "Dust Collector Housings", desc: "Dust collector housings, hoppers, and ductwork exteriors corrode from both atmospheric exposure and process chemical contact. Surface prep and recoating extends the life of these systems and prevents the kind of through-wall corrosion that requires replacement." },
+          { title: "Tanks and Process Vessels In Place", desc: "Process tanks, mix vessels, reactors, and storage containers within the plant can be blasted in-place when accessible during a shutdown. We assess the access and geometry and blast interior or exterior as required by the maintenance scope." },
+          { title: "Preventive Maintenance Steel Prep", desc: "Preventive blast work — addressing steel before it reaches a failure condition — is always more economical than reactive repairs. We work with plant maintenance teams to identify and schedule blast prep on steel that's showing early corrosion." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Manufacturing Plants", "/industries/manufacturing-plants/"],
+          ["Tanks & Silos", "/industries/tanks-silos/"],
+          ["Industrial Equipment", "/industries/industrial-equipment/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How much advance notice do you need to mobilize for a plant shutdown?", a: "The more notice the better — we can plan crew size and equipment allocation properly with adequate lead time. For major annual shutdowns, booking 4–8 weeks out is ideal. For shorter maintenance windows, contact us as soon as the schedule is set and we'll confirm availability." },
+          { q: "Can you handle a large blast scope in a short shutdown window?", a: "Yes. With 900 CFM air capacity and up to four simultaneous blast setups, we scale crew and equipment to match the scope. Tell us what's on the list and how long the window is — we'll give you a straight answer on what can be accomplished and what the priority sequence should be." },
+          { q: "How do you handle blast media containment inside a plant?", a: "We contain media and blast debris within the work area using tarps, barriers, and catch systems. Spent media is collected and disposed of appropriately. We don't leave a facility with media scattered across the production floor." },
+          { q: "What if our maintenance scope changes during the shutdown?", a: "Shutdowns often surface additional work that wasn't in the original scope. We remain flexible during turnarounds to address additional blast items as they're identified — as long as access and time permit. Communicate changes to our crew lead on-site and we'll work it in." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a plant shutdown coming up?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

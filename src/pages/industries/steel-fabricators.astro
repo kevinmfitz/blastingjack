@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Sandblasting for Steel Fabricators | Blasting Jack"
+  description="Mobile sandblasting for steel fabricators in Southeast Michigan. Mill scale removal, weld spatter cleanup, SSPC-SP6 and SP10 surface prep before coating. Warren, MI."
+  canonical="https://blastingjack.com/industries/steel-fabricators/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Sandblasting for Steel Fabricators"
+    subtitle="Mill scale removal, weld cleanup, and coating-ready surface prep for fabricated structural steel."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Getting fabricated steel coating-ready
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            New fabricated steel comes off the shop floor with mill scale, weld spatter, heat discoloration, and surface oxides that will kill coating adhesion if they're not removed. Blasting is the only method that gets structural members, plate, and complex weldments to the profile coatings require — and it has to happen before the coating crew shows up.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack works directly with steel fabricators in Southeast Michigan to provide blast services on new fabricated steel. We can mobilize to your yard or facility, work around your production schedule, and deliver SSPC-SP6 commercial blast or SSPC-SP10 near-white metal finishes depending on what the coating spec calls for. For structural steel headed into bridge or industrial building applications, SP10 is typically required — we hit that profile consistently.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            With 900 CFM air capacity and the ability to run four simultaneous blast setups, we can move through large batches of fabricated steel without becoming the bottleneck in your delivery schedule. We bring the equipment to you — no trucking your steel to a blast shop.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Mill scale removal from hot-rolled structural members",
+                "Weld spatter and heat scale cleanup on fabricated assemblies",
+                "Structural plate and beam prep to SSPC-SP6 or SP10",
+                "Complex weldments and connection hardware",
+                "Shop primer removal ahead of field coating",
+                "Rust removal on stored or weathered stock",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        What we blast for fabricators
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Structural Members — Beams, Columns, HSS", desc: "Wide flange beams, HSS tube, angles, channels, and columns all come off the line with mill scale. We blast full-length structural members in the yard before they go to paint or primer." },
+          { title: "Plate and Base Plates", desc: "Flat plate, gusset plates, and base plates require consistent blast profiles. We deliver uniform surface prep across large plate quantities without the warping risk you get from chemical stripping." },
+          { title: "Fabricated Weldments", desc: "Complex weldments with multiple connection points, stiffeners, and overlapping geometry require blast media that gets into corners and crevices. We select media and nozzle angles for full coverage." },
+          { title: "Handrail and Miscellaneous Steel", desc: "Handrail, ladders, grating frames, and miscellaneous steel fabrications all require blast prep before galvanizing or coating. We handle batch quantities efficiently." },
+          { title: "Storage and Weathered Stock", desc: "Structural steel stored outdoors develops surface rust that needs removal before it can be coated. We restore weathered stock to a clean metal profile ready for the coating system spec." },
+          { title: "Shop Primer Removal", desc: "When field coating specs don't accept existing shop primer, we remove it before the coating crew applies the specified system. Cleaner than grinding and faster than chemical methods." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Manufacturing Plants", "/industries/manufacturing-plants/"],
+          ["Structural Steel", "/industries/structural-steel/"],
+          ["General Contractors", "/industries/general-contractors/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What SSPC surface prep standards can you hit?", a: "We regularly deliver SSPC-SP6 commercial blast and SSPC-SP10 near-white metal blast. For bridge and industrial structural applications requiring SP10, we hit that profile consistently. SP5 white metal is available on request for specialty coating systems." },
+          { q: "Can you come to our fabrication yard?", a: "Yes — we mobilize to your location. We bring our own equipment and don't require you to truck steel to an off-site blast shop. We need a staging area, access to the steel, and sufficient space to contain blast media and debris." },
+          { q: "How fast can you move through a batch of structural steel?", a: "With 900 CFM air capacity and up to four simultaneous blast setups, we can move through significant volumes of structural steel efficiently. Contact us with your quantity and member sizes and we'll give you a realistic production rate estimate." },
+          { q: "Do you blast steel after fabrication or can you do it before cutting?", a: "We work on fabricated assemblies — after cutting, welding, and fitting. Blasting plate before fabrication isn't practical because the cutting and welding process re-introduces scale and spatter. The right sequence is blast after fab, then coat." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blast prep for fabricated steel?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

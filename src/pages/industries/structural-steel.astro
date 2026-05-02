@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Structural Steel Sandblasting | Blasting Jack"
+  description="Structural steel sandblasting in Southeast Michigan. Building steel in place, bridges, industrial frames, renovation prep — SSPC profiles for coating adhesion. Warren, MI."
+  canonical="https://blastingjack.com/industries/structural-steel/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Structural Steel Sandblasting"
+    subtitle="In-place blast prep for building steel, bridges, and industrial frames — SSPC profiles that coatings require."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Getting structural steel to the profile coatings require
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Structural steel in buildings, bridges, and industrial frames corrodes over time as protective coatings age, crack, and fail. When a coating system reaches the end of its service life, the steel underneath is often in worse condition than it looks from the outside. Surface preparation — done right — is the only way to ensure a new coating system will perform for its full rated life.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides in-place blast prep for structural steel across Southeast Michigan. We work on building steel that can't be moved, bridges and overpasses, industrial building frames, and renovation projects where existing steel is being re-coated rather than replaced. SSPC-SP6 commercial blast and SSPC-SP10 near-white metal are our standard deliverables — the right choice depends on the coating system and exposure environment.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Structural steel blasting is typically coordinated with a coating contractor. We handle the blast prep, they apply the coating system. If you're managing that coordination as a GC or owner, we work directly with coating crews to sequence the work so blasted steel gets coated before it flashes.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Building columns, beams, and frames — in place",
+                "Bridge structural steel and girders",
+                "Industrial building steel — new and renovation",
+                "Overhead steel and crane runway systems",
+                "Exposed exterior structural members",
+                "Steel in parking structures and below-grade environments",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Structural steel blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Commercial and Industrial Building Steel", desc: "Building columns, beams, and bracing in commercial and industrial structures corrode as coatings age. In-place blasting removes rust and failed coating to prepare for new protective systems without disrupting the structure." },
+          { title: "Bridge and Overpass Steel", desc: "Bridge structural members — girders, floor beams, and connection hardware — are exposed to road salt, moisture, and freeze-thaw cycles. Blast prep to SSPC-SP10 is standard for bridge recoating work." },
+          { title: "Industrial Building Frames", desc: "Steel frames in manufacturing facilities, warehouses, and heavy industrial buildings experience accelerated corrosion from process chemicals, humidity, and industrial atmospheres. We blast in-place during maintenance windows." },
+          { title: "Renovation and Recoating Projects", desc: "Renovation projects that involve recoating existing structural steel require full removal of the existing coating system and rust before a new system goes on. This work happens with the building occupied — we manage dust and containment." },
+          { title: "New Construction Steel Prep", desc: "New structural steel on commercial and industrial construction projects needs blast prep before the protective coating system is applied. We work with GC and coating crews on new construction sequences." },
+          { title: "Overhead and Elevated Steel", desc: "Overhead steel — crane runways, roof structural members, elevated platforms — requires blast prep at height. We set up properly for overhead work and deliver the same surface quality as ground-level blasting." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Steel Fabricators", "/industries/steel-fabricators/"],
+          ["Parking Garages", "/industries/parking-garages/"],
+          ["General Contractors", "/industries/general-contractors/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What SSPC surface prep standard is required for structural steel recoating?", a: "It depends on the coating system and exposure environment. SSPC-SP6 commercial blast is minimum for most industrial coating systems. SSPC-SP10 near-white is required for high-performance coatings, immersion service, and most bridge applications. The coating spec should specify — we deliver what it requires." },
+          { q: "Can you blast structural steel in an occupied building?", a: "Yes, with appropriate containment and dust control. For occupied or partially occupied buildings, vapor/dustless blasting reduces airborne dust significantly. We also use containment barriers to isolate the work area. Access scheduling and work windows are coordinated with the owner or GC." },
+          { q: "Do you coordinate with coating contractors?", a: "Yes. Structural steel work typically involves a blast crew and a coating crew. We coordinate the sequence so blasted steel gets coated promptly — flash rust develops quickly on freshly blasted steel in humid conditions, and the coating crew needs to follow right behind." },
+          { q: "Can you handle bridge work?", a: "Yes. Bridge structural members — girders, floor beams, columns, connection hardware — are within our capability. Bridge projects often require coordination with DOT inspection requirements and traffic control. Contact us with the bridge details and we'll discuss what's involved." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need structural steel blast prep?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

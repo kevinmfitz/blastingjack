@@ -1,0 +1,132 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Municipal & Utility Asset Sandblasting | Blasting Jack"
+  description="Sandblasting for municipal and utility assets in Southeast Michigan. Bridges, water towers, utility structures, municipal fleet — SSPC standards, public agency experience. Warren, MI."
+  canonical="https://blastingjack.com/industries/municipal-utility-assets/"
+>
+  <Header />
+  <PageBanner
+    label="Industries"
+    title="Municipal & Utility Asset Sandblasting"
+    subtitle="SSPC-compliant blast prep for bridges, water towers, utility structures, and public infrastructure in Southeast Michigan."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Public infrastructure blast prep that meets the spec
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Municipal and utility assets — bridges, water towers, utility structures, pump stations, and fleet equipment — require surface preparation that meets the standards set by engineers and public agency specifications. SSPC surface prep standards are written into public works coating specs for a reason: the protection of public infrastructure depends on the coating system performing for its rated life, and that performance starts with the blast.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile blast services for public infrastructure projects in Southeast Michigan. We work with municipalities, utility authorities, engineering firms managing rehab projects, and general contractors on public works. SSPC-SP10 near-white metal blast is our standard deliverable for bridge and water tower applications where the coating spec requires it.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Municipal fleet equipment — public works trucks, utility vehicles, heavy equipment owned by municipalities — follows the same process as private fleet work. We mobilize to municipal yards and blast fleet vehicles and equipment for repainting. It's often more cost-effective to blast and repaint aging fleet units than to replace them.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common blast applications</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                "Bridge structural steel — girders, floor beams, connection hardware",
+                "Water storage and distribution towers",
+                "Utility structures — substations, transmission supports",
+                "Pump stations and lift station structural steel",
+                "Municipal fleet equipment — trucks and heavy equipment",
+                "Signage structures, light poles, and traffic support steel",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use cases -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Municipal and utility blasting applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Bridge Structural Steel", desc: "Bridge girders, floor beams, and connection hardware exposed to road salt and weather require blast prep to SSPC-SP10 before recoating. We work on bridge steel during maintenance windows coordinated with traffic control requirements." },
+          { title: "Water Towers and Storage Tanks", desc: "Municipal water towers and storage tanks require periodic interior and exterior relining. Interior lining prep typically requires SSPC-SP10 or SP5. We handle confined space entry for interior tank blasting on water storage assets." },
+          { title: "Utility Structures", desc: "Electrical substations, transmission line support structures, and utility poles require blast prep when protective coating systems age. We work with utility owners and engineering firms on these assets." },
+          { title: "Pump Stations and Lift Stations", desc: "Pump station and lift station structural steel — including in-place piping supports, building steel, and mechanical equipment frames — corrodes in wet and chemical environments. We blast these during planned maintenance shutdowns." },
+          { title: "Municipal Fleet Equipment", desc: "Public works trucks, utility vehicles, road maintenance equipment, and heavy equipment owned by municipalities corrode with outdoor storage and heavy use. On-site fleet blasting at the municipal yard before repainting extends fleet life." },
+          { title: "Traffic and Signage Structures", desc: "Overhead sign structures, signal support poles, light poles, and traffic infrastructure steel corrode in roadway environments. Blast prep restores the surface before protective coating systems are reapplied." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related industries -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Related industries</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Structural Steel", "/industries/structural-steel/"],
+          ["Tanks & Silos", "/industries/tanks-silos/"],
+          ["General Contractors", "/industries/general-contractors/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you work with public agencies directly or only through GCs?", a: "Both. We work directly with municipalities, utility authorities, and public works departments on maintenance projects. We also sub to GCs managing public infrastructure contracts. Either way, we can provide the documentation and compliance records the project requires." },
+          { q: "What SSPC standards do you work to for public infrastructure projects?", a: "Bridge and water tower recoating projects typically require SSPC-SP10 near-white metal blast. Some water tank lining specs require SSPC-SP5 white metal. We deliver whatever the project spec calls for. Bring us the coating spec and we'll confirm we can hit the required profile." },
+          { q: "Can you handle bridge work with traffic control requirements?", a: "We provide the blast scope — traffic control is typically the GC's or agency's responsibility. We work within the access windows and bridge closure schedules established by the project team. We've worked on bridge projects where traffic control was managed by others and we simply executed the blast prep within the available window." },
+          { q: "Do you work on water tower interiors?", a: "Yes. Interior water tower and tank blasting requires confined space entry procedures — we're confined space capable. Interior tank blasting for water storage assets requires NSF-appropriate surface prep and coordination with the lining applicator. Contact us with the asset details and we'll discuss what's required." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blast prep for a public infrastructure project?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
