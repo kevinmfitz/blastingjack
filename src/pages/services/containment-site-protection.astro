@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Blasting Containment and Site Protection | Blasting Jack"
+  description="Blasting containment and site protection planning in Michigan — spent media management, debris capture, dust control, occupied facility work, and regulated material handling."
+  canonical="https://blastingjack.com/services/containment-site-protection/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Blasting Containment and Site Protection"
+    subtitle="Containment is not optional — it's planned before the first nozzle opens."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Why containment planning is part of every blast job
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Abrasive blasting generates spent media, removed rust, old paint particles, and airborne dust — all of which need to go somewhere. If that somewhere isn't planned before the job starts, it becomes a liability problem: debris on vehicles, cross-contamination of adjacent operations, environmental violations near waterways, or OSHA citations for inadequate dust control.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack treats containment as part of every scope — not as an add-on or afterthought. On every project, we assess the blast environment, what's adjacent to the work, and what regulations apply before deciding on the containment approach.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            The right containment system varies by project. A shop blast on structural steel in an open yard requires different controls than blasting inside a food processing plant or on a parking garage above occupied floors.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Containment considerations by environment</h3>
+            <div class="space-y-3">
+              {[
+                { env: "Outdoor — open site", controls: "Tarp containment, downwind positioning, debris collection, dust monitoring in populated areas" },
+                { env: "Outdoor — near waterways", controls: "Stormwater containment, no media recovery via water runoff, compliance with local environmental regulations" },
+                { env: "Indoor — active facility", controls: "Curtain containment, HEPA filtration, negative air pressure where needed, protection of adjacent equipment" },
+                { env: "Occupied structure (garages, buildings)", controls: "Section isolation, debris netting, vehicle exclusion zones, phased blast sequence" },
+                { env: "Historic or architectural surfaces", controls: "Vapor blasting to reduce dust, careful debris management, surface protection of adjacent materials" },
+              ].map(item => (
+                <div class="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                  <div class="font-semibold text-heading text-[14px]">{item.env}</div>
+                  <p class="text-body text-[13px] mt-0.5">{item.controls}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Containment methods used by Blasting Jack
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Shrouded Blast Heads", desc: "Vacuum-shrouded blast nozzles capture spent media and debris at the source — effective for contained blasting with minimal spread. Used for flat surfaces and accessible steel." },
+          { title: "Tarp and Curtain Systems", desc: "Heavy-duty polyethylene tarps and blast curtains contain the work area, capture fallout, and prevent migration of debris to adjacent surfaces or areas below." },
+          { title: "Debris Netting", desc: "Overhead and horizontal netting systems used in parking structures and elevated work to capture debris falling from the blast zone." },
+          { title: "HEPA Filtration", desc: "For enclosed or occupied spaces, HEPA-filtered exhaust systems maintain air quality and capture fine dust before it migrates beyond the work area." },
+          { title: "Media Recovery", desc: "Spent abrasive media is collected after blasting — vacuumed, shoveled, or swept depending on the surface — before site handoff to coating crews." },
+          { title: "Surface Protection", desc: "Machinery, vehicles, flooring, and adjacent surfaces not being blasted are masked or protected with appropriate covers before blast work begins." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Regulated materials in old coatings</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial facilities built or last painted before 1978 may have coatings that contain lead. Bridges and utility structures may have chromate-containing primers. When removing these coatings, containment requirements are stricter — airborne debris must not migrate beyond the work area, and waste must be handled and disposed of appropriately.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            If you know or suspect that coatings contain lead or other regulated materials, communicate that upfront. It affects containment setup, PPE requirements, waste handling, and project cost. Surprises on regulated material jobs are expensive.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">OSHA and EPA considerations</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack crews are OSHA-trained. OSHA 10, OSHA 30, and confined space certifications are maintained by our crews. The specific OSHA standards governing lead exposure in construction (29 CFR 1926.62) and silica exposure (29 CFR 1926.1153) apply to blast work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We use silica-free abrasive media on every job — not coal slag or silica sand — which is the primary control for OSHA's silica exposure standard. Respiratory protection and crew monitoring programs are in place.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Who is responsible for containment on a blast project — the blaster or the GC?", a: "Typically the blasting contractor is responsible for designing and executing containment within their blast scope. However, site-specific containment requirements — especially near waterways, in occupied buildings, or on regulated material removal projects — may be defined by the GC's site safety plan. We review the project requirements and build containment into our scope." },
+          { q: "Can you blast in a facility that's actively processing or manufacturing?", a: "Depends on what's being manufactured and where the blast area is relative to active operations. In many cases, phased blast work with appropriate containment allows blasting in one section while another operates. We assess each facility individually." },
+          { q: "What happens to spent blast media after the job?", a: "Spent media is collected from the work area and removed. Depending on what was blasted (and whether the removed coating contained regulated materials), disposal requirements vary. Ordinary spent garnet or steel grit from non-regulated surfaces is typically disposed of as general construction debris." },
+          { q: "Do you provide containment planning documentation?", a: "Yes — for projects that require it, we provide a containment plan as part of the pre-job documentation package. This is standard practice on projects governed by a site safety plan or where regulatory compliance documentation is required." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have a project with specific containment requirements?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Talk to Us About Your Project
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

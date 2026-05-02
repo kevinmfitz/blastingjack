@@ -1,0 +1,167 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Tank and Silo Sandblasting in Michigan | Blasting Jack"
+  description="Tank and silo blasting in Michigan — interior and exterior. Food-grade silos, industrial tanks, wastewater tanks, above-ground storage. Surface prep before lining and coating application."
+  canonical="https://blastingjack.com/services/tank-silo-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Tank and Silo Sandblasting in Michigan"
+    subtitle="Interior and exterior surface prep for industrial tanks, storage silos, and process vessels."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Tank and silo blasting — inside and out
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Tanks and silos require blasting inside and outside to different specifications depending on their service. Interior surfaces in contact with stored product — food, chemicals, water, petroleum — typically require the highest cleanliness standard (SSPC SP-5, white metal) and specific coating systems designed for immersion service. Exterior surfaces that face weather and general industrial exposure may require SP-10 or SP-6 depending on the coating system.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack has direct experience with food-grade silo cleaning, wastewater tank surface prep, industrial storage tank maintenance, and in-ground process vessel blasting. We've worked on tanks ranging from small quench tanks to large silos at food processing facilities.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Through our sister brand Endurance Painting, we can coordinate blasting and lining application on the same project — critical when interior tank lining requires specific timing between blast and coat.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Tank and vessel types</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Above-ground storage tanks (ASTs)",
+                "Food-grade storage silos and hoppers",
+                "Wastewater and water treatment tanks",
+                "Industrial process vessels",
+                "In-ground quench tanks and dip tanks",
+                "Chemical storage tanks",
+                "Fuel storage tanks (exterior surface prep)",
+                "Grain silos and agricultural storage",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Interior tank blasting
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Interior tank blasting is specialized work. Containment of blast debris inside the tank is essential — spent media and removed material must be collected and removed before lining application. Ventilation and air monitoring are required depending on what the tank previously held.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Interior surfaces for lining application typically require SSPC SP-5 (white metal) — all rust, scale, and coating must be removed from 100% of the surface. Any residual contamination under a tank lining creates a failure point.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work with tank owners and lining contractors to sequence interior blasting and lining application to minimize flash rust development and keep the project on schedule.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-3">Interior tank prep requirements</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "SSPC SP-5 (white metal) typically required for immersion service lining",
+                "Full containment and collection of blast debris inside tank",
+                "Ventilation and air quality monitoring",
+                "Coordination with lining applicator on timing from blast to coat",
+                "Surface profile confirmation (Testex tape readings)",
+                "Clean, dry surface before lining application",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[22px] font-semibold text-heading mb-6">Related project examples</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          { href: "/gallery/fda-grade-storage-silo/", title: "FDA Grade Storage Silo", label: "Gallery Project" },
+          { href: "/gallery/brownstown-wastewater-tanks/", title: "Brownstown Wastewater Tanks", label: "Gallery Project" },
+          { href: "/gallery/jiffy-food-grade-silo/", title: "Interior Cleaning of a Food Grade Storage Silo", label: "Gallery Project" },
+          { href: "/gallery/metro-alloy-quench-tank/", title: "Blast and Repaint of In-Ground Quench Tank", label: "Gallery Project" },
+        ].map(item => (
+          <a href={item.href} class="flex items-start gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+            <span class="text-primary text-[18px] mt-0.5">→</span>
+            <div>
+              <div class="font-semibold text-heading text-[14px] leading-snug">{item.title}</div>
+              <div class="text-body text-[12px] mt-0.5">{item.label}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Need Coating or Lining After Blasting?</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack can coordinate tank and vessel blasting with industrial lining and coating application under one project plan. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What SSPC standard is required for tank interior lining?", a: "Most industrial tank lining systems require SSPC SP-5 (white metal blast) — 100% of the surface free from all rust, scale, coatings, and contaminants. Some systems accept SP-10 (near-white). Always confirm with the lining manufacturer's product data sheet before blast work begins." },
+          { q: "How do you contain blast debris inside a tank?", a: "We vacuum or shovel spent media and removed material out of the tank before the lining crew arrives. Access requirements — manway size, personnel entry, air supply — are evaluated during the site visit. Media recovery is part of every interior tank blast scope." },
+          { q: "How quickly does interior lining need to be applied after blasting?", a: "As quickly as possible — typically within hours in warm, humid conditions. Flash rust on bare steel interior surfaces begins immediately after blasting. The lining applicator should be staged and ready to coat the same day as blast completion in most cases." },
+          { q: "Can you blast food-grade silos without contaminating the interior?", a: "Yes. We use appropriate media (garnet or other food-safe abrasives), remove all spent media before handoff, and can clean the interior to the standard required before food-grade lining application. We've completed food-grade silo cleaning projects in Michigan." },
+          { q: "Do you handle both interior and exterior on the same project?", a: "Yes. We typically schedule interior blasting first (it has more timing-critical constraints for lining application), then exterior. The scope and sequencing depend on the specific tank and project requirements." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need a tank or silo blasted?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

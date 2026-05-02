@@ -1,0 +1,174 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Surface Preparation for Industrial Coatings | Blasting Jack"
+  description="Surface preparation for industrial coatings in Michigan. SSPC-compliant prep, anchor profiles, and blast-to-coat timing — the foundation every coating system requires to perform as specified."
+  canonical="https://blastingjack.com/services/surface-preparation-for-coatings/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Surface Preparation for Industrial Coatings"
+    subtitle="Surface preparation that protects the coating before it starts."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            What surface preparation actually does for coatings
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial coatings don't stick to rust, mill scale, contamination, or poorly prepared surfaces. Adhesion is a mechanical and chemical bond between the coating and the substrate — and that bond requires a clean, profiled surface that the coating can grip.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Abrasive blasting accomplishes two things simultaneously that no other prep method can match: it removes everything that shouldn't be there (rust, scale, old coatings, contamination), and it creates the anchor profile that gives coatings the surface texture they need to bond permanently.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            The SSPC estimates that over 80% of industrial coating failures trace back to inadequate surface preparation — not coating quality, not the applicator. Prep is the variable that determines whether a coating system performs for 15+ years or fails in two.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack provides surface preparation to the standard required by the coating system — confirmed before blast work begins, documented for coating inspectors after.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">What surface prep provides</h3>
+            <ul class="space-y-3 text-body text-[16px]">
+              {[
+                { item: "Cleanliness", desc: "Rust, mill scale, old coatings, grease, and contamination removed — down to the SSPC standard the coating requires" },
+                { item: "Anchor profile", desc: "The surface texture (measured in mils) that gives coatings mechanical adhesion — without it, coatings peel from the surface rather than bonding to it" },
+                { item: "Known substrate condition", desc: "A properly blasted surface is a known starting point — every coating spec assumes a defined surface condition as the baseline for performance" },
+                { item: "Documentation", desc: "Cleanliness grade, surface profile readings, and timing from blast to coat — documented for inspectors and project records" },
+              ].map(item => (
+                <div class="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                  <div class="font-semibold text-heading text-[15px]">{item.item}</div>
+                  <p class="text-body text-[14px] mt-0.5">{item.desc}</p>
+                </div>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-8">
+        Matching prep to the coating system
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[15px] border-collapse">
+          <thead>
+            <tr class="bg-dark text-white">
+              <th class="text-left p-4 font-semibold">Coating System</th>
+              <th class="text-left p-4 font-semibold">Minimum SSPC Prep</th>
+              <th class="text-left p-4 font-semibold">Typical Profile</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Zinc-rich primer (inorganic)", "SP-10 Near-White", "2–4 mil"],
+              ["High-build epoxy", "SP-10 Near-White", "2–3 mil"],
+              ["Coal tar epoxy (immersion)", "SP-5 White Metal", "3–4 mil"],
+              ["Tank lining (internal)", "SP-5 White Metal", "2.5–4 mil"],
+              ["Urethane topcoat (exterior steel)", "SP-6 Commercial (min)", "1.5–3 mil"],
+              ["Structural steel primer (field)", "SP-6 to SP-10", "1.5–3 mil"],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                {row.map((cell, j) => (
+                  <td class={`p-4 border border-gray-200 ${j === 0 ? "font-semibold text-heading" : "text-body"}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-body text-[14px] mt-4">Confirm requirements with the coating manufacturer's product data sheet — these are representative ranges. The PDS governs.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Why painting contractors subcontract blast work
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial painting contractors subcontract blast work to Blasting Jack because blast work is a production operation — it requires equipment, crew capacity, safety training, and experience that most painting contractors don't maintain in-house. Painting a surface is not the same as preparing it.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            When a painting contractor subs blast work to Blasting Jack, they get SSPC-compliant surface prep, documented profiles, and a surface their coating system can bond to. That means their coating performs as warranted — and the project doesn't have warranty callbacks from inadequate prep.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Blast-to-coat timing
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Steel begins oxidizing immediately after blasting — flash rust can appear within hours in Michigan's summer humidity. The window between blast completion and primer application is a critical scheduling constraint.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack coordinates directly with painting contractors to sequence blast work so primer follows as quickly as the spec allows. We can stage blast work in sections to keep coating crews moving rather than waiting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Surface Prep and Coating — One Project Plan</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack can coordinate industrial surface preparation and coating application under one scope, one schedule, and one point of contact. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How do I know what prep level my coating system requires?", a: "The coating manufacturer's product data sheet (PDS) specifies the minimum surface preparation required for the coating to perform as warranted. If you have the PDS, look for the surface preparation section. If you don't have it, give us the coating product name and manufacturer — we'll help you find the requirement." },
+          { q: "Can you provide surface preparation documentation for the coating inspector?", a: "Yes. We provide Testex replica tape surface profile readings, visual cleanliness inspection records, and prep completion documentation for projects where coating inspection is part of the scope." },
+          { q: "What happens if a surface flashes before coating is applied?", a: "Light flash rust (level 1) on SP-10 or SP-5 blasted steel can sometimes be acceptable depending on the coating system — confirm with the coating manufacturer. More significant flash rust requires re-blasting to restore the cleanliness grade. We schedule blast-to-coat timing to minimize flash rust risk." },
+          { q: "Do painting contractors hire Blasting Jack directly?", a: "Yes — we work with painting contractors who subcontract blast prep on industrial projects. If you're a painting contractor looking for reliable blast prep in Michigan, contact us. We understand the scheduling and documentation requirements that painting contractors need from their blast sub." },
+          { q: "Is surface prep required on new steel, or just maintenance work?", a: "New fabricated steel has mill scale — a thin layer of iron oxide that forms during hot rolling. Mill scale prevents coatings from bonding and must be removed by abrasive blasting before any primer is applied, including on brand-new steel. This is not optional." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need surface prep before coating?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

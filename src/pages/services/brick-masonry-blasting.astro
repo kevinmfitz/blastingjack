@@ -1,0 +1,159 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Brick and Masonry Blasting in Michigan | Blasting Jack"
+  description="Brick and masonry blasting in Michigan — paint removal, stain removal, graffiti, biological growth. Vapor blasting preferred for historic and delicate surfaces. Media selected to protect mortar."
+  canonical="https://blastingjack.com/services/brick-masonry-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Brick and Masonry Blasting in Michigan"
+    subtitle="Restore brick and masonry without damaging the original material — media selection is everything."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Blasting brick and masonry — why media selection is critical
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Brick, stone, and masonry are more fragile than steel. The wrong abrasive media — too hard, too angular, or at too high a pressure — erodes the face of the brick, damages the mortar joints, and can permanently alter the appearance of historic surfaces. Getting it back is expensive or impossible.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack selects media and blast parameters for each brick and masonry project based on the surface type, the contaminant being removed, and whether the surface is historic or modern. Softer media (crushed glass, corn cob, baking soda, or low-pressure glass bead) removes paint and biological growth without cutting into the brick face or mortar.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Vapor blasting (dustless blasting) is often the preferred method for brick and masonry — the water-abrasive slurry is gentler on porous surfaces and suppresses dust from disturbed paint and biological growth.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">What brick blasting removes</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Old paint and masonry coatings (elastomeric, latex, oil-based)",
+                "Biological growth (moss, lichen, algae, mold)",
+                "Staining from water, rust, or efflorescence",
+                "Graffiti from brick and stone surfaces",
+                "Soot and smoke residue from fire damage",
+                "Weathered surface buildup from decades of exposure",
+                "Failed or peeling waterproofing sealers",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Historic and architecturally significant surfaces
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Historic brick buildings in Michigan — industrial plants, train stations, commercial buildings, and residential structures built before 1950 — often have softer, more porous brick than modern manufactured brick. They require lower blast pressures, finer media, and more conservative technique to clean without causing damage.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack has worked on historic restoration projects in Michigan, including the Michigan Central Train Station waiting room restoration. For architecturally significant surfaces, we evaluate the brick and mortar before selecting media and test a small inconspicuous area before proceeding with the full scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            If a project is on the National Register or subject to historic preservation guidelines, additional restrictions may apply — we recommend reviewing those requirements before any surface work begins.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <a href="/gallery/vapor-blasting-historic-brick/" class="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <span class="text-primary text-[20px]">→</span>
+            <div>
+              <div class="font-semibold text-heading text-[15px]">Vapor Blasting Historic Brick Exterior</div>
+              <div class="text-body text-[13px]">Gallery Project</div>
+            </div>
+          </a>
+          <a href="/gallery/michigan-central-train-station/" class="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <span class="text-primary text-[20px]">→</span>
+            <div>
+              <div class="font-semibold text-heading text-[15px]">Michigan Central Train Station Waiting Room</div>
+              <div class="text-body text-[13px]">Gallery Project</div>
+            </div>
+          </a>
+          <a href="/gallery/ann-arbor-stairs/" class="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <span class="text-primary text-[20px]">→</span>
+            <div>
+              <div class="font-semibold text-heading text-[15px]">Ann Arbor Staircase Restoration</div>
+              <div class="text-body text-[13px]">Gallery Project</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Containment for paint removal on masonry</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Paint removed from brick surfaces — especially older paint — may contain lead. Appropriate containment is required to capture debris and prevent migration to surrounding areas, pedestrians, or adjacent property.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For urban or occupied building sites, blast containment is set up to capture media and removed material. Vapor blasting reduces airborne dust, making it easier to manage the debris generated during paint and coating removal from masonry.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">After blasting</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasted brick and masonry surfaces are typically left clean and ready for the next phase of work — whether that's tuck pointing, sealing, painting, or simply restored to natural appearance.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            If the project involves painting or coating the brick after blasting, we can coordinate with painting contractors on timing and surface condition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can all brick be blasted?", a: "Most modern brick can handle abrasive blasting with appropriate media and pressure. Very soft or highly porous historic brick, especially in structures pre-dating 1900, may be too fragile for abrasive blasting and may require chemical cleaning or very gentle wet methods instead. We evaluate each surface before committing to a method." },
+          { q: "Will blasting damage the mortar joints?", a: "It can, if the wrong media or pressure is used. Proper brick blasting uses soft, fine-grit media at controlled pressure, directed at the brick face rather than directly into mortar joints. An experienced operator adjusts technique to preserve mortar." },
+          { q: "What's the best method for removing paint from brick?", a: "Vapor blasting (dustless blasting) is often the best approach — it's gentler on porous surfaces, reduces dust, and provides good control over blast intensity. For very stubborn coatings or large areas, dry blasting with soft media may be more efficient." },
+          { q: "Can you remove graffiti from brick?", a: "Yes. Graffiti removal from brick using low-pressure wet blasting or vapor blasting is effective on most graffiti paints. The result depends on how deeply the graffiti paint has penetrated the brick face. Older graffiti or porous brick may retain some staining after removal." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need brick or masonry cleaned?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

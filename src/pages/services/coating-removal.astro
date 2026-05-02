@@ -1,0 +1,143 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Industrial Coating Removal in Michigan | Blasting Jack"
+  description="Industrial coating removal in Michigan — abrasive blasting and UHP water blasting to remove failed coatings, peeling paint, and rust from steel, concrete, tanks, and equipment."
+  canonical="https://blastingjack.com/services/coating-removal/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Industrial Coating Removal in Michigan"
+    subtitle="Strip failed coatings down to bare metal. Start the recoat cycle right."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Why coating over a failed coating always fails
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            The most common cause of premature coating failure is inadequate surface preparation on the previous application. When a coating peels, blisters, or delaminating, it means the adhesion bond between the coating and the substrate has broken down. Painting over a failed coating doesn't restore that bond — it adds another layer that will fail the same way, usually faster.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Proper coating removal gets you back to a known starting point — clean, profiled steel, concrete, or masonry — so the new coating system can be applied correctly and perform as specified.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack removes failed coatings using abrasive blasting, ultra-high-pressure water blasting (up to 40,000 PSI), or a combination of both depending on the surface and the project requirements.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Common conditions requiring coating removal</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Peeling or delaminating industrial coatings on structural steel",
+                "Blistering epoxy or urethane on tanks and vessels",
+                "Failing paint on industrial equipment, trailers, and machinery",
+                "Deteriorated coatings on parking garage structural steel",
+                "Old paint on brick, concrete, or masonry before restoration",
+                "Maintenance recoat cycles where old coating must come off completely",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Removal methods
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          {
+            title: "Abrasive Blasting",
+            desc: "The standard method for industrial coating removal on steel. Removes coating, rust, and mill scale simultaneously while creating the anchor profile required for the new coating system. Achieves SSPC SP-6, SP-10, or SP-5."
+          },
+          {
+            title: "UHP Water Blasting (40,000 PSI)",
+            desc: "Ultra-high-pressure water removes failed coatings from steel and concrete without generating abrasive media waste. Preserves existing anchor profile. Meets WJ-1 through WJ-4 SSPC water jetting standards. No dust generation."
+          },
+          {
+            title: "Vapor / Dustless Blasting",
+            desc: "For coating removal in occupied facilities or on historic surfaces where dust control is critical. Water-abrasive slurry removes coatings with 92%+ less airborne dust than dry blasting."
+          },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Containment for paint removal</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Older industrial coatings may contain lead, chromates, or other regulated materials. Coating removal on these surfaces requires appropriate containment to prevent airborne particles and debris from migrating beyond the work area, and proper waste handling protocols.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack plans containment as part of every coating removal project. If you know or suspect the existing coating contains regulated materials, tell us upfront — that affects how we set up, what PPE is used, and how waste is handled.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">After removal — ready to coat</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            After coating removal, the surface should be inspected and coated as quickly as the spec allows. Steel surfaces are vulnerable to flash rust once the old coating is off, especially in Michigan's humid environment.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Through our sister brand Endurance Painting, we can coordinate blasting and industrial coating application under one project plan. The prep-to-coat transition is handled without gaps in schedule or accountability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Do you need to remove all of an existing coating before repainting?", a: "It depends on the coating system spec and the condition of the existing coating. If the existing coating is tightly adhered and in good condition, some systems allow overcoating. If there's delamination, peeling, or active rust underneath, removal is required. The coating manufacturer's product data sheet specifies what's acceptable." },
+          { q: "Can you remove coatings that may contain lead?", a: "We can remove coatings with appropriate containment measures. We don't perform lead abatement certification or disposal — we contain blast debris properly and work with the project's environmental requirements. If lead abatement certification is required by the project, tell us upfront." },
+          { q: "What's the difference between abrasive blasting and UHP water blasting for coating removal?", a: "Abrasive blasting removes the coating and simultaneously creates a new anchor profile. UHP water blasting removes the coating without changing the existing profile — useful when the base metal profile is already correct and you just need the failed coating stripped. Water blasting also generates no abrasive waste." },
+          { q: "How quickly should new coating be applied after removal?", a: "As quickly as possible — within hours in humid conditions. Bare steel begins to oxidize (flash rust) immediately after blasting, especially in Michigan's summer humidity. We work with coating crews to minimize the window between blast and primer." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need a failed coating removed?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

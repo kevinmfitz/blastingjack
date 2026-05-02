@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Rust Removal Blasting for Industrial Surfaces | Blasting Jack"
+  description="Industrial rust removal by sandblasting in Michigan. Michigan's road salt, humidity, and freeze-thaw cycles destroy unprotected steel — abrasive blasting is the only permanent solution."
+  canonical="https://blastingjack.com/services/rust-removal/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Rust Removal Blasting for Industrial Surfaces"
+    subtitle="Michigan's environment is hard on steel. Abrasive blasting is the only fix that lasts."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Why Michigan steel corrodes fast — and what to do about it
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Michigan's industrial environment is among the most corrosive in the country. Road salt used from November through March is highly aggressive to unprotected or poorly protected steel. Freeze-thaw cycles cause coatings to crack and delaminate. Year-round humidity, near the Great Lakes, accelerates oxidation on any exposed steel surface.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Wire brushing, grinding, and rust converters all treat rust at the surface level. They don't remove the oxidation from the pits and valleys of corroded steel, and they don't create the anchor profile a coating needs to bond permanently. The rust comes back — usually within one to two years.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Abrasive blasting removes rust completely — from the surface and from the pits — and simultaneously creates the anchor profile that industrial coatings require. It's the only preparation method that produces a permanent fix when paired with the right coating system.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Why other rust removal methods fall short</h3>
+            <div class="space-y-4">
+              {[
+                { method: "Wire brushing / grinding", problem: "Removes surface rust only. Rust in pits and texture remains. No anchor profile created. Coating will fail at remaining rust cells." },
+                { method: "Rust converter", problem: "Chemically treats rust but doesn't remove it. Conversion is incomplete in deeper corrosion. Creates an unstable base for industrial coatings." },
+                { method: "Power tool cleaning (SSPC SP-3)", problem: "Minimum prep for very light surface rust. Insufficient for assets that require industrial coating systems or that face aggressive environments." },
+                { method: "Hand cleaning (SSPC SP-2)", problem: "Removes loose rust and scale. Leaves tightly bonded rust in place. Not acceptable for high-performance coating systems." },
+              ].map(item => (
+                <div class="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                  <div class="font-semibold text-heading text-[15px]">{item.method}</div>
+                  <p class="text-body text-[14px] mt-1">{item.problem}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Common rust removal applications
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Structural Steel", desc: "Beams, columns, connections, and embedded plates in parking structures, bridges, and industrial buildings. Rust at structural connections is a safety issue, not just a cosmetic one." },
+          { title: "Industrial Equipment", desc: "Manufacturing equipment, trailers, material handling systems, and plant machinery corroded by industrial environments and exposure to the elements." },
+          { title: "Tanks & Vessels", desc: "Above-ground storage tanks, wastewater tanks, and industrial vessels where rust on interior or exterior surfaces compromises structural integrity and coating adhesion." },
+          { title: "Light Poles & Infrastructure", desc: "Light poles, utility structures, guard rails, and municipal infrastructure that require rust removal and recoating on a maintenance schedule." },
+          { title: "Seawalls & Marine", desc: "Steel seawalls, sheet piling, and marine structures exposed to water and salt that require aggressive rust removal and protective coating." },
+          { title: "Fleet & Trailers", desc: "Flatbed trailers, tankers, and fleet vehicles corroded by road salt — blasted and recoated to extend service life." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">SSPC standards for rust removal</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            The SSPC (Society for Protective Coatings) defines cleanliness standards for steel surface preparation. Rust removal to SP-10 (near-white) or SP-5 (white metal) is typically required for high-performance industrial coatings and immersion service.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            The required standard depends on the coating system being applied. Blasting Jack works to the spec required — we confirm the SSPC level with you before the job starts, not after.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">After the rust is gone</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasted steel is vulnerable to flash rust within hours, especially in humid conditions. Primer should follow blasting as quickly as the project allows. The window between blast and coat is a critical scheduling constraint.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Through our sister brand Endurance Painting, we can coordinate industrial surface prep and coating application under one project plan with no gap in accountability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How do I know if my steel needs blasting vs. power tool cleaning?", a: "The deciding factor is the coating system being applied and the severity of corrosion. Most industrial coating systems — any epoxy, urethane, or high-build coating — require abrasive blasting to a minimum of SSPC SP-6 for the coating to perform as specified. If there's active rust, pitting, or delaminated coating, blasting is required." },
+          { q: "Can you remove rust from large structures that can't be moved?", a: "Yes — this is what mobile blasting is designed for. We come to the site, set up containment, and blast the structure in place. We work on installed structural steel, tanks, parking structures, seawalls, and other large fixed assets regularly." },
+          { q: "How long will a coating system last after proper surface prep?", a: "Coating life depends on the system selected, the environment, and the maintenance program. A properly blasted and coated industrial steel surface in a typical Michigan environment can be expected to perform 10–20+ years with the right system. Proper prep is the primary variable in coating longevity." },
+          { q: "Does rust removal require special permits in Michigan?", a: "It depends on the location and scope. Outdoor blasting near waterways, or blasting in certain municipalities, may require permits. If the coating being removed contains regulated materials (lead, chromates), waste handling requirements apply. We'll identify permit requirements during project planning." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need rust removed from industrial steel?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

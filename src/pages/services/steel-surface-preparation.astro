@@ -1,0 +1,170 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Steel Surface Preparation Contractor | Blasting Jack"
+  description="SSPC-compliant steel surface preparation in Michigan. Proper anchor profiles, cleanliness standards, and prep timing — the foundation every industrial coating system requires."
+  canonical="https://blastingjack.com/services/steel-surface-preparation/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Steel Surface Preparation Contractor"
+    subtitle="Surface preparation that protects the coating before it starts."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Why surface prep determines coating life
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            A coating system is only as good as the surface it's applied to. The SSPC estimates that over 80% of industrial coating failures are caused by inadequate surface preparation — not coating quality, not application method, not environmental conditions. Inadequate prep.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            The two things abrasive blasting achieves simultaneously are what make it the required prep method for industrial steel: cleanliness (removing rust, mill scale, old coatings, and contaminants) and anchor profile (creating the surface texture that gives coatings mechanical adhesion). A coating applied over contaminated steel or over steel with insufficient profile will fail at the bond line — regardless of coating quality.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack performs steel surface preparation to the SSPC standard specified by the coating system — confirmed before any blasting begins, documented after.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-4">SSPC Cleanliness Standards</h3>
+            <div class="space-y-3">
+              {[
+                { std: "SP-5 — White Metal", desc: "All rust, scale, coatings, and contaminants removed. Required for immersion service, tank linings, and severe environments." },
+                { std: "SP-10 — Near-White", desc: "≥95% of surface free of all residues. Required by most high-performance industrial coatings (epoxy, urethane, zinc-rich primers)." },
+                { std: "SP-6 — Commercial Blast", desc: "≥2/3 of surface free of all residues. Minimum acceptable standard for general industrial coating applications." },
+                { std: "SP-7 — Brush-Off", desc: "Loose rust and scale removed, tight material remains. Limited coating applications — check spec before accepting." },
+              ].map(item => (
+                <div class="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                  <div class="font-semibold text-heading text-[15px]">{item.std}</div>
+                  <p class="text-body text-[14px] mt-1">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+        Anchor profile
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Surface profile — measured in mils (thousandths of an inch) using Testex replica tape — is the peak-to-valley roughness created by abrasive blasting. Coating systems specify a minimum profile to achieve rated adhesion strength.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Too little profile: the coating doesn't have enough surface area to bond and adhesion is insufficient. Too much profile: peaks can telegraph through thin film coatings, creating a path for moisture infiltration.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Media selection, blast pressure, and standoff distance determine the resulting profile. Blasting Jack selects parameters to hit the profile range specified by the coating manufacturer.
+          </p>
+        </div>
+        <div class="bg-white border border-gray-200 p-6 rounded-lg">
+          <h3 class="font-heading text-[17px] font-semibold text-heading mb-4">Common profile requirements by coating system</h3>
+          <div class="space-y-3 text-[15px]">
+            {[
+              { coating: "Zinc-rich primer (inorganic)", profile: "2–4 mil" },
+              { coating: "Epoxy primer / high-build epoxy", profile: "1.5–3 mil" },
+              { coating: "Urethane topcoat", profile: "1–3 mil" },
+              { coating: "Coal tar epoxy (immersion)", profile: "3–4 mil" },
+              { coating: "Tank lining (internal)", profile: "2.5–4 mil" },
+            ].map(item => (
+              <div class="flex justify-between border-b border-gray-100 pb-2 last:border-0 last:pb-0">
+                <span class="text-heading font-medium">{item.coating}</span>
+                <span class="text-body font-semibold">{item.profile}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-body text-[13px] mt-4">Always confirm with the coating manufacturer's PDS — these are representative ranges, not universal specs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Timing between blast and coat</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Once steel is blasted to bare metal, it begins oxidizing — the rate depends on humidity, temperature, and steel chemistry. Flash rust can appear within hours in Michigan's summer humidity. Coating should follow blasting as quickly as the spec allows.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We coordinate with coating contractors on sequencing so the window between blast and prime is minimized. This is a critical scheduling variable, not an afterthought.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Surface prep documentation</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Many industrial projects require documented evidence of surface prep compliance before coating application is authorized. Blasting Jack provides Testex tape profile documentation and surface cleanliness records on projects where this is required.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Coating inspectors can be coordinated to verify the surface before primer is applied. We work within whatever inspection and documentation framework your project requires.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Need Surface Prep and Coating on the Same Project?</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack coordinates steel surface preparation and industrial coating application under one project plan. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What SSPC standard does my project require?", a: "The required standard is specified by the coating manufacturer's product data sheet (PDS) and/or the project engineering spec. Most zinc-rich primers and high-performance epoxies require SSPC SP-10 as a minimum. Immersion service coating systems typically require SP-5. If you don't have the PDS, we can help you identify what's required." },
+          { q: "Do you provide surface prep documentation for coating inspectors?", a: "Yes. We provide Testex replica tape surface profile readings and visual inspection records when required. We can also work within third-party inspection frameworks specified by the project." },
+          { q: "How do you handle flash rust between blast and coat?", a: "Scheduling. The window between blast completion and primer application should be as short as possible. We coordinate with coating crews on sequencing and can stage blast work in sections to keep that window tight. In high-humidity conditions, inhibitive rinse additives can be applied after blasting." },
+          { q: "Can you prep steel at a fabrication shop before delivery?", a: "Yes. We work at fabrication shops regularly — blasting fabricated steel to the required SSPC standard before primer or delivery. Shop blasting is more efficient than field blasting on standard fabricated steel." },
+          { q: "What surfaces does steel surface preparation apply to?", a: "Structural steel, fabricated steel assemblies, tanks and vessels, equipment and machinery, trailers, bridges and infrastructure, parking garage steel, and any other ferrous metal surface that requires industrial coating." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Get your steel ready for coating
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

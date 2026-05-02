@@ -1,0 +1,161 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Dry Ice Blasting Services in Michigan | Blasting Jack"
+  description="Dry ice (CO2) blasting in Michigan — no secondary waste, no moisture, safe around electronics and food processing. Machine cleaning, mold remediation, and industrial equipment cleaning."
+  canonical="https://blastingjack.com/services/dry-ice-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Dry Ice Blasting Services in Michigan"
+    subtitle="Clean industrial equipment in place — no media, no moisture, no secondary waste."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            What dry ice blasting is
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Dry ice blasting propels solid CO₂ pellets at high velocity using compressed air. When pellets impact a surface, two things happen: the kinetic energy dislodges the contaminant, and the extreme cold (−109°F) causes thermal shock that makes contaminants brittle and fractures them from the substrate. The dry ice then sublimates — converting directly from solid to gas — leaving zero residue behind.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            The only material left on the ground after dry ice blasting is what was on the surface to begin with. There's no spent abrasive to collect, no water to manage, and no chemical residue to neutralize.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            This makes dry ice blasting the right tool for cleaning industrial equipment in place — without disassembly, without introducing moisture, and without the cleanup burden of abrasive methods.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Where dry ice blasting excels</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Manufacturing equipment cleaned in place without disassembly",
+                "Live electrical panels and control equipment (non-conductive)",
+                "Food processing and packaging machinery (food-safe, no chemicals)",
+                "Mold remediation on wood framing and structural members",
+                "Ink and adhesive residue on printing and packaging lines",
+                "Fire and smoke damage restoration",
+                "Precision-machined components and mold faces",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-8">
+        Dry ice vs. other cleaning methods
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[15px] border-collapse">
+          <thead>
+            <tr class="bg-dark text-white">
+              <th class="text-left p-4 font-semibold">Method</th>
+              <th class="text-left p-4 font-semibold">Residue</th>
+              <th class="text-left p-4 font-semibold">Safe Near Electronics?</th>
+              <th class="text-left p-4 font-semibold">Downtime Required?</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Dry Ice Blasting", "None (sublimates)", "Yes", "Minimal — often in place"],
+              ["Abrasive Blasting", "Spent abrasive media", "No", "Full shutdown + cleanup"],
+              ["Pressure Washing", "Water, moisture", "No", "Drying time required"],
+              ["Chemical Cleaning", "Chemical residue", "Limited", "Neutralization required"],
+              ["Hand Scraping", "None", "Yes", "Very high labor time"],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                {row.map((cell, j) => (
+                  <td class={`p-4 border border-gray-200 ${j === 0 ? "font-semibold text-heading" : "text-body"}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Safety and ventilation</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Dry ice sublimates into CO₂ gas. In enclosed or poorly ventilated spaces, CO₂ concentrations can build to unsafe levels. Adequate ventilation is required when working in confined areas — CO₂ monitoring should be used when working in areas with limited air exchange.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Operators wear appropriate PPE including face shields, hearing protection, and insulated gloves. Blasting Jack crews are OSHA-trained for safe operation in industrial environments.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">What dry ice blasting is not for</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Dry ice blasting removes contaminants from surfaces — it does not create an anchor profile. If the goal is surface preparation for an industrial coating system that requires a specific mil profile, abrasive blasting is the correct method.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For heavy mill scale, structural rust removal, or surfaces requiring bare-metal SSPC cleanliness for industrial painting, abrasive blasting is the appropriate choice.
+          </p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <h3 class="font-heading text-[18px] font-semibold text-heading mb-4">Related project</h3>
+        <a href="/gallery/dry-ice-machine-cleaning/" class="inline-flex items-center gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+          <span class="text-primary text-[20px]">→</span>
+          <div>
+            <div class="font-semibold text-heading text-[15px]">Dry-Ice Blasting for Machine Cleaning</div>
+            <div class="text-body text-[13px]">Gallery Project</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can dry ice blasting clean equipment that's still running?", a: "In many cases, yes — because dry ice blasting is non-conductive and leaves no moisture, it can be performed on live electrical equipment and machinery that remains energized. Always confirm with your safety team and equipment manufacturer before cleaning energized equipment." },
+          { q: "Is dry ice blasting safe in food processing environments?", a: "Yes. CO₂ is food-safe, there are no chemicals involved, and the process leaves no residue that could contaminate food contact surfaces. It's used widely in conveyor systems, baking equipment, packaging lines, and cold storage facilities." },
+          { q: "How much downtime does dry ice blasting require?", a: "Often minimal. Because equipment can frequently stay in place and the process leaves no residue requiring cleanup (other than the removed contaminant), dry ice blasting often requires significantly less downtime than alternative methods." },
+          { q: "Can dry ice blasting remove rust?", a: "Dry ice blasting removes loose rust and surface contamination but is not the right tool for removing heavy rust or corroded steel. For structural rust removal and surface preparation before industrial coatings, abrasive blasting is required." },
+          { q: "Does dry ice blasting damage surfaces?", a: "When operated correctly, dry ice blasting is non-abrasive. CO₂ pellets are softer than most industrial surfaces and won't scratch, pit, or abrade metals. Blast pressure and pellet size are adjusted based on the substrate." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need in-place equipment cleaning?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,157 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Industrial Sandblasting Services in Michigan | Blasting Jack"
+  description="Large-scale industrial sandblasting in Michigan. Crews of 10–20, 900 CFM capacity, four simultaneous blast setups. Tanks, structural steel, plant equipment, and more."
+  canonical="https://blastingjack.com/services/industrial-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Industrial Sandblasting Services in Michigan"
+    subtitle="Production-scale blast capacity for Michigan's industrial facilities and contractors."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blast work at scale
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial sandblasting projects are defined by surface area, access constraints, SSPC cleanliness requirements, tight maintenance windows, and the need to coordinate with coating contractors, facility managers, and safety teams. Blasting Jack is built for this work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            We run crews of 10–20 with 900 CFM air capacity and the ability to operate four simultaneous blast setups on large projects. That kind of production capacity is what keeps a 30,000 sq ft structural steel project on schedule instead of creating a bottleneck.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Every project gets a dedicated project lead, clear schedule milestones, and documentation of surface prep compliance before coating crews move in.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Production capabilities</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Crews of 10–20 for large industrial projects",
+                "900 CFM air delivery capacity",
+                "Four simultaneous blast setups",
+                "Owned heavy equipment — no rental delays",
+                "BlastOne MistBlaster and full mobile equipment package",
+                "Available for nights and weekends to minimize downtime",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Industrial assets and facilities we serve
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Manufacturing Plants", desc: "Scheduled plant maintenance blasting — structural steel, equipment, tanks — coordinated around production windows and shutdowns." },
+          { title: "Steel Fabrication Shops", desc: "Mill scale removal from new fabricated steel before primer application, ensuring coating specs are met before parts leave the shop." },
+          { title: "Tanks & Storage Vessels", desc: "Interior and exterior blasting of industrial tanks, food-grade silos, wastewater tanks, and above-ground storage tanks." },
+          { title: "Parking Structures", desc: "Surface preparation on structural steel and concrete in parking garages — rust removal and prep before protective coating application." },
+          { title: "Infrastructure", desc: "Bridges, utility assets, water towers, and public infrastructure maintained to SSPC and government specs." },
+          { title: "Heavy Equipment & Fleets", desc: "Mobile blasting of industrial equipment, trailers, and fleet vehicles at your facility — no transport required." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Working around your schedule
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial facilities don't stop production for blast work unless they have to. Blasting Jack schedules around your maintenance windows — planned shutdowns, nights, weekends, and phased sections of a facility.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work with your maintenance manager or project coordinator to sequence blast work with coating crews, inspectors, and production restart timelines. One contact, clear milestones.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            SSPC compliance and documentation
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Industrial coating specs require documented surface prep compliance — cleanliness level, surface profile, and timing between blast and coat. Blasting Jack provides surface prep documentation as part of project delivery.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work to the SSPC standard specified — SP-6, SP-10, or SP-5 — and can provide Testex tape profile documentation when required.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Need Coating After Blasting?</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack can coordinate industrial surface preparation and coating application under one project plan. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How large of a project can Blasting Jack handle?", a: "We've completed projects ranging from single pieces of equipment to large structural steel jobs covering tens of thousands of square feet. With crews of 10–20 and four simultaneous blast setups, we're one of Michigan's more capable mid-to-large industrial blasting operations." },
+          { q: "Do you work during plant shutdowns?", a: "Yes — planned shutdowns are one of our primary scheduling windows. We'll confirm the shutdown schedule, define the scope within that window, and sequence work so coating crews can follow immediately if needed." },
+          { q: "What's required before Blasting Jack mobilizes to site?", a: "A clear scope of work, confirmed SSPC surface prep standard, access to utilities (compressed air or power as needed), and a point of contact for site safety orientation. We handle the rest." },
+          { q: "Do you provide surface prep documentation for coating inspectors?", a: "Yes. We can provide visual inspection records, Testex profile readings, and signed surface prep documentation when specified by the project." },
+          { q: "Can you handle containment in an active facility?", a: "Yes. We work in occupied facilities regularly with appropriate containment systems — curtains, negative pressure, debris collection, and HEPA filtration where required." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Have an industrial blasting project?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Structural Steel Blasting in Michigan | Blasting Jack"
+  description="Structural steel blasting and surface preparation in Michigan — in-place blasting of parking structures, bridges, building steel, and industrial framing. SSPC-compliant surface prep before protective coatings."
+  canonical="https://blastingjack.com/services/structural-steel-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Structural Steel Blasting in Michigan"
+    subtitle="SSPC-compliant surface preparation on structural steel — in-place, on schedule, properly contained."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Structural steel prep — in place, at scale
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Structural steel in parking garages, bridges, industrial buildings, and infrastructure accumulates rust and coating failures over time. Maintenance recoating is the most cost-effective way to extend the life of steel structures — but only when proper surface preparation is done first.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Structural steel can't be taken down and transported to a blast shop. It's blasted in place. That requires mobile equipment, planned containment to protect what's below and adjacent, and coordination with coating contractors, facility managers, and inspectors.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack operates production-scale blast crews with the capacity to work efficiently on large structural steel projects — tens of thousands of square feet — while maintaining the SSPC cleanliness standards that coating systems require.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Structural steel applications</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Parking garage beams, columns, and connections",
+                "Bridge structural steel and expansion joints",
+                "Industrial building framing and mezzanines",
+                "Steel fabrication — mill scale removal before primer",
+                "Structural connections at grade and above grade",
+                "Pipe racks, platforms, and structural supports",
+                "Overhead steel in manufacturing facilities",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Containment for in-place structural blasting
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting installed structural steel generates abrasive media, paint particles, and rust debris that must be contained. Debris falling on vehicles in an occupied parking garage, on equipment below the blast area, or near pedestrians creates liability and regulatory problems.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack designs containment based on the structure — shrouded blast heads, debris capture systems, plastic sheeting, and section-by-section sequencing to keep the work area controlled.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For structures with occupied or active areas adjacent to the blast zone, we phase the work to minimize disruption and maintain safe conditions throughout the project.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Scheduling around structure operations
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Parking garages, industrial buildings, and infrastructure assets don't shut down for maintenance blasting. Blasting Jack schedules around operational constraints — nights, weekends, low-traffic periods, and section-by-section sequencing.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work directly with facility managers, property managers, and GCs to confirm sequencing, lane closures, and access requirements before mobilizing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="mb-10">
+        <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Related project examples</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          {[
+            { href: "/gallery/henry-ford-hospital-parking-garage/", title: "Parking Garage Blast and Repaint", label: "Gallery Project" },
+            { href: "/gallery/mobile-blasting-mill-scale-pipes/", title: "Mobile Blasting: Removing Mill Scale for Pipe Manufacturer", label: "Gallery Project" },
+          ].map(item => (
+            <a href={item.href} class="flex items-center gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+              <span class="text-primary text-[20px]">→</span>
+              <div>
+                <div class="font-semibold text-heading text-[15px]">{item.title}</div>
+                <div class="text-body text-[13px]">{item.label}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Need Coating After Blasting?</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack can coordinate structural steel blasting and protective coating application under one project plan. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Can you blast structural steel while the building is in use?", a: "Yes — with appropriate containment and scheduling. We work in occupied and semi-occupied structures regularly. Containment design, operating hours, and access sequencing are determined during project planning." },
+          { q: "What SSPC standard is required for structural steel maintenance coating?", a: "It depends on the coating system. Most high-performance structural steel coatings (epoxy, zinc-rich primer, urethane) require SSPC SP-10 (near-white) as a minimum. Some applications in mild environments may accept SP-6. The coating manufacturer's spec is the governing document." },
+          { q: "Do you blast at fabrication shops before erection?", a: "Yes. Shop blasting of fabricated steel before delivery is more efficient than field blasting after erection. We work at fabrication shops to blast and prime structural steel before it leaves the shop." },
+          { q: "How do you protect vehicles and equipment below the blast area?", a: "Containment is designed around the specific structure. For parking garages, we use tarps, debris netting, and section isolation. Vehicles are excluded from the immediate blast zone. For overhead work in industrial buildings, we protect equipment below with appropriate covers." },
+          { q: "How long does structural steel blasting take?", a: "Production rates depend on SSPC level required, surface condition, access constraints, and crew size. A 10,000 sq ft parking garage project is typically a one-to-two week blast scope for a production crew. Large bridge or industrial projects are scoped based on site-specific access and conditions." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need structural steel blasted?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

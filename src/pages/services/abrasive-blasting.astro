@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Abrasive Blasting Contractor in Michigan | Blasting Jack"
+  description="Abrasive blasting for industrial surfaces in Michigan. SSPC-compliant surface profiles, premium silica-free media, structural steel, tanks, equipment, and more."
+  canonical="https://blastingjack.com/services/abrasive-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Abrasive Blasting Contractor in Michigan"
+    subtitle="The right media, the right profile, the right prep — every time."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            What abrasive blasting is and when you need it
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Abrasive blasting propels abrasive media at high velocity against a surface to remove rust, mill scale, old coatings, and contaminants — and to create an anchor profile that allows industrial coatings to bond. Without a proper surface profile, even the best coating system will fail prematurely.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Most industrial coating specs — whether from the coating manufacturer, an engineering firm, or a government standard — require abrasive blasting to a specific SSPC cleanliness level before primer is applied. Abrasive blasting is the only method that both cleans and profiles the surface in a single operation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack uses premium silica-free abrasives on every job. Coal slag is cheap and creates real problems — silica exposure risk, inconsistent profiles, and surface contamination. We don't use it.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">SSPC Surface Prep Standards</h3>
+            <div class="space-y-3 text-[15px]">
+              {[
+                { code: "SP-3", name: "Power Tool Cleaning", note: "Not abrasive blasting — for reference" },
+                { code: "SP-6", name: "Commercial Blast", note: "Removes 2/3 of rust and contaminants — basic industrial requirement" },
+                { code: "SP-10", name: "Near-White Blast", note: "≥95% clean — required by most high-performance coatings" },
+                { code: "SP-5", name: "White Metal Blast", note: "100% clean — required for immersion service, tanks, severe environments" },
+              ].map(item => (
+                <div class="border-b border-gray-200 pb-3 last:border-0 last:pb-0">
+                  <span class="font-semibold text-heading">{item.code} — {item.name}</span>
+                  <p class="text-body mt-0.5">{item.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Abrasive media selection
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { media: "Garnet", use: "High-performance steel prep, precise anchor profiles, clean finish" },
+          { media: "Steel Grit", use: "Heavy-duty rust and scale removal on thick steel, high production rates" },
+          { media: "Steel Shot", use: "Peening and light cleaning on steel where a smoother profile is needed" },
+          { media: "Glass Bead / Aluminum Oxide", use: "Lighter surfaces, vapor blasting slurry, masonry, and restoration work" },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-5 rounded-lg">
+            <h3 class="font-heading text-[16px] font-semibold text-heading mb-2">{item.media}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.use}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-body text-[15px] mt-6">Media selection is matched to the surface type, cleanliness spec, and required anchor profile. We confirm the spec before any blasting begins.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Anchor profile</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Surface profile (measured in mils or microns — Ra/Rz) is the roughness created by abrasive blasting. Coatings require a minimum profile to achieve specified adhesion strength. Too little profile and the coating won't bond. Too much and the peaks can telegraph through thin coats.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Every coating system specifies a required profile range. We select media and blast parameters to hit that range consistently.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Containment & cleanup</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Abrasive blasting generates spent media and removed material that must be managed. Blasting Jack plans containment for every project — tarps, vacuum recovery, and shrouded blast heads for dust-sensitive environments.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            If the surface being blasted contains old paint with lead or other regulated materials, containment and disposal requirements are addressed during project planning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What's the difference between abrasive blasting and sandblasting?", a: "Sandblasting is an older term for abrasive blasting using sand as the media. Modern abrasive blasting uses silica-free media (garnet, steel grit, glass bead, etc.) to avoid silica dust exposure. The terms are used interchangeably in the industry, but the media used today is almost never actual sand." },
+          { q: "How do I know what SSPC level my project needs?", a: "The coating manufacturer's product data sheet specifies the minimum surface prep required for the product to perform as warranted. Engineering specs and government contracts typically specify the standard. Blasting Jack can help you interpret the requirements — just send us the spec or the product data sheet." },
+          { q: "Can abrasive blasting damage the base metal?", a: "When done correctly with the right media and blast parameters, abrasive blasting removes surface material (rust, scale, coatings) without damaging the base steel. Excessive blast pressure or the wrong media can cause over-blasting on thin gauge materials. We adjust parameters to the surface." },
+          { q: "What surfaces can't be abrasive blasted?", a: "Very thin metals, certain plastics, live electrical components, and surfaces where dust or abrasive contamination would cause downstream problems are generally not suited to traditional abrasive blasting. For those, dry ice blasting or vapor blasting may be the better option." },
+          { q: "Do you provide surface profile readings after blasting?", a: "Yes, we can provide Testex tape profile readings as part of project documentation when required by the project spec or at client request." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need an abrasive blasting quote?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting Contractor in Michigan | Blasting Jack"
+  description="Blasting Jack provides mobile sandblasting across Michigan — truck-mounted equipment comes to your job site. Industrial surfaces, equipment, tanks, structural steel, and more."
+  canonical="https://blastingjack.com/services/mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Mobile Sandblasting Contractor in Michigan"
+    subtitle="We bring the equipment to you — no transport, no delays, no excuses."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Surface prep that comes to your site
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Mobile sandblasting means the blast equipment comes to the job site — whether that's a manufacturing plant, a steel yard, a construction site, or a facility with large fixed assets that can't be transported. Blasting Jack operates fully self-contained mobile blast rigs across Southeast Michigan and statewide.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Most industrial surfaces are too large, too heavy, or too integrated into a facility to move to a shop for blasting. Mobile blasting eliminates that constraint. We set up containment, blast the surface, clean up, and leave the asset where it is — prepped and ready for coating or inspection.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack runs crews of 10–20 with 900 CFM air capacity and the ability to run four simultaneous blast setups on large projects. We're not a one-truck operation.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-2">When to use mobile blasting</h3>
+            <ul class="text-body text-[16px] space-y-2">
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Asset is too large or heavy to transport to a shop</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Structural steel is installed in place</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Tanks, silos, or vessels must stay in position</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Multiple surfaces at one facility need prep on the same schedule</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Coating contractors are arriving after blast crew and scheduling must align</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Project site is remote or difficult to access by standard equipment</li>
+            </ul>
+          </div>
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-2">Equipment capacity</h3>
+            <ul class="text-body text-[16px] space-y-2">
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Crews of 10–20 on large industrial projects</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> 900 CFM air capacity</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Four simultaneous blast setups available</li>
+              <li class="flex items-start gap-2"><span class="text-primary mt-1">→</span> Owned heavy equipment — no rental delays</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Surfaces Served -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Surfaces and assets served
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Structural Steel", desc: "In-place blasting of structural framing, parking structures, bridges, and building steel before coating or inspection." },
+          { title: "Industrial Equipment", desc: "Manufacturing machinery, heavy equipment, trailers, and plant assets blasted on-site without disassembly." },
+          { title: "Tanks & Silos", desc: "Interior and exterior blasting of storage tanks, food-grade silos, wastewater tanks, and above-ground storage vessels." },
+          { title: "Infrastructure", desc: "Light poles, utility assets, seawalls, bridges, and municipal infrastructure maintained with mobile blast crews." },
+          { title: "Brick & Masonry", desc: "Paint removal, stain removal, and surface restoration on brick, block, and stone — with appropriate media selection." },
+          { title: "Trailers & Fleet", desc: "Equipment fleet and trailer blasting for rental companies, steel haulers, and equipment owners." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Solved -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Problems mobile blasting solves
+          </h2>
+          <ul class="space-y-4 text-body text-[17px]">
+            {[
+              "Rust and active corrosion on steel that's reducing structural life and making coating adhesion impossible",
+              "Failed coatings that are peeling, blistering, or delaminating — coating over them will fail in the same way",
+              "Mill scale on new fabricated steel that prevents coatings from bonding correctly",
+              "Old paint on equipment that needs to be stripped before a shop coat or field coat can be applied",
+              "Surface contamination (grease, oxidation, weld spatter) that will undermine any coating system",
+              "Scheduled plant shutdowns where maintenance windows are short and prep needs to be completed fast",
+            ].map(item => (
+              <li class="flex items-start gap-3">
+                <span class="text-primary font-bold mt-1 shrink-0">→</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Containment & site protection
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Mobile blasting generates spent abrasive, dust, and debris that must be contained and managed. Blasting Jack plans containment as part of every project — not as an afterthought.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            For outdoor blasting near waterways, parking areas, or occupied facilities, we use shrouded blast heads, HEPA filtration, plastic sheeting, and debris barriers appropriate to the site. For indoor work, containment systems prevent cross-contamination with adjacent operations.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Cleanup is included. We leave the site clean and the surface ready for the next phase of work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-brand -->
+  <section class="py-16 md:py-20 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="max-w-[700px]">
+        <p class="text-primary font-semibold text-[13px] tracking-[0.15em] uppercase mb-3">Sister Brand</p>
+        <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-white leading-[1.2] mb-4">Need Coating After Blasting?</h2>
+        <p class="text-white/70 text-[17px] leading-relaxed mb-8">
+          Through our sister brand Endurance Painting, Blasting Jack can help coordinate surface preparation and industrial painting under one streamlined project plan. Blasting Jack prepares the surface. Endurance Painting protects the asset.
+        </p>
+        <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[16px] px-[32px] py-[14px] border-2 border-primary hover:bg-primary-hover transition-all duration-300">
+          Request a Blasting + Coating Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          {
+            q: "How far does Blasting Jack travel for mobile sandblasting?",
+            a: "We primarily serve Southeast Michigan — Macomb, Oakland, Wayne, Washtenaw, Genesee, and Livingston counties — but we take projects statewide and into neighboring states for the right job."
+          },
+          {
+            q: "Do you need access to power or water on-site?",
+            a: "Our equipment is self-contained for blasting. Depending on the scope and method, we may require access to water for dustless blasting operations, or electrical power for lighting in confined spaces. We'll outline requirements during the site visit."
+          },
+          {
+            q: "How long does a typical mobile blasting project take?",
+            a: "It depends entirely on the surface area, condition of the surface, and SSPC cleanliness level required. Small equipment blast jobs can be done in a day. Large structural steel projects may take a week or more. We provide a schedule with every estimate."
+          },
+          {
+            q: "Can you blast while the facility is operating?",
+            a: "Often yes — with appropriate containment. We regularly work during plant operations, scheduled shutdowns, nights, and weekends to minimize disruption. Containment requirements depend on what's adjacent to the work area."
+          },
+          {
+            q: "What SSPC surface prep standards do you work to?",
+            a: "We work to the standard specified by the coating manufacturer or the project spec. Most industrial coating systems require SSPC SP-6 (commercial blast), SP-10 (near-white), or SP-5 (white metal). We confirm the required standard before the job starts."
+          },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Ready to get your surface prepped?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

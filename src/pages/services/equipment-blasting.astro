@@ -1,0 +1,150 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Equipment Sandblasting in Michigan | Blasting Jack"
+  description="Mobile equipment sandblasting in Michigan — industrial machinery, trailers, rental fleet, agricultural equipment. We come to your facility. No transport required."
+  canonical="https://blastingjack.com/services/equipment-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Equipment Sandblasting in Michigan"
+    subtitle="We come to your facility — no hauling required. Rust removal, coating removal, and surface prep for paint on equipment of any size."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Mobile equipment blasting — at your location
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Moving large industrial equipment to a blast shop is expensive, slow, and sometimes impossible. Blasting Jack operates mobile blast rigs that come to your facility — whether that's a manufacturing plant, an equipment yard, a construction site, or a steel fabrication shop.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            We set up containment, blast the equipment in place, clean up, and leave the surface ready for primer or paint. No crane lifts to a trailer. No transport fees. No waiting for a shop to have an opening.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Equipment blasting removes rust, failed coatings, mill scale, and surface contamination — and creates the anchor profile that paint and industrial coatings need to bond and last.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Equipment types we blast</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Manufacturing and production machinery",
+                "Heavy construction equipment",
+                "Flatbed, tanker, and specialty trailers",
+                "Rental equipment fleet (excavators, lifts, skid steers)",
+                "Agricultural equipment",
+                "Material handling systems and conveyors",
+                "Industrial tanks and vessels",
+                "Molds, dies, and precision tooling",
+                "Trucks and fleet vehicles (commercial)",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        What equipment blasting accomplishes
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Rust Removal", desc: "Remove active corrosion from equipment steel. Abrasive blasting is the only method that fully removes rust from pits and surface texture — not just the surface layer." },
+          { title: "Coating Removal", desc: "Strip failed paint, peeling industrial coatings, and old finishes before repainting. Coating over a failed coating produces the same failure — faster." },
+          { title: "Mill Scale Removal", desc: "New steel and fabricated components have mill scale that prevents paint from bonding. Blasting removes it completely and creates the anchor profile coating systems require." },
+          { title: "Surface Profile Creation", desc: "Abrasive blasting creates the anchor profile (measured in mils) that gives paint and industrial coatings mechanical adhesion. The coating manufacturer's spec defines the required profile." },
+          { title: "Contamination Removal", desc: "Grease, oxidation, weld spatter, and surface contamination are removed along with rust and old coatings — leaving a clean, anchor-profiled surface ready for primer." },
+          { title: "Asset Life Extension", desc: "Blasting and recoating a piece of equipment — at a fraction of replacement cost — extends its service life significantly. Regular maintenance cycles keep fleet and plant assets producing." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Containment on equipment jobs</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Equipment blasting generates spent media, removed rust, and paint particles. Blasting Jack manages containment based on the environment — outdoor blasting on an equipment yard requires different containment than blasting inside a production facility.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For indoor work, tarps and debris containment systems prevent blast material from migrating into the facility. For outdoor work, we position equipment to minimize drift and collect spent media after blasting.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Related project examples</h2>
+          <div class="space-y-3">
+            {[
+              { href: "/gallery/ford-model-a-tables/", title: "Historical Restoration of Ford Model A Factory Tables", label: "Gallery Project" },
+              { href: "/gallery/dti-steel-trailer/", title: "Mobile Blasting and Painting a Steel Trailer", label: "Gallery Project" },
+              { href: "/gallery/metro-alloy-quench-tank/", title: "Blast and Repaint of In-Ground Quench Tank and Alloy Molds", label: "Gallery Project" },
+            ].map(item => (
+              <a href={item.href} class="flex items-center gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+                <span class="text-primary text-[20px]">→</span>
+                <div>
+                  <div class="font-semibold text-heading text-[15px]">{item.title}</div>
+                  <div class="text-body text-[13px]">{item.label}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "How much does equipment sandblasting cost?", a: "Cost depends on the size of the equipment, the condition of the surface (how heavily rusted or how thick the existing coating), and the required SSPC cleanliness level. A single trailer may be a few thousand dollars. A large fleet of equipment or heavy machinery is quoted based on scope. Contact us with photos and dimensions for an accurate estimate." },
+          { q: "Do you blast equipment inside facilities?", a: "Yes — with appropriate containment. We work inside manufacturing plants, equipment buildings, and maintenance shops regularly. The containment setup depends on what's adjacent to the blast area and whether the facility is actively operating during the work." },
+          { q: "Can you blast painted equipment that's still in service?", a: "We can schedule blasting during planned downtime, nights, or weekends. Equipment doesn't need to be permanently taken out of service — just available during the blast window. We'll coordinate with your maintenance schedule." },
+          { q: "Do you coat the equipment after blasting, or is that a separate contractor?", a: "We specialize in blasting and surface preparation. For coating application, we can coordinate with painting contractors or, through our sister brand Endurance Painting, provide both services under one project plan." },
+          { q: "Can you blast both steel and aluminum equipment?", a: "Steel is our primary focus for industrial blasting. Aluminum requires careful media selection and blast parameters to avoid damage — we evaluate aluminum jobs individually and use appropriate media and pressure." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need equipment blasted at your facility?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

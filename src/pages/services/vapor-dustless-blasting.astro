@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Vapor Blasting and Dustless Blasting in Michigan | Blasting Jack"
+  description="Vapor blasting and dustless blasting services in Michigan. Water-abrasive slurry suppresses dust at the source — ideal for occupied facilities, historic surfaces, and urban job sites."
+  canonical="https://blastingjack.com/services/vapor-dustless-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Vapor Blasting and Dustless Blasting in Michigan"
+    subtitle="Abrasive blasting with 92%+ less airborne dust — for environments where traditional blasting isn't an option."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            What vapor blasting is and how it works
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Vapor blasting — also called dustless blasting — mixes water with abrasive media inside the blast machine before it exits the nozzle. The water encapsulates the abrasive and removed material, keeping it from becoming airborne. The result is a wet slurry that hits the surface at high velocity and falls to the ground rather than creating a dust cloud.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            This makes vapor blasting practical in situations where dry abrasive blasting would create serious dust problems — near other trades, in occupied or semi-occupied facilities, on urban job sites, near waterways, and on historic or architecturally sensitive surfaces.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack uses the BlastOne MistBlaster system, which reduces airborne dust by 92%+ compared to dry abrasive blasting while still achieving SSPC-compliant surface profiles.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Best applications for vapor blasting</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Occupied or semi-occupied buildings and facilities",
+                "Historic brick, stone, and masonry where dust must be controlled",
+                "Urban job sites with adjacent businesses or pedestrian areas",
+                "Near waterways where dry blasting is restricted",
+                "Projects where other trades are working in the same area",
+                "Surfaces requiring a clean, consistent prep without blast residue",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-8">
+        Vapor blasting vs. traditional dry abrasive blasting
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[15px] border-collapse">
+          <thead>
+            <tr class="bg-dark text-white">
+              <th class="text-left p-4 font-semibold"></th>
+              <th class="text-left p-4 font-semibold">Vapor / Dustless Blasting</th>
+              <th class="text-left p-4 font-semibold">Dry Abrasive Blasting</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Airborne dust", "92%+ reduction", "Significant dust generation"],
+              ["Occupied facilities", "Yes, with proper containment", "Limited — dust exclusion required"],
+              ["Surface profile", "SSPC-compliant profiles achievable", "Full range of SSPC profiles"],
+              ["Flash rust risk", "Higher — surface must be coated faster", "Lower — dry surface after blast"],
+              ["Historic surfaces", "Preferred method", "Risk of damage with wrong media"],
+              ["Production rate", "Somewhat slower", "Faster on large open areas"],
+              ["Cleanup", "Slurry collection required", "Spent media collection required"],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                {row.map((cell, j) => (
+                  <td class={`p-4 border border-gray-200 ${j === 0 ? "font-semibold text-heading" : "text-body"}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Flash rust consideration</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Because water is introduced to the surface during vapor blasting, flash rust can appear on bare steel within minutes in humid conditions. Coordinating the transition from blast to primer application is critical — coating should follow vapor blasting quickly.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For projects where same-day coating isn't possible, inhibitive rinse additives can be used in the blast slurry to slow flash rust development.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">Related project examples</h2>
+          <div class="space-y-3">
+            <a href="/gallery/vapor-blasting-historic-brick/" class="flex items-center gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+              <span class="text-primary text-[20px]">→</span>
+              <div>
+                <div class="font-semibold text-heading text-[15px]">Vapor Blasting Historic Brick Exterior</div>
+                <div class="text-body text-[13px]">Gallery Project</div>
+              </div>
+            </a>
+            <a href="/gallery/interior-vapor-blasting-deck-column/" class="flex items-center gap-3 p-4 bg-light-bg rounded-lg hover:bg-gray-200 transition-colors">
+              <span class="text-primary text-[20px]">→</span>
+              <div>
+                <div class="font-semibold text-heading text-[15px]">Interior Vapor Blasting — Deck and Column</div>
+                <div class="text-body text-[13px]">Gallery Project</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Is vapor blasting as effective as dry sandblasting?", a: "For most surface types and SSPC cleanliness levels, yes. The anchor profile and cleanliness achievable with vapor blasting meets the same coating manufacturer requirements as dry blasting. The primary difference is dust control, flash rust risk on steel, and production rate on large open areas." },
+          { q: "Can vapor blasting be used on all surfaces?", a: "Vapor blasting works well on steel, brick, masonry, concrete, and most industrial surfaces. It's not appropriate for surfaces that are sensitive to moisture or where water introduction would cause damage. For those situations, dry ice blasting is typically the better choice." },
+          { q: "Is vapor blasting more expensive than dry blasting?", a: "It can be slightly more expensive due to lower production rates and slurry management. The cost difference is often offset by reduced containment requirements for dust control in environments where dry blasting would require extensive protective measures." },
+          { q: "Do you use vapor blasting for historic restoration?", a: "Yes. Vapor blasting is our preferred method for historic brick, stone, and ornamental metalwork where controlling blast pressure and dust is critical to preserving original material. Media selection is matched to the substrate." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need dustless blasting at your facility?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

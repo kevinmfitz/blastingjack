@@ -1,0 +1,129 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Parking Garage Surface Preparation in Michigan | Blasting Jack"
+  description="Parking garage surface preparation in Michigan — blast and repaint of structural steel columns, beams, and connections. SSPC-compliant prep, contained blast work, scheduling around garage operations."
+  canonical="https://blastingjack.com/services/parking-garage-surface-preparation/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="Parking Garage Surface Preparation in Michigan"
+    subtitle="Rust removal and surface prep on parking structure steel — contained, on schedule, SSPC-compliant."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Why parking structure steel fails — and how to stop it
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Parking garage structural steel is exposed to road salt-contaminated water every winter, year after year. Salt water penetrates failed or aging coatings, initiates corrosion at the steel surface, causes the coating to delaminate, and eventually compromises structural connections. Maintenance recoating on a planned cycle is far less expensive than structural repair.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Recoating without proper surface preparation doesn't work. Painting over rusted or contaminated steel produces a coating that fails at the bond line — usually within one to three years. Blasting Jack removes all rust, failed coating, and contamination down to the SSPC standard required, so the new coating system can perform as specified.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting Jack has completed parking garage surface preparation projects in Michigan, including work at the Henry Ford Hospital parking structure. We understand the scheduling, containment, and coordination requirements specific to occupied structures.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">What we blast in parking structures</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Structural columns — all faces, from grade to deck",
+                "Beam soffits and connections",
+                "Stair stringers and railings",
+                "Overhead structural steel on each level",
+                "Embedded steel at expansion joints and connections",
+                "Exposed rebar (where concrete has spalled)",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <a href="/gallery/henry-ford-hospital-parking-garage/" class="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <span class="text-primary text-[20px]">→</span>
+            <div>
+              <div class="font-semibold text-heading text-[15px]">Parking Garage Blast and Repaint</div>
+              <div class="text-body text-[13px]">Gallery Project — Henry Ford Hospital Parking Structure</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Containment in occupied garages
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Most parking garage surface prep projects happen while the structure is still partially in use. Blast debris — spent media, rust, and old paint particles — must be contained to prevent it from landing on vehicles or migrating to occupied floors.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack sections off the blast area, uses tarps and debris netting to capture falling material, and sequences work level by level or section by section to keep the accessible area of the garage operational.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We coordinate lane closures, vehicle exclusion zones, and signage with the facility manager or property manager so the garage disruption is planned and communicated rather than reactive.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading text-[26px] md:text-[32px] font-semibold text-heading leading-[1.2] mb-6">
+            Scheduling around garage operations
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Garages serving hospital campuses, commercial buildings, and urban facilities have tight operational constraints. Blasting Jack works nights, weekends, and in phased sections to minimize disruption to daily users.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            We work directly with property managers and facility directors to build a schedule that meets the project deadline while accommodating operational needs. Section-by-section blast sequencing with coating crews following immediately behind is the standard approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "What SSPC standard is required for parking garage steel recoating?", a: "Most protective coating systems for parking structure steel require SSPC SP-10 (near-white blast) as a minimum. Some high-performance epoxy and urethane systems used on parking structures specify SP-10 or SP-5 at structural connections. The coating manufacturer's spec is the governing document." },
+          { q: "Can you blast while the garage is open?", a: "Yes — in contained sections. We don't blast in areas where vehicles or pedestrians are present. Lanes and sections are closed and contained, blast work proceeds, coating follows, then that section reopens. The garage stays operational throughout the project." },
+          { q: "How do you protect cars in the garage?", a: "Vehicles are excluded from the immediate blast zone before work begins. We use tarps and debris containment around the blast area. If the garage can't be cleared of vehicles in adjacent areas, blast work is phased further away from occupied spaces." },
+          { q: "How often does parking structure steel need to be recoated?", a: "In Michigan's road salt environment, a properly coated parking structure typically needs maintenance recoating every 10–15 years depending on the coating system and the severity of salt exposure. Spot repairs at connection points may be needed on a shorter cycle." },
+          { q: "Do you coordinate with the painting contractor?", a: "Yes. Blast prep and coating application need to be sequenced so the time between blast completion and primer application is minimized. We coordinate directly with the painting contractor or, through our sister brand Endurance Painting, provide both services under one project plan." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need your parking structure prepped?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
