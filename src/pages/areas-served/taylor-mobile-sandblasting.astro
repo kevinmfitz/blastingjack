@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Taylor, MI | Blasting Jack"
+  description="Mobile sandblasting in Taylor, MI. Surface preparation for downriver industrial manufacturing, fleet yards, and commercial facilities along I-75 and Goddard Road. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/taylor-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Taylor, MI"
+    subtitle="Surface preparation for Taylor's industrial manufacturing operations, fleet yards, and commercial facilities in downriver Wayne County."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Downriver industrial blasting in Taylor
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Taylor is a dense downriver Wayne County city of roughly 63,000 with real industrial and commercial character. Manufacturing operations, fleet and logistics yards along Goddard Road and I-75, and commercial development throughout the city generate surface preparation demand. The proximity to Detroit Metropolitan Airport adds logistics and distribution operations to the industrial mix.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Taylor is roughly 30 to 35 miles via I-75 — within our Wayne County service range. We serve manufacturing maintenance, fleet restoration, distribution facilities, and commercial building steel in Taylor as part of our regular territory. Downriver industrial operators in Taylor have the same need for mobile blasting capacity as anywhere in the metro area.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Fleet yards and logistics operations in the Taylor area are frequent users of mobile blasting — trailers, flatbeds, and freight equipment that accumulate rust and need coatings stripped before refinishing. We come to your yard, set up, and blast on-site.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Taylor</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Taylor
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Industrial Manufacturing", desc: "Manufacturing operations throughout Taylor's industrial corridors have structural steel, production equipment, and process assets requiring blasting during planned maintenance windows." },
+          { title: "Fleet and Equipment Yards", desc: "Fleet operators, trucking companies, and equipment yards in Taylor use mobile blasting to restore trailers, trucks, and freight equipment on-site. The Goddard Road and I-75 corridor has a concentration of logistics operations that use this service." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings throughout Taylor have structural and architectural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Distribution and Logistics", desc: "Distribution facilities and logistics operations near DTW and along Taylor's I-75 corridor have dock equipment and facility infrastructure requiring periodic surface preparation." },
+          { title: "Airport-Adjacent Industrial", desc: "Industrial and logistics operations in proximity to Detroit Metropolitan Airport have equipment and facility maintenance needs that require professional surface preparation before protective coatings are applied." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure and public facility steel in Taylor require SSPC-standard surface preparation before protective coating application. We work with contractors managing infrastructure maintenance programs." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Romulus", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Westland", "/areas-served/westland-mobile-sandblasting/"],
+          ["Dearborn Heights", "/areas-served/dearborn-heights-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Taylor?", a: "Yes — Taylor is within our Wayne County service range from our Warren base, roughly 30 to 35 miles via I-75. We serve manufacturing operations, fleet yards, distribution facilities, and commercial building steel in Taylor." },
+          { q: "Can you blast fleet trailers and trucks in Taylor?", a: "Yes. Fleet operators along the I-75 and Goddard Road corridor in Taylor use mobile blasting to strip rust and old coatings from trailers, flatbeds, and freight equipment. We come to your yard — no hauling required." },
+          { q: "What manufacturing work do you handle in Taylor?", a: "Structural steel, production equipment, tanks, and process assets at Taylor manufacturing facilities. We schedule around production windows — nights, weekends, and planned shutdowns all work." },
+          { q: "Do you work with logistics and distribution operations near DTW in Taylor?", a: "Yes. Logistics and distribution operations in Taylor have facility steel, dock equipment, and fleet vehicles requiring periodic surface preparation. We schedule around operational hours to minimize disruption." },
+          { q: "How do I get a quote for Taylor blasting work?", a: "Contact us through our website or by phone. Describe the asset, location, and scope. We'll follow up to confirm availability and provide a quote." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Taylor?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

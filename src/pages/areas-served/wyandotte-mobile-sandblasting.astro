@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Wyandotte, MI | Blasting Jack"
+  description="Mobile sandblasting in Wyandotte, MI. Surface preparation for chemical and process facilities, tank blasting, waterfront infrastructure, and industrial buildings on the Detroit River. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/wyandotte-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Wyandotte, MI"
+    subtitle="Surface preparation for Wyandotte's chemical and process facilities, waterfront industrial infrastructure, and historic industrial buildings on the Detroit River."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Chemical and industrial blasting on the Detroit River
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Wyandotte has one of the most distinctive industrial profiles of any Michigan city its size. Its history as a chemical and process manufacturing center — BASF operated major chemical operations here, and the legacy of that industrial heritage remains in the building stock, tank infrastructure, and riverside industrial installations. The Detroit River waterfront adds a layer of exposure that accelerates corrosion and coating failure on riverside structures. For a city of roughly 25,000, Wyandotte has dense and technically demanding surface preparation needs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Wyandotte is roughly 30 to 35 miles via I-75 — within our Wayne County service range. We handle chemical and process facility blasting, tank and vessel surface preparation, waterfront and river-adjacent structures, and historic industrial building work in Wyandotte. Riverside blasting requires containment planning to keep blast media out of the Detroit River, which we treat as a standard part of job setup.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Tank and vessel blasting at Wyandotte process facilities requires careful specification matching — the coating systems used on chemical service tanks have specific anchor profile requirements, and surface preparation must be executed to SSPC standards for the coating to perform correctly.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Wyandotte</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Wyandotte
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Chemical and Process Facilities", desc: "Chemical manufacturing and process operations in Wyandotte have tanks, vessels, piping, and structural steel requiring professional surface preparation to SSPC specification before chemical-resistant or industrial protective coatings are applied." },
+          { title: "Tank and Vessel Blasting", desc: "Industrial storage tanks and process vessels in Wyandotte blasted interior and exterior — to SP-5 white metal or SP-10 near-white metal depending on the service environment and coating specification." },
+          { title: "Waterfront and Marine Infrastructure", desc: "Detroit River-adjacent structures in Wyandotte — dock steel, waterfront buildings, and riverside industrial infrastructure — require blasting to remove rust and failed coatings. Containment prevents blast media from reaching the river." },
+          { title: "Historic Industrial Buildings", desc: "Wyandotte's older industrial buildings carry decades of coating history on structural steel and masonry. Removal and surface preparation are required before renovation coatings can properly bond." },
+          { title: "Commercial Building Steel", desc: "Commercial properties in Wyandotte's business districts have structural steel and architectural components requiring surface preparation during renovation and maintenance programs." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure and public facility steel in Wyandotte require SSPC-standard surface preparation before protective coating application. River-adjacent public infrastructure requires containment planning." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+          ["Trenton", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Lincoln Park", "/areas-served/wayne-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Wyandotte?", a: "Yes — Wyandotte is within our Wayne County service range from our Warren base, roughly 30 to 35 miles via I-75. We handle chemical and process facility blasting, tank and vessel surface preparation, waterfront infrastructure, and industrial building work in Wyandotte." },
+          { q: "Can you blast tanks at chemical process facilities in Wyandotte?", a: "Yes. Chemical service tanks require surface preparation to the SSPC specification required by the coating manufacturer — often SP-10 near-white or SP-5 white metal for the most aggressive chemical environments. We blast to specification and document the result." },
+          { q: "How do you handle containment for Detroit River-adjacent blasting in Wyandotte?", a: "Riverside blasting requires containment that prevents blast media from entering the Detroit River. We build tarps, shrouding, and enclosures appropriate to the site. This is planned as standard job setup for any river-adjacent work — not handled after the fact." },
+          { q: "What standards do you blast to for Wyandotte industrial work?", a: "We blast to whatever SSPC standard the coating specification requires. SP-6 commercial blast for general industrial, SP-10 near-white metal for demanding coating systems, SP-5 white metal for chemical service or immersion environments. We confirm the profile achieved." },
+          { q: "Can you handle historic industrial building blasting in Wyandotte?", a: "Yes. Legacy industrial buildings with accumulated paint layers on structural steel and masonry require professional coating removal before renovation coatings are applied. We assess the substrate and choose the appropriate blasting method." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Wyandotte?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

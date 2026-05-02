@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Howell, MI | Blasting Jack"
+  description="Mobile sandblasting in Howell, MI. Surface preparation for government buildings, light manufacturing, fleet operations, and commercial facilities in the Livingston County seat. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/howell-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Howell, MI"
+    subtitle="Surface preparation for Howell's institutional buildings, light manufacturing, and commercial facilities in the Livingston County seat."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Institutional and commercial blasting in Howell
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Howell is the county seat of Livingston County — a small city of roughly 10,000 with a mix of government and institutional buildings, light commercial development, and rural-adjacent industrial operations. The county seat function means Howell has public buildings, courthouse facilities, and county infrastructure that require professional surface preparation during renovation and maintenance cycles. Light manufacturing and commercial businesses serve the surrounding county from Howell's commercial base.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Howell is roughly 50 to 55 miles — further than Brighton within the same county. At this distance, we focus on projects with appropriate scope. Institutional and government building work during planned renovation programs, light manufacturing maintenance, and fleet or equipment work in sufficient quantity are the best candidates. We're direct about the mobilization economics and won't pad a quote.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Howell's historic downtown has older commercial and institutional buildings with brick and masonry that require careful surface preparation — not the same approach as industrial steel blasting. We assess the substrate first and choose the appropriate method.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Howell</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Howell
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Government and Institutional Buildings", desc: "Livingston County government facilities, courthouse buildings, and public infrastructure in Howell have structural steel and masonry requiring surface preparation during renovation and planned maintenance programs." },
+          { title: "Light Manufacturing", desc: "Light manufacturing operations in Howell and the surrounding Livingston County area have equipment and structural steel requiring periodic blasting during planned maintenance windows." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Howell's downtown and along its commercial corridors have structural and architectural steel requiring surface preparation during renovation and maintenance cycles." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and equipment companies in the Howell area use mobile blasting for truck, trailer, and work equipment restoration. Multi-piece jobs in a single mobilization work well at this range." },
+          { title: "Agricultural Equipment", desc: "Agricultural operations throughout Livingston County near Howell have farm equipment and storage structures that benefit from on-site mobile blasting — no transport required." },
+          { title: "Infrastructure", desc: "County and city infrastructure assets in Howell — bridge steel, utility structures, and public facility components — require SSPC-standard surface preparation before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Livingston County", "/areas-served/livingston-county-mobile-sandblasting/"],
+          ["Brighton", "/areas-served/brighton-mobile-sandblasting/"],
+          ["Genesee County", "/areas-served/genesee-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Howell?", a: "Yes — Howell is within our service territory in Livingston County, roughly 50 to 55 miles from our Warren base. This is extended range, so project scope matters. Institutional building renovation, manufacturing maintenance, and fleet work in sufficient quantity are the best candidates." },
+          { q: "Do you work on government buildings in Howell?", a: "Yes. County government facilities and public buildings in Howell require surface preparation during renovation and maintenance programs. We schedule around building operations and occupancy." },
+          { q: "Can you blast historic brick in Howell's downtown?", a: "Yes — using methods appropriate to the substrate. Older brick and masonry require lower pressure and gentler media than industrial steel blasting. We assess the building condition before committing to a method." },
+          { q: "What kinds of Howell projects make sense at this mobilization distance?", a: "Institutional building renovation, multi-piece fleet and equipment work, manufacturing maintenance during planned shutdowns, and agricultural equipment jobs are the best fits. Single small items at this distance are worth a direct conversation first." },
+          { q: "How do I get a quote for Howell blasting work?", a: "Use our website contact form or call us directly. Tell us the asset type, scope, and timeline. We'll confirm availability and provide an honest quote for the project." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Howell?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

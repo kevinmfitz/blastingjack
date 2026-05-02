@@ -1,0 +1,70 @@
+﻿---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Brighton, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation in Brighton, MI. Serving light manufacturing, construction equipment, fleet operations, and commercial properties in Livingston County."
+  canonical="https://blastingjack.com/areas-served/brighton-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Brighton, MI"
+    subtitle="Surface preparation for Brighton's manufacturing facilities, fleet operations, and commercial building stock."
+  />
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">Serving Brighton's industrial and commercial base</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Brighton is Livingston County's largest commercial hub — anchored at the I-96 and US-23 interchange, it serves a broad region of western Oakland, southern Livingston, and northern Washtenaw counties. The city's industrial parks house light manufacturing and construction-related operations, while its commercial corridor generates demand for building steel maintenance, fleet restoration, and equipment blasting.</p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Blasting Jack provides mobile sandblasting in Brighton from our Warren base. Brighton is within our extended service range — accessible for industrial and commercial projects with appropriate scope.</p>
+          <p class="text-body text-[17px] leading-relaxed">For Brighton projects in occupied commercial areas where dust control is important, vapor/dustless blasting is available as a low-dust alternative to open abrasive blasting.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Brighton</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[["Mobile Sandblasting","/services/mobile-sandblasting/"],["Abrasive Blasting","/services/abrasive-blasting/"],["Vapor / Dustless Blasting","/services/vapor-dustless-blasting/"],["Rust Removal","/services/rust-removal/"],["Coating Removal","/services/coating-removal/"],["Steel Surface Preparation","/services/steel-surface-preparation/"],["Equipment Blasting","/services/equipment-blasting/"]].map(([label,href])=>(<li><a href={href} class="flex items-center gap-2 hover:text-primary transition-colors"><span class="text-primary">→</span>{label}</a></li>))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">Brighton project types we serve</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[{title:"Light Manufacturing",desc:"Industrial park operations in Brighton require scheduled equipment blasting and structural steel maintenance around production windows."},{title:"Construction Equipment and Fleet",desc:"General contractors and equipment operators throughout Brighton and Livingston County use mobile blasting to restore equipment at their yard without transport."},{title:"Commercial Building Steel",desc:"Commercial properties and office buildings along the I-96 corridor maintain structural steel requiring periodic surface preparation as coatings age."},{title:"Agricultural Equipment",desc:"Agricultural equipment and rural industrial assets throughout Livingston County are suited to mobile blasting with no transport to a fixed facility."},{title:"Infrastructure Assets",desc:"Transportation infrastructure and utility assets in the Brighton area require surface preparation as part of capital maintenance programs."},{title:"Fleet and Equipment Yards",desc:"Equipment dealers, construction companies, and fleet operators in Brighton use mobile blasting for rust removal and coating restoration on-site."}].map(item=>(<div class="bg-light-bg border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3><p class="text-body text-[15px] leading-relaxed">{item.desc}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[["Livingston County","/areas-served/livingston-county-mobile-sandblasting/"],["Howell","/areas-served/howell-mobile-sandblasting/"],["Oakland County","/areas-served/oakland-county-mobile-sandblasting/"],["Fenton","/areas-served/fenton-mobile-sandblasting/"]].map(([label,href])=>(<a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[{q:"Do you take blasting projects in Brighton?",a:"Yes. Brighton is within our extended service range from Warren. Light manufacturing, fleet, equipment, and commercial projects are accessible. Contact us with your scope and location."},{q:"Can you blast construction equipment in Brighton?",a:"Yes. Mobile blasting for construction equipment, trailers, and fleet vehicles is a regular service. We come to your yard."},{q:"What scope makes sense for Brighton?",a:"Extended mobilization works best with meaningful scope. Contact us with what needs blasting and we will give you a straight answer on whether it makes sense economically."}].map(item=>(<div class="bg-white border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3><p class="text-body text-[16px]">{item.a}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">Need blasting in Brighton?</h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">Request a Free Estimate</a>
+    </div>
+  </section>
+  <Footer />
+</Layout>

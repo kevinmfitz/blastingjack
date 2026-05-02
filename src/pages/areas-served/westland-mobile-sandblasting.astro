@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Westland, MI | Blasting Jack"
+  description="Mobile sandblasting in Westland, MI. Surface preparation for industrial manufacturing, commercial buildings, distribution facilities, and fleet operations in western Wayne County. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/westland-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Westland, MI"
+    subtitle="Surface preparation for Westland's industrial manufacturing operations, commercial building stock, and fleet yards along Ford Road and Michigan Avenue."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial and commercial blasting in Westland
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Westland is a large Wayne County city of roughly 82,000 with a solid industrial and commercial character. Manufacturing operations, distribution facilities, and commercial building stock along Ford Road and Michigan Avenue represent years of accumulated surface preparation need — aging coatings, rust, and substrate deterioration that require professional blasting before new protective coatings can be properly applied.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Westland is roughly 30 to 35 miles via I-96 — within our Wayne County service range. We serve manufacturing maintenance, fleet and equipment restoration, distribution facility surface prep, and commercial building steel in Westland without unusual mobilization overhead. Industrial park tenants along Westland's commercial corridors are regular candidates for the kind of work we do.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Fleet and trailer blasting in Westland — trucking companies, construction fleets, and equipment operators — is one of the more frequent request types. Mobile blasting at your yard means equipment doesn't need to move to a shop. We bring the setup to you.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Westland</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Westland
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Industrial Manufacturing", desc: "Manufacturing operations in Westland's industrial zones have structural steel, production equipment, and process assets requiring blasting during planned maintenance windows." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings along Ford Road, Michigan Avenue, and Westland's business corridors have structural and architectural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Distribution Facilities", desc: "Distribution and logistics operations in Westland have dock equipment, facility steel, and infrastructure requiring periodic surface preparation and protective coating maintenance." },
+          { title: "Fleet and Equipment", desc: "Fleet operators, trucking companies, and construction equipment yards in Westland use mobile blasting to restore trailers, trucks, and work equipment on-site at their facilities." },
+          { title: "Parking Structures", desc: "Commercial and municipal parking structures in Westland require surface preparation on structural steel elements as part of ongoing protective coating maintenance programs." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure and public facility steel in Westland require SSPC-standard surface preparation before protective coating application. We work with contractors managing these programs." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Livonia", "/areas-served/livonia-mobile-sandblasting/"],
+          ["Canton", "/areas-served/canton-mobile-sandblasting/"],
+          ["Dearborn Heights", "/areas-served/dearborn-heights-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Westland?", a: "Yes — Westland is within our Wayne County service range from our Warren base, roughly 30 to 35 miles via I-96. We serve manufacturing operations, fleet yards, distribution facilities, and commercial building steel in Westland." },
+          { q: "Can you blast trailers and fleet equipment in Westland?", a: "Yes. Fleet operators and trucking companies in Westland use mobile blasting to strip rust and old coatings from trailers, flatbeds, and trucks. We come to your yard — no hauling required." },
+          { q: "What manufacturing blasting do you handle in Westland?", a: "Structural steel, production equipment, tanks, and process assets at Westland manufacturing facilities. We schedule around your production windows and can work nights and weekends." },
+          { q: "Can you work at distribution centers in Westland?", a: "Yes. Dock equipment, loading bay steel, and facility infrastructure at Westland distribution operations need periodic surface preparation. We schedule around facility operations to minimize disruption." },
+          { q: "How do I get a quote for Westland blasting work?", a: "Use our website contact form or call us directly. Give us the asset type, location, and scope. We'll follow up to confirm availability and provide a quote." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Westland?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

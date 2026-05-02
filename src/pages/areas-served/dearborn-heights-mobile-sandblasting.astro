@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Dearborn Heights, MI | Blasting Jack"
+  description="Mobile sandblasting in Dearborn Heights, MI. Surface preparation for commercial building steel, light manufacturing, fleet operations, and custom metalwork. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/dearborn-heights-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Dearborn Heights, MI"
+    subtitle="Surface preparation for Dearborn Heights' commercial buildings, light manufacturing operations, and fleet equipment along the Michigan Avenue and Ford Road corridors."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Commercial and industrial blasting adjacent to Dearborn's Ford corridor
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Dearborn Heights is a residential and commercial city of roughly 56,000 that sits directly adjacent to Dearborn — which means proximity to Ford's River Rouge complex and the broader Ford manufacturing corridor. Commercial building stock along Michigan Avenue and Ford Road, light industrial operations, and fleet equipment create steady surface preparation demand. The city's commercial corridors have a mix of older and mid-century commercial buildings with steel and masonry that require professional blasting during renovation and maintenance.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Dearborn Heights is roughly 25 to 30 miles via I-96 — within our standard Wayne County service range. We serve commercial building steel, light manufacturing, fleet restoration, and custom metalwork in Dearborn Heights without unusual mobilization costs. The proximity to Dearborn also means we're often in the area for adjacent projects.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Custom metal fabrications — gates, fencing, railings — in Dearborn Heights often come through contractors managing residential and commercial renovation work. These pieces need to be blasted to bare steel before powder coating or paint. Mobile blasting handles this at the job site or fabrication shop.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Dearborn Heights</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Dearborn Heights
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Commercial Building Steel", desc: "Commercial buildings along Michigan Avenue and Ford Road in Dearborn Heights have structural and architectural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Light Manufacturing", desc: "Light manufacturing operations in Dearborn Heights have equipment and structural steel requiring periodic blasting during maintenance windows. We schedule around production to minimize downtime." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and contractors in Dearborn Heights use mobile blasting to restore trucks, trailers, and work equipment on-site at their yards and facilities." },
+          { title: "Parking Structures", desc: "Commercial parking structures in Dearborn Heights require surface preparation on structural steel elements as part of ongoing protective coating maintenance programs." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure and public facility steel in Dearborn Heights require SSPC-standard surface preparation before protective coating application." },
+          { title: "Residential and Custom Metalwork", desc: "Custom fabricated gates, railings, fencing, and architectural metal elements in Dearborn Heights need to be blasted to bare steel before powder coating or paint is applied. Mobile blasting handles this at the site or shop." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Dearborn", "/areas-served/dearborn-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+          ["Westland", "/areas-served/westland-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Dearborn Heights?", a: "Yes — Dearborn Heights is within our standard Wayne County service range from our Warren base, roughly 25 to 30 miles. We serve commercial building steel, light manufacturing, fleet operations, and custom metalwork in Dearborn Heights." },
+          { q: "Can you blast custom gates and metal fabrications in Dearborn Heights?", a: "Yes. Custom fabricated gates, railings, and other metal elements need to be blasted to bare steel before powder coating or paint. We can do this at the fabrication shop, at the installation site, or at a yard." },
+          { q: "What commercial building work do you handle in Dearborn Heights?", a: "Structural steel surface prep, coating removal, and facade cleaning on commercial buildings along Michigan Avenue and Ford Road. General contractors managing commercial renovation in Dearborn Heights use us for the surface preparation phase." },
+          { q: "Can you blast fleet vehicles and trailers in Dearborn Heights?", a: "Yes. Fleet operators in Dearborn Heights use mobile blasting to restore trucks, trailers, and equipment on-site. We come to your yard — no hauling required." },
+          { q: "Do you work near Dearborn for adjacent projects?", a: "Yes. We work throughout the Dearborn and Dearborn Heights area, and our proximity to Ford's manufacturing corridor in Dearborn means we're frequently in the area for adjacent project work." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Dearborn Heights?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

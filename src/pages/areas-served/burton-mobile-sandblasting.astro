@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Burton, MI | Blasting Jack"
+  description="Mobile sandblasting in Burton, MI. Surface preparation for manufacturing facilities, industrial equipment, fleet operations, and commercial building steel in Genesee County. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/burton-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Burton, MI"
+    subtitle="Surface preparation for Burton's manufacturing operations, industrial equipment, and fleet yards in southeast Genesee County."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blasting for Burton's manufacturing base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Burton is a working city of roughly 30,000 on the southeast side of Flint — a Genesee County community with genuine manufacturing and industrial roots. Automotive-related manufacturing, industrial operations, and ongoing maintenance needs in the area create demand for professional surface preparation that mobile blasting is well-suited to serve. The industrial heritage of the Flint area means Burton facilities have real equipment maintenance cycles, not just occasional touch-up work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Burton is roughly 60 miles via I-75 — extended service range. We handle industrial and manufacturing scope in Burton when the project justifies mobilization. Manufacturing facilities, industrial equipment, fleet work, and multi-day projects are the right fit. We're straightforward about the distance and give honest quotes based on actual scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Manufacturing equipment and fleet in Burton — presses, conveyors, trailers, and industrial vehicles with accumulated rust and worn coatings — is a common type of extended-range project. Multi-piece jobs done in a single mobilization are efficient and practical for this distance.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Burton</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Burton
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Manufacturing Facilities", desc: "Manufacturing operations in Burton have structural steel, production equipment, and process assets requiring periodic surface preparation during planned maintenance windows." },
+          { title: "Industrial Equipment", desc: "Production presses, conveyors, material handling equipment, and process machinery at Burton industrial facilities blasted during maintenance periods — scheduled to minimize production disruption." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and equipment yards in the Burton area use mobile blasting to restore trucks, trailers, and industrial equipment. Multi-piece jobs done in a single mobilization are efficient for this service range." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Burton have structural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Municipal Infrastructure", desc: "City and county infrastructure assets in Burton require professional surface preparation to SSPC standards before protective coating application." },
+          { title: "Light Industrial", desc: "Light industrial operations in Burton's commercial and industrial zones have equipment and facility steel requiring periodic blasting during maintenance cycles." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Genesee County", "/areas-served/genesee-county-mobile-sandblasting/"],
+          ["Flint", "/areas-served/flint-mobile-sandblasting/"],
+          ["Davison", "/areas-served/genesee-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Burton?", a: "Yes — Burton is within our extended Genesee County service range from our Warren base, roughly 60 miles via I-75. We handle manufacturing, industrial equipment, fleet work, and commercial building steel in Burton when the scope justifies the mobilization." },
+          { q: "What types of Burton projects work best for extended-range service?", a: "Manufacturing maintenance during planned shutdowns, multi-piece fleet and equipment refurbishment, and industrial facility steel prep are the best fits. Single small jobs at this range are worth a conversation — we'll give you a straight answer." },
+          { q: "Can you schedule around production at Burton manufacturing facilities?", a: "Yes. We schedule around production shifts and planned downtime. Nights, weekends, and shutdown windows all work. Give us your maintenance schedule and we'll plan around it." },
+          { q: "Can you blast fleet equipment for a Burton industrial operator?", a: "Yes. Multi-piece fleet jobs — a yard full of trailers or industrial vehicles — done in a single mobilization are efficient for extended-range locations like Burton." },
+          { q: "How do I get a quote for Burton blasting work?", a: "Contact us through our website or by phone. Describe the scope and location. We'll confirm availability and provide a quote based on the actual project." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Burton?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

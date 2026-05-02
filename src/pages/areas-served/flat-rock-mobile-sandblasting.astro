@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Flat Rock, MI | Blasting Jack"
+  description="Industrial surface preparation in Flat Rock, MI. Mobile sandblasting for automotive manufacturing facilities, supplier operations, and industrial equipment. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/flat-rock-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Flat Rock, MI"
+    subtitle="Industrial surface preparation for Flat Rock's automotive manufacturing facilities and surrounding industrial base."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Surface prep for Flat Rock's automotive and industrial operations
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Flat Rock punches above its weight as an industrial city. Ford's Flat Rock Assembly Plant — producing Mustangs at volume — anchors the local economy and draws a supporting ecosystem of Tier 1 and Tier 2 suppliers, tooling shops, and logistics operations. For a city of roughly 10,000, Flat Rock carries significant industrial maintenance demand relative to its size.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Flat Rock is roughly 35 to 40 miles — within our standard service range. We provide mobile blasting for automotive facility maintenance, supplier operations, manufacturing equipment, and fleet work in Flat Rock without unusual mobilization costs. Production-sensitive scheduling is standard for us.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Assembly plant work and Tier 1 supplier facilities typically require blast work during planned shutdown periods. We build our schedule around your production window and have the crew capacity and equipment to execute efficiently during compressed downtime.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Flat Rock</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Flat Rock
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Assembly Facilities", desc: "Assembly plant structural steel, mezzanines, conveyor supports, and production equipment require periodic blasting and surface preparation during planned maintenance shutdowns." },
+          { title: "Tier 1 Supplier Operations", desc: "Stamping, tooling, and supply operations feeding the Flat Rock Assembly Plant have their own structural steel and equipment maintenance needs. We schedule around production windows and supplier delivery requirements." },
+          { title: "Manufacturing Equipment", desc: "Production presses, conveyors, material handling equipment, and process machinery at Flat Rock manufacturing facilities blasted in-place during maintenance periods." },
+          { title: "Structural Steel", desc: "Industrial building steel — beams, columns, roof structures, and mezzanine framing — requires surface preparation during facility renovation and long-term maintenance programs." },
+          { title: "Fleet and Equipment", desc: "Flat Rock industrial operators use mobile blasting to restore trucks, trailers, and work equipment on-site. No hauling to a distant shop — we come to your yard." },
+          { title: "Industrial Tanks", desc: "Storage tanks and process vessels at Flat Rock industrial facilities blasted interior and exterior to SSPC specification before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Monroe County", "/areas-served/monroe-county-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Detroit", "/areas-served/detroit-industrial-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Flat Rock?", a: "Yes — Flat Rock is within our standard service range from our Warren base, roughly 35 to 40 miles. We serve automotive assembly facilities, Tier 1 suppliers, and the broader industrial base in Flat Rock." },
+          { q: "Can you work during planned shutdowns at Flat Rock Assembly?", a: "Yes. Assembly plant maintenance shutdowns are the right window for structural steel blasting, equipment restoration, and coating removal. We schedule to make the most of your available downtime — crew capacity and four simultaneous blast setups help move at pace." },
+          { q: "What SSPC standards do you blast to for automotive facilities?", a: "Automotive facilities typically specify SP-10 near-white metal or SP-6 commercial blast depending on the coating system. We blast to the specification on your project documents and can confirm surface profile with a Testex replica tape reading." },
+          { q: "Can you handle in-plant blasting at Flat Rock supplier facilities?", a: "Yes — with containment. In-plant blasting requires containment systems that prevent blast debris from migrating into active production or finished goods areas. We design containment appropriate to the plant layout and blast the work area." },
+          { q: "Do you handle fleet and equipment work in Flat Rock?", a: "Yes. Fleet trailers, trucks, and work equipment are common requests in the Flat Rock area. Mobile blasting comes to your yard — we blast on-site without requiring hauling to a shop." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Flat Rock?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

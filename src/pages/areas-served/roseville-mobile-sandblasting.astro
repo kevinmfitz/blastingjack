@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Roseville, MI | Blasting Jack"
+  description="Mobile sandblasting in Roseville, MI. Surface preparation for light manufacturing, fleet yards, and commercial building stock along Gratiot Ave and Utica Road. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/roseville-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Roseville, MI"
+    subtitle="Surface preparation for Roseville's manufacturing operations, fleet yards, and commercial facilities along the Gratiot and Utica Road corridors."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Roseville's light industrial and commercial base — local service
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Roseville is a dense Macomb County city of roughly 47,000 with a strong light industrial and commercial character. Manufacturing operations, fleet yards, and commercial building stock along Gratiot Avenue and Utica Road create steady surface preparation demand. Roseville sits adjacent to Warren — we're based just down the road, which means responsive scheduling and no mobilization overhead on local jobs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Manufacturing and industrial operators in Roseville use mobile blasting for equipment maintenance, structural steel surface prep, and fleet restoration. The close proximity to our Warren base means same-week scheduling is frequently available, and we can respond to time-sensitive maintenance work without a long lead time.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Roseville's commercial building stock includes older structures on the Gratiot corridor that have brick, masonry, and steel components requiring different blasting approaches. We match the method to the substrate — standard abrasive for steel, lower-pressure or vapor methods for masonry and brick.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Roseville</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Roseville
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing", desc: "Manufacturing operations in Roseville's industrial zones have structural steel, production equipment, and facility assets requiring periodic surface preparation during planned maintenance windows." },
+          { title: "Fleet and Equipment", desc: "Fleet yards, trucking operations, and equipment companies in Roseville use mobile blasting to strip rust and old coatings from trailers, trucks, and work equipment on-site at their yards." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings along Gratiot Avenue and Utica Road have structural and architectural steel requiring surface preparation during renovation, remediation, and maintenance programs." },
+          { title: "Industrial Facilities", desc: "Industrial operations in Roseville — including processing equipment, storage tanks, and production assets — require blasting during scheduled maintenance periods to prepare surfaces for protective coatings." },
+          { title: "Parking Structures", desc: "Commercial and municipal parking structures in Roseville need surface preparation on structural steel columns and beams as part of ongoing maintenance to control corrosion." },
+          { title: "Municipal Infrastructure", desc: "Public facility steel, utility infrastructure, and municipal assets in Roseville require professional surface preparation to SSPC specification before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Sterling Heights", "/areas-served/sterling-heights-mobile-sandblasting/"],
+          ["Eastpointe", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Roseville?", a: "Yes — Roseville is adjacent to our Warren base, making it part of our core service territory. Manufacturing operations, fleet yards, commercial building steel, and industrial facilities in Roseville are all within our regular service scope." },
+          { q: "Can you handle fleet and trailer blasting in Roseville?", a: "Yes. Fleet operators in Roseville frequently need rust and old coatings removed from trailers, flatbeds, and trucks. Mobile blasting comes to your yard — we blast on-site so equipment doesn't have to move." },
+          { q: "What manufacturing work do you handle in Roseville?", a: "Structural steel, production equipment, tanks, and industrial facility maintenance are the common requests. We schedule around your production windows and work nights or weekends when needed." },
+          { q: "Do you work on older commercial buildings in Roseville?", a: "Yes. Older commercial buildings on Gratiot and Utica Road have brick, masonry, and steel that require different surface preparation approaches. We assess the substrate and choose the appropriate method — abrasive blasting for steel, lower-pressure or vapor for masonry." },
+          { q: "How quickly can you get to Roseville for a job?", a: "Roseville is adjacent to our Warren base. Same-week scheduling is often available for Roseville jobs. Contact us with your project details and we'll confirm availability." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Roseville?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

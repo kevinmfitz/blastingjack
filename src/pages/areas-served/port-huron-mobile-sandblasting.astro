@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Port Huron, MI | Blasting Jack"
+  description="Mobile sandblasting in Port Huron, MI. Surface preparation for industrial facilities, marine infrastructure, and commercial buildings along the St. Clair River. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/port-huron-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Port Huron, MI"
+    subtitle="Surface preparation for Port Huron's industrial facilities, marine infrastructure, and commercial buildings along the St. Clair River."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blasting for Port Huron's waterfront and industrial sector
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Port Huron sits at the mouth of the St. Clair River where Lake Huron begins, making it one of the most industrially significant waterfront locations in southeast Michigan. The Blue Water Bridge carries heavy cross-border freight traffic, which supports a logistics and freight infrastructure base. Historical manufacturing, Cargill salt operations nearby, and the river's commercial traffic all create ongoing demand for professional surface preparation on industrial and marine assets.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile blasting in Port Huron from our Warren base. At roughly 60 miles, this is extended-range territory — we work here on projects with appropriate scope. Industrial facilities, marine and waterfront structures, bridge steel, commercial buildings, and fleet equipment in substantial quantities are the right fit. We're upfront about mobilization distance and will give you an honest quote based on the actual project.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Blasting near the St. Clair River requires proper containment to keep blast media out of the water. We plan containment for waterway-adjacent work as part of the job setup — not an afterthought.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Port Huron</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Port Huron
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Freight and Logistics Facilities", desc: "Port Huron's role as a border crossing city means warehouses, freight terminals, and logistics infrastructure that need structural steel and dock equipment maintained with proper surface prep." },
+          { title: "Marine and Waterfront Structures", desc: "Docks, seawalls, marine loading equipment, and river-adjacent structures along the St. Clair River require blasting to remove rust and old coatings before recoating with protective systems appropriate for waterfront exposure." },
+          { title: "Industrial Building Steel", desc: "Manufacturing and processing facilities in Port Huron have structural steel — beams, columns, mezzanines, and roof structures — that require surface preparation during planned maintenance and renovation work." },
+          { title: "Bridge and Infrastructure Steel", desc: "Bridge approach structures, municipal infrastructure steel, and public facility components in Port Huron require blasting to SSPC specification before protective coating application." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and equipment yards in the Port Huron area use mobile blasting to restore trailers, trucks, and work equipment — on-site, without hauling to a distant shop." },
+          { title: "Commercial Building Maintenance", desc: "Commercial buildings along the Huron Ave and downtown Port Huron corridors have steel components and facades that require surface preparation as part of renovation and long-term maintenance programs." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["St. Clair County", "/areas-served/st-clair-county-mobile-sandblasting/"],
+          ["Marysville", "/areas-served/marysville-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Port Huron?", a: "Yes — we provide mobile blasting in Port Huron from our Warren base. Port Huron is in our extended service range at roughly 60 miles. Projects here work best when the scope is substantial — industrial facilities, marine infrastructure, commercial building steel, and larger fleet work. Contact us to discuss your project." },
+          { q: "Can you blast near the St. Clair River or waterfront sites?", a: "Yes. Waterway-adjacent work requires proper containment to prevent blast media from entering the river. We build containment appropriate to the site — tarps, shrouding, or enclosures depending on what the location requires. This is part of our job planning, not an add-on." },
+          { q: "What kind of marine or waterfront work do you handle in Port Huron?", a: "Seawalls, dock structures, marine loading equipment, and river-facing building steel are all within scope. The key is establishing a clean surface profile before protective coatings are applied — coatings that need to hold up in a waterfront exposure environment." },
+          { q: "How long is mobilization from Warren to Port Huron?", a: "Port Huron is roughly 60 miles from our Warren base — extended range for us. We factor mobilization honestly into project pricing. For industrial scope, multi-day projects, or substantial fleet work, the economics work well. For small one-day jobs, it's worth a conversation first." },
+          { q: "Can you work around freight or logistics operations in Port Huron?", a: "Yes. Freight and logistics facilities in Port Huron operate on schedules we can build around. We schedule blast work during off-peak hours, weekends, or overnight when needed to minimize interference with active operations." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Port Huron?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

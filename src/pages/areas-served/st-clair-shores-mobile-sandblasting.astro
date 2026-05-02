@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in St. Clair Shores, MI | Blasting Jack"
+  description="Mobile sandblasting in St. Clair Shores, MI. Surface preparation for marine and waterfront structures, commercial building steel, and fleet operations. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/st-clair-shores-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in St. Clair Shores, MI"
+    subtitle="Surface preparation for St. Clair Shores' waterfront infrastructure, commercial buildings, and fleet operations along Lake St. Clair."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Waterfront and commercial blasting on Lake St. Clair
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            St. Clair Shores is a lakefront city of roughly 60,000 with an extensive Lake St. Clair waterfront — boat docks, seawalls, and marine infrastructure that take constant weather and water exposure. Jefferson Avenue carries a dense commercial strip, and the city has ongoing surface preparation needs on commercial building steel, fleet equipment, and industrial assets. It also borders Warren directly, making it one of the closest cities in our service area.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            For waterfront structures in St. Clair Shores, blasting is often the only way to properly address rust and coating failure on seawalls, dock steel, and marine hardware that has been exposed to water and freeze-thaw cycles. We use containment appropriate to lake-adjacent work to prevent blast media from reaching the water.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Commercial building steel along Jefferson Avenue and 9 Mile Road requires periodic surface preparation during renovation and maintenance work. Our proximity to St. Clair Shores from Warren means responsive scheduling and no excessive travel fees.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in St. Clair Shores</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in St. Clair Shores
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Marine and Waterfront Structures", desc: "Seawalls, dock steel, boat lifts, and waterfront infrastructure along Lake St. Clair require blasting to remove rust and old coatings before protective marine-grade coatings are applied. Containment prevents blast media from entering the lake." },
+          { title: "Commercial Building Steel", desc: "The Jefferson Avenue commercial corridor and surrounding commercial buildings have structural and architectural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Fleet and Equipment", desc: "Commercial operators and fleet yards in St. Clair Shores use mobile blasting to restore vehicles, trailers, and equipment. We come to your site — no hauling required." },
+          { title: "Industrial Facilities", desc: "Light industrial operations in St. Clair Shores have structural steel, equipment, and facility assets requiring periodic surface preparation during planned maintenance windows." },
+          { title: "Infrastructure", desc: "Municipal infrastructure, bridge structures, and public facility steel in St. Clair Shores require professional surface preparation to SSPC specification before protective coating application." },
+          { title: "Parking Structures", desc: "Commercial parking structures in the St. Clair Shores area require surface preparation on structural steel elements as part of ongoing maintenance programs to protect against corrosion." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Eastpointe", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve St. Clair Shores?", a: "Yes — St. Clair Shores borders Warren directly, and it's one of the closest cities to our base. We serve marine and waterfront structures, commercial building steel, industrial facilities, and fleet operations in St. Clair Shores." },
+          { q: "Can you blast seawalls and dock structures on Lake St. Clair?", a: "Yes. Waterfront structures require blasting to remove rust and failing coatings before protective marine coatings are applied. We plan containment for lake-adjacent work to prevent blast media from entering Lake St. Clair." },
+          { q: "What containment do you use for lake-adjacent blasting in St. Clair Shores?", a: "For waterfront work, we use tarps, shrouding, and enclosures appropriate to the site configuration. The goal is to contain blast media so it doesn't reach the water. This is planned as part of the job setup, not handled after the fact." },
+          { q: "Do you handle commercial building steel in St. Clair Shores?", a: "Yes. Commercial buildings along Jefferson Avenue and other commercial corridors in St. Clair Shores have steel components requiring surface preparation during renovation and maintenance work." },
+          { q: "How quickly can you mobilize to St. Clair Shores?", a: "St. Clair Shores is adjacent to our Warren base — typically one of our fastest mobilization times. For scheduled work, we'll confirm availability during the estimate." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in St. Clair Shores?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

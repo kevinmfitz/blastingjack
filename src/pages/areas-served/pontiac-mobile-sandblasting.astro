@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Pontiac, MI | Blasting Jack"
+  description="Mobile sandblasting in Pontiac, MI. Surface preparation for historic industrial buildings, active manufacturing, redevelopment projects, and commercial building steel. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/pontiac-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Pontiac, MI"
+    subtitle="Surface preparation for Pontiac's legacy industrial buildings, active manufacturing facilities, and ongoing redevelopment projects."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blasting for Pontiac's manufacturing legacy and current operations
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Pontiac is one of Michigan's most historically significant automotive cities — former home to GM's Pontiac division and a city that built its economy on vehicle manufacturing and related supply operations. Today, Pontiac has a substantial legacy building stock from that industrial era alongside continuing manufacturing operations and an active redevelopment and adaptive reuse scene. That mix creates real and varied demand for professional surface preparation work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Pontiac is roughly 30 to 35 miles via I-75 — well within our standard Oakland County service range. We work here on active manufacturing maintenance, legacy industrial building renovation, commercial building steel, and redevelopment projects. The density of older industrial buildings in Pontiac means coating removal and structural steel surface prep are among the more common requests.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Historic industrial buildings in Pontiac often have decades of paint layers on structural steel and masonry. Proper coating removal and surface preparation is critical before renovation coatings are applied — and it requires professional blasting equipment, not just a pressure washer or grinder.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Pontiac</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Pontiac
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Historic Industrial Buildings", desc: "Legacy automotive-era industrial buildings in Pontiac have structural steel and masonry with accumulated coatings that require removal before renovation. Professional blasting strips decades of paint and establishes a clean substrate." },
+          { title: "Active Manufacturing Facilities", desc: "Continuing manufacturing operations in Pontiac have equipment, structural steel, and process assets requiring periodic surface preparation during planned maintenance windows and production shutdowns." },
+          { title: "Redevelopment and Adaptive Reuse", desc: "Developers and contractors converting industrial buildings to commercial, residential, or mixed-use projects in Pontiac need coating removal and structural steel prep as part of the renovation process." },
+          { title: "Commercial Building Steel", desc: "Commercial properties in Pontiac's business districts have structural and architectural steel requiring surface preparation during renovation and long-term maintenance programs." },
+          { title: "Parking Structures", desc: "Parking garage structures in Pontiac require surface preparation on structural steel elements — blasting to remove corrosion and old coatings before protective coating is applied as part of a maintenance program." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure, bridge steel, and public facility assets in Pontiac require SSPC-standard surface preparation before protective coating application. We work with contractors managing public infrastructure projects." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Auburn Hills", "/areas-served/auburn-hills-industrial-sandblasting/"],
+          ["Waterford", "/areas-served/waterford-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Pontiac?", a: "Yes — Pontiac is within our standard Oakland County service range from our Warren base, roughly 30 to 35 miles via I-75. We handle manufacturing maintenance, historic industrial building renovation, redevelopment projects, and commercial building steel in Pontiac." },
+          { q: "Can you remove decades of old paint from historic industrial buildings in Pontiac?", a: "Yes. Legacy industrial buildings with multiple paint layers on structural steel and masonry are a common request. Professional abrasive blasting removes accumulated coatings efficiently and establishes a clean substrate for renovation coatings." },
+          { q: "Do you work on redevelopment and adaptive reuse projects in Pontiac?", a: "Yes. General contractors and developers converting Pontiac's legacy industrial buildings use us during the remediation and renovation phase for coating removal and structural steel surface preparation." },
+          { q: "Can you handle in-plant blasting at active manufacturing facilities in Pontiac?", a: "Yes — with appropriate containment. We design containment systems that prevent blast debris from migrating into active production areas or finished goods zones. Scheduling around production shifts and planned downtime is standard." },
+          { q: "What's your approach to masonry blasting on Pontiac's older buildings?", a: "Older brick and masonry in Pontiac's historic buildings requires lower pressure and finer media than steel blasting. We assess the substrate condition first and adjust pressure, media, and method to clean without damaging the brick or mortar." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Pontiac?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

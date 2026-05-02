@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Saline, MI | Blasting Jack"
+  description="Mobile sandblasting in Saline, MI. Surface preparation for light manufacturing, industrial equipment, fleet operations, and commercial facilities southwest of Ann Arbor. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/saline-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Saline, MI"
+    subtitle="Mobile surface preparation for Saline's light manufacturing operations, fleet yards, and commercial facilities southwest of Ann Arbor."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blasting for Saline's manufacturing and commercial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Saline is a small Washtenaw County city of roughly 9,000 with a meaningful light manufacturing base anchored by its industrial park along the US-12 corridor southwest of Ann Arbor. Several manufacturing operations have established long-term presence in Saline, and the area's agricultural and commercial character adds farm equipment and contractor fleet work to the surface preparation demand mix.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Saline is roughly 45 to 50 miles via I-94 — at the outer end of our standard service range for Washtenaw County. We work in Saline on projects with appropriate scope. Manufacturing facilities, industrial equipment, fleet work, and multi-piece equipment jobs are good candidates. Smaller one-off work is worth a conversation — we'll give you a straight answer on whether it makes sense to schedule.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Agricultural equipment in the Saline area is a common type of request — tillage equipment, grain trailers, farm implements that need rust removed and a clean substrate for protective coatings. Mobile blasting handles this on-site at the farm, which is far more practical than transporting large ag equipment to a shop.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Saline</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Saline
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing Facilities", desc: "Manufacturing operations in Saline's industrial park have structural steel, production equipment, and process assets requiring periodic blasting during planned maintenance windows." },
+          { title: "Industrial Equipment", desc: "Process equipment, tanks, and industrial assets at Saline manufacturing facilities require surface preparation to SSPC specification before protective coatings are applied." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and construction companies in the Saline area use mobile blasting to restore trucks, trailers, and work equipment on-site at their yards." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Saline's business corridors have structural and architectural steel requiring surface preparation during renovation and maintenance programs." },
+          { title: "Agricultural Equipment", desc: "Farm equipment, grain trailers, tillage implements, and agricultural structures in the Saline area are blasted on-site — no transport required. Mobile blasting is the practical choice for ag equipment." },
+          { title: "Infrastructure", desc: "Municipal and county infrastructure assets in the Saline area require professional surface preparation to SSPC standards before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Ann Arbor", "/areas-served/ann-arbor-mobile-sandblasting/"],
+          ["Monroe County", "/areas-served/monroe-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Saline?", a: "Yes — Saline is within our extended Washtenaw County service range, roughly 45 to 50 miles from Warren. We work in Saline on manufacturing facilities, industrial equipment, fleet work, and agricultural equipment. Project scope matters at this distance — contact us to discuss your specific project." },
+          { q: "Can you blast agricultural equipment at a farm in Saline?", a: "Yes. Farm trailers, grain bins, tillage equipment, and other ag assets are blasted on-site at the farm or storage yard. Mobile blasting eliminates the need to haul large or awkward equipment to a distant shop." },
+          { q: "What manufacturing blasting do you handle in Saline?", a: "Structural steel, production equipment, and process vessels at Saline manufacturing facilities. We schedule around production windows and plan the work to minimize operational disruption." },
+          { q: "Is Saline in Blasting Jack's standard service range?", a: "Saline is at the outer end of our standard range from Warren. Manufacturing scope, multi-piece equipment work, and substantial fleet jobs work well. Smaller jobs are worth a direct conversation — we'll be honest about whether the economics make sense for both sides." },
+          { q: "How do I get a quote for Saline work?", a: "Contact us through our website or by phone. Describe the asset, location, and scope. We'll confirm availability and provide a quote based on the actual project." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Saline?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

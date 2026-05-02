@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Marysville, MI | Blasting Jack"
+  description="Mobile sandblasting in Marysville, MI. Surface preparation for industrial facilities, chemical operations, and commercial buildings along the St. Clair River. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/marysville-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Marysville, MI"
+    subtitle="Surface preparation for Marysville's industrial and commercial facilities along the St. Clair River."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial surface preparation along the Marysville riverfront
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Marysville sits directly on the St. Clair River just south of Port Huron, and for a city of roughly 10,000 people it carries a meaningful industrial base. Chemical and industrial processing operations, waterfront infrastructure, and commercial development along the river create surface preparation demand that requires professional equipment — not a pressure washer and a rented blaster.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack provides mobile blasting in Marysville from our Warren base. The drive time puts Marysville in the same extended service range as Port Huron — roughly 55 to 60 miles. We handle industrial and commercial scope here when it justifies mobilization. Chemical process equipment, waterway-adjacent structures, industrial building steel, and fleet work are the most common project types.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            River-adjacent blasting in Marysville requires the same containment approach we use throughout the St. Clair corridor — enclosures or shrouding that prevents blast media from reaching the water. We plan for this as standard practice.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Marysville</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Marysville
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Industrial Facilities", desc: "Manufacturing and processing operations in Marysville need periodic blasting on structural steel, equipment, and process vessels. We schedule around production windows and maintenance periods to minimize downtime." },
+          { title: "Chemical and Process Equipment", desc: "Chemical processing and industrial operations along the Marysville riverfront have tanks, vessels, pipes, and process equipment that require proper surface preparation before protective or chemical-resistant coatings are applied." },
+          { title: "Commercial Building Steel", desc: "Commercial and institutional buildings in Marysville have structural and architectural steel that requires surface preparation during renovation and maintenance programs." },
+          { title: "Fleet and Equipment", desc: "Operators and businesses in the Marysville area use mobile blasting to strip rust and old coatings from trucks, trailers, and industrial equipment — done on-site without hauling to a distant blasting shop." },
+          { title: "Infrastructure", desc: "Municipal and public infrastructure steel in Marysville, including bridge structures and utility assets, requires SSPC-standard surface preparation before protective coating application." },
+          { title: "Waterway-Adjacent Assets", desc: "River-facing structures and waterfront assets require careful containment planning. We build appropriate containment for St. Clair River corridor work to keep blast media out of the water." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["St. Clair County", "/areas-served/st-clair-county-mobile-sandblasting/"],
+          ["Port Huron", "/areas-served/port-huron-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Marysville?", a: "Yes — we provide mobile blasting in Marysville from our Warren base. At roughly 55 to 60 miles, Marysville is in our extended service range. We work here on industrial and commercial projects where the scope justifies mobilization." },
+          { q: "Can you handle chemical process equipment in Marysville?", a: "Yes. Chemical and process vessels require careful surface preparation — the right abrasive profile for the coating system being applied. We blast to SSPC specification and can accommodate the surface cleanliness and anchor profile requirements for chemical-resistant coatings." },
+          { q: "How do you handle containment for river-adjacent work in Marysville?", a: "St. Clair River proximity requires containment that keeps blast media out of the water. We use tarps, shrouding, and enclosures appropriate to the site configuration. This is planned as part of the job setup, not addressed after the fact." },
+          { q: "What's the best type of project for Marysville given the mobilization distance?", a: "Industrial facilities, chemical process equipment, multi-day fleet and equipment work, and structural steel projects are the best fit for extended-range work in Marysville. Smaller one-off jobs are worth a conversation — we'll be straightforward about whether the economics make sense." },
+          { q: "Do you work around production schedules at Marysville industrial facilities?", a: "Yes. We can schedule around shift changes, production windows, and planned maintenance periods. Nights and weekends are available when needed." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Marysville?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

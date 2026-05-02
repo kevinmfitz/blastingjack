@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Mount Clemens, MI | Blasting Jack"
+  description="Mobile sandblasting in Mount Clemens, MI. Surface preparation for institutional buildings, historic masonry, commercial steel, and light industrial. Macomb County seat. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/mount-clemens-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Mount Clemens, MI"
+    subtitle="Surface preparation for Mount Clemens' institutional buildings, historic masonry, and light commercial and industrial facilities along the Clinton River."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Professional blasting for the Macomb County seat
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Mount Clemens is Macomb County's county seat — a historically significant city of roughly 16,000 on the Clinton River. Its historic downtown has a dense mix of government and institutional buildings, commercial properties, and older industrial infrastructure that spans decades of construction eras. That building stock creates genuine surface preparation demand, particularly where older coatings, rust, and mineral deposits need to be removed before renovation or maintenance work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Mount Clemens is within easy reach — under 15 miles. We serve Mount Clemens as part of our Macomb County home territory, without mobilization overhead. Government and institutional building maintenance, light industrial facilities, commercial renovation, and municipal infrastructure work are all within our regular scope here.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Historic brick and masonry in Mount Clemens' older buildings requires a careful approach — full-pressure abrasive blasting can damage softer brick or mortar if not controlled. We use vapor/dustless blasting or lower-pressure abrasive methods on masonry substrates, adjusting pressure and media to clean without damage.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Mount Clemens</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Mount Clemens
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Institutional and Government Buildings", desc: "Macomb County government facilities, courts, and public buildings in Mount Clemens have structural steel and architectural components requiring professional surface preparation during renovation and maintenance programs." },
+          { title: "Historic Masonry and Brick", desc: "Older brick and masonry buildings in Mount Clemens' historic districts require careful surface preparation. We use vapor blasting or low-pressure abrasive methods on masonry to clean without damaging brick or mortar." },
+          { title: "Commercial Building Steel", desc: "Commercial properties in downtown Mount Clemens and along the city's commercial corridors have steel structural and facade components requiring blasting during renovation and facility maintenance." },
+          { title: "Light Industrial", desc: "Light industrial operations in Mount Clemens have equipment, structural steel, and process assets requiring periodic surface preparation during planned maintenance windows." },
+          { title: "Municipal Infrastructure", desc: "City and county infrastructure — bridges, utility structures, and public facility assets — require professional blasting to SSPC specification before protective coatings are applied." },
+          { title: "Waterway-Adjacent Assets", desc: "Clinton River-adjacent structures and infrastructure in Mount Clemens require containment planning for blasting work near the waterway. We plan containment appropriate to riverside sites as standard practice." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Clinton Township", "/areas-served/clinton-township-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Mount Clemens?", a: "Yes — Mount Clemens is within our Macomb County home territory, under 15 miles from our Warren base. Government buildings, institutional facilities, commercial building steel, and light industrial work in Mount Clemens are all within our regular scope." },
+          { q: "Can you blast historic brick buildings in downtown Mount Clemens?", a: "Yes — but we use a different approach than industrial steel blasting. Older brick and soft mortar require lower pressure and finer media to avoid damage. We assess the substrate before starting and adjust the method accordingly. Vapor/dustless blasting is often the right choice for masonry in occupied or sensitive environments." },
+          { q: "Do you work on government and county buildings in Mount Clemens?", a: "Yes. Macomb County government facilities and public buildings in Mount Clemens are part of our institutional blasting scope. We can work around building operations and occupancy schedules." },
+          { q: "What about Clinton River-adjacent work in Mount Clemens?", a: "River-adjacent blasting requires containment to keep blast media out of the water. We plan containment appropriate to the site as part of job setup for any waterway-adjacent work in Mount Clemens." },
+          { q: "Can you handle commercial renovation blasting in Mount Clemens?", a: "Yes. General contractors managing commercial renovation projects in downtown Mount Clemens use us for steel surface preparation, coating removal, and masonry cleaning as part of building rehabilitation work." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Mount Clemens?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

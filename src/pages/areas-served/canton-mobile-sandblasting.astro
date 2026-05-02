@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Canton, MI | Blasting Jack"
+  description="Mobile sandblasting in Canton Township, MI. Surface preparation for light manufacturing, distribution facilities, fleet operations, and commercial building steel along I-275. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/canton-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Canton Township, MI"
+    subtitle="Surface preparation for Canton's light manufacturing, distribution centers, and commercial facilities along I-275 and Ford Road."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Commercial and industrial surface prep in Canton Township
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Canton Township is one of Michigan's fastest-growing communities — roughly 95,000 residents — with dense commercial and light industrial development along I-275 and Ford Road. Manufacturing operations, distribution centers, and commercial building stock have accumulated throughout Canton's business parks and commercial corridors. For surface preparation needs in Canton, mobile blasting is often the only practical option for on-site work at scale.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Canton is roughly 30 to 40 miles via I-94 or I-275 — within our Wayne County service range. We serve light manufacturing, fleet work, distribution facility maintenance, and commercial building steel in Canton as part of our regular territory. No unusual mobilization costs for standard industrial and commercial scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Distribution and logistics facilities in Canton along I-275 have dock equipment, loading infrastructure, and facility steel that require periodic surface preparation. We can schedule this work during off-peak periods to avoid disrupting facility operations.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Canton</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Canton
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing and Industrial", desc: "Manufacturing operations in Canton's business parks have structural steel, production equipment, and process assets requiring periodic surface preparation during planned maintenance windows." },
+          { title: "Distribution Facilities", desc: "Distribution and logistics operations along I-275 in Canton have dock infrastructure, facility steel, and equipment requiring surface preparation and protective coating maintenance." },
+          { title: "Fleet and Equipment", desc: "Fleet operators, construction companies, and equipment yards in Canton use mobile blasting to restore trucks, trailers, and work equipment on-site without hauling to a distant shop." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings along Ford Road and Canton's other commercial corridors have structural and architectural steel requiring surface preparation during renovation and maintenance cycles." },
+          { title: "Parking Structures", desc: "Commercial and corporate parking structures in Canton require surface preparation on structural steel elements as part of ongoing protective coating maintenance programs." },
+          { title: "Construction Equipment", desc: "Construction contractors based in Canton or working on Canton projects use mobile blasting to restore excavators, trailers, and support equipment. On-site blasting eliminates transport hassle." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Westland", "/areas-served/westland-mobile-sandblasting/"],
+          ["Livonia", "/areas-served/livonia-mobile-sandblasting/"],
+          ["Plymouth", "/areas-served/wayne-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Canton Township?", a: "Yes — Canton is within our Wayne County service range from our Warren base, roughly 30 to 40 miles. We serve light manufacturing, distribution facilities, fleet work, and commercial building steel in Canton." },
+          { q: "Can you handle distribution facility blasting in Canton?", a: "Yes. Distribution facilities along I-275 in Canton have dock equipment, loading bay steel, and facility infrastructure requiring periodic surface preparation. We schedule around facility operations — nights and weekends available." },
+          { q: "Do you blast construction equipment and trailers in Canton?", a: "Yes. Contractor yards and equipment operators in Canton use mobile blasting to restore trailers, excavators, and other equipment on-site. No need to transport equipment to a blasting shop." },
+          { q: "What manufacturing work do you handle in Canton?", a: "Structural steel, production equipment, and process vessels at Canton manufacturing facilities. We build our schedule around production windows to minimize downtime impact." },
+          { q: "How do I get a quote for Canton blasting work?", a: "Contact us through our website or by phone. Give us the basics — asset type, location in Canton, and scope — and we'll follow up with a quote." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Canton?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

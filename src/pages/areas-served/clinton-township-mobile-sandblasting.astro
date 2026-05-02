@@ -1,0 +1,141 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Clinton Township, MI | Blasting Jack"
+  description="Mobile sandblasting in Clinton Township, MI. Surface preparation for manufacturing, distribution, commercial building steel, and fleet operations. Blasting Jack, based in Warren MI."
+  canonical="https://blastingjack.com/areas-served/clinton-township-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Clinton Township, MI"
+    subtitle="Surface preparation for Clinton Township's light industrial operations, distribution facilities, and commercial building stock along the Hall Road corridor."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Clinton Township's industrial and commercial base — right next door
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Clinton Township is one of Michigan's most populous townships — roughly 160,000 residents — and its commercial and industrial density reflects that scale. The Hall Road and M-59 corridors carry dense commercial development, light manufacturing, distribution facilities, and corporate campuses. For surface preparation needs in Clinton Township, there's no mobilization penalty — we're based in Warren, which borders Clinton Township directly.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Manufacturing operations, fleet yards, parking structures, and distribution facilities throughout Clinton Township are within the same effective service zone as our Warren headquarters. We can respond quickly and don't mark up travel time for local work. Same-week scheduling is frequently available.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Vapor and dustless blasting is available for Clinton Township sites where dust control matters — occupied facilities near active tenants, food-adjacent operations, or work near other trades. Our BlastOne MistBlaster system handles this without the mess of conventional sandblasting.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Clinton Township</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Clinton Township
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing and Industrial", desc: "Manufacturing operations along Clinton Township's industrial corridors have structural steel, equipment, and production assets that require periodic surface preparation during planned maintenance windows." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings and corporate campuses along Hall Road and M-59 have structural steel and architectural metal requiring surface preparation during renovation and facility maintenance programs." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and equipment yards in Clinton Township use mobile blasting to restore trucks, trailers, and work equipment on-site. Close proximity to our Warren base means fast turnaround." },
+          { title: "Distribution Facilities", desc: "Large distribution and logistics facilities in Clinton Township have dock equipment, structural steel, and facility infrastructure that require periodic surface preparation and protective coating maintenance." },
+          { title: "Parking Structures", desc: "Commercial and municipal parking structures throughout Clinton Township require surface preparation on structural steel columns, beams, and deck connections as part of ongoing maintenance programs." },
+          { title: "Tanks and Process Equipment", desc: "Industrial storage tanks, process vessels, and facility equipment at Clinton Township operations blasted to SSPC specification before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Sterling Heights", "/areas-served/sterling-heights-mobile-sandblasting/"],
+          ["Shelby Township", "/areas-served/shelby-township-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Is Clinton Township in Blasting Jack's primary service area?", a: "Yes — Clinton Township borders Warren directly, and our Warren base means Clinton Township is within the same effective service zone as our home territory. No mobilization premium, and same-week scheduling is often available." },
+          { q: "Can you blast inside a distribution facility in Clinton Township?", a: "Yes — with proper containment. We set up containment to prevent blast debris from migrating into active storage or pick-pack areas. Scheduling around facility operations — nights, weekends — is standard." },
+          { q: "Do you offer dustless blasting in Clinton Township?", a: "Yes. Vapor/dustless blasting is available for Clinton Township sites where conventional sandblasting creates too much dust — near occupied tenants, food-adjacent operations, or where other trades are active nearby." },
+          { q: "What kind of manufacturing blasting do you handle in Clinton Township?", a: "Structural steel, production equipment, conveyors, tanks, and process vessels at Clinton Township manufacturing facilities. We build around production schedules — nights, weekends, and shutdown windows all work." },
+          { q: "How quickly can you mobilize to Clinton Township?", a: "Being based in Warren — directly adjacent to Clinton Township — we have fast mobilization for local jobs. For scheduled work, we'll confirm availability during the estimate process." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Clinton Township?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

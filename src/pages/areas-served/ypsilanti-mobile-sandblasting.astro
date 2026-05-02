@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Ypsilanti, MI | Blasting Jack"
+  description="Mobile sandblasting in Ypsilanti, MI. Surface preparation for automotive R&D facilities, light manufacturing, institutional infrastructure, and commercial building steel. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/ypsilanti-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Ypsilanti, MI"
+    subtitle="Surface preparation for Ypsilanti's automotive R&D facilities, manufacturing operations, and institutional infrastructure along the I-94 corridor."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial and institutional blasting in Ypsilanti
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Ypsilanti sits on the I-94 corridor adjacent to Ann Arbor, and its industrial character is shaped by that position. Automotive R&D and engineering facilities, vehicle testing operations, and a meaningful manufacturing base along Michigan Avenue and I-94 create surface preparation demand from industrial users. Eastern Michigan University's campus and the city's older commercial and residential buildings add institutional and historic building work to the mix.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Ypsilanti is roughly 35 to 45 miles via I-94 — within our Washtenaw County service range. We serve automotive testing and engineering facilities, light manufacturing, institutional infrastructure, and commercial building steel in Ypsilanti. Extended range from Warren, but well within standard working distance for most industrial scope.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Ypsilanti's older commercial and industrial buildings along Michigan Avenue and in its historic neighborhoods have brick and steel that require careful surface preparation during renovation. We match the method to the substrate — standard abrasive for steel, lower-pressure or vapor for masonry and historic brick.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Ypsilanti</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Ypsilanti
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive R&D and Testing Facilities", desc: "Automotive engineering and testing operations in Ypsilanti have structural steel, equipment, and facility infrastructure requiring surface preparation during planned maintenance and renovation programs." },
+          { title: "Light Manufacturing", desc: "Manufacturing operations along I-94 and Michigan Avenue in Ypsilanti need periodic equipment blasting and structural steel surface prep during planned maintenance periods." },
+          { title: "Institutional and Campus Infrastructure", desc: "Eastern Michigan University's campus and other institutional facilities in Ypsilanti have structural steel, masonry, and historic buildings requiring surface preparation during renovation and maintenance programs." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Ypsilanti's business districts and along Michigan Avenue have structural and architectural steel requiring surface preparation during renovation and maintenance cycles." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and industrial businesses in the Ypsilanti area use mobile blasting to restore trucks, trailers, and equipment on-site at their yards and facilities." },
+          { title: "Historic Buildings", desc: "Ypsilanti's historic neighborhoods and commercial districts have older brick and masonry buildings requiring careful surface preparation. We use methods appropriate to the substrate — vapor blasting or low-pressure abrasive for masonry." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Ann Arbor", "/areas-served/ann-arbor-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Ypsilanti?", a: "Yes — Ypsilanti is within our Washtenaw County service range from our Warren base, roughly 35 to 45 miles via I-94. We serve automotive engineering facilities, light manufacturing, institutional infrastructure, and commercial building steel in Ypsilanti." },
+          { q: "Can you work at automotive R&D and testing facilities in Ypsilanti?", a: "Yes. Automotive engineering and testing operations have structural steel and equipment maintenance needs during planned facility work. We schedule around facility operations and work during appropriate maintenance windows." },
+          { q: "Do you blast historic buildings in Ypsilanti?", a: "Yes — using methods appropriate to the substrate. Older brick and masonry in Ypsilanti's historic buildings require lower pressure and gentler media than industrial steel blasting. We assess the building material before starting." },
+          { q: "What institutional work do you handle in Ypsilanti?", a: "Campus infrastructure, institutional building steel, and older masonry on educational and public facilities. We schedule around campus or institutional operations to minimize disruption." },
+          { q: "How do I get a quote for Ypsilanti blasting work?", a: "Use the contact form on our website or call us. Describe the asset type, location, and scope. We'll follow up to confirm availability and provide a quote." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Ypsilanti?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

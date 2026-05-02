@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Shelby Township, MI | Blasting Jack"
+  description="Mobile sandblasting in Shelby Township, MI. Surface preparation for industrial parks, construction equipment, commercial building steel, and custom metalwork. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/shelby-township-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Shelby Township, MI"
+    subtitle="Surface preparation for Shelby Township's industrial parks, construction contractors, and commercial facilities along the M-53 and Van Dyke corridors."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial and commercial blasting for northern Macomb County
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Shelby Township is an affluent, growing township of roughly 80,000 in northern Macomb County with a more diverse economic profile than the county's older industrial cities. Industrial parks along M-53 and Van Dyke carry light manufacturing operations, construction contractor yards, and commercial development. Custom residential and commercial construction in the township creates demand for custom metalwork blasting — gates, railings, and structural elements that need professional surface prep before powder coating or paint.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Shelby Township is within easy reach — 15 to 20 miles north on Van Dyke or M-53. No unusual mobilization costs, and we cover Shelby Township as part of our Macomb County home territory. Industrial park tenants, construction equipment yards, and commercial building maintenance all fall within our regular scope here.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Construction contractors in Shelby Township frequently need fleet and equipment blasting — excavators, skid steers, trailers, and dump trucks that have accumulated rust and need to be refinished. Mobile blasting at your yard eliminates the cost and hassle of transporting equipment.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Shelby Township</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Shelby Township
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Industrial Park Facilities", desc: "Light manufacturing and industrial tenants in Shelby Township's business parks have structural steel, production equipment, and facility assets requiring surface preparation during maintenance cycles." },
+          { title: "Construction Equipment and Fleet", desc: "Construction contractors operating from Shelby Township yards use mobile blasting to restore excavators, trailers, skid steers, dump trucks, and fleet vehicles. On-site blasting at your yard is standard." },
+          { title: "Commercial Building Steel", desc: "Commercial and corporate buildings along the M-53 and Van Dyke corridors have structural and architectural steel requiring surface preparation during renovation and maintenance work." },
+          { title: "Custom Metalwork and Gates", desc: "Custom fabricated gates, railings, fencing, and architectural metal elements in Shelby Township require blasting to bare steel before powder coating or paint is applied. Mobile blasting handles this without moving the pieces to a shop." },
+          { title: "Light Manufacturing", desc: "Manufacturing operations in Shelby Township's industrial parks need equipment and structural steel blasted during planned maintenance windows. We schedule around your operation." },
+          { title: "Parking Structures", desc: "Commercial and municipal parking structures in Shelby Township require surface preparation on structural steel elements during maintenance and renovation programs." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Warren", "/areas-served/warren-mobile-sandblasting/"],
+          ["Sterling Heights", "/areas-served/sterling-heights-mobile-sandblasting/"],
+          ["Utica", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Shelby Township?", a: "Yes — Shelby Township is within our Macomb County home territory, roughly 15 to 20 miles north of our Warren base. We serve industrial parks, construction equipment yards, commercial buildings, and custom metalwork in Shelby Township as part of our regular service area." },
+          { q: "Can you blast custom gates and metal fabrications in Shelby Township?", a: "Yes. Custom fabricated gates, railings, and architectural metal elements need to be blasted to bare steel before powder coating or paint. We can do this at your fabrication shop, installation site, or at a yard location." },
+          { q: "What's the typical scope for construction equipment blasting in Shelby Township?", a: "Contractor yards with multiple pieces of equipment are common — excavators, trailers, dump trucks, and skid steers that need rust removed and a clean substrate for new paint. We blast on-site at your yard, so equipment doesn't have to move." },
+          { q: "Do you handle industrial park tenant blasting in Shelby Township?", a: "Yes. Light manufacturing tenants in Shelby Township's business parks need structural steel and equipment blasted during planned maintenance windows. We schedule around the operation and use containment to protect adjacent tenant spaces." },
+          { q: "Can you work with construction contractors doing commercial projects in Shelby Township?", a: "Yes. General contractors managing commercial projects in Shelby Township — renovation, structural work, and facility upgrades — use us for surface preparation on existing steel before new protective coatings are applied." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Shelby Township?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

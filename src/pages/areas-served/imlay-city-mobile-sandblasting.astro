@@ -1,0 +1,70 @@
+﻿---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Imlay City, MI | Blasting Jack"
+  description="Mobile sandblasting in Imlay City, MI. Serving light manufacturing, agricultural equipment, fleet operations, and commercial facilities in Lapeer County."
+  canonical="https://blastingjack.com/areas-served/imlay-city-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Imlay City, MI"
+    subtitle="Surface preparation for Imlay City manufacturing operations, agricultural equipment, and industrial facilities."
+  />
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">Serving Imlay City industrial and agricultural base</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Imlay City sits at the I-69 and M-53 intersection in northern Lapeer County — a small city serving as a hub for the surrounding agricultural region and home to light manufacturing and food processing operations. The mix of processing facilities, light industry, agricultural equipment, and construction fleet creates ongoing demand for professional surface preparation.</p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Blasting Jack provides mobile sandblasting in Imlay City from our Warren base via the I-69 corridor. Imlay City is within our extended service range for projects with appropriate scope.</p>
+          <p class="text-body text-[17px] leading-relaxed">Mobile service means equipment stays at your location — no transport to a fixed blast facility required.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Imlay City</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[["Mobile Sandblasting","/services/mobile-sandblasting/"],["Abrasive Blasting","/services/abrasive-blasting/"],["Vapor / Dustless Blasting","/services/vapor-dustless-blasting/"],["Rust Removal","/services/rust-removal/"],["Coating Removal","/services/coating-removal/"],["Steel Surface Preparation","/services/steel-surface-preparation/"],["Equipment Blasting","/services/equipment-blasting/"],["Tank & Silo Blasting","/services/tank-silo-blasting/"]].map(([label,href])=>(<li><a href={href} class="flex items-center gap-2 hover:text-primary transition-colors"><span class="text-primary">→</span>{label}</a></li>))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">Imlay City project types we serve</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[{title:"Light Manufacturing and Processing",desc:"Manufacturing and food processing operations in Imlay City require equipment blasting, structural steel maintenance, and tank prep on scheduled cycles."},{title:"Agricultural Equipment",desc:"Farm equipment, processing machinery, and agricultural storage structures in the surrounding region are suited to mobile blasting with no transport required."},{title:"Fleet and Construction Equipment",desc:"Construction contractors and fleet operators in the Imlay City area use mobile blasting for rust removal and coating restoration at their location."},{title:"Industrial Tanks and Vessels",desc:"Storage tanks and process vessels at Imlay City industrial facilities blasted interior and exterior to SSPC standards."},{title:"Commercial Building Steel",desc:"Commercial properties and industrial buildings throughout the area maintain structural steel requiring periodic surface preparation."},{title:"Infrastructure Assets",desc:"Transportation infrastructure and utility assets in Lapeer County require surface preparation as part of capital maintenance programs."}].map(item=>(<div class="bg-light-bg border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3><p class="text-body text-[15px] leading-relaxed">{item.desc}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[["Lapeer County","/areas-served/lapeer-county-mobile-sandblasting/"],["Lapeer","/areas-served/lapeer-mobile-sandblasting/"],["Macomb County","/areas-served/macomb-county-mobile-sandblasting/"]].map(([label,href])=>(<a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[{q:"Do you take blasting projects in Imlay City?",a:"Yes. Imlay City is accessible from Warren via I-69 for projects with appropriate scope. Industrial, agricultural equipment, and fleet projects are practical. Contact us with your location and scope."},{q:"Can you blast agricultural and processing equipment in Imlay City?",a:"Yes. Agricultural equipment, food processing machinery, and industrial tanks are regular project types. Mobile service means we come to your site."},{q:"What scope makes sense for Imlay City?",a:"Extended mobilization works best with meaningful scope. Contact us and we will give you a direct answer on whether the project makes sense economically."}].map(item=>(<div class="bg-white border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3><p class="text-body text-[16px]">{item.a}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">Need blasting in Imlay City?</h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">Request a Free Estimate</a>
+    </div>
+  </section>
+  <Footer />
+</Layout>

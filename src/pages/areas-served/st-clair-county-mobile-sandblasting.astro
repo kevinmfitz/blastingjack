@@ -1,0 +1,161 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Port Huron", "Marysville", "Marine City", "St. Clair",
+  "Algonac", "Fort Gratiot", "Yale", "Kimball Township", "Port Huron Township",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in St. Clair County, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation throughout St. Clair County, MI. Serving Port Huron, Marysville, Marine City, and the Blue Water corridor. Industrial, marine, and infrastructure blasting."
+  canonical="https://blastingjack.com/areas-served/st-clair-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in St. Clair County, MI"
+    subtitle="Surface preparation for St. Clair County's industrial facilities, marine assets, and infrastructure along the Blue Water corridor."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Industrial blasting along the Blue Water corridor
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            St. Clair County sits at the intersection of Great Lakes shipping, cross-border freight, and the St. Clair River waterfront. Port Huron anchors the Blue Water Bridge border crossing — one of Michigan's busiest US-Canada commercial crossings — which drives substantial freight logistics and support infrastructure throughout the county. Cargill's salt mining operation, manufacturing facilities, and an active marine and waterfront sector create real demand for professional surface preparation work.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Blasting Jack operates from our Warren base approximately 60 miles south. St. Clair County is within our extended service range, and we take on projects here when the scope justifies the mobilization — industrial facilities, marine infrastructure, larger equipment and fleet work, and structural steel on bridges and commercial buildings. Projects with compressed timelines or sufficient volume are a good fit.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Waterway-adjacent blasting along the St. Clair River requires careful containment planning. We build containment systems appropriate to the site and proximity to water, keeping blast debris from migrating to sensitive areas. That capability is in place for Port Huron and Marysville waterfront work.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in St. Clair County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Containment & Site Protection", "/services/containment-site-protection/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in St. Clair County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout St. Clair County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of St. Clair County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <!-- Asset types -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Assets and facilities we blast in St. Clair County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Marine and Waterfront Structures", desc: "Seawalls, dock systems, marine infrastructure, and waterfront steel along the St. Clair River require abrasive blasting to remove rust and failed coatings before protective recoating. Containment systems are built to prevent blast media from entering the waterway." },
+          { title: "Industrial Facilities", desc: "Manufacturing and processing operations throughout St. Clair County need periodic surface preparation on structural steel, equipment, and process vessels. We schedule around production and can work during planned maintenance windows." },
+          { title: "Salt Mining and Processing", desc: "Cargill's salt operations and related processing infrastructure require corrosion-resistant coatings that depend on proper surface preparation. Industrial blasting to SSPC standards establishes the anchor profile coatings need to bond correctly." },
+          { title: "Commercial Building Steel", desc: "Commercial and institutional buildings throughout Port Huron and the surrounding county have structural steel and architectural metal components that require blasting during renovation and maintenance cycles." },
+          { title: "Bridge and Infrastructure Steel", desc: "Bridge deck steel, expansion joints, and infrastructure assets along the Blue Water Bridge approach and throughout the county are candidates for structural steel blasting and surface preparation prior to protective coating application." },
+          { title: "Fleet and Equipment", desc: "Freight logistics operations, construction fleets, and heavy equipment operators in St. Clair County need mobile blasting to remove rust and old coatings from trailers, trucks, and work equipment." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Lapeer County", "/areas-served/lapeer-county-mobile-sandblasting/"],
+          ["Port Huron", "/areas-served/port-huron-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve St. Clair County?", a: "Yes — St. Clair County is within our extended service range from our Warren base. At approximately 60 miles, projects here work best when the scope is substantial enough to make the mobilization practical. Industrial facilities, marine infrastructure, and larger equipment work are the best fits." },
+          { q: "Can you blast near the St. Clair River or other waterways?", a: "Yes. Waterway-adjacent blasting requires proper containment planning to prevent blast media from entering the water. We build site-appropriate containment systems for riverside and waterfront work in Port Huron, Marysville, and other St. Clair River communities." },
+          { q: "What kind of St. Clair County projects does Blasting Jack handle?", a: "Industrial facilities, marine and waterfront structures, commercial building steel, fleet and equipment, tanks and vessels, and infrastructure steel. The common thread is substantial surface preparation scope where professional-grade blasting equipment and crew capacity make a real difference." },
+          { q: "What SSPC standards do you blast to in St. Clair County?", a: "We blast to the specification the coating manufacturer or project engineer requires. Common standards include SP-6 commercial blast, SP-10 near-white metal, and SP-5 white metal for the most demanding coating systems. We document the profile and cleanliness level achieved." },
+          { q: "How do I get a quote for a St. Clair County project?", a: "Contact us through the form on our website or call directly. Describe the asset, scope, and location. For extended-range projects, we'll confirm availability and provide a quote based on the actual work involved." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in St. Clair County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,70 @@
+﻿---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Fenton, MI | Blasting Jack"
+  description="Mobile sandblasting in Fenton, MI. Serving light manufacturing, construction equipment, fleet, and commercial properties at the Genesee-Livingston County gateway."
+  canonical="https://blastingjack.com/areas-served/fenton-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Fenton, MI"
+    subtitle="Surface preparation for Fenton's manufacturing operations, construction equipment, and commercial facilities."
+  />
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">Serving Fenton's industrial and commercial base</h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Fenton sits at the I-23 corridor where Genesee, Livingston, and Oakland counties converge. The city's industrial parks, construction equipment operations, and commercial building stock generate demand for surface preparation on equipment, structural steel, and facility assets.</p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">Blasting Jack provides mobile sandblasting in Fenton from our Warren base. Fenton is within our extended service range for projects with appropriate scope. Fleet blasting, equipment restoration, and commercial building steel are common project types here.</p>
+          <p class="text-body text-[17px] leading-relaxed">Fenton's position between multiple counties makes it practical for larger regional projects across the I-23 corridor.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Fenton</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[["Mobile Sandblasting","/services/mobile-sandblasting/"],["Abrasive Blasting","/services/abrasive-blasting/"],["Vapor / Dustless Blasting","/services/vapor-dustless-blasting/"],["Rust Removal","/services/rust-removal/"],["Coating Removal","/services/coating-removal/"],["Steel Surface Preparation","/services/steel-surface-preparation/"],["Equipment Blasting","/services/equipment-blasting/"]].map(([label,href])=>(<li><a href={href} class="flex items-center gap-2 hover:text-primary transition-colors"><span class="text-primary">→</span>{label}</a></li>))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">Fenton project types we serve</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[{title:"Light Manufacturing",desc:"Industrial park operations in Fenton require scheduled equipment blasting and structural steel maintenance around production windows."},{title:"Construction Equipment and Fleet",desc:"General contractors and equipment operators use mobile blasting to restore rust-affected equipment at their yard without transport."},{title:"Commercial Building Steel",desc:"Commercial properties along the I-23 corridor maintain structural steel requiring periodic surface preparation as coatings age."},{title:"Agricultural Equipment",desc:"Agricultural equipment and rural industrial assets in the area are suited to mobile blasting with no transport to a fixed facility required."},{title:"Infrastructure Assets",desc:"Transportation infrastructure and utility assets in and around Fenton require surface preparation as part of capital maintenance programs."},{title:"Fleet and Equipment Yards",desc:"Equipment dealers, rental companies, and fleet operators use mobile blasting for rust removal and coating restoration on-site."}].map(item=>(<div class="bg-light-bg border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3><p class="text-body text-[15px] leading-relaxed">{item.desc}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[["Genesee County","/areas-served/genesee-county-mobile-sandblasting/"],["Livingston County","/areas-served/livingston-county-mobile-sandblasting/"],["Grand Blanc","/areas-served/grand-blanc-mobile-sandblasting/"],["Brighton","/areas-served/brighton-mobile-sandblasting/"]].map(([label,href])=>(<a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[{q:"Do you take blasting projects in Fenton?",a:"Yes. Fenton is within our extended service range. Light manufacturing, fleet, equipment, and commercial projects are accessible. Contact us with your scope and location."},{q:"Can you blast construction equipment in Fenton?",a:"Yes. Mobile blasting for construction equipment, trailers, and fleet vehicles is a regular service. We come to your yard."},{q:"What scope makes sense for Fenton?",a:"Extended mobilization works best with meaningful scope. Contact us with your location and what needs blasting and we will be straightforward about whether it makes sense."}].map(item=>(<div class="bg-white border border-gray-200 p-6 rounded-lg"><h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3><p class="text-body text-[16px]">{item.a}</p></div>))}
+      </div>
+    </div>
+  </section>
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">Need blasting in Fenton?</h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">Request a Free Estimate</a>
+    </div>
+  </section>
+  <Footer />
+</Layout>

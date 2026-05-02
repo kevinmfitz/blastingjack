@@ -1,0 +1,162 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Monroe", "Flat Rock", "Dundee", "Milan",
+  "Temperance", "Bedford Township", "Frenchtown Township", "Gibraltar", "Luna Pier",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Monroe County, MI | Blasting Jack"
+  description="Mobile sandblasting and surface preparation throughout Monroe County, MI. Serving Monroe, Flat Rock, Dundee, and surrounding communities. Automotive, energy, and industrial blasting."
+  canonical="https://blastingjack.com/areas-served/monroe-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Monroe County, MI"
+    subtitle="Surface preparation for Monroe County's automotive, energy, and industrial facilities in southeast Michigan."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Surface prep for Monroe County's heavy industrial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Monroe County anchors the southeast corner of Michigan's industrial belt. Ford's Flat Rock Assembly Plant produces Mustangs at significant volume. DTE Energy's Monroe Power Plant is one of the largest coal-fired generating stations in the country, with the adjacent Fermi Nuclear Plant adding to the county's energy infrastructure footprint. Glass manufacturing, agricultural processing, and supporting industrial operations fill out an industry base that generates real surface preparation demand.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Monroe County is at the southern end of our service range from Warren — roughly 45 to 60 miles depending on the location in the county. We work here on projects where the scope is appropriate for the mobilization. Industrial facilities, power generation infrastructure, large tanks and vessels, and commercial building steel are the right fit. We're direct about this — not every small job in Monroe County makes sense logistically, but larger industrial scope is worth the conversation.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            For automotive and energy facilities in Monroe County, we can work against production schedules and planned outage windows. Our 900 CFM air capacity and four simultaneous blast setups give us the throughput to stay on pace when downtime is limited.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Monroe County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Monroe County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Monroe County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Monroe County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <!-- Asset types -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Assets and facilities we blast in Monroe County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Assembly and Supplier Facilities", desc: "Flat Rock Assembly and its Tier 1 and Tier 2 supplier network create ongoing demand for equipment blasting, structural steel surface prep, and coating removal during planned shutdowns and maintenance cycles." },
+          { title: "Power Generation Infrastructure", desc: "Large power generation facilities involve extensive steel structures, tanks, vessels, and process equipment that require regular surface preparation and protective coating maintenance. We work during planned outage windows." },
+          { title: "Industrial Tanks and Vessels", desc: "Storage tanks, process vessels, and industrial containers at Monroe County facilities blasted interior and exterior to SSPC specification. Industrial-grade blasting establishes the anchor profile that protective and corrosion-resistant coatings require." },
+          { title: "Commercial and Municipal Buildings", desc: "Commercial building steel and municipal infrastructure throughout Monroe County — including historic downtown Monroe — require periodic surface preparation as part of renovation and long-term maintenance programs." },
+          { title: "Fleet and Equipment", desc: "Agricultural processors, construction companies, and industrial operators in Monroe County need mobile blasting to restore fleet vehicles, trailers, and work equipment to a condition ready for primer and topcoat." },
+          { title: "Infrastructure Assets", desc: "Bridge steel, municipal water infrastructure, and public facility structural steel throughout Monroe County require professional surface preparation to SSPC standards before protective coatings are applied." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+          ["Washtenaw County", "/areas-served/washtenaw-county-mobile-sandblasting/"],
+          ["Monroe", "/areas-served/monroe-mobile-sandblasting/"],
+          ["Flat Rock", "/areas-served/flat-rock-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Monroe County?", a: "Yes — Monroe County is within our service range, though it's at the southern end. Projects here work best when the scope is substantial. Industrial facilities, power generation infrastructure, large tanks, and commercial building steel are the right fit. Contact us to discuss your project." },
+          { q: "Can you work during power plant outage windows in Monroe County?", a: "Yes. Scheduled outage windows are exactly the kind of project constraint we build around. We can mobilize during a planned maintenance period and work to your schedule to complete surface preparation before the facility needs to return to service." },
+          { q: "What specifications do you blast to for automotive facilities in Monroe County?", a: "Automotive facilities typically specify SSPC SP-10 near-white metal or SP-6 commercial blast depending on the coating system. We blast to the spec required, and can confirm the surface profile with a Testex replica tape reading if documentation is needed." },
+          { q: "Do you handle tank blasting at Monroe County industrial sites?", a: "Yes. Interior and exterior tank blasting is part of our regular scope — storage tanks, process vessels, and industrial containers. We work to the SSPC specification the coating requires and document the results." },
+          { q: "How do I get an estimate for a Monroe County project?", a: "Use the contact form on our site or call us directly. Describe the asset type, approximate scope, and your timeline. For extended-range work in Monroe County, we'll confirm availability and price based on the actual project." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Monroe County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

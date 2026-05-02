@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Lapeer, MI | Blasting Jack"
+  description="Mobile sandblasting in Lapeer, MI. Surface preparation for manufacturing operations, fleet yards, and commercial facilities in Lapeer County. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/lapeer-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Lapeer, MI"
+    subtitle="Surface preparation for Lapeer's manufacturing operations, fleet yards, and commercial facilities."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Mobile blasting for Lapeer's manufacturing and commercial base
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Lapeer is the county seat of Lapeer County — a smaller industrial city with light manufacturing, some automotive-adjacent production, and a commercial sector serving a large rural region. For businesses and facilities in the Lapeer area, mobile blasting is often the only practical surface preparation option — hauling equipment to a shop in metro Detroit or Flint isn't always realistic, and local options for industrial-scale work are limited.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Lapeer is accessible via I-69 — generally 40 to 50 miles. Lapeer is within our working service range, and we take on manufacturing blasting, fleet work, commercial building steel, and equipment restoration here. We're direct: project scope matters at this distance, and we'll give you an honest assessment before scheduling.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Agricultural and construction equipment in the Lapeer area is one of our more common request types outside of manufacturing. Trailers, farm equipment, and contractor fleet that need rust stripped and a clean substrate for new coatings — done on-site, where the equipment sits.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Lapeer</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Lapeer
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing", desc: "Manufacturing operations in Lapeer — including automotive-adjacent production and general fabrication — need periodic structural steel blasting and equipment surface preparation during planned maintenance windows." },
+          { title: "Fleet and Equipment", desc: "Fleet operators, construction companies, and equipment yards in the Lapeer area use mobile blasting to restore trucks, trailers, and work equipment. We come to your location — no hauling to a distant shop." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Lapeer's business districts have structural and architectural steel that requires surface preparation during renovation, remediation, and scheduled maintenance programs." },
+          { title: "Agricultural Equipment", desc: "Farm trailers, augers, grain equipment, and other agricultural assets in the Lapeer area are blasted on-site at the farm or yard. Mobile blasting eliminates the need to transport large or awkward equipment." },
+          { title: "Infrastructure", desc: "County bridges, municipal utility infrastructure, and public facility structural steel in the Lapeer area require professional surface preparation to SSPC standards before protective coating application." },
+          { title: "Industrial Facilities", desc: "Industrial operations in Lapeer — processing equipment, storage vessels, and building steel — require blasting during planned maintenance periods. We schedule around production and facility operations." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Lapeer County", "/areas-served/lapeer-county-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Lapeer?", a: "Yes — Lapeer is within our working service range from our Warren base via I-69, roughly 40 to 50 miles. We handle manufacturing blasting, fleet work, commercial building steel, and agricultural equipment in the Lapeer area." },
+          { q: "Can you blast agricultural equipment in Lapeer?", a: "Yes. Agricultural equipment — trailers, farm implements, grain handling equipment — is blasted on-site at the farm or storage yard. Mobile blasting eliminates the need to transport large equipment to a shop." },
+          { q: "What manufacturing work do you handle in Lapeer?", a: "Light manufacturing and fabrication operations in Lapeer are within scope. Structural steel, equipment blasting, and tank surface preparation are common requests. We schedule around your production windows." },
+          { q: "How is the mobilization from Warren to Lapeer?", a: "Lapeer is roughly 40 to 50 miles from Warren via I-69 — within our standard service territory. There's no unusual mobilization surcharge for Lapeer work as there might be for more distant locations." },
+          { q: "Do you work on commercial buildings in Lapeer?", a: "Yes. Commercial building steel and brick or masonry on older buildings in Lapeer's commercial districts require surface preparation during renovation work. We match the blasting method to the substrate — lower pressure for masonry, standard abrasive for steel." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Lapeer?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

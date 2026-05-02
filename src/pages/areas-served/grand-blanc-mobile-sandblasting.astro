@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Grand Blanc, MI | Blasting Jack"
+  description="Mobile sandblasting in Grand Blanc, MI. Surface preparation for light manufacturing, medical facilities, commercial building steel, and fleet operations just south of Flint. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/grand-blanc-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Grand Blanc, MI"
+    subtitle="Surface preparation for Grand Blanc's light manufacturing, commercial facilities, and institutional buildings along the I-75 corridor south of Flint."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Commercial and industrial blasting south of Flint
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Grand Blanc Township and city sit just south of Flint on I-75 — one of the more commercially developed areas in Genesee County outside of Flint proper. Medical facilities, corporate offices, light manufacturing, and commercial development along the I-75 corridor give Grand Blanc a more commercial-suburban character than the heavily industrial cities further north. Surface preparation demand here is more commercial and institutional than heavy industrial.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Grand Blanc is roughly 55 to 60 miles via I-75 — extended service range. We work here on Genesee County projects where the scope justifies the mobilization. Light manufacturing, commercial building steel, fleet and equipment work, and institutional facilities are the most common fits. Contact us to discuss your project and we'll give you a straight answer.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Fleet and equipment work in Grand Blanc — construction companies and industrial operators in the I-75 corridor — is a common request type for extended-range locations like this. Multi-piece jobs or full fleet refurbishments justify the drive and make efficient use of mobilization.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Grand Blanc</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Grand Blanc
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing", desc: "Manufacturing operations in Grand Blanc's industrial parks have structural steel, production equipment, and process assets requiring surface preparation during planned maintenance windows." },
+          { title: "Medical and Institutional Facilities", desc: "Medical facilities and institutional buildings in Grand Blanc have structural steel and building components requiring surface preparation during renovation and facility maintenance programs." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings along I-75 and Grand Blanc's commercial corridors have structural and architectural steel requiring surface preparation during renovation and maintenance cycles." },
+          { title: "Fleet and Equipment", desc: "Fleet operators and construction companies in the Grand Blanc area use mobile blasting to restore trucks, trailers, and equipment on-site — practical for multi-piece jobs at extended service range." },
+          { title: "Parking Structures", desc: "Commercial and medical facility parking structures in Grand Blanc require surface preparation on structural steel elements as part of ongoing protective coating maintenance programs." },
+          { title: "Infrastructure", desc: "Municipal and county infrastructure assets in the Grand Blanc area require SSPC-standard surface preparation before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Genesee County", "/areas-served/genesee-county-mobile-sandblasting/"],
+          ["Flint", "/areas-served/flint-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Grand Blanc?", a: "Yes — Grand Blanc is within our extended Genesee County service range from our Warren base, roughly 55 to 60 miles via I-75. We work here on light manufacturing, commercial building steel, fleet work, and institutional facilities when the scope justifies the mobilization." },
+          { q: "What types of projects work best in Grand Blanc given the mobilization distance?", a: "Light manufacturing maintenance, multi-piece fleet and equipment work, commercial building steel during renovation, and institutional facility projects are the best fits. Single small-piece jobs at this distance are worth a direct conversation — we'll tell you honestly if it makes sense." },
+          { q: "Do you work at medical facilities in Grand Blanc?", a: "Yes. Medical and institutional facilities have structural steel and building infrastructure requiring surface preparation during renovation and maintenance programs. We schedule around facility operations and occupancy." },
+          { q: "Can you blast fleet equipment for a Grand Blanc construction company?", a: "Yes. Fleet refurbishment — multiple trailers, trucks, or pieces of equipment done in a single mobilization — works well for extended-range locations like Grand Blanc. Efficient use of mobilization makes the economics work." },
+          { q: "How do I get a quote for Grand Blanc work?", a: "Contact us through our website or by phone. Describe the asset type, location, and scope. We'll confirm availability and provide a quote." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Grand Blanc?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+
+const cities = [
+  "Lapeer", "Imlay City", "Almont", "North Branch",
+  "Metamora", "Hadley", "Columbiaville", "Mayfield Township", "Attica Township",
+];
+---
+
+<Layout
+  title="Mobile Sandblasting in Lapeer County, MI | Blasting Jack"
+  description="Mobile surface preparation for Lapeer County's manufacturing operations, agricultural equipment, and commercial facilities. Serving Lapeer, Imlay City, and surrounding communities."
+  canonical="https://blastingjack.com/areas-served/lapeer-county-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Lapeer County, MI"
+    subtitle="Mobile surface preparation for Lapeer County's manufacturing operations, agricultural equipment, and commercial facilities."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Serving Lapeer County's manufacturing and agricultural sector
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Lapeer County is a working mix of light manufacturing, automotive-related supply operations, agriculture, and rural commercial development. The county seat of Lapeer has a manufacturing base with some automotive-adjacent production. Imlay City carries its own industrial operations. Across the county, agricultural operations, construction companies, and commercial facilities all generate surface preparation needs that aren't well-served by shop-based blasting or small local operations.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Lapeer County is accessible via I-69 — generally within 40 to 50 miles depending on the destination. Lapeer city and the southern portions of the county fall within our standard service range. Northern communities are extended range where project scope matters more. Either way, we're direct about what works and what doesn't.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Agricultural and construction equipment in Lapeer County is a common request — trailers, tillage equipment, skid steers, and fleet trucks that need rust and old coatings removed before new protective coatings are applied. Mobile blasting handles this work on-site without hauling equipment to a shop.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Lapeer County</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Surface Prep for Coatings", "/services/surface-preparation-for-coatings/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-4">
+        Cities and communities served in Lapeer County
+      </h2>
+      <p class="text-body text-[17px] mb-8">Blasting Jack provides mobile blasting services throughout Lapeer County, including:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {cities.map(city => (
+          <div class="bg-white border border-gray-200 px-4 py-3 rounded text-body text-[15px] font-medium">{city}</div>
+        ))}
+      </div>
+      <p class="text-body text-[15px]">Not listed? We serve all of Lapeer County. <a href="/#contact" class="text-primary hover:text-primary-hover underline">Contact us</a> to confirm availability for your location.</p>
+    </div>
+  </section>
+
+  <!-- Asset types -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Assets and operations we serve in Lapeer County
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Light Manufacturing Facilities", desc: "Manufacturing operations in Lapeer and Imlay City — including automotive-related production and general fabrication — need periodic structural steel and equipment blasting during planned maintenance windows." },
+          { title: "Agricultural Equipment and Structures", desc: "Farm equipment, grain bins, storage structures, and ag-related trailers throughout Lapeer County are blasted on-site. Mobile equipment means no hauling — we come to the farm or yard and do the work where the equipment sits." },
+          { title: "Fleet and Construction Equipment", desc: "Construction companies, landscaping operations, and heavy equipment operators throughout the county use mobile blasting to restore trucks, trailers, excavators, and support equipment before recoating." },
+          { title: "Commercial Building Steel", desc: "Commercial buildings in Lapeer and Imlay City have structural and architectural steel that requires surface preparation during renovation, remediation, or scheduled maintenance cycles." },
+          { title: "Infrastructure Assets", desc: "County road bridges, municipal water and utility infrastructure, and public facility structural steel require blasting to SSPC specification before protective coating application." },
+          { title: "Rural Industrial Operations", desc: "Gravel pits, logging equipment, rural processing operations, and other non-traditional industrial assets in Lapeer County need the same quality surface preparation as larger urban industrial sites." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Genesee County", "/areas-served/genesee-county-mobile-sandblasting/"],
+          ["Lapeer", "/areas-served/lapeer-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Lapeer County?", a: "Yes — Lapeer County is within our service range from our Warren base. Southern portions of the county including Lapeer city are within standard range. Northern communities involve extended mobilization, so project scope is a factor. Contact us to discuss your specific location and project." },
+          { q: "Can you blast agricultural equipment on-site in Lapeer County?", a: "Yes. Mobile blasting is built for on-site work. We bring the equipment to your farm, yard, or facility — no need to haul machinery to a shop. Farm trailers, grain bins, augers, and other ag equipment are common requests." },
+          { q: "What about smaller manufacturing jobs in Lapeer?", a: "We handle manufacturing blasting in Lapeer for facilities where the scope makes mobilization practical. Structural steel prep, equipment restoration, and tank blasting are common. Describe your project and we'll tell you directly whether it's a fit." },
+          { q: "Can you work around a production schedule in Lapeer County?", a: "Yes — we schedule around your operation. Nights, weekends, and shutdown windows all work. For manufacturing clients in Lapeer County, we'll plan the blast sequence to minimize interference with active production." },
+          { q: "How do I get a quote for Lapeer County work?", a: "Contact us through our website or call directly. Give us the basics — asset type, location, and scope — and we'll follow up to confirm availability and provide a quote." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Lapeer County?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

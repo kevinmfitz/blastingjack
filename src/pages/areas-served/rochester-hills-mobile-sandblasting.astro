@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Rochester Hills, MI | Blasting Jack"
+  description="Mobile sandblasting in Rochester Hills, MI. Surface preparation for automotive engineering facilities, Tier 1 suppliers, manufacturing equipment, and corporate campuses. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/rochester-hills-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Rochester Hills, MI"
+    subtitle="Surface preparation for Rochester Hills' automotive engineering facilities, Tier 1 supplier operations, and manufacturing equipment."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Automotive and engineering facility blasting in Rochester Hills
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Rochester Hills is a significant automotive engineering and manufacturing city — GM facilities, Tier 1 suppliers, and automotive R&D operations are embedded throughout its industrial parks and corporate campuses. The M-59 corridor carries dense commercial development alongside these automotive tenants. With roughly 74,000 residents and a strong employment base, Rochester Hills generates consistent surface preparation demand from its industrial and commercial sectors.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Rochester Hills is within our standard Oakland County service range — 20 to 30 miles via M-59 or I-75. We serve automotive facilities, Tier 1 supplier operations, manufacturing equipment, and commercial building steel in Rochester Hills as part of our regular territory. Production-sensitive scheduling for plant shutdowns and maintenance windows is standard practice.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Corporate campus facilities in Rochester Hills include engineering labs and technical buildings with sensitive environments adjacent to blast work. Vapor and dustless blasting is available for situations where conventional sandblasting would create unacceptable dust in shared or occupied facilities.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Rochester Hills</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Equipment Blasting", "/services/equipment-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Rochester Hills
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Automotive Engineering Facilities", desc: "Automotive engineering labs, technical centers, and R&D facilities in Rochester Hills have structural steel and facility infrastructure requiring surface preparation during planned maintenance and renovation programs." },
+          { title: "Tier 1 Supplier Operations", desc: "Stamping, tooling, and supply operations throughout Rochester Hills' industrial parks have production equipment and structural steel requiring blasting during planned shutdown and maintenance periods." },
+          { title: "Manufacturing Equipment", desc: "Production presses, conveyors, tooling, and material handling equipment at Rochester Hills manufacturing facilities blasted during maintenance windows — scheduled around production requirements." },
+          { title: "Corporate Campus Steel", desc: "Corporate campus buildings and facilities have structural steel, curtain walls, and architectural metal requiring surface preparation during renovation and long-term maintenance programs." },
+          { title: "Parking Structures", desc: "Commercial and corporate parking structures in Rochester Hills require surface preparation on structural steel elements as part of ongoing protective coating maintenance programs." },
+          { title: "Equipment and Fleet", desc: "Rochester Hills industrial operators and construction companies use mobile blasting to restore fleet vehicles, trucks, trailers, and work equipment on-site at their yards and facilities." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Auburn Hills", "/areas-served/auburn-hills-industrial-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Macomb County", "/areas-served/macomb-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Rochester Hills?", a: "Yes — Rochester Hills is within our standard Oakland County service range from our Warren base, approximately 20 to 30 miles. We serve automotive facilities, Tier 1 suppliers, manufacturing operations, and commercial building steel in Rochester Hills." },
+          { q: "Can you work during planned shutdowns at Rochester Hills automotive facilities?", a: "Yes. Planned shutdown windows are exactly the kind of constraint we schedule around. We can mobilize for a maintenance period and execute structural steel and equipment blasting before the facility returns to production." },
+          { q: "Do you offer dustless blasting for corporate campus work in Rochester Hills?", a: "Yes. Engineering labs and technical facilities adjacent to blast work often require dust control. Our vapor/dustless blasting system is available for sites where conventional sandblasting would create problems in sensitive shared environments." },
+          { q: "What SSPC standards do you blast to for Rochester Hills automotive suppliers?", a: "Automotive Tier 1 facilities typically specify SP-10 near-white metal or SP-6 commercial blast. We blast to the specification on your project documents and can confirm surface profile with a Testex replica tape reading if documentation is required." },
+          { q: "Can you handle parking structure maintenance in Rochester Hills?", a: "Yes. Parking structure blasting involves surface preparation on structural steel columns, beams, and connections during planned maintenance programs. We can work nights and weekends to minimize disruption to parking operations." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Rochester Hills?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,139 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Royal Oak, MI | Blasting Jack"
+  description="Mobile sandblasting in Royal Oak, MI. Surface preparation for commercial building steel, parking structures, historic buildings, and redevelopment projects. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/royal-oak-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Royal Oak, MI"
+    subtitle="Surface preparation for Royal Oak's commercial buildings, parking structures, and urban redevelopment projects along the Woodward corridor."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Commercial and urban blasting along Woodward Avenue
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Royal Oak is a dense urban commercial city of roughly 58,000 — one of the most active commercial corridors in Oakland County along Woodward Avenue. The city has been through significant redevelopment cycles, and its commercial building stock runs from historic brick facades to mid-century steel-frame construction to modern mixed-use development. Surface preparation is a regular part of the renovation and maintenance work that keeps these buildings viable.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            From our Warren base, Royal Oak is accessible via I-696 — roughly 15 to 20 miles. It's within our standard Oakland County service range, and we work here on commercial renovation projects, parking structure maintenance, historic building cleaning, and light industrial blasting without unusual mobilization costs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Urban commercial sites in Royal Oak often require vapor or dustless blasting where conventional sandblasting would create too much debris near pedestrians, businesses, or other trades. Our MistBlaster system handles this for sites where dust management is a priority.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Royal Oak</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Coating Removal", "/services/coating-removal/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Structural Steel Blasting", "/services/structural-steel-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Royal Oak
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Commercial Building Steel", desc: "Commercial and mixed-use buildings along Woodward Avenue and throughout Royal Oak's business districts have structural steel and architectural metal requiring surface preparation during renovation and maintenance programs." },
+          { title: "Parking Structures", desc: "Municipal and commercial parking garages in Royal Oak require surface preparation on structural steel elements — columns, beams, and connections — as part of ongoing maintenance to control corrosion and prepare for protective coating." },
+          { title: "Historic Commercial Buildings", desc: "Older brick and stone commercial buildings in Royal Oak's historic business district require careful surface preparation. We use vapor blasting or low-pressure abrasive methods on masonry to clean without damaging the substrate." },
+          { title: "Redevelopment Projects", desc: "Active redevelopment and adaptive reuse projects in Royal Oak involve removing old coatings and cleaning structural steel in existing buildings before renovation. General contractors working on Royal Oak projects use us for this surface prep phase." },
+          { title: "Light Manufacturing", desc: "Light industrial operations in Royal Oak's commercial and industrial zones have equipment and structural steel requiring periodic blasting during maintenance cycles." },
+          { title: "Municipal Infrastructure", desc: "City infrastructure, bridge steel, and public facility assets in Royal Oak require professional surface preparation to SSPC standards before protective coating application." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Oakland County", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Madison Heights", "/areas-served/oakland-county-mobile-sandblasting/"],
+          ["Troy", "/areas-served/troy-mobile-sandblasting/"],
+          ["Southfield", "/areas-served/southfield-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Royal Oak?", a: "Yes — Royal Oak is within our standard Oakland County service range from our Warren base, roughly 15 to 20 miles via I-696. We handle commercial building steel, parking structure maintenance, historic building cleaning, and light industrial work in Royal Oak." },
+          { q: "Can you do dustless blasting in Royal Oak's urban commercial areas?", a: "Yes. Urban commercial sites near active pedestrian areas and neighboring businesses often require dust control. Our vapor/dustless blasting system reduces airborne debris significantly compared to conventional sandblasting — the right choice for occupied or sensitive urban sites." },
+          { q: "Do you blast historic brick buildings in Royal Oak?", a: "Yes — using methods appropriate to the substrate. Older brick requires lower pressure and finer media than steel blasting. We assess the building material before starting and adjust the approach to clean without damaging brick or mortar." },
+          { q: "Can you work on active redevelopment projects in Royal Oak?", a: "Yes. General contractors managing renovation and adaptive reuse projects in Royal Oak use us to remove old coatings and prepare structural steel during the remediation and demo phase. We coordinate scheduling with the GC to fit the project timeline." },
+          { q: "What about parking garage blasting in Royal Oak?", a: "Parking structure blasting in Royal Oak involves surface preparation on structural steel columns, beams, and connections — typically as part of a protective coating maintenance program. We can work nights and weekends to avoid disrupting parking operations." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Royal Oak?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,138 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="Mobile Sandblasting in Monroe, MI | Blasting Jack"
+  description="Mobile sandblasting in Monroe, MI. Surface preparation for industrial facilities, power generation infrastructure, and commercial properties in Monroe County. Blasting Jack, Warren MI."
+  canonical="https://blastingjack.com/areas-served/monroe-mobile-sandblasting/"
+>
+  <Header />
+  <PageBanner
+    label="Areas Served"
+    title="Mobile Sandblasting in Monroe, MI"
+    subtitle="Surface preparation for Monroe's industrial facilities, power generation infrastructure, and commercial properties."
+  />
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            Mobile blasting for Monroe's industrial and energy sector
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Monroe is the county seat of Monroe County — a city of roughly 20,000 with a heavier industrial footprint than its size suggests. DTE Energy's Monroe Power Plant, one of Michigan's largest generating facilities, operates just north of the city and creates significant infrastructure maintenance demand. Ford's Flat Rock Assembly Plant nearby and a history of glass and industrial manufacturing mean the surrounding region has real surface preparation needs.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Monroe sits near the southern end of our service range from Warren — roughly 45 to 55 miles. We provide mobile blasting here for projects with appropriate scope. Power generation infrastructure, industrial facilities, tanks and vessels, and larger commercial building steel are good fits. We're honest about the mobilization distance and build it into pricing transparently.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            Monroe's historic downtown has commercial building stock that requires careful blasting during renovation work. Brick and masonry on older buildings can be cleaned with lower-pressure abrasive methods that preserve the substrate. We match the blasting approach to what the material requires.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Services available in Monroe</h3>
+            <ul class="space-y-2 text-body text-[15px]">
+              {[
+                ["Mobile Sandblasting", "/services/mobile-sandblasting/"],
+                ["Industrial Sandblasting", "/services/industrial-sandblasting/"],
+                ["Abrasive Blasting", "/services/abrasive-blasting/"],
+                ["Vapor / Dustless Blasting", "/services/vapor-dustless-blasting/"],
+                ["Rust Removal", "/services/rust-removal/"],
+                ["Tank & Silo Blasting", "/services/tank-silo-blasting/"],
+                ["Steel Surface Preparation", "/services/steel-surface-preparation/"],
+                ["Brick & Masonry Blasting", "/services/brick-masonry-blasting/"],
+              ].map(([label, href]) => (
+                <li>
+                  <a href={href} class="flex items-center gap-2 hover:text-primary transition-colors">
+                    <span class="text-primary">→</span>{label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project types -->
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Project types in Monroe
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Power Generation and Utility Facilities", desc: "Large power generation infrastructure involves extensive structural steel, pressure vessels, tanks, and process piping that require professional surface preparation during planned outage periods. We can mobilize for outage-window work." },
+          { title: "Industrial Manufacturing", desc: "Monroe-area manufacturing operations — including automotive-adjacent production and historical industrial users — need periodic equipment blasting and structural steel surface prep during planned maintenance windows." },
+          { title: "Commercial Building Steel", desc: "Commercial properties in Monroe's business districts have steel facades, structural components, and architectural metal that require surface preparation during renovation and maintenance work." },
+          { title: "Fleet and Equipment", desc: "Industrial and agricultural fleet operators in the Monroe area use mobile blasting to restore equipment on-site — removing rust and old coatings before protective recoating." },
+          { title: "Infrastructure Assets", desc: "Bridges, municipal utility infrastructure, and public facility steel in Monroe require SSPC-standard blasting before protective coatings are applied. We work with municipalities and contractors managing these maintenance cycles." },
+          { title: "Municipal and Institutional Buildings", desc: "Government buildings, institutional facilities, and historic structures in downtown Monroe have brick, masonry, and steel that require surface preparation during renovation programs. Dustless or low-pressure methods available for sensitive substrates." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby areas -->
+  <section class="py-12 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h3 class="font-heading text-[20px] font-semibold text-heading mb-4">Nearby service areas</h3>
+      <div class="flex flex-wrap gap-3">
+        {[
+          ["Monroe County", "/areas-served/monroe-county-mobile-sandblasting/"],
+          ["Flat Rock", "/areas-served/flat-rock-mobile-sandblasting/"],
+          ["Wayne County", "/areas-served/wayne-county-mobile-sandblasting/"],
+        ].map(([label, href]) => (
+          <a href={href} class="inline-block bg-white border border-gray-200 text-body text-[14px] font-medium px-4 py-2 rounded hover:border-primary hover:text-primary transition-colors">{label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-light-bg">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does Blasting Jack serve Monroe, MI?", a: "Yes — Monroe is within our service range from our Warren base, roughly 45 to 55 miles. This is the southern end of our regular service territory. Projects here work best when the scope is substantial — industrial facilities, power generation infrastructure, tanks and vessels, and larger commercial building work." },
+          { q: "Can you work during planned outages at power generation facilities near Monroe?", a: "Yes. Planned outage windows are exactly the kind of constraint we build project schedules around. We can mobilize during a maintenance period and execute surface preparation work before the facility needs to come back online." },
+          { q: "Do you handle historic or masonry buildings in downtown Monroe?", a: "Yes — older commercial and institutional buildings require a gentler approach than industrial blasting. We use lower-pressure abrasive methods or vapor/dustless blasting on brick and masonry substrates to clean without damage. We assess the material before committing to a method." },
+          { q: "What's the typical scope for Monroe projects?", a: "Multi-day industrial scope, power generation infrastructure, tanks and vessels, and substantial fleet work are the best fit for Monroe given the mobilization distance. Smaller jobs are worth discussing — we'll give you a straight answer about whether it makes sense." },
+          { q: "How do I get a quote for a Monroe project?", a: "Contact us through our website or by phone. Describe the asset, the scope, and your timeline. For extended-range work in Monroe, we'll confirm availability and price the project based on what the work actually involves." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need blasting in Monroe?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
