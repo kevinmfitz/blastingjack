@@ -224,42 +224,43 @@ const areas = [
 </div>
 
 <script>
-  // ── Hamburger ──────────────────────────────────────────────
-  const btn  = document.getElementById("mobile-menu-btn");
-  const menu = document.getElementById("mobile-nav");
-  const bar1 = document.getElementById("bar1");
-  const bar2 = document.getElementById("bar2");
-  const bar3 = document.getElementById("bar3");
+  function initMobileMenu() {
+    const btn  = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-nav");
+    const bar1 = document.getElementById("bar1");
+    const bar2 = document.getElementById("bar2");
+    const bar3 = document.getElementById("bar3");
 
-  function openMenu() {
-    menu?.classList.remove("hidden");
-    menu?.classList.add("flex");
-    btn?.setAttribute("aria-expanded", "true");
-    bar1?.classList.add("rotate-45", "translate-y-[8px]");
-    bar2?.classList.add("opacity-0");
-    bar3?.classList.add("-rotate-45", "-translate-y-[8px]");
+    if (!btn || !menu) return;
+
+    function openMenu() {
+      menu.classList.remove("hidden");
+      menu.classList.add("flex");
+      btn.setAttribute("aria-expanded", "true");
+      bar1?.classList.add("rotate-45", "translate-y-[8px]");
+      bar2?.classList.add("opacity-0");
+      bar3?.classList.add("-rotate-45", "-translate-y-[8px]");
+    }
+
+    function closeMenu() {
+      menu.classList.add("hidden");
+      menu.classList.remove("flex");
+      btn.setAttribute("aria-expanded", "false");
+      bar1?.classList.remove("rotate-45", "translate-y-[8px]");
+      bar2?.classList.remove("opacity-0");
+      bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
+    }
+
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      expanded ? closeMenu() : openMenu();
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
   }
 
-  function closeMenu() {
-    menu?.classList.add("hidden");
-    menu?.classList.remove("flex");
-    btn?.setAttribute("aria-expanded", "false");
-    bar1?.classList.remove("rotate-45", "translate-y-[8px]");
-    bar2?.classList.remove("opacity-0");
-    bar3?.classList.remove("-rotate-45", "-translate-y-[8px]");
-  }
-
-  btn?.addEventListener("click", () => {
-    const expanded = btn.getAttribute("aria-expanded") === "true";
-    expanded ? closeMenu() : openMenu();
-  });
-
-  // Close on direct link click
-  menu?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // ── Mobile accordions ──────────────────────────────────────
   function initAccordions() {
     document.querySelectorAll(".mobile-accordion-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -280,6 +281,8 @@ const areas = [
     });
   }
 
-  initAccordions();
-  document.addEventListener("astro:page-load", initAccordions);
+  document.addEventListener("astro:page-load", () => {
+    initMobileMenu();
+    initAccordions();
+  });
 </script>

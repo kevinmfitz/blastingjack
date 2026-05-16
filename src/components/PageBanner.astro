@@ -11,7 +11,7 @@ interface Props {
 const { label, title, subtitle } = Astro.props;
 ---
 
-<section class="relative flex items-center overflow-hidden" style="height: 260px;">
+<section class="relative flex items-start md:items-center overflow-hidden md:h-[260px]">
   <Image
     src={heroBg}
     alt=""
@@ -25,17 +25,17 @@ const { label, title, subtitle } = Astro.props;
   <div class="absolute inset-0 bg-black/58"></div>
 
   <!-- Content -->
-  <div class="relative z-10 max-w-[1400px] mx-auto px-6 w-full pt-16">
+  <div class="relative z-10 max-w-[1400px] mx-auto px-6 w-full pt-[108px] pb-8 md:pt-16 md:pb-0">
     {label && (
       <p class="text-white/60 font-semibold text-[12px] tracking-[0.15em] uppercase mb-3">
         {label}
       </p>
     )}
-    <h1 class="font-heading text-[32px] md:text-[48px] font-semibold leading-[1.15] tracking-[-0.03em] text-white max-w-[800px]">
+    <h1 class="font-heading text-[26px] md:text-[48px] font-semibold leading-[1.15] tracking-[-0.03em] text-white max-w-[800px]">
       {title}
     </h1>
     {subtitle && (
-      <p class="text-white/75 text-[16px] md:text-[18px] mt-3 max-w-[580px] leading-relaxed">
+      <p class="text-white/75 text-[15px] md:text-[18px] mt-3 max-w-[580px] leading-relaxed">
         {subtitle}
       </p>
     )}
