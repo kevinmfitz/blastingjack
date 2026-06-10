@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request }) => {
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; color: #333;">
       <h2 style="color: #6B2813; border-bottom: 2px solid #6B2813; padding-bottom: 8px;">
-        New Project Enquiry — Blasting Jack
+        New Project Enquiry - Blasting Jack
       </h2>
       <table style="width:100%; border-collapse: collapse; margin-top: 16px;">
         <tr>
@@ -60,17 +60,16 @@ export const POST: APIRoute = async ({ request }) => {
     </div>
   `;
 
-  const text = `New Project Enquiry — Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
+  const text = `New Project Enquiry - Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
 
   try {
-    const apiKey = (import.meta.env.RESEND_API_KEY || '').replace(/^﻿/, '').trim();
-    const resend = new Resend(apiKey);
+    const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
       from: 'Blasting Jack <noreply@blastingjack.com>',
       to: RECIPIENTS,
       replyTo: email,
-      subject: `New Enquiry from ${name} — Blasting Jack`,
+      subject: `New Enquiry from ${name} - Blasting Jack`,
       html,
       text,
     });
