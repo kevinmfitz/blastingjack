@@ -62,19 +62,27 @@ export const POST: APIRoute = async ({ request }) => {
 
   const text = `New Project Enquiry — Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
 
-  const resend = new Resend(import.meta.env.RESEND_API_KEY);
+  try {
+    const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-  const { error } = await resend.emails.send({
-    from: 'Blasting Jack <noreply@blastingjack.com>',
-    to: RECIPIENTS,
-    replyTo: email,
-    subject: `New Enquiry from ${name} — Blasting Jack`,
-    html,
-    text,
-  });
+    const { error } = await resend.emails.send({
+      from: 'Blasting Jack <noreply@blastingjack.com>',
+      to: RECIPIENTS,
+      replyTo: email,
+      subject: `New Enquiry from ${name} — Blasting Jack`,
+      html,
+      text,
+    });
 
-  if (error) {
-    console.error('Resend error:', error);
+    if (error) {
+      console.error('Resend error:', error);
+      return new Response(JSON.stringify({ error: 'Failed to send message. Please try again.' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+  } catch (err) {
+    console.error('Resend exception:', err);
     return new Response(JSON.stringify({ error: 'Failed to send message. Please try again.' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
