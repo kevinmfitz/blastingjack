@@ -63,7 +63,9 @@ export const POST: APIRoute = async ({ request }) => {
   const text = `New Project Enquiry - Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
 
   try {
-    const resend = new Resend(import.meta.env.RESEND_API_KEY);
+    const rawKey = import.meta.env.RESEND_API_KEY || '';
+    const apiKey = rawKey.charCodeAt(0) === 0xFEFF ? rawKey.slice(1).trim() : rawKey.trim();
+    const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
       from: 'Blasting Jack <noreply@blastingjack.com>',
