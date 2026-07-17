@@ -1,0 +1,180 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import PageBanner from "../../components/PageBanner.astro";
+---
+
+<Layout
+  title="40,000 PSI Ultra-High Pressure Water Blasting Michigan | Blasting Jack"
+  description="40,000 PSI UHP water blasting for surface preparation in Michigan. No abrasives, no dust — removes coatings, rust, and contamination from steel, concrete, and industrial surfaces."
+  canonical="https://blastingjack.com/services/uhp-water-blasting/"
+>
+  <Header />
+  <PageBanner
+    label="Services"
+    title="40,000 PSI Ultra-High Pressure Water Blasting"
+    subtitle="Pure water at extreme pressure — removes coatings, rust, and contamination without abrasives, dust, or media disposal."
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-6">
+            What 40,000 PSI water blasting is and how it works
+          </h2>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Ultra-high pressure (UHP) water blasting uses pure water at 40,000 PSI — roughly 2,700 times atmospheric pressure — to remove coatings, rust, mill scale, and surface contamination. No abrasive media is introduced. The water pressure alone does the work, then runs off the surface carrying removed material with it.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed mb-4">
+            Because there is no abrasive, there is no media to contain, collect, and dispose of. There is no silica dust. There is no abrasive embedment in the substrate. The surface is left clean, wet, and free of loose material — ready for inspection and coating application once dry.
+          </p>
+          <p class="text-body text-[17px] leading-relaxed">
+            UHP water blasting prepares surfaces to SSPC-SP WJ standards (Water Jetting): WJ-1 through WJ-4, depending on the pressure, dwell time, and surface condition. It is a recognized SSPC/NACE surface preparation method specified on bridge, tank, industrial facility, and marine projects where abrasive blasting is restricted or impractical.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-light-bg p-6 rounded-lg">
+            <h3 class="font-heading text-[18px] font-semibold text-heading mb-3">Best applications for UHP water blasting</h3>
+            <ul class="space-y-2 text-body text-[16px]">
+              {[
+                "Structural steel where abrasive contamination must be avoided",
+                "Concrete surface preparation for epoxy floors, overlays, and linings",
+                "Tank interiors — no abrasive residue in the vessel",
+                "Bridge decks and rebar exposure (hydrodemolition)",
+                "Near-water and environmentally restricted job sites",
+                "Facilities where silica dust cannot be tolerated",
+                "Coating removal where substrate damage from abrasive is a concern",
+                "Lead paint removal — no airborne dust generated",
+                "Secondary containment linings and chemical vessel interiors",
+                "Active facilities where abrasive containment is not feasible",
+              ].map(item => (
+                <li class="flex items-start gap-2"><span class="text-primary mt-1 shrink-0">→</span>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-8">
+        UHP water blasting vs. abrasive blasting
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-[15px] border-collapse">
+          <thead>
+            <tr class="bg-dark text-white">
+              <th class="text-left p-4 font-semibold"></th>
+              <th class="text-left p-4 font-semibold">40,000 PSI Water Blasting</th>
+              <th class="text-left p-4 font-semibold">Abrasive Blasting</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Media / abrasive", "None — pure water only", "Steel grit, garnet, sand, coal slag"],
+              ["Dust generation", "None", "Significant — containment required"],
+              ["Silica exposure risk", "None", "Present with silica-containing media"],
+              ["Media disposal", "None", "Spent media must be collected and disposed"],
+              ["Anchor profile creation", "Does not create new profile", "Creates anchor profile for coatings"],
+              ["Near-water use", "Yes — water is the media", "Restricted — containment required"],
+              ["SSPC cleanliness standard", "SSPC-SP WJ-1 through WJ-4", "SSPC-SP 5, SP-10, SP-6, SP-7"],
+              ["Flash rust risk", "Present — inhibitors may be required", "Lower on dry surfaces"],
+              ["Lead paint removal", "Preferred — no airborne dust", "Requires full respiratory and containment"],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                {row.map((cell, j) => (
+                  <td class={`p-4 border border-gray-200 ${j === 0 ? "font-semibold text-heading" : "text-body"}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-8">
+        SSPC Water Jetting Standards
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        {[
+          { std: "WJ-1", name: "Clean to Bare Substrate", desc: "All visible rust, coatings, and foreign matter removed. Surface appears clean, with only tightly adherent material permitted." },
+          { std: "WJ-2", name: "Very Thorough Cleaning", desc: "At least 95% of each unit area free of all visible residues. Staining limited to 5% of each unit area." },
+          { std: "WJ-3", name: "Thorough Cleaning", desc: "At least two-thirds of each unit area free of all visible residues. Random staining allowed on remainder." },
+          { std: "WJ-4", name: "Light Cleaning", desc: "Loose rust, coatings, and foreign matter removed. Tightly adherent rust and coatings may remain." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <div class="text-primary font-heading font-bold text-[20px] mb-1">{item.std}</div>
+            <div class="font-semibold text-heading text-[15px] mb-2">{item.name}</div>
+            <p class="text-body text-[14px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-body text-[15px] leading-relaxed max-w-3xl">
+        Note: UHP water blasting does not create a new anchor profile on bare steel the way abrasive blasting does. On previously coated surfaces with an existing profile, water blasting preserves that profile. On bare steel with no existing profile, a flash inhibitor and appropriate primer selection are necessary. Consult your coating manufacturer's technical data sheet for surface prep requirements.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-light-bg">
+    <div class="max-w-[1400px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] tracking-[-0.03em] mb-10">
+        Industries and project types
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {[
+          { title: "Structural Steel and Bridge Work", desc: "Bridge decks, fascia beams, and structural steel where abrasive containment over water or roadways is restricted. UHP water blasting removes deteriorated coatings and rust while meeting environmental requirements for near-water work." },
+          { title: "Industrial Tank Interiors", desc: "Tank lining prep where abrasive contamination of vessel interiors is unacceptable — food-grade silos, chemical storage vessels, and water tanks. Water blasting removes failed linings and corrosion without abrasive residue." },
+          { title: "Concrete Floors and Parking Structures", desc: "Parking garage decks, industrial floors, and secondary containment areas prepared for epoxy coatings and overlays. Water blasting removes existing coatings and opens the concrete surface without abrasive dust." },
+          { title: "Marine and Shipyard Work", desc: "Hull and ballast tank surface preparation where abrasive blasting near open water is restricted. Water blasting removes marine growth, failed coatings, and corrosion products on steel hull sections." },
+          { title: "Chemical and Process Facilities", desc: "Refineries, chemical plants, and process facilities where abrasive contamination of process equipment or drain systems cannot be tolerated. UHP removes coatings from piping, vessels, and structural steel in sensitive environments." },
+          { title: "Lead Paint Removal", desc: "Deteriorated lead-based paint on steel structures, bridges, and industrial equipment removed without generating airborne lead dust. Water blasting keeps removed material wet, reducing airborne exposure risk." },
+        ].map(item => (
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.title}</h3>
+            <p class="text-body text-[15px] leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-[900px] mx-auto px-6">
+      <h2 class="font-heading text-[28px] md:text-[36px] font-semibold text-heading leading-[1.2] mb-10">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {[
+          { q: "Does 40,000 PSI water blasting create an anchor profile?", a: "No. UHP water blasting removes coatings and corrosion but does not abrade the substrate to create a new anchor profile the way abrasive blasting does. On steel with an existing profile from a prior blast, water blasting preserves that profile. On bare steel with no profile, a zinc-rich primer or other primer compatible with low-profile steel is typically required, or the surface is abrasive-blasted after water blasting if a profile is needed." },
+          { q: "What flash rust prevention is used with UHP water blasting?", a: "Flash rust on bare steel after water blasting is managed with flash rust inhibitors added to the water, or by priming quickly after blasting. Coating manufacturer technical data sheets typically specify acceptable flash rust levels (none, light, medium) and compatible primers. We coordinate with the coating applicator on timing and inhibitor use." },
+          { q: "Can UHP water blasting be used inside occupied buildings?", a: "Yes, with appropriate water containment and drainage. Because there is no airborne dust or abrasive, UHP water blasting is usable in environments where abrasive blasting would be excluded. Water management — collection, routing, and disposal — is the primary site management concern." },
+          { q: "Is 40,000 PSI water blasting approved for SSPC and NACE specifications?", a: "Yes. SSPC-SP WJ-1 through WJ-4 are established SSPC/NACE standards for water jetting surface preparation. Many coating manufacturers include water jetting as an approved surface preparation method in their technical data sheets. Always verify the specific standard and cleanliness level required by your coating spec." },
+          { q: "What is the difference between UHP water blasting and pressure washing?", a: "Pressure washing typically operates at 1,000–4,000 PSI — enough to clean a surface but not remove bonded coatings or dense rust. UHP water blasting at 40,000 PSI operates at 10–40x higher pressure, generating the kinetic energy to cut through and remove rust, multiple layers of coating, and tightly adherent contaminants. They are not interchangeable for surface preparation purposes." },
+        ].map(item => (
+          <div class="bg-light-bg border border-gray-200 p-6 rounded-lg">
+            <h3 class="font-heading text-[17px] font-semibold text-heading mb-2">{item.q}</h3>
+            <p class="text-body text-[16px]">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-dark">
+    <div class="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <h2 class="font-heading text-[28px] md:text-[40px] font-medium leading-[1.2] tracking-[-0.045em] text-white">
+        Need UHP water blasting at your facility?
+      </h2>
+      <a href="/#contact" class="inline-block bg-primary text-white font-semibold text-[18px] px-[40px] md:px-[60px] py-[18px] md:py-[20px] border-2 border-primary hover:bg-primary-hover transition-all duration-300 shrink-0">
+        Request a Free Estimate
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
