@@ -4,9 +4,10 @@ import { Resend } from 'resend';
 export const prerender = false;
 
 const RECIPIENTS = [
-  'endurancepainting@yahoo.com',
-  'kfitzgeraldblastingjackend@gmail.com',
-  'Jacobsansoterra111@gmail.com',
+  'info@blastingjack.com',
+  'johns@blastingjack.com',
+  'kevinf@blastingjack.com',
+  'jacobs@blastingjack.com',
 ];
 
 export const POST: APIRoute = async ({ request }) => {
