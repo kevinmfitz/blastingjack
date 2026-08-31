@@ -71,10 +71,14 @@ npm run dev        # http://localhost:4321
 | Variable | Description |
 |---|---|
 | `RESEND_API_KEY` | Resend API key for contact form email delivery |
+| `CRM_INBOUND_URL` | BD CRM's `/api/inbound` webhook URL — optional; contact form works fine without it |
+| `CRM_INBOUND_API_KEY` | This site's API key for the BD CRM webhook (brand is resolved by which key is sent — see `bd-crm/CLAUDE.md`) |
 
 **Local:** Create a `.env` file in the project root:
 ```
 RESEND_API_KEY=your_key_here
+CRM_INBOUND_URL=https://<bd-crm-domain>/api/inbound
+CRM_INBOUND_API_KEY=your_bj_crm_key_here
 ```
 
 **Production:** Set in Vercel → Project Settings → Environment Variables. Already configured for Production, Preview, and Development via Vercel CLI.
@@ -91,6 +95,11 @@ RESEND_API_KEY=your_key_here
 > **Note:** Currently routing to `kevinmfitz7@gmail.com` only (Resend free tier restriction).
 > To enable all four recipient addresses, verify `blastingjack.com` at [resend.com/domains](https://resend.com/domains),
 > then uncomment the full `RECIPIENTS` array in `src/pages/api/contact.ts` and change the `from` address to `no-reply@blastingjack.com`.
+
+**Also fires a webhook to the BD CRM** (`../bd-crm`) alongside the Resend
+send — non-blocking, failures swallowed, so a CRM outage never breaks this
+form. See `CRM_INBOUND_URL` / `CRM_INBOUND_API_KEY` above and
+`bd-crm/CLAUDE.md` for the full contract.
 
 ---
 

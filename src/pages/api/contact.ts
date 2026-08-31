@@ -63,19 +63,40 @@ export const POST: APIRoute = async ({ request }) => {
 
   const text = `New Project Enquiry - Blasting Jack\n\nName: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ''}\n\nMessage:\n${message}`;
 
+  // Runs alongside the Resend send below (not sequentially after it) so it
+  // adds no latency in the common case. Brand is resolved on the CRM side by
+  // WHICH API key this is — never trust a body field for that — so this
+  // can't misroute a lead into Endurance Painting's data even by bug.
+  // Failure is swallowed: a CRM outage must never break the live contact
+  // form. See bd-crm/CLAUDE.md.
+  const crmInboundUrl = import.meta.env.CRM_INBOUND_URL;
+  const crmInboundApiKey = import.meta.env.CRM_INBOUND_API_KEY;
+  const crmWebhookPromise =
+    crmInboundUrl && crmInboundApiKey
+      ? fetch(crmInboundUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-api-key': crmInboundApiKey },
+          body: JSON.stringify({ name, email, phone, message }),
+          signal: AbortSignal.timeout(3000),
+        }).catch((err) => console.error('CRM webhook failed:', err))
+      : Promise.resolve();
+
   try {
     const rawKey = import.meta.env.RESEND_API_KEY || '';
     const apiKey = rawKey.charCodeAt(0) === 0xFEFF ? rawKey.slice(1).trim() : rawKey.trim();
     const resend = new Resend(apiKey);
 
-    const { error } = await resend.emails.send({
-      from: 'Blasting Jack <noreply@blastingjack.com>',
-      to: RECIPIENTS,
-      replyTo: email,
-      subject: `New Enquiry from ${name} - Blasting Jack`,
-      html,
-      text,
-    });
+    const [{ error }] = await Promise.all([
+      resend.emails.send({
+        from: 'Blasting Jack <noreply@blastingjack.com>',
+        to: RECIPIENTS,
+        replyTo: email,
+        subject: `New Enquiry from ${name} - Blasting Jack`,
+        html,
+        text,
+      }),
+      crmWebhookPromise,
+    ]);
 
     if (error) {
       console.error('Resend error:', error);
