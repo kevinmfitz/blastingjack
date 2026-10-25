@@ -913,9 +913,12 @@ const partners = [
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = "Send Message";
-        setTimeout(() => {
-          formResult.className = "hidden text-center text-[15px] font-medium py-3 px-4 rounded-md";
-        }, 6000);
+        // Errors clear after a few seconds; the success confirmation stays visible.
+        if (!formResult.classList.contains("bg-green-50")) {
+          setTimeout(() => {
+            formResult.className = "hidden text-center text-[15px] font-medium py-3 px-4 rounded-md";
+          }, 6000);
+        }
       }
     });
   }

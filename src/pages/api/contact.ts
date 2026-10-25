@@ -10,6 +10,16 @@ const RECIPIENTS = [
   'jacobs@blastingjack.com',
 ];
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export const POST: APIRoute = async ({ request }) => {
   let body: { name?: string; email?: string; phone?: string; message?: string };
 
@@ -22,11 +32,21 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  const { name, email, phone, message } = body;
+  const name = String(body.name ?? '').trim().slice(0, 200);
+  const email = String(body.email ?? '').trim().slice(0, 254);
+  const phone = String(body.phone ?? '').trim().slice(0, 50);
+  const message = String(body.message ?? '').trim().slice(0, 5000);
 
   if (!name || !email || !message) {
     return new Response(
       JSON.stringify({ error: 'Name, email, and message are required.' }),
+      { status: 400, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+
+  if (!EMAIL_PATTERN.test(email)) {
+    return new Response(
+      JSON.stringify({ error: 'Please enter a valid email address.' }),
       { status: 400, headers: { 'Content-Type': 'application/json' } }
     );
   }
@@ -39,20 +59,20 @@ export const POST: APIRoute = async ({ request }) => {
       <table style="width:100%; border-collapse: collapse; margin-top: 16px;">
         <tr>
           <td style="padding: 8px 12px; font-weight: 600; background: #f5f5f5; width: 130px;">Name</td>
-          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${name}</td>
+          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${escapeHtml(name)}</td>
         </tr>
         <tr>
           <td style="padding: 8px 12px; font-weight: 600; background: #f5f5f5;">Email</td>
-          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${email}</td>
+          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${escapeHtml(email)}</td>
         </tr>
         ${phone ? `
         <tr>
           <td style="padding: 8px 12px; font-weight: 600; background: #f5f5f5;">Phone</td>
-          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${phone}</td>
+          <td style="padding: 8px 12px; border-bottom: 1px solid #eee;">${escapeHtml(phone)}</td>
         </tr>` : ''}
         <tr>
           <td style="padding: 8px 12px; font-weight: 600; background: #f5f5f5; vertical-align: top;">Message</td>
-          <td style="padding: 8px 12px;">${message.replace(/\n/g, '<br/>')}</td>
+          <td style="padding: 8px 12px;">${escapeHtml(message).replace(/\n/g, '<br/>')}</td>
         </tr>
       </table>
       <p style="margin-top: 24px; font-size: 12px; color: #999;">
