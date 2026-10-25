@@ -105,4 +105,4 @@ The stakes on industrial coating work are high. A coating system applied over pr
 
 Blasting Jack has been doing this work in Michigan since the 1980s. We answer every one of these questions in detail — because we've built our entire operation around the standard of work that industrial and commercial clients actually require.
 
-**[Contact us](/# contact)** to discuss your project. We serve industrial and commercial clients from Metro Detroit and Macomb County to Grand Rapids, Lansing, Flint, Saginaw, Kalamazoo, and throughout Michigan.
+**[Contact us](/#contact)** to discuss your project. We serve industrial and commercial clients from Metro Detroit and Macomb County to Grand Rapids, Lansing, Flint, Saginaw, Kalamazoo, and throughout Michigan.

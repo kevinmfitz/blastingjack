@@ -77,4 +77,4 @@ Blasting Jack assesses every project before recommending a method. We look at th
 
 Our mobile crews operate on structural steel, manufacturing facilities, industrial equipment, bridges, tanks, and large commercial infrastructure from Metro Detroit and Macomb County to Grand Rapids, Lansing, Flint, Saginaw, Kalamazoo, and throughout the Lower Peninsula.
 
-**Contact Blasting Jack** [for a project consultation](/# contact) — we'll assess your site and give you a straightforward recommendation on method, timeline, and scope.
+**[Contact Blasting Jack for a project consultation](/#contact)** — we'll assess your site and give you a straightforward recommendation on method, timeline, and scope.

@@ -88,4 +88,4 @@ We've been quoting and executing industrial and commercial sandblasting projects
 
 We work with Sherwin Williams, PPG, Behr, and Carboline coating systems and follow all OSHA and EPA standards on every project. No shortcuts, no surprises on the invoice.
 
-**[Contact us for a project estimate](/# contact)** — we serve industrial and commercial clients across Metro Detroit, Grand Rapids, Lansing, Flint, Saginaw, Kalamazoo, and throughout Michigan.
+**[Contact us for a project estimate](/#contact)** — we serve industrial and commercial clients across Metro Detroit, Grand Rapids, Lansing, Flint, Saginaw, Kalamazoo, and throughout Michigan.

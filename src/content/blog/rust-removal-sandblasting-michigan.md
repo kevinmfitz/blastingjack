@@ -88,4 +88,4 @@ Our mobile blasting crews handle corrosion removal on:
 
 We serve industrial and commercial clients from Metro Detroit, Macomb County, and the Downriver corridor through Flint, Saginaw, Lansing, Grand Rapids, Kalamazoo, and across Michigan's Lower Peninsula.
 
-**[Contact Blasting Jack](/# contact)** to discuss your corrosion problem and get a straightforward assessment of what the work requires.
+**[Contact Blasting Jack](/#contact)** to discuss your corrosion problem and get a straightforward assessment of what the work requires.
