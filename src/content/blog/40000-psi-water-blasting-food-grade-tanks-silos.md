@@ -9,7 +9,7 @@ draft: false
 
 Abrasive blasting inside a food grade silo or hopper creates an immediate problem: you've just introduced steel grit, garnet, or coal slag into a vessel that's going back into food storage service. Every piece of abrasive media that doesn't get recovered is a foreign material contamination risk. Recovering it completely from the interior geometry of a large silo — the seams, the cone, the discharge area — is a manual process that takes longer than the blasting itself, and "complete" is difficult to verify.
 
-**UHP water blasting at 40,000 PSI** removes failed linings and prepares food grade vessel interiors without introducing any abrasive. The media is water. It drains.
+**[UHP water blasting at 40,000 PSI](/services/uhp-water-blasting/)** removes failed linings and prepares food grade vessel interiors without introducing any abrasive. The media is water. It drains.
 
 ---
 

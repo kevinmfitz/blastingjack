@@ -9,7 +9,7 @@ draft: false
 
 Tank interior surface preparation presents a set of challenges that make UHP water blasting the default choice for anyone who's done enough tank work to know what a bad outcome looks like. Spent abrasive at the bottom of a vessel that holds food product. Silica dust in an enclosed space with no airflow. A crew trying to vacuum blast in a 6-foot-diameter pipe. All of these are real problems that water blasting sidesteps.
 
-**40,000 PSI UHP water blasting** drains, doesn't pile up, and produces no airborne particulate. For tank interiors, vessels, and confined space work, those two properties change the entire job.
+**[40,000 PSI UHP water blasting](/services/uhp-water-blasting/)** drains, doesn't pile up, and produces no airborne particulate. For tank interiors, vessels, and confined space work, those two properties change the entire job.
 
 ---
 
@@ -83,4 +83,4 @@ Most industrial tank lining systems specify acceptable flash rust levels. Workin
 
 ---
 
-**Blasting Jack** has blasted and prepped tank interiors for lining work across Michigan — above-ground petroleum tanks, wastewater vessels, food-grade silos, and industrial process equipment. If you're planning a tank relining project and want to know whether water blasting or abrasive blasting makes more sense for your vessel, give us a call. Free estimates.
+**Blasting Jack** has blasted and prepped tank interiors for lining work across Michigan — above-ground petroleum tanks, [wastewater vessels](/gallery/brownstown-wastewater-tanks/), food-grade silos, and industrial process equipment. If you're planning a tank relining project and want to know whether water blasting or abrasive blasting makes more sense for your vessel, give us a call. Free estimates.

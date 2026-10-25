@@ -7,7 +7,7 @@ tags: ["water blasting", "UHP", "bridge surface prep", "structural steel", "Mich
 draft: false
 ---
 
-Bridges, overpasses, and structural steel over roadways and waterways present a problem that sandblasting can't always solve cleanly: you can't let abrasive rain onto traffic lanes or into rivers. At **40,000 PSI**, ultra-high pressure water blasting removes failed coatings and rust from steel without abrasive media — no containment tarp failures sending grit onto a highway, no media recovery from a drainage ditch.
+Bridges, overpasses, and structural steel over roadways and waterways present a problem that sandblasting can't always solve cleanly: you can't let abrasive rain onto traffic lanes or into rivers. At **40,000 PSI**, [ultra-high pressure water blasting](/services/uhp-water-blasting/) removes failed coatings and rust from steel without abrasive media — no containment tarp failures sending grit onto a highway, no media recovery from a drainage ditch.
 
 It's become a standard surface prep method on Michigan bridge maintenance and structural steel projects for exactly this reason.
 

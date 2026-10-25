@@ -77,4 +77,4 @@ Coal tar removal is dirty, hazardous work. Done with the right plan, it's also a
 
 ---
 
-Blasting Jack removes old coal tar, Bitumastic, and multi-layer coatings from pipe, tanks, and structural steel across Michigan using abrasive blasting and 40,000 PSI water jetting, with containment and exposure controls. [Contact us](/#contact) to plan your coating replacement project.
+Blasting Jack removes old coal tar, Bitumastic, and multi-layer coatings from pipe, tanks, and structural steel across Michigan using abrasive blasting and [40,000 PSI water jetting](/services/uhp-water-blasting/), with containment and exposure controls. [Contact us](/#contact) to plan your coating replacement project.

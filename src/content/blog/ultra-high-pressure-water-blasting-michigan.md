@@ -7,7 +7,7 @@ tags: ["water blasting", "UHP", "surface preparation", "hydroblasting", "Michiga
 draft: false
 ---
 
-Ultra-high-pressure (UHP) water blasting operates at pressures up to **40,000 PSI** — roughly 1,000 times the pressure of a standard garden hose. At that pressure, water alone removes paint, rust, mill scale, concrete, and chemical deposits from steel, concrete, and other industrial surfaces. No abrasive media. No chemicals. No dust.
+[Ultra-high-pressure (UHP) water blasting](/services/uhp-water-blasting/) operates at pressures up to **40,000 PSI** — roughly 1,000 times the pressure of a standard garden hose. At that pressure, water alone removes paint, rust, mill scale, concrete, and chemical deposits from steel, concrete, and other industrial surfaces. No abrasive media. No chemicals. No dust.
 
 It's a different tool than sandblasting — not a replacement for it. Here's what it does, where it makes sense, and where it doesn't.
 

@@ -9,7 +9,7 @@ draft: false
 
 Removing an industrial coating is rarely as simple as slapping on a paint stripper and waiting. Failed epoxy linings, thick build-up from decades of recoating, lead-based paint on structural steel, and chemically resistant coatings on process equipment all require mechanical removal — and the method you choose affects cost, safety, and what your surface looks like when you're done.
 
-**40,000 PSI UHP water blasting** removes coatings without introducing any foreign material to the surface. No abrasive. No chemicals. No dust. Here's why that matters and when it's the right tool for coating removal work.
+**[40,000 PSI UHP water blasting](/services/uhp-water-blasting/)** removes coatings without introducing any foreign material to the surface. No abrasive. No chemicals. No dust. Here's why that matters and when it's the right tool for coating removal work.
 
 ---
 

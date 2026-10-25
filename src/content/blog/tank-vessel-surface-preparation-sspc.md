@@ -86,4 +86,4 @@ Tank work done correctly lasts a decade or more. Done incorrectly, it fails in s
 
 ---
 
-Blasting Jack provides tank and vessel surface preparation throughout Southeast Michigan — manufacturing facilities, water infrastructure, industrial process tanks, and agricultural silos. Contact us to discuss SSPC surface preparation for your next tank maintenance project.
+Blasting Jack provides [tank and vessel surface preparation](/services/tank-silo-blasting/) throughout Southeast Michigan — manufacturing facilities, water infrastructure, [industrial process tanks](/gallery/metro-alloy-quench-tank/), and agricultural silos. Contact us to discuss SSPC surface preparation for your next tank maintenance project.

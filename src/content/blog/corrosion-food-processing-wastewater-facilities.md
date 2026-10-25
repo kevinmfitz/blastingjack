@@ -40,7 +40,7 @@ Interior surfaces in direct contact or in proximity to food product must meet FD
 
 ## What We Have Seen in Michigan Food Processing Facilities
 
-Our work blasting and relining a large FDA-grade storage silo in Michigan is a direct example of what corrosion remediation in a regulated food environment looks like. The interior lining had failed, active corrosion was present on the vessel walls, and the work — confined space blasting, lining application, and regulatory documentation — required a level of planning and contamination management that is substantially more involved than open-air industrial blasting.
+Our work [blasting and relining a large FDA-grade storage silo](/gallery/fda-grade-storage-silo/) in Michigan is a direct example of what corrosion remediation in a regulated food environment looks like. The interior lining had failed, active corrosion was present on the vessel walls, and the work — confined space blasting, lining application, and regulatory documentation — required a level of planning and contamination management that is substantially more involved than open-air industrial blasting.
 
 The assets most commonly requiring corrosion remediation in Michigan food processing facilities include:
 
@@ -72,7 +72,7 @@ In treatment facilities, the splash zone — the area at and just above the wate
 
 ### Access and Confined Space Requirements
 
-Most wastewater treatment structures requiring interior coating work are confined spaces under OSHA 29 CFR 1910.146. Entry requires a permit, atmospheric monitoring, ventilation, standby personnel, and rescue provisions. Our crews are trained and equipped for confined space entry. Managing confined space work is a standard part of how we plan and execute wastewater blasting and coating projects — not an exception.
+Most wastewater treatment structures requiring interior coating work are confined spaces under OSHA 29 CFR 1910.146. Entry requires a permit, atmospheric monitoring, ventilation, standby personnel, and rescue provisions. Our crews are trained and equipped for confined space entry. Managing confined space work is a standard part of how we plan and execute [wastewater blasting and coating projects](/gallery/brownstown-wastewater-tanks/) — not an exception.
 
 ---
 
@@ -90,7 +90,7 @@ Standard commercial blast cleaning — SSPC SP-6 Commercial Blast — is the min
 
 ## Working With Blasting Jack on Regulated Environments
 
-We have direct experience in both food processing and wastewater environments in Michigan. We understand what FDA-grade silo relining requires. We hold the confined space training and equipment required for wastewater basin and wet well work. We work with coating manufacturers to specify lining systems appropriate to the specific chemical exposure and service requirements of each application.
+We have direct experience in both food processing and wastewater environments in Michigan. We understand what [FDA-grade silo relining](/services/tank-silo-blasting/) requires. We hold the confined space training and equipment required for wastewater basin and wet well work. We work with coating manufacturers to specify lining systems appropriate to the specific chemical exposure and service requirements of each application.
 
 If your facility operates in either of these environments and you are dealing with failing linings, active corrosion, or upcoming maintenance requirements, we would rather have a conversation before the scope becomes an emergency.
 

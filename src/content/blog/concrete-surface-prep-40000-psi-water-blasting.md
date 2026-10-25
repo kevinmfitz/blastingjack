@@ -9,7 +9,7 @@ draft: false
 
 Concrete surface preparation is one of the most frequently overlooked causes of coating failure. Apply an epoxy floor coating to a slab with residual curing compound, laitance, or a failed previous coating, and you've set the job up to fail before the first coat is dry.
 
-**40,000 PSI UHP water blasting** is a recognized method for concrete surface prep that removes failed coatings, laitance, and contamination — and in the right applications, selectively removes damaged concrete while leaving sound material intact. Here's how it works and where it's used on Michigan industrial and commercial concrete projects.
+**[40,000 PSI UHP water blasting](/services/uhp-water-blasting/)** is a recognized method for concrete surface prep that removes failed coatings, laitance, and contamination — and in the right applications, selectively removes damaged concrete while leaving sound material intact. Here's how it works and where it's used on Michigan industrial and commercial concrete projects.
 
 ---
 

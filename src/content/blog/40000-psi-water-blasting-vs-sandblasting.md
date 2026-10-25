@@ -17,7 +17,7 @@ Here's how to think through the choice — and when the right answer is actually
 
 **Abrasive blasting** propels media — steel grit, garnet, coal slag, glass bead — at the surface at high velocity. The abrasive cuts into the substrate, removing coatings and rust and simultaneously creating a surface profile (anchor pattern) that coatings bond to.
 
-**UHP water blasting at 40,000 PSI** uses pure water at extreme pressure. The water sheers coatings and corrosion off the surface without cutting into the base material. It does not create a new anchor profile — it removes what's on top and leaves the substrate below intact.
+**[UHP water blasting at 40,000 PSI](/services/uhp-water-blasting/)** uses pure water at extreme pressure. The water sheers coatings and corrosion off the surface without cutting into the base material. It does not create a new anchor profile — it removes what's on top and leaves the substrate below intact.
 
 That single difference — profile creation — drives most of the decision-making.
 

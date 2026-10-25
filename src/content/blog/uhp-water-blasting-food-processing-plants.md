@@ -9,7 +9,7 @@ draft: false
 
 Food processing facilities live under a set of constraints that most industrial coating jobs don't have to think about: FDA and USDA regulations around surface contact and contamination, HACCP plans that specify where and when maintenance work can happen, and the reality that grit, dust, or chemical residue anywhere near a production line is not just a housekeeping problem — it's a regulatory one.
 
-**40,000 PSI UHP water blasting** removes the contamination risk that makes abrasive blasting problematic in food plants. No abrasive media to recover from food contact surfaces. No silica dust drifting toward open processing areas. No chemical stripper residue to neutralize. Water does the work — and then it drains.
+**[40,000 PSI UHP water blasting](/services/uhp-water-blasting/)** removes the contamination risk that makes abrasive blasting problematic in food plants. No abrasive media to recover from food contact surfaces. No silica dust drifting toward open processing areas. No chemical stripper residue to neutralize. Water does the work — and then it drains.
 
 ---
 
