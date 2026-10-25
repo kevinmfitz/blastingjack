@@ -46,4 +46,4 @@ A clean-looking surface isn't the same as a coating-ready surface. Profile is a 
 
 ---
 
-**[Contact Blasting Jack](/contact)** for surface preparation with documented profile measurement to meet your coating manufacturer's specification.
+**[Contact Blasting Jack](/#contact)** for surface preparation with documented profile measurement to meet your coating manufacturer's specification.

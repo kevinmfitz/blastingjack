@@ -100,4 +100,4 @@ We are a mobile blasting contractor, not a coating manufacturer with a product t
 
 Some assets need a full blast and recoat. Some need targeted maintenance blasting and spot prime. Some can be addressed with a sweep blast and overcoat at a fraction of full project cost. We scope work based on what the condition requires.
 
-**[Contact Blasting Jack](/contact)** to schedule a no-cost facility assessment and get a straight answer on where your assets stand and what the appropriate intervention looks like.
+**[Contact Blasting Jack](/#contact)** to schedule a no-cost facility assessment and get a straight answer on where your assets stand and what the appropriate intervention looks like.

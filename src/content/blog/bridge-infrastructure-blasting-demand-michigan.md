@@ -34,4 +34,4 @@ For structures where coating deterioration is visible now, waiting rarely reduce
 
 ---
 
-**[Contact Blasting Jack](/contact)** to discuss surface preparation and coating support for bridge, infrastructure, and structural steel projects in Michigan.
+**[Contact Blasting Jack](/#contact)** to discuss surface preparation and coating support for bridge, infrastructure, and structural steel projects in Michigan.

@@ -37,4 +37,4 @@ Dry ice blasting cleans off grease, carbon, and surface buildup — it doesn't r
 
 ---
 
-Blasting Jack provides mobile dry ice blasting for fleet and heavy equipment maintenance throughout Michigan. **[Contact us](/contact)** to schedule a cleaning for your yard, rental return equipment, or fleet turnaround.
+Blasting Jack provides mobile dry ice blasting for fleet and heavy equipment maintenance throughout Michigan. **[Contact us](/#contact)** to schedule a cleaning for your yard, rental return equipment, or fleet turnaround.

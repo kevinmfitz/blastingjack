@@ -99,4 +99,4 @@ Regardless of corrosion type, the fundamental requirement before applying any pr
 
 Identifying the type of corrosion you're dealing with determines what preparation standard is required, what coating system is appropriate, and whether any structural or engineering assessment should precede the coating work. Getting that diagnosis right at the start saves money and prevents repeat failures.
 
-**[Contact Blasting Jack](/contact)** to discuss the corrosion conditions at your facility and get a straightforward assessment of what proper remediation looks like.
+**[Contact Blasting Jack](/#contact)** to discuss the corrosion conditions at your facility and get a straightforward assessment of what proper remediation looks like.

@@ -37,4 +37,4 @@ Dry ice blasting removes surface contamination — it's not a replacement for a 
 
 ---
 
-Blasting Jack provides dry ice blasting for food and beverage processing facilities throughout Michigan. **[Contact us](/contact)** to discuss a cleaning plan for your production equipment, packaging lines, or facility changeover schedule.
+Blasting Jack provides dry ice blasting for food and beverage processing facilities throughout Michigan. **[Contact us](/#contact)** to discuss a cleaning plan for your production equipment, packaging lines, or facility changeover schedule.

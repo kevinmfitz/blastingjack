@@ -40,4 +40,4 @@ Sustainable blasting isn't a separate service — it's a set of decisions about 
 
 ---
 
-**[Contact Blasting Jack](/contact)** to discuss media selection, waste handling, and disposal planning for your next surface preparation project.
+**[Contact Blasting Jack](/#contact)** to discuss media selection, waste handling, and disposal planning for your next surface preparation project.

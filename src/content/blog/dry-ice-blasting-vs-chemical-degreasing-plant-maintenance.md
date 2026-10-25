@@ -35,4 +35,4 @@ The maintenance teams that get the most value from switching to dry ice blasting
 
 ---
 
-Blasting Jack provides dry ice blasting for industrial plant maintenance throughout Michigan. **[Contact us](/contact)** to evaluate whether dry ice blasting fits your facility's maintenance cleaning cycle.
+Blasting Jack provides dry ice blasting for industrial plant maintenance throughout Michigan. **[Contact us](/#contact)** to evaluate whether dry ice blasting fits your facility's maintenance cleaning cycle.

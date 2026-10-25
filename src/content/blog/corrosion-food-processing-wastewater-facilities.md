@@ -94,4 +94,4 @@ We have direct experience in both food processing and wastewater environments in
 
 If your facility operates in either of these environments and you are dealing with failing linings, active corrosion, or upcoming maintenance requirements, we would rather have a conversation before the scope becomes an emergency.
 
-**[Contact Blasting Jack](/contact)** to discuss your facility's corrosion situation and what the right approach looks like.
+**[Contact Blasting Jack](/#contact)** to discuss your facility's corrosion situation and what the right approach looks like.

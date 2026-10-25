@@ -39,4 +39,4 @@ We've run wet abrasive blasting on [interior vapor blasting of deck and column s
 
 ---
 
-If your facility has a surface prep project where dry blasting isn't an option — occupied space, historic material, or strict dust control requirements — **[contact Blasting Jack](/contact)** to talk through whether vapor blasting is the right fit.
+If your facility has a surface prep project where dry blasting isn't an option — occupied space, historic material, or strict dust control requirements — **[contact Blasting Jack](/#contact)** to talk through whether vapor blasting is the right fit.

@@ -37,4 +37,4 @@ Most restoration contractors don't own dry ice blasting equipment — the CO₂ 
 
 ---
 
-Blasting Jack works with restoration contractors across Michigan on dry ice blasting scopes for fire and smoke damage jobs. **[Contact us](/contact)** to discuss bringing dry ice blasting onto your next restoration project.
+Blasting Jack works with restoration contractors across Michigan on dry ice blasting scopes for fire and smoke damage jobs. **[Contact us](/#contact)** to discuss bringing dry ice blasting onto your next restoration project.

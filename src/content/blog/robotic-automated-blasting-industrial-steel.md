@@ -37,4 +37,4 @@ We track the technology because it matters for where the industry is headed. For
 
 ---
 
-**[Contact Blasting Jack](/contact)** to scope a structural steel, tank, or facility blasting project with an experienced field crew.
+**[Contact Blasting Jack](/#contact)** to scope a structural steel, tank, or facility blasting project with an experienced field crew.
