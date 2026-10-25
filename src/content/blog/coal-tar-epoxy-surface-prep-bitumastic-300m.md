@@ -58,9 +58,9 @@ The profile is the texture the blast cuts into the steel: microscopic peaks and 
 - **Too deep** (well over 3 mils): peaks can poke through thinner areas of the film, and you use more coating filling valleys.
 - **Rounded** (from steel shot or worn media): lower surface area and weaker grip than an angular profile at the same depth.
 
-Getting 2–3 mils consistently comes down to abrasive choice and blast pressure. A properly sized angular abrasive — steel grit, coal slag, or garnet — at the right nozzle pressure will get there. Whatever's left on the truck from the last job might not. We cover abrasive options in [Abrasive Selection for Silica-Free Industrial Sandblasting](/blog/abrasive-selection-silica-free-industrial-sandblasting).
+Getting 2–3 mils consistently comes down to abrasive choice and blast pressure. A properly sized angular abrasive — steel grit, coal slag, or garnet — at the right nozzle pressure will get there. Whatever's left on the truck from the last job might not. We cover abrasive options in [Abrasive Selection for Silica-Free Industrial Sandblasting](/blog/abrasive-selection-silica-free-industrial-sandblasting/).
 
-Profile should be measured, not eyeballed — replica tape per ASTM D4417 Method C or a profile depth gauge — and written down. More on why in [Surface Profile and Coating Adhesion](/blog/surface-profile-anchor-profile-coating-adhesion).
+Profile should be measured, not eyeballed — replica tape per ASTM D4417 Method C or a profile depth gauge — and written down. More on why in [Surface Profile and Coating Adhesion](/blog/surface-profile-anchor-profile-coating-adhesion/).
 
 ## After the Blast: Clean, Dry, and Coat Fast
 

@@ -9,7 +9,7 @@ draft: false
 
 Coal tar coatings have been protecting buried and submerged steel for over a century, and for good reason. They go on thick, water doesn't get through them, they tolerate less-than-perfect conditions better than most high-performance coatings, and they're cheap per mil.
 
-They've also been pushed out of potable water service entirely (we cover that in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61)). But for pipe and steel that's buried, submerged, and never touches drinking water, Bitumastic is still one of the most practical coatings on the market.
+They've also been pushed out of potable water service entirely (we cover that in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61/)). But for pipe and steel that's buried, submerged, and never touches drinking water, Bitumastic is still one of the most practical coatings on the market.
 
 ## The Two Bitumastic Products You'll Actually See
 
@@ -52,7 +52,7 @@ For Bitumastic 300M, Carboline's data sheet calls for:
 - **SSPC-SP 10 near-white metal blast** for steel in immersion or buried service.
 - **A 2.0 to 3.0 mil angular anchor profile.**
 
-Bitumastic 50 is more tolerant for non-immersion damp proofing, but on buried pipe you still want mill scale and rust removed by blasting. We go deeper into the 300M prep requirements in [Surface Prep for Coal Tar Epoxy](/blog/coal-tar-epoxy-surface-prep-bitumastic-300m).
+Bitumastic 50 is more tolerant for non-immersion damp proofing, but on buried pipe you still want mill scale and rust removed by blasting. We go deeper into the 300M prep requirements in [Surface Prep for Coal Tar Epoxy](/blog/coal-tar-epoxy-surface-prep-bitumastic-300m/).
 
 ## Field Joints, Fittings, and Repairs
 

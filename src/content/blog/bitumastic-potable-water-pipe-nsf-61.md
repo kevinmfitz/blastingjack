@@ -53,7 +53,7 @@ None of this makes coal tar Bitumastic useless. It's still one of the most forgi
 - Steel piling, foundations, and below-grade structural steel
 - Submerged steel on seawalls and water control structures
 
-What these all have in common: no drinking water contact and no sunlight. Coal tar breaks down under UV, so Bitumastic is a below-grade and immersion product only. We cover those uses in detail in [Bitumastic on New Non-Potable and Buried Pipe](/blog/bitumastic-buried-non-potable-pipe).
+What these all have in common: no drinking water contact and no sunlight. Coal tar breaks down under UV, so Bitumastic is a below-grade and immersion product only. We cover those uses in detail in [Bitumastic on New Non-Potable and Buried Pipe](/blog/bitumastic-buried-non-potable-pipe/).
 
 ## The Surface Prep Doesn't Change
 

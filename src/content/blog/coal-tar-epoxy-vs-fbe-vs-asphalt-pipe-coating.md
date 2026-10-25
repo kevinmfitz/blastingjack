@@ -81,7 +81,7 @@ Asphalt coatings are petroleum-based rather than coal-tar-based. They're often c
 
 ## How to Choose
 
-**Is it drinking water?** Then the interior needs an NSF 61 certified product — liquid epoxy (AWWA C210), FBE (AWWA C213), cement mortar, or a certified asphalt. Coal tar epoxy is out. We explain why in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61)
+**Is it drinking water?** Then the interior needs an NSF 61 certified product — liquid epoxy (AWWA C210), FBE (AWWA C213), cement mortar, or a certified asphalt. Coal tar epoxy is out. We explain why in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61/)
 
 **Is the pipe coming from a mill already coated?** FBE is often the plant coating. Plan how field joints and fittings will be coated in a compatible system.
 
@@ -95,7 +95,7 @@ Asphalt coatings are petroleum-based rather than coal-tar-based. They're often c
 
 The coating chemistry is different, but every buried pipe coating failure we see traces back to the same handful of problems: mill scale left on the steel, oil blasted into the surface, a profile that's too shallow or too rounded, dust left on the steel, or coating over flash rust.
 
-FBE plants control this with automated blasting and inspection. Field-applied coal tar epoxy and asphalt depend on the blast crew doing it right. We cover coal tar epoxy prep specifically in [Surface Prep for Coal Tar Epoxy](/blog/coal-tar-epoxy-surface-prep-bitumastic-300m), and the same principles apply to any immersion or buried coating.
+FBE plants control this with automated blasting and inspection. Field-applied coal tar epoxy and asphalt depend on the blast crew doing it right. We cover coal tar epoxy prep specifically in [Surface Prep for Coal Tar Epoxy](/blog/coal-tar-epoxy-surface-prep-bitumastic-300m/), and the same principles apply to any immersion or buried coating.
 
 ---
 

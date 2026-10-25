@@ -27,7 +27,7 @@ Profile is measured in mils (thousandths of an inch), and most industrial coatin
 
 Profile depth is driven by media type, media size, air pressure, nozzle distance, and blast angle — all variables an experienced operator controls, but all variables that produce inconsistent results without attention. A crew blasting to visual cleanliness standards (SSPC-SP 6, SP 10, etc.) without also checking profile can hit the cleanliness spec and still miss the profile spec entirely, especially with finer abrasive media or media that's been recycled past its effective cutting life.
 
-This is also where media selection interacts with the requirement directly: coarser garnet or steel grit cuts deeper profile than fine glass bead or crushed glass, for the same air pressure and dwell time. Choosing media without accounting for the coating manufacturer's profile requirement is a common cause of profile-related coating failure — see our breakdown of [why industrial coatings fail on surface preparation](/blog/industrial-coating-failure-surface-prep) for how this plays out on real projects.
+This is also where media selection interacts with the requirement directly: coarser garnet or steel grit cuts deeper profile than fine glass bead or crushed glass, for the same air pressure and dwell time. Choosing media without accounting for the coating manufacturer's profile requirement is a common cause of profile-related coating failure — see our breakdown of [why industrial coatings fail on surface preparation](/blog/industrial-coating-failure-surface-prep/) for how this plays out on real projects.
 
 ## What Should Be Documented
 
@@ -38,7 +38,7 @@ For any project where coating warranty or long-term performance matters — stru
 - Comparison against the coating manufacturer's specified profile range
 - Photographic documentation alongside the numeric readings
 
-This record matters twice: it protects the facility if a coating fails prematurely and the cause needs to be identified, and it protects the contractor by proving the surface prep met spec before the first coat went on. See our related post on [tank and vessel surface preparation and SSPC standards](/blog/tank-vessel-surface-preparation-sspc) for how profile fits into a full surface prep specification.
+This record matters twice: it protects the facility if a coating fails prematurely and the cause needs to be identified, and it protects the contractor by proving the surface prep met spec before the first coat went on. See our related post on [tank and vessel surface preparation and SSPC standards](/blog/tank-vessel-surface-preparation-sspc/) for how profile fits into a full surface prep specification.
 
 ## The Bottom Line
 

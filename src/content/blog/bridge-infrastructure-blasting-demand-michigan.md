@@ -23,14 +23,14 @@ Bridge and infrastructure surface preparation carries constraints that a typical
 
 - **Environmental containment over water or traffic.** Full containment systems are required to prevent spent media, paint chips, and dust from entering waterways or falling on roadways below — this is a regulatory requirement, not optional, on most bridge coating projects.
 - **Access and traffic control.** Work often happens under lane closures, at height, or over active waterways, which limits working windows and requires equipment and crews suited to elevated, confined, or over-water access.
-- **Lead paint on older structures.** Many Michigan bridges were originally coated with lead-based paint systems, which brings the containment, worker protection, and disposal requirements covered in our post on [lead paint abatement during industrial blasting](/blog/lead-paint-abatement-industrial-blasting).
-- **Method selection where containment is restricted.** On structures where abrasive containment over traffic or water is difficult to certify, [UHP water blasting for bridges and structural steel](/blog/uhp-water-blasting-bridges-structural-steel-michigan) is increasingly specified as an alternative that limits airborne media entirely.
+- **Lead paint on older structures.** Many Michigan bridges were originally coated with lead-based paint systems, which brings the containment, worker protection, and disposal requirements covered in our post on [lead paint abatement during industrial blasting](/blog/lead-paint-abatement-industrial-blasting/).
+- **Method selection where containment is restricted.** On structures where abrasive containment over traffic or water is difficult to certify, [UHP water blasting for bridges and structural steel](/blog/uhp-water-blasting-bridges-structural-steel-michigan/) is increasingly specified as an alternative that limits airborne media entirely.
 
 ## What This Means for Agencies and Facility Owners
 
 Bid volume for bridge and infrastructure coating work is increasing, and contractors with the containment systems, lead-safe practices, and documented SSPC surface preparation experience to handle it are in higher demand than the supply of qualified crews. For agencies and asset owners planning coating maintenance, the practical takeaway is to plan further ahead than has historically been necessary — qualified contractor capacity is tightening as more of this funded work reaches the bid stage at the same time.
 
-For structures where coating deterioration is visible now, waiting rarely reduces the eventual cost. Coating failure exposes bare steel to uniform corrosion and, on older structures, pitting that can affect section thickness over time — see our guide to [the types of industrial corrosion](/blog/types-of-industrial-corrosion) for how that progression typically plays out on exposed structural steel.
+For structures where coating deterioration is visible now, waiting rarely reduces the eventual cost. Coating failure exposes bare steel to uniform corrosion and, on older structures, pitting that can affect section thickness over time — see our guide to [the types of industrial corrosion](/blog/types-of-industrial-corrosion/) for how that progression typically plays out on exposed structural steel.
 
 ---
 

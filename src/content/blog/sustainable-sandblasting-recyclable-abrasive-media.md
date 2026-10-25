@@ -32,7 +32,7 @@ Media selection isn't purely an environmental decision — it's driven first by 
 - **Structural steel prep for new coating** — garnet delivers a clean, silica-reduced profile with straightforward single-use disposal
 - **Shop-based repetitive work** — steel grit with a recovery system pays for itself in reduced media purchase and disposal cost over repeated use
 - **Sensitive sites near water, soil, or vegetation** — biodegradable or low-impact media options limit runoff and site contamination risk
-- **Lead paint removal** — media choice interacts directly with hazardous waste classification; see our post on [lead paint abatement during industrial blasting](/blog/lead-paint-abatement-industrial-blasting) for how containment and disposal requirements change the calculation
+- **Lead paint removal** — media choice interacts directly with hazardous waste classification; see our post on [lead paint abatement during industrial blasting](/blog/lead-paint-abatement-industrial-blasting/) for how containment and disposal requirements change the calculation
 
 ## The Bottom Line
 

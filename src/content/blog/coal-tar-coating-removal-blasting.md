@@ -17,13 +17,13 @@ A lot of that coating is now at the end of its life. And when it's time to recoa
 
 **It's thick and it's soft.** Coal tar enamels and mastics can be very thick, and they're gummy compared to hard epoxies. Abrasive tends to bounce off or embed instead of cutting, especially in warm weather when the coating softens.
 
-**It rarely comes alone.** Older coal tar systems were often applied over, or under, lead-based primers. Many older tanks and structures have layers from different decades. What's on the steel needs to be tested before anyone blasts it. See [Lead Paint Abatement and Industrial Blasting](/blog/lead-paint-abatement-industrial-blasting).
+**It rarely comes alone.** Older coal tar systems were often applied over, or under, lead-based primers. Many older tanks and structures have layers from different decades. What's on the steel needs to be tested before anyone blasts it. See [Lead Paint Abatement and Industrial Blasting](/blog/lead-paint-abatement-industrial-blasting/).
 
 ## Removal Methods
 
 **Abrasive blasting.** The most common method for getting to a clean surface with a profile, ready for recoating. It works best with a sharp, aggressive abrasive and enough pressure and nozzle size to cut through the film. On thick or gummy coatings, cold weather actually helps — coal tar gets brittle and fractures off more cleanly. Blasting ends with the SSPC grade the new coating needs, usually SSPC-SP 10 or SP 5 for immersion service.
 
-**Ultra-high-pressure (UHP) water jetting.** At 40,000 PSI, UHP water jetting strips thick coatings well, keeps dust down, and doesn't add spent abrasive to the waste stream. It does not create an anchor profile, so if the steel's old profile isn't usable, you blast after. More in [40,000 PSI Water Blasting for Coating Removal](/blog/40000-psi-water-blasting-coating-removal).
+**Ultra-high-pressure (UHP) water jetting.** At 40,000 PSI, UHP water jetting strips thick coatings well, keeps dust down, and doesn't add spent abrasive to the waste stream. It does not create an anchor profile, so if the steel's old profile isn't usable, you blast after. More in [40,000 PSI Water Blasting for Coating Removal](/blog/40000-psi-water-blasting-coating-removal/).
 
 **Mechanical removal.** Scraping and power tools for small areas, edges, and tie-ins. Slow on large areas and doesn't produce the profile most replacement coatings need.
 
@@ -38,7 +38,7 @@ Coal tar removal needs a written exposure control plan, just like lead or silica
 - **Full skin coverage**, including gloves, coveralls, and face protection, to prevent coal tar dust contact
 - **Hygiene facilities** — wash stations and a clean change area so contamination doesn't go home on skin or clothing
 - **Air monitoring** to confirm exposures are below OSHA limits
-- **Silica controls** if the abrasive or substrate contains silica — see [OSHA's Silica Dust Standard](/blog/osha-silica-dust-standard-industrial-blasting)
+- **Silica controls** if the abrasive or substrate contains silica — see [OSHA's Silica Dust Standard](/blog/osha-silica-dust-standard-industrial-blasting/)
 
 Inside tanks and pipe, all of this is on top of OSHA confined space requirements.
 
@@ -52,7 +52,7 @@ Contain the blast area, collect spent media daily, and keep it out of storm drai
 
 What replaces coal tar depends on the service:
 
-**Potable water tanks and pipe.** An NSF/ANSI 61 certified lining — usually a liquid epoxy per AWWA C210 for steel pipe, or an NSF 61 tank lining system. Coal tar can't go back on. Details in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61)
+**Potable water tanks and pipe.** An NSF/ANSI 61 certified lining — usually a liquid epoxy per AWWA C210 for steel pipe, or an NSF 61 tank lining system. Coal tar can't go back on. Details in [Can You Use Bitumastic on Potable Water Pipe?](/blog/bitumastic-potable-water-pipe-nsf-61/)
 
 **Buried and submerged non-potable steel.** Coal tar epoxy is still allowed on many of these jobs. Many owners now choose high-build non-coal-tar epoxies for similar performance without the coal tar exposure concerns for future maintenance crews.
 
