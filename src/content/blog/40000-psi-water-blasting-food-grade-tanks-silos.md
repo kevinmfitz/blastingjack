@@ -98,6 +98,6 @@ Vessel recoating in a food plant has to fit around production schedules, sanitat
 
 ---
 
-We blasted and relined a food grade storage silo in Michigan using UHP water blasting specifically because abrasive blasting inside a vessel going back into dry food storage wasn't an option. The water blasting removed the failed interior lining cleanly, the silo was rinsed and dried, and the new FDA-compliant lining went on without abrasive contamination being a factor.
+We've [blasted and relined a food grade storage silo](/gallery/fda-grade-storage-silo/) in Michigan.
 
 If you're managing a food grade tank, silo, or hopper relining project in Michigan, **Blasting Jack** can walk you through the surface prep and schedule logistics. Free estimates.

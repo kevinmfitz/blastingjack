@@ -50,8 +50,6 @@ On new construction, structural steel typically arrives with mill scale — a ti
 
 For new steel that will be primed in the field (versus shop-coated), water blasting at 40,000 PSI can remove mill scale and any surface contamination before primer application. On a project like a steel-framed building going up in stages, mobile UHP equipment can prep and prime steel as it's erected rather than waiting for the whole frame to be complete.
 
-We ran this approach on a new construction structural steel project in Taylor, MI — blasting and priming steel columns and beams as sections were set, keeping the coating schedule tight with the construction sequence.
-
 ---
 
 ## Flash Rust Management

@@ -46,7 +46,7 @@ Petroleum and chemical ASTs require periodic lining inspection and relining. Wat
 Water and wastewater tanks have strict requirements about contamination. Abrasive blasting introduces a foreign material that must be completely recovered. Water blasting adds no foreign material — the only waste is the removed coating and corrosion products mixed with the water. For tanks going back into potable water service, this is a significant advantage.
 
 ### Food-Grade Silos and Hoppers
-FDA-regulated and food-grade storage vessels — flour silos, sugar hoppers, grain storage — cannot tolerate abrasive contamination. We blasted and relined a food-grade storage silo in Michigan using water blasting specifically because abrasive media in a food storage vessel wasn't an option. Water removed the failed interior coating cleanly, the silo was flushed and dried, and the new FDA-compliant lining went on.
+FDA-regulated and food-grade storage vessels — flour silos, sugar hoppers, grain storage — cannot tolerate abrasive contamination.
 
 ### Chemical Process Vessels
 Reactors, mixing tanks, and process vessels in chemical and pharmaceutical facilities have process purity requirements that make abrasive contamination unacceptable. Water blasting removes failed internal coatings and corrosion products without introducing abrasive media into the vessel interior.
