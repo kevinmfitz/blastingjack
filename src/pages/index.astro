@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 import heroBg from "../assets/images/hero-bg.jpg";
 
@@ -87,6 +87,8 @@ const processSteps = [
   { num: "04", title: "Final Inspection & Aftercare", icon: "fa-clipboard-check" },
 ];
 
+const featuredPoster = await getImage({ src: featuredVideoPoster, width: 760, format: "webp" });
+
 const sliderPairs = [
   { before: slider1Before, after: slider1After, alt: "Industrial equipment sandblasting", w: 1920, h: 1440 },
   { before: slider2Before, after: slider2After, alt: "Surface coating restoration", w: 1008, h: 900 },
@@ -139,6 +141,7 @@ const partners = [
       widths={[640, 1024, 1440, 1920]}
       sizes="100vw"
       loading="eager"
+      fetchpriority="high"
     />
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative z-10 max-w-[1400px] mx-auto px-6 py-32 md:py-40 w-full text-center">
@@ -267,6 +270,8 @@ const partners = [
                     alt={`${pair.alt} - before`}
                     width={pair.w}
                     height={pair.h}
+                    widths={[320, 640]}
+                    sizes="160px"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                   <span class="absolute bottom-2 left-1.5 px-2 py-0.5 bg-black/60 text-white text-[11px] font-semibold tracking-wider uppercase rounded">Before &lsaquo;</span>
@@ -277,6 +282,8 @@ const partners = [
                     alt={`${pair.alt} - after`}
                     width={pair.w}
                     height={pair.h}
+                    widths={[320, 640]}
+                    sizes="160px"
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
                   <span class="absolute bottom-2 right-1.5 px-2 py-0.5 bg-black/60 text-white text-[11px] font-semibold tracking-wider uppercase rounded">&rsaquo; After</span>
@@ -393,8 +400,8 @@ const partners = [
         <video
           controls
           playsinline
-          preload="metadata"
-          poster={featuredVideoPoster.src}
+          preload="none"
+          poster={featuredPoster.src}
           class="w-full rounded-xl shadow-2xl bg-black"
           style="aspect-ratio: 9/16;"
         >
