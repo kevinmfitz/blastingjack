@@ -23,7 +23,7 @@ Because the process is non-abrasive, it also won't damage seals, gaskets, wiring
 
 **Rental fleet turnaround.** Equipment coming back from a rental customer often needs a full clean before it goes back out or goes up for resale. Dry ice blasting gets equipment presentation-ready without the drying time water-based cleaning requires, and without leaving a chemical residue that shows up as a film on inspection.
 
-**Trailers and steel hauling equipment.** Grease, carbon, and adhesive residue from tie-down points, decking, and structural steel on flatbeds and specialty trailers cleans up in place — complementing mobile blasting and repainting work when a trailer needs both cleaning and a full surface prep and coating job.
+**Trailers and steel hauling equipment.** Grease, carbon, and adhesive residue from tie-down points, decking, and structural steel on flatbeds and specialty trailers cleans up in place — complementing [mobile blasting and repainting work](/gallery/dti-steel-trailer/) when a trailer needs both cleaning and a full surface prep and coating job.
 
 **Pre-sale and pre-inspection detailing.** Equipment being sold or inspected benefits from a clean that doesn't leave chemical odor or residue behind, and that can be done on-site rather than trucking equipment to a wash facility.
 
@@ -37,4 +37,4 @@ Dry ice blasting cleans off grease, carbon, and surface buildup — it doesn't r
 
 ---
 
-Blasting Jack provides mobile dry ice blasting for fleet and heavy equipment maintenance throughout Michigan. **[Contact us](/#contact)** to schedule a cleaning for your yard, rental return equipment, or fleet turnaround.
+Blasting Jack provides mobile [dry ice blasting](/services/dry-ice-blasting/) for fleet and heavy equipment maintenance throughout Michigan. **[Contact us](/#contact)** to schedule a cleaning for your yard, rental return equipment, or fleet turnaround.

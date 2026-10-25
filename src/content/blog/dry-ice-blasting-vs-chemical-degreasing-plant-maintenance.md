@@ -31,8 +31,8 @@ Chemical degreasing isn't obsolete. For very light residue, small parts that can
 
 ## Making the Switch — or Not
 
-The maintenance teams that get the most value from switching to dry ice blasting are typically the ones already running a frequent cleaning cycle on larger equipment — production lines, packaging equipment, industrial machinery — where downtime and disposal costs compound with every cycle. For infrequent, small-scale cleaning, the case for switching is weaker. The right answer is usually a plant running both methods, matched to the job, rather than eliminating one entirely.
+The maintenance teams that get the most value from switching to dry ice blasting are typically the ones already running a frequent cleaning cycle on larger equipment — production lines, packaging equipment, [industrial machinery](/gallery/warren-screw-cnc-dry-ice-blasting/) — where downtime and disposal costs compound with every cycle. For infrequent, small-scale cleaning, the case for switching is weaker. The right answer is usually a plant running both methods, matched to the job, rather than eliminating one entirely.
 
 ---
 
-Blasting Jack provides dry ice blasting for industrial plant maintenance throughout Michigan. **[Contact us](/#contact)** to evaluate whether dry ice blasting fits your facility's maintenance cleaning cycle.
+Blasting Jack provides [dry ice blasting](/services/dry-ice-blasting/) for industrial plant maintenance throughout Michigan. **[Contact us](/#contact)** to evaluate whether dry ice blasting fits your facility's maintenance cleaning cycle.

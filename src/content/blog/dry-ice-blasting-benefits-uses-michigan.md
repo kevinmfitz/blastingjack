@@ -10,7 +10,7 @@ heroImage: "/images/blog/dry-ice-blasting-hero.jpg"
 
 When a manufacturer shuts down a production line to clean heavy equipment, they're not just spending money on cleaning — they're spending money on downtime. Every hour a machine sits idle waiting for chemical solvents to work, or for grit media to be collected and contained, is an hour of lost production. **Dry-ice blasting** was developed specifically to solve this problem, and it does so in a way that no other cleaning method can replicate.
 
-At Blasting Jack, we offer dry-ice blasting alongside our traditional sandblasting and dustless blasting services. Here's everything you need to know about what it is, when to use it, and why it's become the preferred method across some of the most demanding industrial environments in Michigan and beyond.
+At Blasting Jack, we offer [dry-ice blasting](/services/dry-ice-blasting/) alongside our traditional sandblasting and dustless blasting services. Here's everything you need to know about what it is, when to use it, and why it's become the preferred method across some of the most demanding industrial environments in Michigan and beyond.
 
 ---
 
@@ -78,7 +78,7 @@ Dry-ice blasting is approved for use in food processing environments. There are 
 ## Primary Use Cases for Dry-Ice Blasting
 
 ### Industrial Manufacturing Equipment
-Production equipment accumulates grease, carbon, adhesives, and process residue over time. Dry-ice blasting removes this buildup efficiently without disassembling machinery or introducing cleaning agents that require neutralization.
+Production equipment accumulates grease, carbon, adhesives, and process residue over time. Dry-ice blasting removes this buildup efficiently without disassembling machinery or introducing cleaning agents that require neutralization. See our [dry-ice blasting of a CNC machine](/gallery/warren-screw-cnc-dry-ice-blasting/) for an example.
 
 ### Automotive and Aerospace Components
 Precision parts, molds, and tooling benefit from a cleaning method that doesn't alter dimensional tolerances. Dry-ice blasting is widely used in automotive stamping and injection molding operations.

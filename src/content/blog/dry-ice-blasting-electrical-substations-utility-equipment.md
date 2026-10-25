@@ -39,4 +39,4 @@ Dry ice blasting removes surface contamination — it doesn't repair insulation 
 
 ---
 
-Blasting Jack provides dry ice blasting for electrical, substation, and utility equipment maintenance throughout Michigan. **[Contact us](/#contact)** to discuss a cleaning scope coordinated with your facility's electrical safety requirements.
+Blasting Jack provides [dry ice blasting](/services/dry-ice-blasting/) for electrical, substation, and utility equipment maintenance throughout Michigan. **[Contact us](/#contact)** to discuss a cleaning scope coordinated with your facility's electrical safety requirements.
