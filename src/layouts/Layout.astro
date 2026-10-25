@@ -2,6 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import Analytics from "@vercel/analytics/astro";
 import "../styles/global.css";
+import logo from "../assets/images/logo-full.png";
 
 interface Props {
   title?: string;
@@ -16,6 +17,26 @@ const {
   canonical = "https://blastingjack.com/",
   ogType = "website",
 } = Astro.props;
+
+// Business structured data — only facts shown on the site (footer contact info).
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://blastingjack.com/#business",
+  name: "Blasting Jack",
+  url: "https://blastingjack.com/",
+  logo: new URL(logo.src, "https://blastingjack.com").href,
+  telephone: "+1-810-602-6809",
+  email: "info@blastingjack.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "14500 East Eleven Mile Road",
+    addressLocality: "Warren",
+    addressRegion: "MI",
+    postalCode: "48089",
+    addressCountry: "US",
+  },
+};
 ---
 
 <!doctype html>
@@ -36,6 +57,7 @@ const {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
