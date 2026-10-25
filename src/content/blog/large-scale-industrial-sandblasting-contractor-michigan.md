@@ -19,7 +19,7 @@ That's what Blasting Jack was built for.
 
 We can mobilize **10 to 20 trained blast operators** on a single project when the schedule demands it. These are our people — trained to our standards, working under our supervision. We don't subcontract the labor to meet a headcount.
 
-That depth matters on jobs with compressed windows: plant shutdowns that have to be done over a weekend, new construction schedules where the blast-and-prime sequence controls the entire project timeline, or multi-phase work where different sections of a structure need to be running simultaneously.
+That depth matters on jobs with compressed windows: plant shutdowns that have to be done over a weekend, new construction schedules where the [blast-and-prime sequence](/gallery/taylor-structural-steel-blast-prime/) controls the entire project timeline, or multi-phase work where different sections of a structure need to be running simultaneously.
 
 ---
 
@@ -53,6 +53,6 @@ The reason they keep calling is simple: we show up with the right people, the ri
 
 ## Get a Scope Review
 
-If you have a large-scale blast project in Michigan, contact Blasting Jack for a direct conversation about your scope and timeline. We'll tell you straight whether we're the right fit and what it takes to get it done.
+If you have a [large-scale blast project](/services/industrial-sandblasting/) in Michigan, contact Blasting Jack for a direct conversation about your scope and timeline. We'll tell you straight whether we're the right fit and what it takes to get it done.
 
 No pitch. Just an honest assessment from a contractor that's been doing this for decades.

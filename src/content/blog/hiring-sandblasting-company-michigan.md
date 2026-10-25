@@ -64,7 +64,7 @@ Michigan EGLE and EPA rules are clear on this. Any contractor who can't give spe
 
 ## 5. Can You Perform Mobile, On-Site Work for Industrial Scale Projects?
 
-For most industrial and commercial blasting — structural steel in place, large equipment that can't be transported, active facilities — **mobile blasting is the only practical option.** A contractor who only operates out of a fixed shop cannot handle the majority of real industrial scope.
+For most industrial and commercial blasting — structural steel in place, large equipment that can't be transported, active facilities — **[mobile blasting](/services/mobile-sandblasting/) is the only practical option.** A contractor who only operates out of a fixed shop cannot handle the majority of real industrial scope.
 
 Mobile industrial blasting means bringing sufficient compressed air capacity, media supply, containment systems, and qualified operators directly to your site. It requires logistics planning, site coordination, and the right equipment for the scale of the project.
 

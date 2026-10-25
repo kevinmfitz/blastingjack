@@ -77,10 +77,10 @@ We schedule our work to align with coating application windows and use industria
 
 ## Industrial and Commercial Assets We Restore Across Michigan
 
-Our mobile blasting crews handle corrosion removal on:
+Our mobile blasting crews handle [corrosion removal](/services/rust-removal/) on:
 
 - **Structural steel** — building frames, mezzanines, trusses, bridges, and infrastructure components
-- **Industrial tanks and vessels** — exteriors and interiors, including confined space work
+- **[Industrial tanks and vessels](/gallery/vacuum-truck-blasting-relining/)** — exteriors and interiors, including confined space work
 - **Manufacturing equipment** — presses, frames, conveyors, fabricated assemblies
 - **Commercial facility exteriors** — steel-clad buildings, dock doors, canopy structures
 - **Utility and energy infrastructure** — pipe racks, support structures, substations

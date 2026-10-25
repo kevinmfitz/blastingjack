@@ -31,7 +31,7 @@ For some environments, it already is. For most of the field and structural work 
 
 ## What This Means for Facility Planning
 
-Robotic blasting is a legitimate and growing part of the industry — for large-scale, repetitive, flat-surface, high-hazard-access work like ship hulls, tank exteriors, and shop-fabricated parts. For the structural steel, tank interiors, parking structures, and mixed-geometry facility work that makes up most industrial blasting scope in Michigan, crewed field blasting remains the practical and cost-effective choice, and will stay that way until mobile robotic systems close the gap on geometry, access, and mobilization cost.
+Robotic blasting is a legitimate and growing part of the industry — for large-scale, repetitive, flat-surface, high-hazard-access work like ship hulls, tank exteriors, and shop-fabricated parts. For the [structural steel](/services/structural-steel-blasting/), tank interiors, parking structures, and mixed-geometry facility work that makes up most industrial blasting scope in Michigan, crewed field blasting remains the practical and cost-effective choice, and will stay that way until mobile robotic systems close the gap on geometry, access, and mobilization cost.
 
 We track the technology because it matters for where the industry is headed. For the work in front of most facility managers today, an experienced crew with the right equipment still gets it done faster, more thoroughly, and at lower total cost.
 

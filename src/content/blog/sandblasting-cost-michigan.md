@@ -84,7 +84,7 @@ Before approving any sandblasting contract, confirm the quote includes:
 
 ## The Blasting Jack Standard
 
-We've been quoting and executing industrial and commercial sandblasting projects in Michigan since the 1980s. Our estimates are itemized, our scope is defined, and our pricing reflects what the work actually costs to do properly — not what it takes to win the bid.
+We've been quoting and executing [industrial and commercial sandblasting](/services/industrial-sandblasting/) projects in Michigan since the 1980s. Our estimates are itemized, our scope is defined, and our pricing reflects what the work actually costs to do properly — not what it takes to win the bid.
 
 We work with Sherwin Williams, PPG, Behr, and Carboline coating systems and follow all OSHA and EPA standards on every project. No shortcuts, no surprises on the invoice.
 

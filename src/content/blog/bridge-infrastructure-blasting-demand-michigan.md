@@ -11,7 +11,7 @@ Michigan has thousands of bridges, and a meaningful share of them are carrying s
 
 ## What's Driving the Increase
 
-**Federal infrastructure funding is flowing into bridge programs.** The Infrastructure Investment and Jobs Act allocated roughly $40 billion nationally for bridge repair, replacement, and rehabilitation — the largest dedicated federal bridge investment in decades. Michigan DOT and local road agencies have been putting that funding to work on bridge preservation projects, and coating and structural steel rehabilitation work is a direct beneficiary.
+**Federal infrastructure funding is flowing into bridge programs.** The Infrastructure Investment and Jobs Act allocated roughly $40 billion nationally for bridge repair, replacement, and rehabilitation — the largest dedicated federal bridge investment in decades. Michigan DOT and local road agencies have been putting that funding to work on bridge preservation projects, and coating and [structural steel rehabilitation](/services/structural-steel-blasting/) work is a direct beneficiary.
 
 **A large share of Michigan's bridge inventory is aging into the window where recoating is due.** Steel bridge coating systems typically have a design service life in the 15 to 25 year range depending on the system and environment. A significant number of Michigan structures were coated or last recoated in the same multi-decade window, which means a wave of bridges are becoming due for major coating maintenance at roughly the same time rather than on a staggered schedule.
 

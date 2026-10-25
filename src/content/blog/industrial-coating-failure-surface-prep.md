@@ -70,4 +70,4 @@ Surface preparation is not a cost center. It's the foundation the rest of the co
 
 ---
 
-Blasting Jack provides industrial surface preparation to SSPC standards throughout Southeast Michigan. If you're evaluating a maintenance recoat project or dealing with a coating failure on a facility asset, contact us to discuss the scope.
+Blasting Jack provides [industrial surface preparation](/services/surface-preparation-for-coatings/) to SSPC standards throughout Southeast Michigan. If you're evaluating a maintenance recoat project or dealing with a coating failure on a facility asset, contact us to discuss the scope.
