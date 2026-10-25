@@ -22,6 +22,21 @@ const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
   day: 'numeric',
 });
 const canonical = `https://blastingjack.com/blog/${post.id}/`;
+
+const toDate = (d: Date) => d.toISOString().slice(0, 10);
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description,
+  url: canonical,
+  mainEntityOfPage: canonical,
+  datePublished: toDate(post.data.pubDate),
+  ...(post.data.updatedDate && { dateModified: toDate(post.data.updatedDate) }),
+  ...(post.data.heroImage && { image: `https://blastingjack.com${post.data.heroImage}` }),
+  author: { "@type": "Organization", "@id": "https://blastingjack.com/#business", name: "Blasting Jack", url: "https://blastingjack.com/" },
+  publisher: { "@id": "https://blastingjack.com/#business" },
+};
 ---
 
 <Layout
@@ -29,6 +44,7 @@ const canonical = `https://blastingjack.com/blog/${post.id}/`;
   description={post.data.description}
   canonical={canonical}
   ogType="article"
+  schema={[articleSchema]}
 >
   <Header />
 

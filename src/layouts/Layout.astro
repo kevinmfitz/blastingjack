@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   canonical?: string;
   ogType?: string;
+  schema?: Record<string, unknown>[];
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   description = "Blasting Jack delivers expert sandblasting, surface restoration, and durable industrial coating solutions. We protect your valuable assets. Contact us for a free quote!",
   canonical = "https://blastingjack.com/",
   ogType = "website",
+  schema = [],
 } = Astro.props;
 
 // Business structured data — only facts shown on the site (footer contact info).
@@ -37,6 +39,23 @@ const businessSchema = {
     addressCountry: "US",
   },
 };
+
+// Breadcrumbs for blog articles and gallery projects, built from the canonical URL and page title.
+const breadcrumbSections: Record<string, string> = { blog: "Blog", gallery: "Gallery" };
+const pathParts = new URL(canonical).pathname.split("/").filter(Boolean);
+const breadcrumbSchema =
+  pathParts.length === 2 && breadcrumbSections[pathParts[0]]
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blastingjack.com/" },
+          { "@type": "ListItem", position: 2, name: breadcrumbSections[pathParts[0]], item: `https://blastingjack.com/${pathParts[0]}/` },
+          { "@type": "ListItem", position: 3, name: title.replace(/ \| Blasting Jack$/, ""), item: canonical },
+        ],
+      }
+    : null;
+const pageSchemas = [businessSchema, breadcrumbSchema, ...schema].filter(Boolean);
 ---
 
 <!doctype html>
@@ -57,7 +76,7 @@ const businessSchema = {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+    {pageSchemas.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
