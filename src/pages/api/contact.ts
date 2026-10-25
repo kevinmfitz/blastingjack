@@ -32,6 +32,15 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
+  // Honeypot: the hidden company_website field is only filled in by bots.
+  // Pretend success so they don't retry, but send nothing.
+  if (String((body as Record<string, unknown>).company_website ?? '').trim()) {
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
   const name = String(body.name ?? '').trim().slice(0, 200);
   const email = String(body.email ?? '').trim().slice(0, 254);
   const phone = String(body.phone ?? '').trim().slice(0, 50);
