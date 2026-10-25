@@ -48,7 +48,7 @@ One call covers the blast scope. Your crew follows behind on a surface that's re
 
 ## Surface Prep Standards
 
-Coating manufacturers specify surface prep standards because inadequate preparation is the leading cause of premature coating failure — widely cited at 80% across industry training and technical data sheets. When a coating fails early, the surface prep is the first thing examined.
+Coating manufacturers specify surface prep standards because inadequate preparation is the leading cause of premature coating failure. When a coating fails early, the surface prep is the first thing examined.
 
 Blasting Jack produces [SSPC-compliant profiles](/services/surface-preparation-for-coatings/) to the standard your coating spec requires:
 

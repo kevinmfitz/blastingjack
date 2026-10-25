@@ -49,25 +49,6 @@ Some projects quote blasting only; others include the full scope through primer 
 
 ---
 
-## Typical Commercial and Industrial Project Ranges in Michigan
-
-These are realistic ranges for professional work — proper containment, compliant disposal, qualified operators, and documented surface prep standards:
-
-| Project Type | Typical Range |
-|---|---|
-| Structural steel (per sq ft, accessible) | $3–$8/sq ft |
-| Tank exterior (medium to large) | $8,000–$35,000+ |
-| Tank interior (confined space) | $12,000–$50,000+ |
-| Bridge or infrastructure steel | Quoted by scope |
-| Industrial equipment (machinery, frames) | $2,000–$15,000+ |
-| Commercial facility exterior steel | $5,000–$40,000+ |
-| Lead paint abatement (added to base) | +25–40% of base scope |
-| Multi-day mobilization (per day) | Included in project scope |
-
-Smaller individual jobs — a single piece of equipment, a structure component, or a filler project — typically run $2,000 and up depending on scope. These are priced and handled with the same professionalism as larger contracts.
-
----
-
 ## What Every Serious Quote Should Specify
 
 Before approving any sandblasting contract, confirm the quote includes:
