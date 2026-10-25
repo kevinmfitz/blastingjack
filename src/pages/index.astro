@@ -588,6 +588,8 @@ const partners = [
 </Layout>
 
 <script>
+  import { track } from "@vercel/analytics";
+
   function initAll() {
     // Intersection Observer for scroll reveals
     const revealObs = new IntersectionObserver(
@@ -904,6 +906,8 @@ const partners = [
 
         formResult.classList.remove("hidden");
         if (response.ok) {
+          // Conversion event: only after the server confirms the send. No form contents are included.
+          if (result.success === true) track("Quote Form Submitted");
           formResult.textContent = "Message sent! We'll be in touch shortly.";
           formResult.classList.add("bg-green-50", "text-green-700", "border", "border-green-200");
           contactForm.reset();

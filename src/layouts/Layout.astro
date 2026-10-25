@@ -90,5 +90,14 @@ const pageSchemas = [businessSchema, breadcrumbSchema, ...schema].filter(Boolean
   </head>
   <body>
     <slot />
+    <script>
+      import { track } from "@vercel/analytics";
+
+      // Phone-link clicks on any page. Records only the page path, never the number itself.
+      document.addEventListener("click", (event) => {
+        const link = (event.target as Element | null)?.closest?.('a[href^="tel:"]');
+        if (link) track("Phone Click", { page: location.pathname });
+      });
+    </script>
   </body>
 </html>
