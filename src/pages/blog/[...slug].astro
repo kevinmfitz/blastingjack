@@ -31,7 +31,6 @@ const articleSchema = {
   description: post.data.description,
   url: canonical,
   mainEntityOfPage: canonical,
-  datePublished: toDate(post.data.pubDate),
   ...(post.data.updatedDate && { dateModified: toDate(post.data.updatedDate) }),
   ...(post.data.heroImage && { image: `https://blastingjack.com${post.data.heroImage}` }),
   author: { "@type": "Organization", "@id": "https://blastingjack.com/#business", name: "Blasting Jack", url: "https://blastingjack.com/" },
